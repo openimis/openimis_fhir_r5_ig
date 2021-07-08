@@ -1,0 +1,43 @@
+id: openimis.fhir.r4
+canonical: https://openimis.github.io/openimis_fhir_r4_ig/
+name: openIMISFHIRR4
+title: "openIMIS FHIR R4 Implementation Guide"
+description: This IG is about the mapping and usage of FHIR R4 to integrate openIMIS with other external systems.
+status: draft
+license: CC0-1.0
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+releaseLabel: ci-build
+publisher:
+  name: Swiss TPH - SCIH - openIMIS Group
+  url: https://www.swisstph.ch/en/
+  email: dragos.dobre@swisstph.ch
+template: #local-template
+
+menu:
+  Overview: index.html
+  FHIR Design: specification.html
+  Use Cases: usecases.html
+  Connected Partner: connected_partner.html
+  Future Plans: future.html
+  Artifacts:
+    Patient: artifacts.html#1
+  Glossary: glossary.html
+  Credits: credits.html
+  
+pages:
+  index.md:
+    title: openIMIS FHIR Overview
+  specification.md:
+    title: FHIR Design and Overview
+  usecases.md:
+    title: Integration Use Cases
+  connected_partner.md:
+    title: Becoming a Connected Partner
+  future.md:
+    title: Future Plans
+  glossary.md:
+    title: Glossary
+  credits.md:
+    title: Credits
