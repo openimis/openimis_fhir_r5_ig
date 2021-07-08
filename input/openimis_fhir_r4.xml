@@ -19,6 +19,11 @@
       <system value="url"/>
       <value value="https://www.swisstph.ch/en/"/>
     </telecom>
+    <telecom>
+      <!-- Or whatever URL and/or email address(es) are appropriate -->
+      <system value="email"/>
+      <value value="dragos.dobre@swisstph.ch"/>
+    </telecom>
   </contact>
   <description value="This IG is about the mapping and usage of FHIR R4 to integrate openIMIS with other external systems."/>
   <jurisdiction>
@@ -33,7 +38,7 @@
       -->
     </coding>
   </jurisdiction>
-  <packageId value="openimis.org.fhir.openimis_fhir_r4"/>
+  <packageId value="org.openimis.fhir.r4"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
@@ -41,6 +46,7 @@
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
+   
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>
@@ -48,13 +54,18 @@
       <generation value="html"/>
       <page>
         <nameUrl value="index.html"/>
-        <title value="MyIG Home Page"/>
+        <title value="openIMIS FHIR R4 Home Page"/>
         <generation value="html"/>
       </page>
       <page>
         <nameUrl value="scope.html"/>
         <title value="Functional Scope"/>
         <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases covered by this Implementation Guide"/>
+        <generation value="html"/>
       </page>
       <page>
         <nameUrl value="downloads.html"/>
@@ -71,7 +82,7 @@
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2019+"/>
+      <value value="2021+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>

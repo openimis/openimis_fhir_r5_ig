@@ -1,1 +1,10 @@
 #---
+feedback:
+  - active: true
+    dashboard: 
+      label: Issues
+      url: https://openimis.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all&status=open
+  - active: true
+    dashboard: 
+      label: Submit issue
+      url: https://openimis.atlassian.net/servicedesk/customer/portal/1
