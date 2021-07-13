@@ -89,11 +89,12 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "used in POST & PUT Patient"
 
 * contact 0..1  // ToDo: see https://openimis.atlassian.net/browse/OE0-26
+  * relationship 1..1 
 * insert ShortAndDefinition(contact, Head of Family contact, Head of Family contact details. If missing\, this Person is the Head of Family.)
 * communication 0..0 // Not used but can be mapped to tblFamilySMS.LanguageOfSMS
 * generalPractitioner only Reference(Organization) // ToDo: see https://openimis.atlassian.net/browse/OE0-25 
 * managingOrganization 0..0
-* link 0..0
+* link 0..0 // ToDo: see https://openimis.atlassian.net/browse/OE0-26
 
 * extension contains IsHead named isHead 0..1 MS
 
