@@ -89,8 +89,12 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "used in POST & PUT Patient"
 
 * contact 0..1  // ToDo: see https://openimis.atlassian.net/browse/OE0-26
-  * relationship 1..1 
+  * relationship 0..1
+  * relationship from OpenIMISContactRelationshipVS (extensible)
+  * name 1..1
+  * address 0..1
 * insert ShortAndDefinition(contact, Head of Family contact, Head of Family contact details. If missing\, this Person is the Head of Family.)
+
 * communication 0..0 // Not used but can be mapped to tblFamilySMS.LanguageOfSMS
 * generalPractitioner only Reference(Organization) // ToDo: see https://openimis.atlassian.net/browse/OE0-25 
 * managingOrganization 0..0
@@ -102,7 +106,7 @@ Instance: john-doe
 InstanceOf: OpenIMISPatient
 Description: "Example of openIMIS Patient"
 * identifier[InsureeCode].value = "123456789"
-* identifier[InsureeCode].type.coding.code = OpenIMISIdentifierCS#Code
+* identifier[InsureeCode].type = OpenIMISIdentifierCS#Code
 * name.family = "Doe"
 * name.given[0] = "John"
 * gender = #male
@@ -113,9 +117,12 @@ Description: "Example of openIMIS Patient"
 * address[FamilyAddress].district = "Jamu"
 * address[FamilyAddress].city = "Jamula"
 * address[FamilyAddress].postalCode = "R1D1M2V1"
-* maritalStatus.coding.system = MaritalStatusCS
-* maritalStatus.coding.code = #M
-
+* maritalStatus = MaritalStatusCS#M
+* contact[+]
+  * relationship = OpenIMISContactRelationshipCS#Brother/Sister
+  * name 
+    * family = "Doe"
+    * given[0] = "Jane"
 
 // The extension can be applied to MedicationRequests, MedicationAdministrations, and Procedures
 Extension: IsHead

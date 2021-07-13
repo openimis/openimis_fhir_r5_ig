@@ -10,15 +10,15 @@ ValueSet: OpenIMISMaritalStatusVS
 Id: openimis-marital-status-vs
 Title: "openIMIS Marital Status Value Set"
 Description: "Indicates the Marital status of an Insuree"
-/* codes from valueset MaritalStatus
-* exclude MaritalStatus#A
-* exclude MaritalStatus#I
-* exclude MaritalStatus#L
-* exclude MaritalStatus#P
-* exclude MaritalStatus#T
-* exclude MaritalStatus#U */
 * MaritalStatusCS#M "Married"
 * MaritalStatusCS#S "Single"
 * MaritalStatusCS#D "Divorced"
 * MaritalStatusCS#W "Widowed"
 * MaritalStatusCS#UNK "unknown"
+
+ValueSet: OpenIMISContactRelationshipVS
+Id: openimis-contact-relationship-vs
+Title: "openIMIS Contact Relationship code system"
+Description: "Indicates the Relationship of a Patient with the Head of the Family"
+* codes from system OpenIMISContactRelationshipCS
+
