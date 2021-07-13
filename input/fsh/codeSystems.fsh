@@ -14,3 +14,16 @@ Description: "Identifiers that are specific to openIMIS and could not be found i
     "Unique code"
     "An identifier issued by the implementer to identify an openIMIS entity"
 
+CodeSystem: OpenIMISContactRelationshipCS
+Id: openimis-contact-relationship-cs
+Title: "openIMIS Contact Relationship code system"
+Description: "Indicates the Relationship of a Patient with the Head of the Family"
+* ^url =  https://openimis.github.io/openimis_fhir_r4_ig/CodeSystem/openimis-identifiers-cs
+* #Spouse "Spouse"
+* #Brother/Sister "Brother/Sister"
+* #Father/Mother "Father/Mother"
+* #Uncle/Aunt "Uncle/Aunt"
+* #Son/Daughter "Son/Daughter"
+* #GrandParents "Grand parents"
+* #Employee "Employee"
+* #Others "Others"
