@@ -26,7 +26,7 @@ RUN mkdir /home/publisher/.node && \
 
 RUN mkdir /home/publisher/bin && \
     printf "#!/bin/sh\n\
-            npm install -g fsh-sushi@2.0.0 beta.1" >>  /home/publisher/bin/with-latest-sushi.sh && \
+            npm install -g fsh-sushi@v2.0.0-beta.2" >>  /home/publisher/bin/with-latest-sushi.sh && \
     chmod +x /home/publisher/bin/with-latest-sushi.sh && \
     /home/publisher/bin/with-latest-sushi.sh
 
