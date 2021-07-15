@@ -18,7 +18,7 @@ CodeSystem: OpenIMISContactRelationshipCS
 Id: openimis-contact-relationship-cs
 Title: "openIMIS Contact Relationship code system"
 Description: "Indicates the Relationship of a Patient with the Head of the Family"
-* ^url =  https://openimis.github.io/openimis_fhir_r4_ig/CodeSystem/openimis-identifiers-cs
+* ^url =  https://openimis.github.io/openimis_fhir_r4_ig/CodeSystem/openimis-contact-relationship-cs
 * #Spouse "Spouse"
 * #Brother/Sister "Brother/Sister"
 * #Father/Mother "Father/Mother"
