@@ -49,7 +49,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 
 * gender 1..1 MS 
 * birthDate 1..1 MS // The date on which the person was born
-* NotUsed(deceased[x]) // Is not available in openIMIS
+* deceased[x] 0..0 // Is not available in openIMIS
 
 * address 1..1 MS // Family address or Current address of the Insuree => state->district->extension[municipality]->city
   * type = AddressType#physical
@@ -80,8 +80,8 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * address[FamilyAddress].use = AddressUse#home // mapped to Family address
 * address[InsureeAddress].use = AddressUse#temp // mapped to Insuree current address
 
-* maritalStatus from OpenIMISMaritalStatusVS (required)
-* NotUsed(multipleBirth[x])
+* maritalStatus from PatientMaritalStatusVS (required)
+* multipleBirth[x] 0..0
 
 * photo 0..1 MS 
   * contentType 1..1 MS // Mime type of the Insuree image
@@ -108,11 +108,12 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 
 * contact 0..1  // ToDo: see https://openimis.atlassian.net/browse/OE0-26
   * relationship 0..1
-  * relationship from OpenIMISContactRelationshipVS (extensible)
+  * relationship from PatientContactRelationshipVS (extensible)
   * name 1..1
-  * telecom 0..1
+  * telecom 0..*
   * address 0..1
-* insert ShortAndDefinition(contact, Head of Family contact, Head of Family contact details. If missing\, this Person is the Head of Family.)
+  * ^short = "Head of Family contact"
+  * ^definition = "Head of Family contact details. If missing, this Person is the Head of Family. Only available in GET Patient."
 
 * communication 0..0 // Not used but can be mapped to tblFamilySMS.LanguageOfSMS
 
@@ -122,13 +123,31 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * managingOrganization 0..0
 * link 0..0 // ToDo: see https://openimis.atlassian.net/browse/OE0-26
 
-* extension contains IsHead named isHead 0..1 MS 
-* insert ShortAndDefinition(extension[isHead], Head of Family, True if Head of the Family.)
+* extension contains PatientIsHeadExtension named isHead 0..1 MS 
+* extension[isHead]
+  * ^short = "Head of Family"
+  * ^definition = "True if the Patient is the Head of the Family"
 
-Instance: Jamula-village
-InstanceOf: Location
-Description: "Example of a Village"
-* id = "dace872d-7f56-4b79-b6ac-b62760063853"
+* extension contains PatientEducationLevelExtension named educationLevel 0..1 
+* extension[PatientEducationLevelExtension]
+  * ^short = "Patient Education Level"
+  * ^definition = "Specifies the Patient's education level"
+
+* extension contains PatientProfessionExtension named profession 0..1 
+* extension[profession]
+  * ^short = "Patient Profession Level"
+  * ^definition = "Specifies the Patient's profession"
+
+* extension contains PatientIdentificationExtension named identification 0..1 
+* extension[identification]
+  * ^short = "Patient Identification"
+  * ^definition = "Specifies the Patient's identification"
+
+* extension contains PatientCardIssuedExtension named cardIssued 0..1 
+* extension[cardIssued]
+  * ^short = "Patient Card Issued"
+  * ^definition = "Specifies if Patient has an insuree card"
+
 
 Instance: john-doe
 InstanceOf: OpenIMISPatient
@@ -145,32 +164,17 @@ Description: "Example of openIMIS Patient"
 * address[FamilyAddress].extension[municipality].valueString = "Jamu"
 * address[FamilyAddress].city = "Jamula"
 * address[FamilyAddress].extension[location].valueReference = Reference(Jamula-village)
-* maritalStatus = MaritalStatusCS#M
+* maritalStatus = FHIRMaritalStatusCS#M
 * contact[+]
-  * relationship = OpenIMISContactRelationshipCS#Brother/Sister
+  * relationship = PatientContactRelationshipCS#Brother/Sister
   * name 
     * family = "Doe"
     * given[0] = "Jane"
+* extension[isHead].valueBoolean = false
+* extension[educationLevel].valueCodeableConcept = PatientEducationLevelCS#University "University"
+* extension[profession].valueCodeableConcept = PatientProfessionCS#2 "Employee"
+* extension[identification].extension[number].valueString = "NationaID1"
+* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N
+* extension[cardIssued].valueBoolean = true
 
-// The extension can be applied to MedicationRequests, MedicationAdministrations, and Procedures
-Extension: IsHead
-Id:        is-head
-Title:    "Is Head of the Family"
-Description: "Whether the Patient is the Head of the Family"
-* insert ExtensionContext(Patient)
-* value[x] only boolean
-
-Extension: AddressMunicipality
-Id:        address-municipality-ext
-Title:    "Address Municipality Location"
-Description: "The location level between District and City/Village"
-* insert ExtensionContext(Address)
-* value[x] only string
-
-Extension: AddressLocationReference
-Id:        address-location-reference-ext
-Title:    "Address Location Reference"
-Description: "The reference to adress location for City/Village level"
-* insert ExtensionContext(Address)
-* value[x] only Reference(Location)
 
