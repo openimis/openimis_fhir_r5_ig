@@ -143,6 +143,11 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "Patient Identification"
   * ^definition = "Specifies the Patient's identification"
 
+* extension contains PatientCardIssuedExtension named cardIssued 0..1 
+* extension[cardIssued]
+  * ^short = "Patient Card Issued"
+  * ^definition = "Specifies if Patient has an insuree card"
+
 
 Instance: john-doe
 InstanceOf: OpenIMISPatient
@@ -170,6 +175,6 @@ Description: "Example of openIMIS Patient"
 * extension[profession].valueCodeableConcept = PatientProfessionCS#2 "Employee"
 * extension[identification].extension[number].valueString = "NationaID1"
 * extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N
-
+* extension[cardIssued].valueBoolean = true
 
 

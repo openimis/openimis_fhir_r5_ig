@@ -5,6 +5,13 @@ Description: "Whether the Patient is the Head of the Family."
 * insert ExtensionContext(Patient)
 * value[x] only boolean
 
+Extension: PatientCardIssuedExtension
+Id:        patient-card-issued
+Title:    "Card Issued (Patient)"
+Description: "Whether a card was issued to the Patient during enrolment."
+* insert ExtensionContext(Patient)
+* value[x] only boolean
+
 Extension: PatientEducationLevelExtension
 Id:        patient-education-level
 Title:    "Education Level (Patient)"
