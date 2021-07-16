@@ -155,6 +155,10 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "Patient Card Issued"
   * ^definition = "Specifies if Patient has an insuree card"
 
+* extension contains PatientGroupReference named group 0..1 
+* extension[group]
+  * ^short = "Patient Group Reference"
+  * ^definition = "Specifies the Group the Patient is part of"
 
 Instance: john-doe
 InstanceOf: OpenIMISPatient
@@ -183,5 +187,5 @@ Description: "Example of openIMIS Patient"
 * extension[identification].extension[number].valueString = "NationaID1"
 * extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N
 * extension[cardIssued].valueBoolean = true
-
+* extension[group].valueReference = Reference(doe-family)
 
