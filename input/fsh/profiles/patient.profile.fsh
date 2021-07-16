@@ -138,6 +138,10 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "Patient Profession Level"
   * ^definition = "Specifies the Patient's profession"
 
+* extension contains PatientIdentificationExtension named identification 0..1 
+* extension[identification]
+  * ^short = "Patient Identification"
+  * ^definition = "Specifies the Patient's identification"
 
 
 Instance: john-doe
@@ -163,7 +167,9 @@ Description: "Example of openIMIS Patient"
     * given[0] = "Jane"
 * extension[isHead].valueBoolean = false
 * extension[educationLevel].valueCodeableConcept = PatientEducationLevelCS#University "University"
-* extension[profession].valueCodeableConcept = PatientProfessionCS#Employee "Employee"
+* extension[profession].valueCodeableConcept = PatientProfessionCS#2 "Employee"
+* extension[identification].extension[number].valueString = "NationaID1"
+* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N
 
 
 
