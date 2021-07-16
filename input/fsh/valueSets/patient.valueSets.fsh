@@ -6,24 +6,30 @@ Description: "Indicates the Identifier type"
 * OpenIMISIdentifierCS#DBID  
 * OpenIMISIdentifierCS#Code  
 
-ValueSet: OpenIMISMaritalStatusVS
-Id: openimis-marital-status-vs
-Title: "openIMIS Marital Status Value Set"
-Description: "Indicates the Marital status of an Insuree"
-* MaritalStatusCS#M "Married"
-* MaritalStatusCS#S "Single"
-* MaritalStatusCS#D "Divorced"
-* MaritalStatusCS#W "Widowed"
-* MaritalStatusCS#UNK "unknown"
+ValueSet: PatientMaritalStatusVS
+Id: patient-marital-status-vs
+Title: "Patient Marital Status Value Set"
+Description: "Indicates the Marital status of a Patient"
+* FHIRMaritalStatusCS#M "Married"
+* FHIRMaritalStatusCS#S "Single"
+* FHIRMaritalStatusCS#D "Divorced"
+* FHIRMaritalStatusCS#W "Widowed"
+* FHIRMaritalStatusCS#UNK "unknown"
 
-ValueSet: OpenIMISContactRelationshipVS
-Id: openimis-contact-relationship-vs
-Title: "openIMIS Contact Relationship code system"
-Description: "Indicates the Relationship of a Patient with the Head of the Family"
-* codes from system OpenIMISContactRelationshipCS
+ValueSet: PatientContactRelationshipVS
+Id: patient-contact-relationship-vs
+Title: "Patient Contact Relationship Value Set"
+Description: "Indicates the Relationship of a Patient with the Head of the Family."
+* codes from system PatientContactRelationshipCS
 
 ValueSet: PatientEducationLevelVS
 Id: patient-education-level-vs
 Title: "Patient Education Level Value Set"
 Description: "Indicates the Education level of a Patient"
 * codes from system PatientEducationLevelCS
+
+ValueSet: PatientProfessionVS
+Id: patient-profession-vs
+Title: "Patient Profession Value Set"
+Description: "Indicates the profession of a Patient"
+* codes from system PatientProfessionCS

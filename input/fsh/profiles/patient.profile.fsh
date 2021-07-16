@@ -80,7 +80,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * address[FamilyAddress].use = AddressUse#home // mapped to Family address
 * address[InsureeAddress].use = AddressUse#temp // mapped to Insuree current address
 
-* maritalStatus from OpenIMISMaritalStatusVS (required)
+* maritalStatus from PatientMaritalStatusVS (required)
 * multipleBirth[x] 0..0
 
 * photo 0..1 MS 
@@ -108,7 +108,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 
 * contact 0..1  // ToDo: see https://openimis.atlassian.net/browse/OE0-26
   * relationship 0..1
-  * relationship from OpenIMISContactRelationshipVS (extensible)
+  * relationship from PatientContactRelationshipVS (extensible)
   * name 1..1
   * telecom 0..*
   * address 0..1
@@ -133,13 +133,11 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "Patient Education Level"
   * ^definition = "Specifies the Patient's education level"
 
-Extension: PatientEducationLevelExtension
-Id:        patient-education-level-extension
-Title:    "Patient Education Level"
-Description: "Specifies the Patient's education level"
-* insert ExtensionContext(Patient)
-* value[x] only CodeableConcept
-* valueCodeableConcept from PatientEducationLevelVS (extensible)
+* extension contains PatientProfessionExtension named profession 0..1 
+* extension[profession]
+  * ^short = "Patient Profession Level"
+  * ^definition = "Specifies the Patient's profession"
+
 
 
 Instance: john-doe
@@ -157,14 +155,15 @@ Description: "Example of openIMIS Patient"
 * address[FamilyAddress].extension[municipality].valueString = "Jamu"
 * address[FamilyAddress].city = "Jamula"
 * address[FamilyAddress].extension[location].valueReference = Reference(Jamula-village)
-* maritalStatus = MaritalStatusCS#M
+* maritalStatus = FHIRMaritalStatusCS#M
 * contact[+]
-  * relationship = OpenIMISContactRelationshipCS#Brother/Sister
+  * relationship = PatientContactRelationshipCS#Brother/Sister
   * name 
     * family = "Doe"
     * given[0] = "Jane"
 * extension[isHead].valueBoolean = false
 * extension[educationLevel].valueCodeableConcept = PatientEducationLevelCS#University "University"
+* extension[profession].valueCodeableConcept = PatientProfessionCS#Employee "Employee"
 
 
 
