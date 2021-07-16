@@ -166,7 +166,7 @@ Description: "Example of openIMIS Patient"
 * address[FamilyAddress].extension[location].valueReference = Reference(Jamula-village)
 * maritalStatus = FHIRMaritalStatusCS#M
 * contact[+]
-  * relationship = PatientContactRelationshipCS#Brother/Sister
+  * relationship = PatientContactRelationshipCS#1
   * name 
     * family = "Doe"
     * given[0] = "Jane"

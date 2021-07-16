@@ -20,14 +20,14 @@ Id: patient-contact-relationship
 Title: "Patient Contact Relationship code system"
 Description: "Indicates the Relationship of a Patient with the Head of the Family. Values defined by openIMIS."
 * ^url =  https://openimis.github.io/openimis_fhir_r4_ig/CodeSystem-patient-contact-relationship
-* #Spouse "Spouse"
-* #Brother/Sister "Brother/Sister"
-* #Father/Mother "Father/Mother"
-* #Uncle/Aunt "Uncle/Aunt"
-* #Son/Daughter "Son/Daughter"
-* #GrandParents "Grand parents"
-* #Employee "Employee"
-* #Others "Others"
+* #1 "Brother/Sister"
+* #2 "Father/Mother"
+* #3 "Uncle/Aunt"
+* #4 "Son/Daughter"
+* #5 "Grand parents"
+* #6 "Employee"
+* #7 "Others"
+* #8 "Spouse"
 
 CodeSystem: PatientEducationLevelCS
 Id: patient-education-level
