@@ -51,7 +51,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * birthDate 1..1 MS // The date on which the person was born
 * NotUsed(deceased[x]) // Is not available in openIMIS
 
-* address 1..1 MS // Family address or Current address of the Insuree
+* address 1..1 MS // Family address or Current address of the Insuree => state->district->extension[municipality]->city
   * type = AddressType#physical
   * country 0..0 // Not used 
   // Location.LocationName from Family's Region (Family.LocationId.ParentLocationId.ParentLocationId.ParentLocationId)
@@ -64,13 +64,13 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * insert ShortAndDefinition(district, Municipality/Ward, Insuree`s municipality/ward name as it is configured in openIMIS.)
   // Location.LocationName from Family's Ward (Family.LocationId.ParentLocationId)
   // Location.LocationName from Insuree's Ward (Insuree.CurrentVillage.ParentLocationId)
-  * extension contains Municipality named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
+  * extension contains AddressMunicipality named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
   * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
   * insert ShortAndDefinition(city, Village Name, Insuree`s village name as it is configured in openIMIS.)
   // Location.LocationCode from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
-  * postalCode 1..1 MS // mapped to Location Code (see previous comment) !!!
-  * insert ShortAndDefinition(postalCode, Village Location Code, Insuree`s village Location Code as it is configured in openIMIS.)
+  * postalCode 0..0 // not used
   * line 0..1 // Family.FamilyAddress or Insuree.CurrentAddress
+  * extension contains AddressLocationReference named location 1..1 MS // mapped to Ward (see previous two comments) !!!
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "use"
 * address ^slicing.rules = #closed
@@ -125,6 +125,10 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * extension contains IsHead named isHead 0..1 MS 
 * insert ShortAndDefinition(extension[isHead], Head of Family, True if Head of the Family.)
 
+Instance: Jamula-village
+InstanceOf: Location
+Description: "Example of a Village"
+* id = "dace872d-7f56-4b79-b6ac-b62760063853"
 
 Instance: john-doe
 InstanceOf: OpenIMISPatient
@@ -138,9 +142,9 @@ Description: "Example of openIMIS Patient"
 * address[FamilyAddress].line = "5 Tsoka"
 * address[FamilyAddress].state = "Ultha"
 * address[FamilyAddress].district = "Rapta"
-* address[FamilyAddress].extension[municipality].value[x] = "Jamu"
+* address[FamilyAddress].extension[municipality].valueString = "Jamu"
 * address[FamilyAddress].city = "Jamula"
-* address[FamilyAddress].postalCode = "R1D1M2V1"
+* address[FamilyAddress].extension[location].valueReference = Reference(Jamula-village)
 * maritalStatus = MaritalStatusCS#M
 * contact[+]
   * relationship = OpenIMISContactRelationshipCS#Brother/Sister
@@ -156,10 +160,17 @@ Description: "Whether the Patient is the Head of the Family"
 * insert ExtensionContext(Patient)
 * value[x] only boolean
 
-Extension: Municipality
-Id:        municipality
-Title:    "Municipality Location"
+Extension: AddressMunicipality
+Id:        address-municipality-ext
+Title:    "Address Municipality Location"
 Description: "The location level between District and City/Village"
 * insert ExtensionContext(Address)
 * value[x] only string
+
+Extension: AddressLocationReference
+Id:        address-location-reference-ext
+Title:    "Address Location Reference"
+Description: "The reference to adress location for City/Village level"
+* insert ExtensionContext(Address)
+* value[x] only Reference(Location)
 
