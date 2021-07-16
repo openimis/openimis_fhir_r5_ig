@@ -40,7 +40,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * family and given MS
   * use = NameUseCS#official
 
-* telecom 0..1 
+* telecom 0..2 
   * value 1..1 
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"
@@ -48,9 +48,9 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * telecom contains
     email 0..1 and
     phone 0..1
-* telecom[email].system = ContactPointSystem#email // it is mapped to CHFID
+* telecom[email].system = ContactPointSystemCS#email // it is mapped to CHFID
 * insert ShortAndDefinition(telecom[email], Patient/Insuree email, Patient/Insuree email contact.)
-* telecom[phone].system = ContactPointSystem#phone
+* telecom[phone].system = ContactPointSystemCS#phone
 * insert ShortAndDefinition(telecom[phone], Patient/Insuree phone, Patient/Insuree phone contact.)
 
 * gender 1..1 MS 
@@ -63,20 +63,24 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   // Location.LocationName from Family's Region (Family.LocationId.ParentLocationId.ParentLocationId.ParentLocationId)
   // Location.LocationName from Insuree's Region (Insuree.CurrentVillage.ParentLocationId.ParentLocationId.ParentLocationId)
   * state 1..1 MS // mapped to Region (see previous two comments) !!!
-  * insert ShortAndDefinition(district, Municipality/Ward, Insuree`s municipality/ward name as it is configured in openIMIS.)
+    * ^short = "State/Region"
+    * ^definition = "Insuree's State/Region name as it is configured in openIMIS."
   // Location.LocationName from Family's District (Family.LocationId.ParentLocationId.ParentLocationId)
   // Location.LocationName from Insuree's District (Insuree.CurrentVillage.ParentLocationId.ParentLocationId)
   * district 1..1 MS // mapped to District (see previous two comments) !!!
-  * insert ShortAndDefinition(district, Municipality/Ward, Insuree`s municipality/ward name as it is configured in openIMIS.)
+    * ^short = "District"
+    * ^definition = "Insuree's District name as it is configured in openIMIS."
   // Location.LocationName from Family's Ward (Family.LocationId.ParentLocationId)
   // Location.LocationName from Insuree's Ward (Insuree.CurrentVillage.ParentLocationId)
   * extension contains AddressMunicipality named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
+    * ^short = "Municipality/Ward"
+    * ^definition = "Insuree's Municipality/Ward name as it is configured in openIMIS."
   * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
-  * insert ShortAndDefinition(city, Village Name, Insuree`s village name as it is configured in openIMIS.)
-  // Location.LocationCode from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
+    * ^short = "City/Village"
+    * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
   * postalCode 0..0 // not used
   * line 0..1 // Family.FamilyAddress or Insuree.CurrentAddress
-  * extension contains AddressLocationReference named location 1..1 MS // mapped to Ward (see previous two comments) !!!
+  * extension contains AddressLocationReference named location 1..1 MS 
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "use"
 * address ^slicing.rules = #closed
@@ -123,7 +127,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 
 * communication 0..0 // Not used but can be mapped to tblFamilySMS.LanguageOfSMS
 
-* generalPractitioner only Reference(Organization) // ToDo: see https://openimis.atlassian.net/browse/OE0-25 
+* generalPractitioner only Reference(OpenIMISHealthFacilityOrganization) // ToDo: see https://openimis.atlassian.net/browse/OE0-25 
   * ^short = "First Service Point"
   * ^definition = "Hospital being set as the Insuree`s First Service Point."
 
