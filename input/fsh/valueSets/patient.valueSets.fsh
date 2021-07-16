@@ -22,3 +22,8 @@ Title: "openIMIS Contact Relationship code system"
 Description: "Indicates the Relationship of a Patient with the Head of the Family"
 * codes from system OpenIMISContactRelationshipCS
 
+ValueSet: PatientEducationLevelVS
+Id: patient-education-level-vs
+Title: "Patient Education Level Value Set"
+Description: "Indicates the Education level of a Patient"
+* codes from system PatientEducationLevelCS

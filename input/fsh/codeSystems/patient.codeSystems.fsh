@@ -27,3 +27,16 @@ Description: "Indicates the Relationship of a Patient with the Head of the Famil
 * #GrandParents "Grand parents"
 * #Employee "Employee"
 * #Others "Others"
+
+CodeSystem: PatientEducationLevelCS
+Id: patient-education-level-cs
+Title: "Patient Education Level Code System"
+Description: "Indicates the Education level of a Patient"
+* ^url =  https://openimis.github.io/openimis_fhir_r4_ig/CodeSystem/patient-education-code-cs
+* #Nursery "Nursery"
+* #Primary "Primary school"
+* #Secondary "Secondary school"
+* #University "University"
+* #Postgraduate "Postgraduate studies"
+* #PHD "PHD"
+* #Other "Other"
