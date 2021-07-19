@@ -83,4 +83,10 @@ Description: "Defines a Group for openIMIS which maps to an Family"
   * ^short = "Group Type"
   * ^definition = "Specifies the Group's type."
 
+// ToDo: Check if ethnicity is still used
+
+* extension contains GroupConfirmationExtension named confirmation 0..1 
+* extension[groupType]
+  * ^short = "Group Confirmation Type"
+  * ^definition = "Specifies the Group's confirmation type."
 

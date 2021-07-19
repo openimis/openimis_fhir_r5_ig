@@ -13,3 +13,5 @@ Description: "Example of openIMIS Group"
 * extension[address].valueAddress.extension[location].valueReference = Reference(Jamula-village)
 * extension[poverty].valueBoolean = false
 * extension[groupType].valueCodeableConcept = GroupTypesCS#H "Household"
+* extension[confirmation].extension[number].valueString = "Reg123456"
+* extension[confirmation].extension[type].valueCodeableConcept = GroupConfirmationTypeCS#B "Municipality"

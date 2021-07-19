@@ -47,7 +47,7 @@ Description: "Example of openIMIS Patient"
 * extension[educationLevel].valueCodeableConcept = PatientEducationLevelCS#University "University"
 * extension[profession].valueCodeableConcept = PatientProfessionCS#3 "Self Employee"
 * extension[identification].extension[number].valueString = "NationaID2"
-* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N
+* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N "National ID"
 * extension[cardIssued].valueBoolean = true
 * extension[group].valueReference = Reference(doe-family)
 
