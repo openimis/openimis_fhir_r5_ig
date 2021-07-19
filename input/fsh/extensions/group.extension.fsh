@@ -6,3 +6,10 @@ Description: "Whether the Group has the poverty status."
 * insert ExtensionContext(Group)
 * value[x] only boolean
 
+Extension: GroupAddressExtension
+Id:        group-address
+Title:    "Poverty Status (Group)"
+Description: "Whether the Group has the poverty status."
+* ^url = "https://openimis.github.io/openimis_fhir_r4_ig/StructureDefinition-group-address"
+* insert ExtensionContext(Group)
+* value[x] only Address

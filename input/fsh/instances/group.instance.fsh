@@ -10,5 +10,5 @@ Description: "Example of openIMIS Group"
 * quantity = 2
 * member[+].entity = Reference(john-doe)
 * member[+].entity = Reference(jane-doe)
-* extension[location].valueReference = Reference(Jamula-village)
+* extension[address].valueAddress.extension[location].valueReference = Reference(Jamula-village)
 * extension[poverty].valueBoolean = false
