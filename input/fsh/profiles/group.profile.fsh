@@ -75,7 +75,12 @@ Description: "Defines a Group for openIMIS which maps to an Family"
 
 * extension contains GroupPovertyStatusExtension named poverty 0..1 
 * extension[poverty]
-  * ^short = "GRoup Poverty Status"
+  * ^short = "Group Poverty Status"
   * ^definition = "Specifies the Group's poverty status."
+
+* extension contains GroupTypeExtension named groupType 0..1 
+* extension[groupType]
+  * ^short = "Group Type"
+  * ^definition = "Specifies the Group's type."
 
 

@@ -12,3 +12,4 @@ Description: "Example of openIMIS Group"
 * member[+].entity = Reference(jane-doe)
 * extension[address].valueAddress.extension[location].valueReference = Reference(Jamula-village)
 * extension[poverty].valueBoolean = false
+* extension[groupType].valueCodeableConcept = GroupTypesCS#H "Household"
