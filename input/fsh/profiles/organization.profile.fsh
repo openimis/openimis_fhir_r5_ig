@@ -55,19 +55,17 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
   * ^short = "Health Facility fax"
   * ^definition = "Health Facility fax contact."
 
-* address 1..1 MS // Family address or Current address of the Insuree => state->district->extension[municipality]->city
+* address 1..1 MS // HF address => state->district
   * type = AddressType#physical
   * country 0..0 // Not used 
-  // Location.LocationName from Family's Region (Family.LocationId.ParentLocationId.ParentLocationId.ParentLocationId)
-  // Location.LocationName from Insuree's Region (Insuree.CurrentVillage.ParentLocationId.ParentLocationId.ParentLocationId)
-  * state 1..1 MS // mapped to Region (see previous two comments) !!!
+  // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
+  * state 1..1 MS // mapped to Region 
     * ^short = "State/Region"
-    * ^definition = "Insuree's State/Region name as it is configured in openIMIS."
-  // Location.LocationName from Family's District (Family.LocationId.ParentLocationId.ParentLocationId)
-  // Location.LocationName from Insuree's District (Insuree.CurrentVillage.ParentLocationId.ParentLocationId)
-  * district 1..1 MS // mapped to District (see previous two comments) !!!
+    * ^definition = "Health Facility's State/Region name as it is configured in openIMIS."
+  // Location.LocationName from HF's District (HF.LocationId)
+  * district 1..1 MS // mapped to District 
     * ^short = "District"
-    * ^definition = "Insuree's District name as it is configured in openIMIS."
+    * ^definition = "Health Facility's District name as it is configured in openIMIS."
   * city 0..0 // not used
   * postalCode 0..0 // not used
   * line 0..1 // HFAddress
@@ -84,18 +82,8 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
   * ^short = "Claim Administrator contact"
   * ^definition = "Claim Administrator contact details. Contains the list of all CA attached to the Health Facility. Only available in GET Organization."
 
+* extension contains OrganizationLegalFormExtension named legalForm 0..1 
+* extension[legalForm]
+  * ^short = "Legal Form"
+  * ^definition = "Specifies the Organization's Legal Forms."
 
-Instance: RaptaDistrictHospital
-InstanceOf: OpenIMISHealthFacilityOrganization
-Description: "Example of openIMIS Health Facility"
-* identifier[HFCode].value = "RAHOS001"
-* identifier[HFCode].type = OpenIMISIdentifierCS#Code
-* identifier[HFUUID].value = "D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036"
-* identifier[HFUUID].type = OpenIMISIdentifierCS#UUID
-* type = OrganizationTypeCS#prov
-* name = "Rapta District Hospital"
-* address[0]
-  * type = AddressType#physical
-  * state = "Ultha"
-  * district = "Rapta"
-  * extension[locationDistrict].valueReference = Reference(Rapta-district)
