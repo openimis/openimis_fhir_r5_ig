@@ -87,3 +87,7 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
   * ^short = "Legal Form"
   * ^definition = "Specifies the Organization's Legal Forms."
 
+* extension contains OrganizationHFLevelExtension named hfLevel 0..1 
+* extension[hfLevel]
+  * ^short = "Health Facility Level"
+  * ^definition = "Specifies the Health Facility's Level."
