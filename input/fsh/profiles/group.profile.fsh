@@ -47,5 +47,6 @@ Description: "Defines a Group for openIMIS which maps to an Family"
   * period 0..0
   * inactive 0..0
 
+* extension contains AddressLocationReference named location 1..1 MS 
 
 

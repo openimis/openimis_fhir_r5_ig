@@ -12,4 +12,5 @@ Title:    "Location Reference (Address)"
 Description: "The reference to adress location for City/Village level"
 * ^url = "https://openimis.github.io/openimis_fhir_r4_ig/StructureDefinition-address-location-reference"
 * insert ExtensionContext(Address)
+* insert ExtensionContext(Group)
 * value[x] only Reference(Location)
