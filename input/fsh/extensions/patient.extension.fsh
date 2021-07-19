@@ -14,6 +14,14 @@ Description: "Whether the Patient/Insuree is the Head of the Family."
 * insert ExtensionContext(Patient)
 * value[x] only boolean
 
+Extension: PatientVulnerabilityStatusExtension
+Id:        patient-vulnerability-status
+Title:    "Vulnerability Status (Patient)"
+Description: "Whether the Patient/Insuree has the vulnerability status."
+* ^url = "https://openimis.github.io/openimis_fhir_r4_ig/StructureDefinition-patient-vulnerability-status"
+* insert ExtensionContext(Patient)
+* value[x] only boolean
+
 Extension: PatientCardIssuedExtension
 Id:        patient-card-issued
 Title:    "Card Issued (Patient)"

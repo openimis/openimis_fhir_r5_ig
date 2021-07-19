@@ -72,7 +72,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
     * ^definition = "Insuree's District name as it is configured in openIMIS."
   // Location.LocationName from Family's Ward (Family.LocationId.ParentLocationId)
   // Location.LocationName from Insuree's Ward (Insuree.CurrentVillage.ParentLocationId)
-  * extension contains AddressMunicipality named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
+  * extension contains AddressMunicipalityExtension named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
     * ^short = "Municipality/Ward"
     * ^definition = "Insuree's Municipality/Ward name as it is configured in openIMIS."
   * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
@@ -80,7 +80,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
     * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
   * postalCode 0..0 // not used
   * line 0..1 // Family.FamilyAddress or Insuree.CurrentAddress
-  * extension contains AddressLocationReference named location 1..1 MS 
+  * extension contains AddressLocationReferenceExtension named location 1..1 MS 
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "use"
 * address ^slicing.rules = #closed
@@ -101,7 +101,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * photo ^slicing.discriminator.type = #exists
 * photo ^slicing.discriminator.path = "url"
 * photo ^slicing.rules = #closed
-* photo ^slicing.description = "Defines if photo is sent by URL or data"
+* photo ^slicing.description = "Defines if photo is sent by URL or data."
 * photo contains
     URL 0..1 and
     Data 0..1 
@@ -137,31 +137,35 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * extension contains PatientIsHeadExtension named isHead 0..1 MS 
 * extension[isHead]
   * ^short = "Head of Family"
-  * ^definition = "True if the Patient is the Head of the Family"
+  * ^definition = "True if the Patient is the Head of the Family."
 
 * extension contains PatientEducationLevelExtension named educationLevel 0..1 
 * extension[PatientEducationLevelExtension]
   * ^short = "Patient Education Level"
-  * ^definition = "Specifies the Patient's education level"
+  * ^definition = "Specifies the Patient's education level."
 
 * extension contains PatientProfessionExtension named profession 0..1 
 * extension[profession]
   * ^short = "Patient Profession Level"
-  * ^definition = "Specifies the Patient's profession"
+  * ^definition = "Specifies the Patient's profession."
 
 * extension contains PatientIdentificationExtension named identification 0..1 
 * extension[identification]
   * ^short = "Patient Identification"
-  * ^definition = "Specifies the Patient's identification"
+  * ^definition = "Specifies the Patient's identification."
 
 * extension contains PatientCardIssuedExtension named cardIssued 0..1 
 * extension[cardIssued]
   * ^short = "Patient Card Issued"
-  * ^definition = "Specifies if Patient has an insuree card"
+  * ^definition = "Specifies if Patient has an insuree card."
 
 * extension contains PatientGroupReference named group 0..1 
 * extension[group]
   * ^short = "Patient Group Reference"
-  * ^definition = "Specifies the Group the Patient is part of"
+  * ^definition = "Specifies the Group the Patient is part of."
 
+* extension contains PatientVulnerabilityStatusExtension named vulnerability 0..1 
+* extension[vulnerability]
+  * ^short = "Patient Vulnerability Status"
+  * ^definition = "Specifies the Patient's vulnerability status."
 
