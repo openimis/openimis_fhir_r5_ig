@@ -1,4 +1,4 @@
-Extension: AddressMunicipality
+Extension: AddressMunicipalityExtension
 Id:        address-municipality
 Title:    "Municipality (Address)"
 Description: "The location level between District and City/Village"
@@ -6,7 +6,7 @@ Description: "The location level between District and City/Village"
 * insert ExtensionContext(Address)
 * value[x] only string
 
-Extension: AddressLocationReference
+Extension: AddressLocationReferenceExtension
 Id:        address-location-reference
 Title:    "Location Reference (Address)"
 Description: "The reference to adress location for City/Village level"

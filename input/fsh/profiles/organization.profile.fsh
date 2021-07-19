@@ -71,7 +71,7 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
   * city 0..0 // not used
   * postalCode 0..0 // not used
   * line 0..1 // HFAddress
-  * extension contains AddressLocationReference named locationDistrict 1..1 MS 
+  * extension contains AddressLocationReferenceExtension named locationDistrict 1..1 MS 
 
 * partOf 0..0 // not used
 

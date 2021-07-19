@@ -72,7 +72,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
     * ^definition = "Insuree's District name as it is configured in openIMIS."
   // Location.LocationName from Family's Ward (Family.LocationId.ParentLocationId)
   // Location.LocationName from Insuree's Ward (Insuree.CurrentVillage.ParentLocationId)
-  * extension contains AddressMunicipality named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
+  * extension contains AddressMunicipalityExtension named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
     * ^short = "Municipality/Ward"
     * ^definition = "Insuree's Municipality/Ward name as it is configured in openIMIS."
   * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
@@ -80,7 +80,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
     * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
   * postalCode 0..0 // not used
   * line 0..1 // Family.FamilyAddress or Insuree.CurrentAddress
-  * extension contains AddressLocationReference named location 1..1 MS 
+  * extension contains AddressLocationReferenceExtension named location 1..1 MS 
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "use"
 * address ^slicing.rules = #closed
