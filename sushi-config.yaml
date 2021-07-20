@@ -10,9 +10,14 @@ fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
-  name: Swiss TPH - SCIH - openIMIS Group
+  name: Swiss TPH
   url: https://www.swisstph.ch/en/
-  email: dragos.dobre@swisstph.ch
+contact:
+  - name: Dragos Dobre
+    telecom:
+      - system: email
+        value: dragos.dobre@swisstph.ch
+        use: work
 template: #local-template
 
 menu:
