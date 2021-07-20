@@ -18,7 +18,7 @@ Description: "Example of openIMIS Patient"
   * relationship = PatientContactRelationshipCS#1
   * name 
     * family = "Doe"
-    * given[0] = "Jane"
+    * given[0] = "John"
 * extension[isHead].valueBoolean = false
 * extension[educationLevel].valueCodeableConcept = PatientEducationLevelCS#4 "University"
 * extension[profession].valueCodeableConcept = PatientProfessionCS#2 "Employee"
