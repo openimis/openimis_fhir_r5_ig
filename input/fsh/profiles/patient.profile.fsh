@@ -48,10 +48,14 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * telecom contains
     email 0..1 and
     phone 0..1
-* telecom[email].system = ContactPointSystemCS#email // it is mapped to CHFID
-* insert ShortAndDefinition(telecom[email], Patient/Insuree email, Patient/Insuree email contact.)
-* telecom[phone].system = ContactPointSystemCS#phone
-* insert ShortAndDefinition(telecom[phone], Patient/Insuree phone, Patient/Insuree phone contact.)
+* telecom[email]
+  * system = ContactPointSystemCS#email 
+  * ^short = "Patient/Insuree email"
+  * ^definition = "Patient/Insuree email contact."
+* telecom[phone]
+  * system = ContactPointSystemCS#phone
+  * ^short = "Patient/Insuree phone"
+  * ^definition = "Patient/Insuree phone contact."
 
 * gender 1..1 MS 
 * birthDate 1..1 MS // The date on which the person was born

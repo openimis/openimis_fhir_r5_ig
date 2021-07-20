@@ -1,15 +1,12 @@
-Instance: AspirinMedication
-InstanceOf: OpenIMISHealthFacilityOrganization
-Description: "Example of openIMIS Health Facility"
-* identifier[HFCode].value = "RAHOS001"
+Instance: RaptaDistrictHospital
+InstanceOf: OpenIMISMedication
+Description: "Example of openIMIS Medication"
+* identifier[HFCode].value = "0001"
 * identifier[HFCode].type = OpenIMISIdentifierCS#Code
-* identifier[HFUUID].value = "D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036"
+* identifier[HFUUID].value = "71EFB78B-64EE-4A68-BE29-87DAF566EB20"
 * identifier[HFUUID].type = OpenIMISIdentifierCS#UUID
-* type = OrganizationTypeCS#prov
-* name = "Rapta District Hospital"
-* address[0]
-  * type = AddressType#physical
-  * state = "Ultha"
-  * district = "Rapta"
-  * extension[locationDistrict].valueReference = Reference(Jimara-district)
-* extension[legalForm].valueCodeableConcept = OrganizationLegalFormCS#D "District organization"
+* code = http://snomed.info/sct#7947003 "ACETYLSALICYLIC ACID (ASPIRIN)  TABS 300MG"
+* form = "tablet"
+* amount 
+  * numerator
+    * value = 1000.00
