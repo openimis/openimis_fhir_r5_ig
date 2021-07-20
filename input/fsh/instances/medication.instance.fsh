@@ -14,3 +14,4 @@ Description: "Example of openIMIS Medication"
 * extension[unitPrice].valueMoney
   * value = 10.00
   * currency = CurrencyCode#EUR "Euro"
+* extension[frequency].valueInteger = 0

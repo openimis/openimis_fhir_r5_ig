@@ -57,3 +57,8 @@ Description: "Defines a Medication for openIMIS which maps to a Medical Item."
 * extension[unitPrice]
   * ^short = "Unit Price"
   * ^definition = "Specifies the Medication unit price."
+
+* extension contains MedicationFrequencyExtension named frequency 0..1 
+* extension[frequency]
+  * ^short = "Frequency"
+  * ^definition = "The frequency a Medication can be prescribed."
