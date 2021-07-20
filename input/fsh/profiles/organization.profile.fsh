@@ -17,7 +17,7 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #closed
 * identifier contains
-    HFCode 0..1 MS and
+    HFCode 1..1 MS and
     HFUUID 0..1 and
     HFID 0..1
 * identifier[HFCode].type.coding.code = OpenIMISIdentifierCS#Code // it is mapped to HFCode
