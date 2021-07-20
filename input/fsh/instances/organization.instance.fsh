@@ -1,4 +1,4 @@
-Instance: AspirinMedication
+Instance: RaptaDistrictHospital
 InstanceOf: OpenIMISHealthFacilityOrganization
 Description: "Example of openIMIS Health Facility"
 * identifier[HFCode].value = "RAHOS001"

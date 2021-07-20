@@ -41,7 +41,7 @@ Description: "Defines a Medication for openIMIS which maps to a Medical Item."
 * status = MedicationStatusCS#active "Active"
 
 * manufacturer 0..0
-*    0..1 //from SNOMEDCTFormCodes (example) 
+* form 0..1 //from SNOMEDCTFormCodes (example) 
   * ^short = "Medication Form"
   * ^definition = "The Medication form configured in openIMIS."
 
@@ -52,3 +52,8 @@ Description: "Defines a Medication for openIMIS which maps to a Medical Item."
 
 * ingredient 0..0
 * batch 0..0
+
+* extension contains MedicationUnitPriceExtension named unitPrice 1..1 
+* extension[unitPrice]
+  * ^short = "Unit Price"
+  * ^definition = "Specifies the Medication unit price."
