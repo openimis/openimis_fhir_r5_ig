@@ -5,7 +5,7 @@ Description: "Example of openIMIS Patient"
 * identifier[InsureeCode].type = OpenIMISIdentifierCS#Code
 * name.family = "Doe"
 * name.given[0] = "John"
-* gender = AdministrativeGenderCS#male
+* gender = FHIRAdministrativeGenderCS#male
 * birthDate = "1962-02-05"
 * address[FamilyAddress].line = "5 Tsoka"
 * address[FamilyAddress].state = "Ultha"
@@ -35,7 +35,7 @@ Description: "Example of openIMIS Patient"
 * identifier[InsureeCode].type = OpenIMISIdentifierCS#Code
 * name.family = "Doe"
 * name.given[0] = "Jane"
-* gender = AdministrativeGenderCS#female
+* gender = FHIRAdministrativeGenderCS#female
 * birthDate = "1964-05-15"
 * address[FamilyAddress].line = "5 Tsoka"
 * address[FamilyAddress].state = "Ultha"
