@@ -8,7 +8,7 @@ Description: "Example of openIMIS Health Facility"
 * type = OrganizationTypeCS#prov
 * name = "Rapta District Hospital"
 * address[0]
-  * type = AddressType#physical
+  * type = FHIRAddressType#physical
   * state = "Ultha"
   * district = "Rapta"
   * extension[locationDistrict].valueReference = Reference(Jimara-district)

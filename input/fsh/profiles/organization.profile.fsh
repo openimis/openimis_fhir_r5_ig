@@ -45,18 +45,18 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
     email 0..1 and
     phone 0..1 and 
     fax 0..1 
-* telecom[email].system = ContactPointSystemCS#email // it is mapped to CHFID
+* telecom[email].system = FHIRContactPointSystemCS#email // it is mapped to CHFID
   * ^short = "Health Facility email"
   * ^definition = "Health Facility email contact."
-* telecom[phone].system = ContactPointSystemCS#phone
+* telecom[phone].system = FHIRContactPointSystemCS#phone
   * ^short = "Health Facility phone"
   * ^definition = "Health Facility phone contact."
-* telecom[fax].system = ContactPointSystemCS#fax
+* telecom[fax].system = FHIRContactPointSystemCS#fax
   * ^short = "Health Facility fax"
   * ^definition = "Health Facility fax contact."
 
 * address 1..1 MS // HF address => state->district
-  * type = AddressType#physical
+  * type = FHIRAddressType#physical
   * country 0..0 // Not used 
   // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
   * state 1..1 MS // mapped to Region 

@@ -38,7 +38,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "Patient/Insuree official name"
   * ^definition = "Patient/Insuree official family and given names."
   * family and given MS
-  * use = NameUseCS#official
+  * use = FHIRNameUseCS#official
 
 * telecom 0..2 
   * value 1..1 
@@ -49,11 +49,11 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
     email 0..1 and
     phone 0..1
 * telecom[email]
-  * system = ContactPointSystemCS#email 
+  * system = FHIRContactPointSystemCS#email 
   * ^short = "Patient/Insuree email"
   * ^definition = "Patient/Insuree email contact."
 * telecom[phone]
-  * system = ContactPointSystemCS#phone
+  * system = FHIRContactPointSystemCS#phone
   * ^short = "Patient/Insuree phone"
   * ^definition = "Patient/Insuree phone contact."
 
@@ -62,7 +62,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * deceased[x] 0..0 // Is not available in openIMIS
 
 * address 1..1 MS // Family address or Current address of the Insuree => state->district->extension[municipality]->city
-  * type = AddressType#physical
+  * type = FHIRAddressType#physical
   * country 0..0 // Not used 
   // Location.LocationName from Family's Region (Family.LocationId.ParentLocationId.ParentLocationId.ParentLocationId)
   // Location.LocationName from Insuree's Region (Insuree.CurrentVillage.ParentLocationId.ParentLocationId.ParentLocationId)
@@ -91,8 +91,8 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * address contains
     FamilyAddress 0..1 MS and
     InsureeAddress 0..1
-* address[FamilyAddress].use = AddressUse#home // mapped to Family address
-* address[InsureeAddress].use = AddressUse#temp // mapped to Insuree current address
+* address[FamilyAddress].use = FHIRAddressUse#home // mapped to Family address
+* address[InsureeAddress].use = FHIRAddressUse#temp // mapped to Insuree current address
 
 * maritalStatus from PatientMaritalStatusVS (required)
 * multipleBirth[x] 0..0

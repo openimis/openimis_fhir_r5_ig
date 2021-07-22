@@ -12,8 +12,8 @@ Description: "Whether the Group has the poverty status."
 * insert ExtensionContext(Group)
 * value[x] only Address
 * valueAddress
-  * type = AddressType#physical
-  * use = AddressUse#home // mapped to Family address
+  * type = FHIRAddressType#physical
+  * use = FHIRAddressUse#home // mapped to Family address
   * country 0..0 // Not used 
   // Location.LocationName from Family's Region (Family.LocationId.ParentLocationId.ParentLocationId.ParentLocationId)
   * state 0..1 MS // mapped to Region (see previous two comments) !!!
