@@ -32,3 +32,9 @@ Title: "Usage Context for Venue Type (ActivityDefinition)"
 Description: "Indicates the Usage Context for Venue Type for an ActivityDefinition."
 * FHIRActCodeCS#AMB "ambulatory"
 * FHIRActCodeCS#IMP "IMP"
+
+ValueSet: ActivityDefinitionServiceTypeVS
+Id: activity-definition-service-type
+Title: "Service Type (ActivityDefinition)"
+Description: "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended."
+* codes from system ActivityDefinitionServiceTypeCS

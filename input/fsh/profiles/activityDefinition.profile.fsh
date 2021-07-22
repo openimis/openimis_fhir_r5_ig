@@ -92,3 +92,53 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
   * ^short = "Usage Context per Care Type"
   * ^definition = """Usage Context per Care Type. openIMIS `both` value will have both `AMB` and `IMP` codes listed."""
 
+* jurisdiction 0..0
+* purpose 0..0
+* usage 0..0
+* copyright 0..0
+* approvalDate 0..0
+* lastReviewDate 0..0
+* effectivePeriod 0..0
+
+* topic from ActivityDefinitionServiceTypeVS (required)
+
+* author 0..0
+* editor 0..0
+* reviewer 0..0
+* endorser 0..0
+* relatedArtifact 0..0
+* library 0..0
+
+* kind 0..1
+* kind = FHIRRequestResourceTypeCS#ServiceRequest "ServiceRequest"
+
+* profile 0..0
+* code 0..0 
+* intent 0..0
+* priority 0..0
+* doNotPerform 0..0
+
+* timing[x] 0..1
+* timing[x] only Timing
+* timingTiming
+  * repeat
+    * frequency 1..1
+    * frequency = 1
+    * period 1..1 
+      * ^short = "Frequency (days)"
+      * ^definition = """The minimum number of days the service can be administered again."""
+    * periodUnit 1..1
+    * periodUnit = UnitsOfTimeCS#d "day"
+
+* location 0..0
+* participant 0..0
+* product[x] 0..0 
+* quantity 0..0
+* dosage 0..0
+* bodySite 0..0
+* specimenRequirement 0..0
+* observationRequirement 0..0
+* observationResultRequirement	0..0
+* transform 0..0
+* dynamicValue 0..0
+

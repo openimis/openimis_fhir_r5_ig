@@ -14,3 +14,10 @@ Description: "Indicates the Usage Context for Workflow Type for an ActivityDefin
 * #D "Delivery"
 * #A "Antenatal"
 * #O "Other"
+
+CodeSystem: ActivityDefinitionServiceTypeCS
+Id: activity-definition-service-type
+Title: "Service Type (ActivityDefinition)"
+Description: "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended."
+* #C "Curative"
+* #P "Preventive"

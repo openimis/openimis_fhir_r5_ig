@@ -23,3 +23,9 @@ Description: "Example of openIMIS ActivityDefinition"
   * code = UsageContextTypeCS#venue "Clinical Venue"
   * valueCodeableConcept
     * coding[0] = FHIRActCodeCS#AMB "ambulatory"
+
+* topic = ActivityDefinitionServiceTypeCS#P "Preventive"
+* timingTiming.repeat
+  * frequency = 1
+  * period = 0
+  * periodUnit = UnitsOfTimeCS#d "day"
