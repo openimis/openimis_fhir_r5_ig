@@ -142,3 +142,7 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
 * transform 0..0
 * dynamicValue 0..0
 
+* extension contains UnitPriceExtension named unitPrice 1..1 
+* extension[unitPrice]
+  * ^short = "Unit Price"
+  * ^definition = "Specifies the Medical Service unit price."

@@ -29,3 +29,7 @@ Description: "Example of openIMIS ActivityDefinition"
   * frequency = 1
   * period = 0
   * periodUnit = UnitsOfTimeCS#d "day"
+
+* extension[unitPrice].valueMoney
+  * value = 40.00
+  * currency = CurrencyCode#EUR "Euro"
