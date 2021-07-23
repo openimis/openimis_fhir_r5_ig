@@ -17,8 +17,8 @@ Description: "Example of openIMIS ActivityDefinition"
 * useContext[Age]
   * code = UsageContextTypeCS#age "Age"
   * valueCodeableConcept
-    * coding[0] = ActivityDefinitionUsageContextAgeTypeCS#adult "Adult"
-    * coding[1] = ActivityDefinitionUsageContextAgeTypeCS#child "Child"
+    * coding[0] = UsageContextAgeTypeCS#adult "Adult"
+    * coding[1] = UsageContextAgeTypeCS#child "Child"
 * useContext[CareType]
   * code = UsageContextTypeCS#venue "Clinical Venue"
   * valueCodeableConcept
