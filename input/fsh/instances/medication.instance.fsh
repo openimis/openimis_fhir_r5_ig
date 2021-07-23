@@ -14,4 +14,25 @@ Description: "Example of openIMIS Medication"
 * extension[unitPrice].valueMoney
   * value = 10.00
   * currency = CurrencyCode#EUR "Euro"
-* extension[frequency].valueInteger = 0
+* extension[timing].valueTiming.repeat
+  * frequency = 1
+  * period = 0
+  * periodUnit = UnitsOfTimeCS#d "day"
+
+* extension[useContext]
+  * extension[Gender].valueUsageContext
+    * code = UsageContextTypeCS#gender "Gender"
+    * valueCodeableConcept
+      * coding[0] = FHIRAdministrativeGenderCS#male "Male"
+      * coding[1] = FHIRAdministrativeGenderCS#female "Female"
+  * extension[Age].valueUsageContext
+    * code = UsageContextTypeCS#age "Age"
+    * valueCodeableConcept
+      * coding[0] = UsageContextAgeTypeCS#adult "Adult"
+      * coding[1] = UsageContextAgeTypeCS#child "Child"
+  * extension[CareType].valueUsageContext
+    * code = UsageContextTypeCS#venue "Clinical Venue"
+    * valueCodeableConcept
+      * coding[0] = FHIRActCodeCS#AMB "ambulatory"
+
+* extension[type].valueCodeableConcept = MedicationItemTypeCS#D "Drug"

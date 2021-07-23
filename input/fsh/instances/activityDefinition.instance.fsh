@@ -17,8 +17,8 @@ Description: "Example of openIMIS ActivityDefinition"
 * useContext[Age]
   * code = UsageContextTypeCS#age "Age"
   * valueCodeableConcept
-    * coding[0] = ActivityDefinitionUsageContextAgeTypeCS#adult "Adult"
-    * coding[1] = ActivityDefinitionUsageContextAgeTypeCS#child "Child"
+    * coding[0] = UsageContextAgeTypeCS#adult "Adult"
+    * coding[1] = UsageContextAgeTypeCS#child "Child"
 * useContext[CareType]
   * code = UsageContextTypeCS#venue "Clinical Venue"
   * valueCodeableConcept
@@ -29,3 +29,7 @@ Description: "Example of openIMIS ActivityDefinition"
   * frequency = 1
   * period = 0
   * periodUnit = UnitsOfTimeCS#d "day"
+
+* extension[unitPrice].valueMoney
+  * value = 40.00
+  * currency = CurrencyCode#EUR "Euro"

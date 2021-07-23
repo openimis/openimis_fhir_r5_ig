@@ -53,12 +53,22 @@ Description: "Defines a Medication for openIMIS which maps to a Medical Item."
 * ingredient 0..0
 * batch 0..0
 
-* extension contains MedicationUnitPriceExtension named unitPrice 1..1 
+* extension contains MedicationUsageContextExtension named useContext 0..4
+* extension[useContext]
+  * ^short = "Usage Context"
+  * ^definition = "Specifies the Medical Item use context."
+
+* extension contains UnitPriceExtension named unitPrice 1..1 
 * extension[unitPrice]
   * ^short = "Unit Price"
-  * ^definition = "Specifies the Medication unit price."
+  * ^definition = "Specifies the Medical Item unit price."
 
-* extension contains MedicationFrequencyExtension named frequency 0..1 
-* extension[frequency]
+* extension contains MedicationFrequencyExtension named timing 0..1 
+* extension[timing]
   * ^short = "Frequency"
-  * ^definition = "The frequency a Medication can be prescribed."
+  * ^definition = "The frequency a Medical Item can be prescribed."
+
+* extension contains MedicationTypeExtension named type 1..1 
+* extension[type]
+  * ^short = "Medication Type"
+  * ^definition = "The type of the Medical Item."

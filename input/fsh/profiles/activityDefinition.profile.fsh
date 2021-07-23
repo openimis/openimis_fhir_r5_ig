@@ -64,7 +64,7 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
   * value[x] only CodeableConcept
   * valueCodeableConcept
     * coding 1..2 
-    * coding from ActivityDefinitionUsageContextGenderTypeVS (required)
+    * coding from UsageContextGenderTypeVS (required)
   * ^short = "Usage Context per Gender"
   * ^definition = "Usage Context per Gender male and female."
 * useContext[Age]
@@ -72,7 +72,7 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
   * value[x] only CodeableConcept
   * valueCodeableConcept
     * coding 1..2 
-    * coding from ActivityDefinitionUsageContextAgeTypeVS (required)
+    * coding from UsageContextAgeTypeVS (required)
   * ^short = "Usage Context per Age"
   * ^definition = "Usage Context per Age adult and child."
 * useContext[Category]
@@ -142,3 +142,7 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
 * transform 0..0
 * dynamicValue 0..0
 
+* extension contains UnitPriceExtension named unitPrice 1..1 
+* extension[unitPrice]
+  * ^short = "Unit Price"
+  * ^definition = "Specifies the Medical Service unit price."

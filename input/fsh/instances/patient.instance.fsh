@@ -1,8 +1,8 @@
 Instance: john-doe
 InstanceOf: OpenIMISPatient
 Description: "Example of openIMIS Patient"
-* identifier[InsureeCode].value = "123456789"
-* identifier[InsureeCode].type = OpenIMISIdentifierCS#Code
+* identifier[Code].value = "123456789"
+* identifier[Code].type = OpenIMISIdentifierCS#Code
 * name.family = "Doe"
 * name.given[0] = "John"
 * gender = FHIRAdministrativeGenderCS#male
@@ -31,8 +31,8 @@ Description: "Example of openIMIS Patient"
 Instance: jane-doe
 InstanceOf: OpenIMISPatient
 Description: "Example of openIMIS Patient"
-* identifier[InsureeCode].value = "123456788"
-* identifier[InsureeCode].type = OpenIMISIdentifierCS#Code
+* identifier[Code].value = "123456788"
+* identifier[Code].type = OpenIMISIdentifierCS#Code
 * name.family = "Doe"
 * name.given[0] = "Jane"
 * gender = FHIRAdministrativeGenderCS#female

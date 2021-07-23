@@ -7,19 +7,6 @@ Description: "Indicates the Usage Context Type for an ActivityDefinition."
 * UsageContextTypeCS#workflow "Workflow Setting"
 * UsageContextTypeCS#venue "Clinical Venue"
 
-ValueSet: ActivityDefinitionUsageContextGenderTypeVS
-Id: activity-definition-usage-context-gender-type
-Title: "Usage Context for Gender Type (ActivityDefinition)"
-Description: "Indicates the Usage Context for Gender Type for an ActivityDefinition."
-* FHIRAdministrativeGenderCS#male "Male"
-* FHIRAdministrativeGenderCS#female "Female"
-
-ValueSet: ActivityDefinitionUsageContextAgeTypeVS
-Id: activity-definition-usage-context-age-type
-Title: "Usage Context for Age Type (ActivityDefinition)"
-Description: "Indicates the Usage Context for Age Type for an ActivityDefinition."
-* codes from system ActivityDefinitionUsageContextAgeTypeCS
-
 ValueSet: ActivityDefinitionUsageContextWorkflowTypeVS
 Id: activity-definition-usage-context-workflow-type
 Title: "Usage Context for Workflow Type (ActivityDefinition)"
