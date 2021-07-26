@@ -1,8 +1,8 @@
 Instance: doe-family
 InstanceOf: OpenIMISGroup
 Description: "Example of openIMIS Group"
-* identifier[FamilyUUID].value = "D30F70DF-D10B-43D4-BF31-5137C118AD82"
-* identifier[FamilyUUID].type = OpenIMISIdentifierCS#UUID
+* identifier[UUID].value = "D30F70DF-D10B-43D4-BF31-5137C118AD82"
+* identifier[UUID].type = OpenIMISIdentifierCS#UUID
 * type = GroupTypeCS#person
 * actual = true
 * active = true

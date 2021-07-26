@@ -32,7 +32,7 @@ Title:    "Education Level (Patient)"
 Description: "Specifies the Patient/Insuree's education level"
 * insert ExtensionContext(Patient)
 * value[x] only CodeableConcept
-* valueCodeableConcept from PatientEducationLevelVS (extensible)
+* valueCodeableConcept from PatientEducationLevelVS (example)
 
 Extension: PatientProfessionExtension
 Id:        patient-profession
@@ -40,7 +40,7 @@ Title:    "Profession (Patient)"
 Description: "Specifies the Patient/Insuree's profession"
 * insert ExtensionContext(Patient)
 * value[x] only CodeableConcept
-* valueCodeableConcept from PatientProfessionVS (extensible)
+* valueCodeableConcept from PatientProfessionVS (example)
 
 Extension: PatientIdentificationExtension
 Id:        patient-identification
@@ -52,5 +52,5 @@ Description: "Specifies the Patient/Insuree official identification and the type
     type 0..1 MS 
 * extension[number].value[x] only string
 * extension[type].value[x] only CodeableConcept
-* extension[type].valueCodeableConcept from PatientIdentificationTypesVS (extensible)
+* extension[type].valueCodeableConcept from PatientIdentificationTypesVS (example)
 
