@@ -4,7 +4,7 @@ Title:    "Legal Forms (Organization)"
 Description: "Indicates the legal forms of the Organization. "
 * insert ExtensionContext(OpenIMISHealthFacilityOrganization)
 * value[x] only CodeableConcept
-* valueCodeableConcept from OrganizationLegalFormVS (extensible)
+* valueCodeableConcept from OrganizationLegalFormVS (example)
 
 Extension: OrganizationHFLevelExtension
 Id:        organization-hf-level
@@ -12,5 +12,5 @@ Title:    "Health Facility Level (Organization)"
 Description: "Indicates the level of the Health Facility (Organization)."
 * insert ExtensionContext(OpenIMISHealthFacilityOrganization)
 * value[x] only CodeableConcept
-* valueCodeableConcept from OrganizationHFLevelVS (extensible)
+* valueCodeableConcept from OrganizationHFLevelVS (required)
 
