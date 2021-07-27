@@ -19,6 +19,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * identifier contains
     Code 0..1 MS and
     UUID 0..1 
+* identifier[Code].value obeys insureeCodeMustBeUnder13Chars 
 * identifier[Code].type.coding.code = OpenIMISIdentifierCS#Code // it is mapped to CHFID
   * ^short = "Patient/Insuree openIMIS Code"
   * ^definition = "Insuree Code managed by openIMIS."
@@ -170,3 +171,9 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * ^short = "Patient Vulnerability Status"
   * ^definition = "Specifies the Patient's vulnerability status."
 
+// @Name: String Length Invariant
+// @Description: Limit string length invariant
+Invariant:   insureeCodeMustBeUnder13Chars
+Description: "Length MUST be <= 12."
+Expression:  "$this.length() <= 12')"
+Severity:    #error

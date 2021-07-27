@@ -2,7 +2,7 @@ Extension: MedicationFrequencyExtension
 Id:        medication-frequency
 Title:    "Frequency (Medication)"
 Description: "The frequency a Medication can be prescribed."
-* insert ExtensionContext(Medication)
+* insert ExtensionContext(OpenIMISMedication)
 * value[x] only Timing
 * valueTiming
   * repeat
@@ -20,7 +20,7 @@ Extension: MedicationUsageContextExtension
 Id:        medication-usage-context
 Title:    "UsageContext (Medication)"
 Description: "The Context a Medication can be prescribed."
-* insert ExtensionContext(Medication)
+* insert ExtensionContext(OpenIMISMedication)
 * extension contains
     Gender 0..1 and
     Age 0..1 and
@@ -60,7 +60,7 @@ Extension: MedicationTypeExtension
 Id:        medication-type
 Title:    "Medication Type (Medication)"
 Description: "Indicates the Item type for the Medication."
-* insert ExtensionContext(Medication)
+* insert ExtensionContext(OpenIMISMedication)
 * value[x] only CodeableConcept
 * valueCodeableConcept from MedicationItemTypeVS (required)
 
