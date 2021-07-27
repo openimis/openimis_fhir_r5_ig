@@ -7,7 +7,7 @@ Description: "Example of openIMIS ActivityDefinition"
 * identifier[UUID].type = OpenIMISIdentifierCS#UUID
 * name = "A1"
 * title = "General Consultation"
-* status = PublicationStatusCS#active "Active"
+* status = FHIRPublicationStatusCS#active "Active"
 * date = "2020-01-01"
 * useContext[Gender]
   * code = UsageContextTypeCS#gender "Gender"

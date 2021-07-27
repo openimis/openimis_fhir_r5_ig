@@ -123,7 +123,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 
 * contact 0..1  // ToDo: see https://openimis.atlassian.net/browse/OE0-26
   * relationship 0..1
-  * relationship from PatientContactRelationshipVS (example)
+  * relationship from PatientContactRelationshipVS (extensible)
   * name 1..1
   * telecom 0..*
   * address 0..1

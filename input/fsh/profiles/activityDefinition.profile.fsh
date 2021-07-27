@@ -39,7 +39,7 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
   * ^definition = "Medical Service name."
 
 * subtitle 0..0
-* status = PublicationStatusCS#active "Active"
+* status = FHIRPublicationStatusCS#active "Active"
 * experimental 0..0
 * subject[x] 0..0
 * date 1..1
