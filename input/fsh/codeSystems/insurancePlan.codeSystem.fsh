@@ -2,7 +2,8 @@ CodeSystem: InsurancePlanCoverageBenefitLimitCS
 Id: insurance-plan-coverage-benefit-limit
 Title: "Coverage Benefit Limit Types (InsurancePlan)"
 Description: "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended."
-* #period "Period"
+* #period "Period" "Duration of the period in months, in which a policy with the product will be valid."
+* #memberCount "Member Count" "Maximal number of members of a household/group for the product."
 
 CodeSystem: InsurancePlanGeneralCostTypeCS
 Id: insurance-plan-general-cost-type

@@ -62,12 +62,26 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
   * benefit 1..1
     * type from InsurancePlanCoverageTypeVS (required)
     * requirement 0..0
-    * limit 1..1
-      * value 1..1 
-        * ^short = "Insurance Period (months)"
-        * ^definition = "Number of months the Insuree is covered."
+    * limit 1..2
       * code 1..1 
       * code from InsurancePlanCoverageBenefitLimitVS (required)
+    * limit ^slicing.discriminator.type = #value
+    * limit ^slicing.discriminator.path = "code.coding.code"
+    * limit ^slicing.rules = #closed
+    * limit contains
+        period 1..1 and
+        memberCount 0..1 
+    * limit[period]
+      * value 1..1 
+        * ^short = "Insurance Period (months)"
+        * ^definition = """Number of months the Insuree is covered. Mapped to `insurancePeriod`"""
+      * code = InsurancePlanCoverageBenefitLimitCS#period "Period"
+    * limit[memberCount]
+      * value 1..1 
+        * ^short = "Member Count"
+        * ^definition = """Maximal number of members of a household/group for the product. Mapped to `memberCount`"""
+      * code = InsurancePlanCoverageBenefitLimitCS#memberCount "Member Count"
+      
 
 * plan 1..1
   * identifier 0..0
@@ -83,13 +97,13 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
   * generalCost ^slicing.discriminator.path = "type.coding.code"
   * generalCost ^slicing.rules = #closed
   * generalCost contains
-    lumpsum 1..1 and
-    premiumAdult 0..1 and
-    premiumChild 0..1 and 
-    registrationLumpsum 0..1 and 
-    registrationFee 0..1 and
-    generalAssemblyLumpSum 0..1 and
-    generalAssemblyFee 0..1
+      lumpsum 1..1 and
+      premiumAdult 0..1 and
+      premiumChild 0..1 and 
+      registrationLumpsum 0..1 and 
+      registrationFee 0..1 and
+      generalAssemblyLumpSum 0..1 and
+      generalAssemblyFee 0..1
   * generalCost[lumpsum]
     * type = InsurancePlanGeneralCostTypeCS#lumpsum "Lumpsum"
     * groupSize 1..1
@@ -114,10 +128,53 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
     * type = InsurancePlanGeneralCostTypeCS#generalAssemblyFee "General Assembly Fee"
     * groupSize 0..0
 
+  * specificCost 0..0
+
+* extension contains InsurancePlanConversionExtension named conversion 0..1
+* extension[conversion]
+  * ^short = "Conversion Product"
+  * ^definition = "Reference to the product which replaces the current product in case of renewal after the period end."
+
+* extension contains InsurancePlanMaxInstallmentsExtension named maxInstallments 1..1
+* extension[maxInstallments]
+  * ^short = "Max Installments"
+  * ^definition = "Maximal number of instalments in which contributions for a policy may be paid."
+
+
 * extension contains InsurancePlanStartCycleExtension named startCycle 0..4 
 * extension[startCycle]
   * ^short = "Start Cycle"
-  * ^definition = "Specifies the start of a new cycle for the Insurance Plan."
+  * ^definition = "If one or more starting dates (a day and a month) of a cycle are specified then the insurance product is considered as the insurance product with fixed enrolment dates. In this case, activation of underwritten and renewed policies is accomplished always on fixed dates during a year. Maximum four cycle dates can be specified."
+
+* extension contains InsurancePlanPeriodExtension named administrationPeriod 0..1
+* extension[administrationPeriod]
+  * ^short = "Administration Period"
+  * ^definition = """Duration of the administration period in months. The administration period is added to the enrolment date/renewal date for determination of the policy start date. Mapped to `administrationPeriod`"""
+
+* extension contains InsurancePlanPeriodExtension named gracePeriodPayment 0..1
+* extension[gracePeriodPayment]
+  * ^short = "Grace Period Payment"
+  * ^definition = """Duration of the period in months, in which a policy has a grace period (not fully paid up) before it is suspended. Mandatory, although it is by default and can be left at zero. Mapped to `waitingPeriod`"""
+
+* extension contains InsurancePlanPeriodExtension named gracePeriodRenewal 0..1
+* extension[gracePeriodRenewal]
+  * ^short = "Grace Period Renewal"
+  * ^definition = """Duration of the period in months after the starting date of a cycle (including this starting date), in which renewing of a policy will still be associated with this cycle. Mapped to `gracePeriodRenewal`"""
+
+* extension contains InsurancePlanPeriodExtension named gracePeriodEnrolment 0..1
+* extension[gracePeriodEnrolment]
+  * ^short = "Start Cycle"
+  * ^definition = """Duration of the period in months after the starting date of a cycle (including this starting date), in which underwriting of a policy will still be associated with this cycle. Mapped to `gracePeriod`"""
+
+* extension contains InsurancePlanDiscountExtension named renewalDiscount 0..1
+* extension[renewalDiscount]
+  * ^short = "Renewal Discount"
+  * ^definition = """Discount to apply for renewals"""
+
+* extension contains InsurancePlanDiscountExtension named enrolmentDiscount 0..1
+* extension[enrolmentDiscount]
+  * ^short = "Enrolment Discount"
+  * ^definition = """Discount to apply for enrolment"""
 
 /*{
       / "prodId": 2, 
@@ -130,7 +187,7 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
       "conversionProdId": 14,
 
       / "lumpsum": 5000.00, // InsurancePlanGeneralCostTypeCS#lumpsum "Lumpsum"
-     "memberCount": 10,
+      / "memberCount": 10,
       // "threshold": 0, integer
      
       / "premiumAdult": 1000.00,
@@ -147,12 +204,16 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
 
 
       "maxInstallments": 3, Max Installments (integer)
-      "waitingPeriod": 1, Grace Period Payment (months)
-      "renewalDiscountPerc": 50, Renewal Disc. % (float)
-      "renewalDiscountPeriod": 2, Renewal Disc. Period (months)
-      "administrationPeriod": 1, Administration Period (months)
-      "enrolmentDiscountPerc": 80, Enrolment Disc. % (float)
-      "enrolmentDiscountPeriod": 2, Enrolment Disc. Period (months)
-      "gracePeriodRenewal": 1, Grace Period Renewal (months)
-      "gracePeriod": 1, Grace Period Enrolment (months)
+      
+      / "renewalDiscountPerc": 50, Renewal Disc. % (float)
+      / "renewalDiscountPeriod": 2, Renewal Disc. Period (months)
+      
+      / "enrolmentDiscountPerc": 80, Enrolment Disc. % (float)
+      / "enrolmentDiscountPeriod": 2, Enrolment Disc. Period (months)
+
+      / "administrationPeriod": 1, Administration Period (months)
+      / "waitingPeriod": 1, Grace Period Payment (months)
+      / "gracePeriodRenewal": 1, Grace Period Renewal (months)
+      / "gracePeriod": 1, Grace Period Enrolment (months)
+
     }*/
