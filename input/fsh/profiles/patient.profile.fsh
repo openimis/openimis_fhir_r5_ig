@@ -175,5 +175,5 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 // @Description: Limit string length invariant
 Invariant:   insureeCodeMustBeUnder13Chars
 Description: "Length MUST be <= 12."
-Expression:  "$this.length() <= 12')"
+Expression:  "$this.length() <= 12"
 Severity:    #error
