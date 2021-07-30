@@ -5,9 +5,7 @@ Parent: Contract
 Id: openimis-contract
 Title: "openIMIS Contract"
 Description: """
-            * Defines a Contract for openIMIS use to enrol a Family/Group. Mapped mostly to Policy and will link Group/Family and Patient/Insurees. 
-            * 
-            * Available endpoint is accepting only **POST**. 
+            Defines a Contract for openIMIS use to enrol a Family/Group. Mapped mostly to Policy and will link Group/Family and Patient/Insurees. 
             """
 
 // ToDo: define if this is needed 
@@ -47,7 +45,7 @@ Description: """
 * expirationType 0..0
 
 * subject 1..1
-* subject only Reference(OpenIMISGroup)
+* subject only Reference(OpenIMISGroup or OpenIMISPolicyHolderOrganization)
   * ^short = "Insured Group"
   * ^definition = """Reference to the Group/Family that is enroled. Mapped to `Policy.FamilyID`."""
 
@@ -183,3 +181,9 @@ Description: """
 * legallyBinding[x] 0..0
 
 // ToDo: Add extension for premium 
+/*
+Invariant:  EO-required
+Description: "If scope is Informal Sector then author MUST be populated"
+Expression: "reasonCode.exists() or reasonReference.exists()"
+Severity:   #error
+*/

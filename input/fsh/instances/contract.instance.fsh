@@ -21,7 +21,7 @@ Description: """
       * role = ContractResourcePartyRoleCS#beneficiary "Beneficiary"
   * asset 
     * typeReference[0] = Reference(jane-doe)
-    * typeReference[+] = Reference(john-doe)
+    * typeReference[1] = Reference(john-doe)
     * period 
       * start = "2021-07-01"
       * end = "2022-06-30"
