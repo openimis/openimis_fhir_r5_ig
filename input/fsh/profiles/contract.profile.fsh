@@ -163,6 +163,11 @@ Description: """
       * recipient 0..0
       * linkId 0..0
       * securityLabelNumber 0..0
+    * extension contains ContractPremiumExtension named premium 0..* MS 
+    * extension[premium]
+      * ^short = "Contract Premiums"
+      * ^definition = "Specifies the premiums for the contract."
+
 
   * action 0..0
   * group  0..0

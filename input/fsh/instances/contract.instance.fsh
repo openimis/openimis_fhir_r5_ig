@@ -33,3 +33,14 @@ Description: """
       * net 
         * value = 1000
         * currency = CurrencyCode#EUR "Euro"
+    * extension[premium][0]
+      * extension[payer].valueCodeableConcept = ContractPremiumPayerCS#beneficiary "Beneficiary"
+      * extension[category].valueCodeableConcept = ContractPremiumCategoryCS#C "Contribution and Others"
+      * extension[amount].valueMoney
+        * value = 1000
+        * currency = CurrencyCode#EUR "Euro"
+      * extension[receipt].valueString = "RE184"
+      * extension[date].valueDate = "2021-07-28"
+      * extension[type].valueCodeableConcept = ContractPremiumTypeCS#C "Cash"
+
+
