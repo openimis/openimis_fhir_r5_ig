@@ -1,8 +1,8 @@
 // This is the profile for openIMIS Practitioner 
 // Mapping is done throught Enrolment Officer openIMIS entities
-Profile: OpenIMISEnrolmentOfficerPractitioner
+Profile: OpenIMISEnrolmentOfficerPractitionerRole
 Parent: PractitionerRole
-Id: openimis-enrolment-officer-practitioner
+Id: openimis-enrolment-officer-practitioner-role
 Title: "openIMIS Enrolment Officer Practitioner Role"
 Description: "Defines a Enrolment Officer Practitioner Role for openIMIS."
 
