@@ -52,7 +52,7 @@ Description: "Defines a Practitioner for openIMIS which maps to an Enrolment Off
   * ^short = "Enrolment Officer phone"
   * ^definition = "Enrolment Officer phone contact."
 
-* address 1..1 MS
+* address 0..1 MS
   * type = FHIRAddressType#physical
   * country 0..0 // Not used 
   * state 1..1 MS // mapped to Region 

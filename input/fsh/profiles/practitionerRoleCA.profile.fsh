@@ -1,8 +1,8 @@
 // This is the profile for openIMIS Practitioner 
 // Mapping is done throught Claim Administrator openIMIS entities
-Profile: OpenIMISClaimAdministratorPractitioner
+Profile: OpenIMISClaimAdministratorPractitionerRole
 Parent: PractitionerRole
-Id: openimis-claim-administrator-practitioner
+Id: openimis-claim-administrator-practitioner-role
 Title: "openIMIS Claim Administrator Practitioner Role"
 Description: "Defines a Claim Administrator Practitioner Role for openIMIS."
 
