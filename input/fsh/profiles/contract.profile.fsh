@@ -15,7 +15,8 @@ Description: """
 
 // ToDo: define if this is needed 
 * identifier 0..* 
-* identifier.type 1..1  
+  * type 1..1  
+  * value 1..1
 * identifier.type.coding.code from OpenIMISIdentifierVS (required)
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
