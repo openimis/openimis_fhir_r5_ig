@@ -10,4 +10,4 @@ Id:        address-location-reference
 Title:    "Location Reference (Address)"
 Description: "The reference to address' location for City/Village level."
 * insert ExtensionContext(Address)
-* value[x] only Reference(Location)
+* value[x] only Reference(OpenIMISLocation)
