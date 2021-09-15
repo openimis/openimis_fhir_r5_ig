@@ -1,6 +1,6 @@
 // This is the profile for openIMIS Claim 
 // Mapping is done throught Claim openIMIS entities
-Profile: OpenIMISClaim
+Profile: OpenIMISClaim 
 Parent: Claim
 Id: openimis-claim
 Title: "openIMIS Claim"
@@ -40,7 +40,7 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * ^short = "Claim Type"
   * ^definition = "openIMIS only manages Claims."
 
-* patient = Reference(OpenIMISPatient)
+* patient only Reference(OpenIMISPatient)
 
 * billablePeriod 1..1
   * start 1..1 
@@ -90,17 +90,17 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
     guarantee 0..1 and
     attachment 0..* 
 * supportingInfo[explanation]
-  * category = ClaimSupportingInfoCategoryCS#explanation // it is mapped to CHFID
+  * category = ClaimSupportingInfoCategoryCS#explanation
   * value[x] only string 
   * ^short = "Explanation"
   * ^definition = "Explanation support info for Claim."
 * supportingInfo[guarantee]
-  * category = ClaimSupportingInfoCategoryCS#guarantee // it is mapped to CHFID
+  * category = ClaimSupportingInfoCategoryCS#guarantee 
   * value[x] only string 
   * ^short = "Guarantee"
   * ^definition = "Guarantee support info for Claim."
 * supportingInfo[attachment]
-  * category = ClaimSupportingInfoCategoryCS#attachment // it is mapped to CHFID
+  * category = ClaimSupportingInfoCategoryCS#attachment 
   * value[x] only Attachment 
   * ^short = "Attachment"
   * ^definition = "Attachment support info for Claim."
@@ -133,7 +133,7 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
 * accident 0..0 // could be used later when accident insurance will be implemented in openIMIS
 
 * item 1..*
-  *  sequence 1..1
+  * sequence 1..1
   * careTeamSequence 0..0
   * diagnosisSequence 0..0
   * procedureSequence 0..0
@@ -145,6 +145,10 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
     * ^definition = "Items category as medical item or service."
 
   * productOrService 1..1
+    * coding 0..0
+    * text 1..1
+      * ^short = "Item/Service Code"
+      * ^definition = "Service or Item Code."
     * ^short = "Item Code"
     * ^definition = "Service or Item Code."
 
@@ -154,6 +158,11 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * location[x] 0..0
   
   * quantity 1..1
+    * value 1..1
+    * comparator 0..0
+    * unit 0..0
+    * system 0..0
+    * code 0..0
   * unitPrice 1..1
     * value 1..1
     * currency 0..1
@@ -166,7 +175,12 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * encounter 0..0
   * detail 0..0
 
-* total 1..1
+  * extension contains ClaimItemReferenceExtension named itemReference 1..1 
+  * extension[itemReference]
+  * ^short = "Item Reference"
+  * ^definition = "Specifies the reference to the Medication or ActivityDefinition."
 
-  
+* total 1..1
+  * value 1..1
+  * currency 0..1
   
