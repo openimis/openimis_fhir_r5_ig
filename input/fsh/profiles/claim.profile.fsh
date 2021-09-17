@@ -148,10 +148,10 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * productOrService 1..1
     * coding 0..0
     * text 1..1
-      * ^short = "Item/Service Name"
-      * ^definition = "Service or Item Name."
-    * ^short = "Item Name"
-    * ^definition = "Service or Item Name."
+      * ^short = "Item/Service Code"
+      * ^definition = "Service or Item Code."
+    * ^short = "Item Code"
+    * ^definition = "Service or Item Code."
 
   * modifier 0..0
   * programCode 0..0
