@@ -23,3 +23,10 @@ Id: claim-status
 Title: "Status of the claim (Claim|ClaimResponse)"
 Description: "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended."
 * codes from system ClaimStatusCS
+
+ValueSet: ClaimRejectionReasonsVS
+Id: claim-rejection-reasons
+Title: "Visit Type (Claim)"
+Description: """Indicates the rejection reason of an item from a Claim. 
+Values limited by openIMIS."""
+* codes from system ClaimRejectionReasonsCS
