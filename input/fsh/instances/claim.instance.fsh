@@ -7,13 +7,11 @@ Description: """
             """
 
 * id = "Claim001"
-* identifier[UUID].value = "D30F70DF-D10B-43D4-BF31-5137C118AD83"
-* identifier[UUID].type = OpenIMISIdentifierCS#UUID
 * identifier[Code].value = "Code001"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
 
 * status = FHIRFinancialResourceStatusCodes#active "Active"
-* type = FHIRClaimTypeCodes#professional
+* type = ClaimVisitTypeCS#O "Other"
 * use = FHIRClaimUseCodes#claim "Claim"
 * patient = Reference(john-doe)
 

@@ -70,10 +70,11 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
   * noteNumber 0..0
   * adjudication 1..4
     * category from ClaimStatusVS (required)
-    * reason 0..1
+    * reason 1..1
       * coding 1..1
+      * coding from ClaimRejectionReasonsVS (required)
         * ^definition = "Rejection reason."
-      * text 1..1
+      * text 0..1
         * ^definition = "Human justification for the decision on Item level."
 
     * amount 1..1
@@ -105,7 +106,7 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
 * formCode 0..0
 * form 0..0
 
-* processNote 1..1
+* processNote 0..1
   * number 0..0
   * type 0..0
   * text 1..1
