@@ -1,11 +1,9 @@
-ValueSet: ClaimVisitTypeCodesVS
-Id: claim-visit-type-codes
+ValueSet: ClaimVisitTypeVS
+Id: claim-visit-type
 Title: "Visit Type Codes (Claim)"
 Description: """Indicates the visit type of the Claim. 
-Can be 'institutional' for inpatient claims or 'professional' for outpatient claims. 
 Values limited by openIMIS."""
-* FHIRClaimTypeCodes#institutional "Institutional"
-* FHIRClaimTypeCodes#professional "Professional"
+* codes from system ClaimVisitTypeCS
 
 ValueSet: ClaimSupportingInfoCategoryVS
 Id: claim-supporting-info-category
@@ -19,3 +17,9 @@ Id: claim-item-category
 Title: "Category of the item (Claim)"
 Description: "Indicates the category for the item under a Claim. Values defined by openIMIS. Can not be extended."
 * codes from system ClaimItemCategoryCS
+
+ValueSet: ClaimStatusVS
+Id: claim-status
+Title: "Status of the claim (Claim|ClaimResponse)"
+Description: "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended."
+* codes from system ClaimStatusCS

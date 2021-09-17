@@ -31,9 +31,9 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * ^short = "FHIR Claim Status"
   * ^definition = "Claim status reported to FHIR Claim required Statuses."
 
-* type.coding from ClaimVisitTypeCodesVS (required)
+* type.coding from ClaimVisitTypeVS (required)
   * ^short = "Visit type"
-  * ^definition = "Mapped to inpatient or outpatient visit type."
+  * ^definition = "Mention the visit type."
 
 * subType 0..0
 * use = FHIRClaimUseCodes#claim "Claim"
@@ -177,8 +177,8 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
 
   * extension contains ClaimItemReferenceExtension named itemReference 1..1 
   * extension[itemReference]
-  * ^short = "Item Reference"
-  * ^definition = "Specifies the reference to the Medication or ActivityDefinition."
+    * ^short = "Item Reference"
+    * ^definition = "Specifies the reference to the Medication or ActivityDefinition."
 
 * total 1..1
   * value 1..1
