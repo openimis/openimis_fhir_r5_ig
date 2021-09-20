@@ -27,13 +27,11 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
 * supportingInfo 0..0
 * insurance 0..0
 
-* item 0..*
+* item 0..2
   * supportingInfoSequence 0..0
-
   * category from ClaimItemCategoryVS (required)
     * ^short = "Category"
     * ^definition = "Items category as medical item or service."
-
   * productOrService 1..1
     * coding 0..0
     * text 1..1
@@ -41,7 +39,6 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
       * ^definition = "Service or Item Code."
     * ^short = "Item Code"
     * ^definition = "Service or Item Code."
-
   * modifier 0..0
   * provider 0..0
   * quantity 0..0
@@ -49,4 +46,17 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
   * facility 0..0
   * diagnosis 0..0
   * detail 0..0
+
+* item ^slicing.discriminator.type = #value
+* item ^slicing.discriminator.path = "category.coding.code"
+* item ^slicing.rules = #closed
+* item contains
+    item 0..1 and
+    service 0..1
+* item[item].category = ClaimItemCategoryCS#item "Item"
+  * ^short = "Coverage eligibility for item"
+  * ^definition = "Coverage eligibility for item."
+* item[service].category = ClaimItemCategoryCS#service "Service"
+  * ^short = "Coverage eligibility for service"
+  * ^definition = "Coverage eligibility for service."
 
