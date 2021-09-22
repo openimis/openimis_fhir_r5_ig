@@ -35,7 +35,7 @@ Values limited by openIMIS."""
 
 CodeSystem: ClaimRejectionReasonsCS
 Id: claim-rejection-reasons
-Title: "Visit Type (Claim)"
+Title: "Rejection Reasons (Claim)"
 Description: """Indicates the rejection reason of an item from a Claim. 
 Values limited by openIMIS."""
 * #-1 "REJECTED BY MEDICAL OFFICER"
