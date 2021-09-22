@@ -26,7 +26,7 @@ Description: "Indicates the status of the Claim. Values defined by openIMIS. Can
 
 ValueSet: ClaimRejectionReasonsVS
 Id: claim-rejection-reasons
-Title: "Visit Type (Claim)"
+Title: "Rejection reasons (Claim)"
 Description: """Indicates the rejection reason of an item from a Claim. 
 Values limited by openIMIS."""
 * codes from system ClaimRejectionReasonsCS

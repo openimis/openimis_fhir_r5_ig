@@ -2,9 +2,7 @@ ValueSet: OpenIMISIdentifierVS
 Id: openimis-identifiers
 Title: "openIMIS Identifiers Value Set"
 Description: "Indicates the Identifier type"
-* OpenIMISIdentifierCS#UUID  
-* OpenIMISIdentifierCS#DBID  
-* OpenIMISIdentifierCS#Code  
+* codes from system OpenIMISIdentifierCS
 
 ValueSet: UsageContextGenderTypeVS
 Id: usage-context-gender-type
