@@ -11,13 +11,19 @@ Description: """
 
 * status = FHIRFinancialResourceStatusCodes#active "Active"
 
-// ...
-
+* policyHolder = Reference(jane-doe)
 * beneficiary = Reference(joe-doe)
 
-// ...
+* period 
+  * start = "2021-07-01"
+  * end = "2022-06-30"
 
 * payor = Reference(jane-doe)
 
-
-// todo complete instance
+* class
+  * type = FHIRCoverageClassCodes#plan "Plan"
+  * value = "RX01"
+  * name = "Regional fixed enrolment"
+    
+* extension[enrollDate].valueDate = "2021-01-28"
+* extension[effectiveDate].valueDate = "2021-01-28"
