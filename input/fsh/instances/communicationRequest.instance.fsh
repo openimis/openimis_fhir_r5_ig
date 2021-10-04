@@ -17,9 +17,9 @@ Description: """
 * about = Reference(Claim001)
 
 * payload[CareRendered].contentString = "Care Rendered? (yes|no)"
-* payload[PaymentAsked].contentString = "PaymentAsked? (yes|no)"
-* payload[DrugPrescribed].contentString = "DrugPrescribed? (yes|no)"
-* payload[DrugReceived].contentString = "DrugReceived? (yes|no)"
+* payload[PaymentAsked].contentString = "Payment Asked? (yes|no)"
+* payload[DrugPrescribed].contentString = "Drug Prescribed? (yes|no)"
+* payload[DrugReceived].contentString = "Drug Received? (yes|no)"
 * payload[Asessment].contentString = "Asessment? (0|1|2|3|4|5)"
 
 * recipient = Reference(Roberts-Jeb-EO)
