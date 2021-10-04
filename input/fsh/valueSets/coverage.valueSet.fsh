@@ -1,7 +1,7 @@
 ValueSet: CoverageStatusVS
 Id: coverage-status
-Title: "Usage Context Type (ActivityDefinition)"
-Description: "Indicates the Usage Context Type for an ActivityDefinition."
+Title: "Coverage Status (Coverage)"
+Description: "Indicates the status of a Coverage (Policy)."
 * FHIRFinancialResourceStatusCodes#active "Active"
 * FHIRFinancialResourceStatusCodes#cancelled "Cancelled"
 * FHIRFinancialResourceStatusCodes#draft "Draft"
