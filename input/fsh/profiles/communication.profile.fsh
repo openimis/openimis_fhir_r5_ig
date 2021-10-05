@@ -1,38 +1,40 @@
 // This is the profile for openIMIS CommunicationRequest 
 // Mapping is done throught Claim openIMIS entity
-Profile: OpenIMISCommunicationRequest
-Parent: CommunicationRequest
-Id: openimis-communication-request
-Title: "openIMIS CommunicationRequest"
-Description: "Defines a CommunicationRequest for openIMIS which maps to the Claim Feedback in openIMIS."
+Profile: OpenIMISCommunication
+Parent: Communication
+Id: openimis-communication
+Title: "openIMIS Communication"
+Description: "Defines a Communication for openIMIS which maps to the Feedback in openIMIS."
 
 * identifier 0..0 
+* instantiatesCanonical 0..0
+* instantiatesUri 0..0
 * basedOn 0..0
-* replaces 0..0
-* groupIdentifier 0..0
+* partOf 0..0
+* inResponseTo 0..0
 
-* status from CommunicationRequestStatusVS (required)
-  * ^short = "active | completed | revoked"
-  * ^definition = """Coverage Status:
-  * active: claim feedback selected
-  * completed: claim feedback delivered
-  * revoked: claim feedback bypassed"""
+* status = FHIREventStatus#completed "Completed"
 
-* statusReason 1..1
-* statusReason from FeedbackStatusVS (required)
-
+* statusReason 0..0
 * category 0..0 // can be used later if other communications requests are defined 
 * priority 0..0
-* doNotPerform 0..0
 * medium 0..0
 
 * subject 1..1
 * subject only Reference(OpenIMISPatient)
 
+* topic 0..0
+
 * about 1..1
 * about only Reference(OpenIMISClaim)
 
 * encounter 0..0
+* sent 0..0
+* received 0..0
+* recipient 0..0
+* sender 0..0
+* reasonCode 0..0
+* reasonReference 0..0
 
 * payload  5..5
   * content[x] only string
@@ -47,32 +49,15 @@ Description: "Defines a CommunicationRequest for openIMIS which maps to the Clai
     DrugReceived 1..1 and
     Asessment 1..1
 * payload[CareRendered]
-  * contentString = "Care Rendered? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#CareRendered 
 * payload[PaymentAsked]
-  * contentString = "Payment Asked? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#PaymentAsked 
 * payload[DrugPrescribed]
-  * contentString = "Drug Prescribed? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugPrescribed 
 * payload[DrugReceived]
-  * contentString = "Drug Received? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugReceived 
 * payload[Asessment]
-  * contentString = "Asessment? (0|1|2|3|4|5)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#Asessment 
 
-* occurrence[x] 0..0
-* authoredOn 0..0
-* requester 0..0
-
-* recipient 1..1
-* recipient only Reference(OpenIMISEnrolmentOfficerPractitioner)
-  * ^short = "Enrolment Officer"
-  * ^definition = "Enrolment Officer having enroled the insuree."
-
-* sender 0..0
-* reasonCode 0..0
-* reasonReference 0..0
 * note 0..0
 

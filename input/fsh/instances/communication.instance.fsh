@@ -1,32 +1,29 @@
 // This is the profile for openIMIS Contract 
 // Only for POST 
-Instance: Claim001CommunicationRequest
-InstanceOf: OpenIMISCommunicationRequest
+Instance: Claim001Communication
+InstanceOf: OpenIMISCommunication
 Description: """
-            * Example of a CommunicationRequest
+            * Example of a Communication (Feedback)  
             """
 
-* status = FHIRRequestStatus#active "Active"
-* statusReason = FeedbackStatusCS#4 "Selected"
+* status = FHIREventStatus#completed "Completed"
 
 * subject = Reference(john-doe)
 
 * about = Reference(Claim001)
 
 * payload[CareRendered]
-  * contentString = "Care Rendered? (yes|no)"
+  * contentString = "yes"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#CareRendered 
 * payload[PaymentAsked]
-  * contentString = "Payment Asked? (yes|no)"
+  * contentString = "no"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#PaymentAsked 
 * payload[DrugPrescribed]
-  * contentString = "Drug Prescribed? (yes|no)"
+  * contentString = "yes"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugPrescribed 
 * payload[DrugReceived]
-  * contentString = "Drug Received? (yes|no)"
+  * contentString = "yes"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugReceived 
 * payload[Asessment]
-  * contentString = "Asessment? (0|1|2|3|4|5)"
+  * contentString = "4"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#Asessment 
-
-* recipient = Reference(Roberts-Jeb-EO)
