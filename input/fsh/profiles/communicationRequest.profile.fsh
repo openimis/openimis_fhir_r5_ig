@@ -4,7 +4,7 @@ Profile: OpenIMISCommunicationRequest
 Parent: CommunicationRequest
 Id: openimis-communication-request
 Title: "openIMIS CommunicationRequest"
-Description: "Defines a CommunicationRequest for openIMIS which maps to the Claim Feedback in openIMIS."
+Description: "Defines a CommunicationRequest for openIMIS which maps to the Claim request for feedback in openIMIS."
 
 * identifier 0..0 
 * basedOn 0..0
