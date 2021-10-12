@@ -1,0 +1,36 @@
+CodeSystem: CoverageItemCategoryCS
+Id: coverage-item-category
+Title: "Category of the item (Coverage)"
+Description: "Indicates the category for the item under a Coverage. Values defined by openIMIS. Can not be extended."
+* #item "Item"
+* #service "Service"
+* #benefit "Benefit Package"
+
+CodeSystem: CoverageItemBenefitTypeCS
+Id: coverage-item-benefit-type
+Title: "Type of benefit (Coverage)"
+Description: "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended."
+* #admissions_left "total_admissions"
+* #visits_left "total_visits"
+* #consultations_left "total_consultations"
+* #surgeries_left "total_surgeries"
+* #deliveries_left "total_deliveries"
+* #antenatal_left "total_antenatal"
+* #consultation_amount "consultation_amount"
+* #surgery_amount "surgery_amount"
+* #delivery_amount "delivery_amount"
+* #hospitalization_amount "hospitalization_amount"
+* #antenatal_amount "antenatal_amount"
+* #total_deduction "total_deduction"
+* #hospital_deduction "hospital_deduction"
+* #non_hospital_deduction "non_hospital_deduction"
+* #total_ceiling "total_ceiling"
+* #hospital_ceiling "hospital_ceiling"
+* #non_hospital_ceiling "non_hospital_ceiling"
+//* #service_left "service_left"
+* #item_left "Items left"
+//* #min_date_service "min_date_service"
+* #min_date_item "Mininum date"
+//* #service_ok "service_ok"
+//* #item_ok "Item ok"
+
