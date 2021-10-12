@@ -22,6 +22,8 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
 * status = FHIRFinancialResourceStatusCodes#active "Active"
 
 * priority 0..0
+
+* purpose 1..1
 * purpose = FHIREligibilityRequestPurpose#benefits "Coverage benefits"
 * patient only Reference(OpenIMISPatient)
 
@@ -40,7 +42,7 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
 
 * item 0..2
   * supportingInfoSequence 0..0
-  * category from ClaimItemCategoryVS (required)
+  * category from CoverageItemCategoryVS (required)
     * ^short = "Category"
     * ^definition = "Items category as medical item or service."
   * productOrService 1..1
@@ -64,10 +66,10 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
 * item contains
     item 0..1 and
     service 0..1
-* item[item].category = ClaimItemCategoryCS#item "Item"
+* item[item].category = CoverageItemCategoryCS#item "Item"
   * ^short = "Coverage eligibility for item"
   * ^definition = "Coverage eligibility for item."
-* item[service].category = ClaimItemCategoryCS#service "Service"
+* item[service].category = CoverageItemCategoryCS#service "Service"
   * ^short = "Coverage eligibility for service"
   * ^definition = "Coverage eligibility for service."
 
