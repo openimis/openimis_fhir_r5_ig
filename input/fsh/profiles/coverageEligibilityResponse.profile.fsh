@@ -6,7 +6,7 @@ Id: openimis-coverage-eligibility-response
 Title: "openIMIS CoverageEligibilityResponse"
 Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enquire information for an Insuree."
 
-* identifier 1..1 MS // Must contain at least the Claim Code
+* identifier 1..1 
   * type 1..1  
   * value 1..1
 * identifier.type.coding.code from OpenIMISIdentifierVS (required)
@@ -55,28 +55,13 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
     * modifier 0..0
     * provider 0..0
     
-    * name 1..1 
-      * ^short = "Product/Item/Service code"
-      * ^definition = "Product/Item/Service code."
-    
-    * description 1..1 
-      * ^short = "Product/Item/Service name"
-      * ^definition = "Product/Item/Service name."
-
     * network 0..0
     * unit 0..0
     * term 0..0
     * authorizationRequired 0..0
     * authorizationSupporting 0..0
     * authorizationUrl 0..0
-
     
-    //* quantity 0..0
-    //* unitPrice 0..0
-    //* facility 0..0
-    //* diagnosis 0..0
-    //* detail 0..0
-
   * item ^slicing.discriminator.type = #value
   * item ^slicing.discriminator.path = "category.coding.code"
   * item ^slicing.rules = #closed
@@ -91,6 +76,14 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
     * category = CoverageItemCategoryCS#benefit "Benefit Package"
     * productOrService 0..0
     * excluded 0..0
+    * name 1..1 
+      * ^short = "Product/Item/Service code"
+      * ^definition = "Product/Item/Service code."
+    
+    * description 1..1 
+      * ^short = "Product/Item/Service name"
+      * ^definition = "Product/Item/Service name."
+
     * benefit 0..11
       * used[x] 0..0
     * benefit ^slicing.discriminator.type = #type
@@ -171,9 +164,6 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
       * allowed[x] only unsignedInt 
       * used[x] 0..0
 
-    * authorizationRequired 0..0
-    * authorizationSupporting 0..0
-    * authorizationUrl 0..0
 
 * preAuthRef 0..0
 * form 0..0

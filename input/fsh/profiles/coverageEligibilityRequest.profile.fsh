@@ -6,7 +6,7 @@ Id: openimis-coverage-eligibility-request
 Title: "openIMIS CoverageEligibilityRequest"
 Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an Insuree."
 
-* identifier 1..1 MS // Must contain at least the Claim Code
+* identifier 1..1 
   * type 1..1  
   * value 1..1
 * identifier.type.coding.code from OpenIMISIdentifierVS (required)
