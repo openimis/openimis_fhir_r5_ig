@@ -1,5 +1,5 @@
-CodeSystem: OrganizationLegalFormCS
-Id: organization-legal-form
+CodeSystem: OrganizationHFLegalFormCS
+Id: organization-hf-legal-form
 Title: "Legal Forms (Organization)"
 Description: "Indicates the legal forms of the Organization. Values defined by openIMIS. Can be extended."
 * #C "Charity"
@@ -15,3 +15,22 @@ Description: "Indicates the level of the Health Facility (Organization). Values 
 * #C "Health Centre"
 * #H "Hospital"
 
+CodeSystem: OrganizationPHLegalFormCS
+Id: organization-ph-legal-form
+Title: "Legal Forms (Organization)"
+Description: "Indicates the legal forms of the PolicyHolder Organization. Values defined by openIMIS. Can be extended."
+* #1 "Personal Company"
+* #2 "Limited Risk Company"
+* #3 "Association"
+* #4 "Government"
+* #5 "Union"
+
+CodeSystem: OrganizationPHActivityCS
+Id: organization-ph-activity
+Title: "Activity (Organization)"
+Description: "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended."
+* #1 "Retail"
+* #2 "Industry"
+* #3 "Building"
+* #4 "Sailing"
+* #5 "Services"

@@ -12,4 +12,4 @@ Description: "Example of openIMIS Health Facility"
   * state = "Ultha"
   * district = "Rapta"
   * extension[locationDistrict].valueReference = Reference(Jimara-district)
-* extension[legalForm].valueCodeableConcept = OrganizationLegalFormCS#D "District organization"
+* extension[legalForm].valueCodeableConcept = OrganizationHFLegalFormCS#D "District organization"
