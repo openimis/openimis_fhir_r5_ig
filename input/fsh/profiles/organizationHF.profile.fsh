@@ -79,7 +79,7 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
   * ^short = "Claim Administrator contact"
   * ^definition = "Claim Administrator contact details. Contains the list of all CA attached to the Health Facility. Only available in GET Organization."
 
-* extension contains OrganizationLegalFormExtension named legalForm 0..1 
+* extension contains OrganizationHFLegalFormExtension named legalForm 0..1 
 * extension[legalForm]
   * ^short = "Legal Form"
   * ^definition = "Specifies the Organization's Legal Forms."

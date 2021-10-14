@@ -1,10 +1,10 @@
-Extension: OrganizationLegalFormExtension
-Id:        organization-legal-form
+Extension: OrganizationHFLegalFormExtension
+Id:        organization-hf-legal-form
 Title:    "Legal Forms (Organization)"
-Description: "Indicates the legal forms of the Organization. "
+Description: "Indicates the legal forms of the Health Facility Organization. "
 * insert ExtensionContext(OpenIMISHealthFacilityOrganization)
 * value[x] only CodeableConcept
-* valueCodeableConcept from OrganizationLegalFormVS (example)
+* valueCodeableConcept from OrganizationHFLegalFormVS (example)
 
 Extension: OrganizationHFLevelExtension
 Id:        organization-hf-level
@@ -14,3 +14,18 @@ Description: "Indicates the level of the Health Facility (Organization)."
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganizationHFLevelVS (required)
 
+Extension: OrganizationPHLegalFormExtension
+Id:        organization-ph-legal-form
+Title:    "Legal Forms (Organization)"
+Description: "Indicates the legal forms of the PolicyHolder Organization. "
+* insert ExtensionContext(OpenIMISPolicyHolderOrganization)
+* value[x] only CodeableConcept
+* valueCodeableConcept from OrganizationPHLegalFormVS (example)
+
+Extension: OrganizationPHActivityExtension
+Id: organization-ph-activity
+Title: "Activity (Organization)"
+Description: "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended."
+* insert ExtensionContext(OpenIMISPolicyHolderOrganization)
+* value[x] only CodeableConcept
+* valueCodeableConcept from OrganizationPHActivityVS (example)

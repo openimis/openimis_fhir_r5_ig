@@ -160,7 +160,7 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
       * allowed[x] only string 
       * used[x] 0..0
     * benefit[itemLeft]
-      * type = CoverageItemCategoryCS#item_left "Service left"
+      * type = CoverageItemCategoryCS#item_left "Items left"
       * allowed[x] only unsignedInt 
       * used[x] 0..0
 

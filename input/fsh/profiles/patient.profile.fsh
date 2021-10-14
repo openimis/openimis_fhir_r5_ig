@@ -123,6 +123,13 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * relationship 0..1
   * relationship from PatientContactRelationshipVS (extensible)
   * name 1..1
+    * use 0..0
+    * text 0..0
+    * family 1..1
+    * given 1..1
+    * prefix 0..0
+    * suffix 0..0
+    * period 0..0
   * telecom 0..*
   * address 0..1
   * ^short = "Head of Family contact"
