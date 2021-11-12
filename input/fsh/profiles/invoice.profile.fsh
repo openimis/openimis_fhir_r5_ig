@@ -60,13 +60,15 @@ Description: "Defines an Invoice for openIMIS."
       * ^definition = "Code only for the base"
       * coding.code = OpenIMISIdentifierCS#Code 
     * factor 1..1
-      * ^definition = """* quantity only for the base
+      * ^definition = """
+      * quantity only for the base
       * rate for tax 
       * discount for discount
       * 1 for deduction
       """
     * amount 1..1
-      * ^definition = """* unit_price*quantity only for the base
+      * ^definition = """
+      * unit_price*quantity only for the base
       * (unit_price*quantity*(1-discount)-deduction)*rate for tax
       * -1*unit_price*quantity*discount for discount
       * -1*deduction for deduction"""
