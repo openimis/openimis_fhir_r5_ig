@@ -128,10 +128,10 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
         minDate 0..1 and
         itemLeft 0..1 
     * benefit[minDate]
-      * type = CoverageItemCategoryCS#min_date_item "Mininum date"
+      * type = CoverageItemBenefitTypeCS#min_date_item "Mininum date"
       * allowed[x] only string 
     * benefit[itemLeft]
-      * type = CoverageItemCategoryCS#item_left "Items left"
+      * type = CoverageItemBenefitTypeCS#item_left "Items left"
       * allowed[x] only unsignedInt 
 
   * item[service]
@@ -156,11 +156,11 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
         minDate 0..1 and
         itemLeft 0..1 
     * benefit[minDate]
-      * type = CoverageItemCategoryCS#min_date_item "Mininum date"
+      * type = CoverageItemBenefitTypeCS#min_date_item "Mininum date"
       * allowed[x] only string 
       * used[x] 0..0
     * benefit[itemLeft]
-      * type = CoverageItemCategoryCS#item_left "Items left"
+      * type = CoverageItemBenefitTypeCS#item_left "Items left"
       * allowed[x] only unsignedInt 
       * used[x] 0..0
 
