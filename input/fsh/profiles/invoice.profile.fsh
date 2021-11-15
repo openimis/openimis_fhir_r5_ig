@@ -75,6 +75,12 @@ Description: "Defines an Invoice for openIMIS."
       * value 1..1
       * currency 0..1
 
+    * extension contains UnitPriceExtension named unitPrice 1..1 
+    * extension[unitPrice]
+      * ^short = "Unit Price"
+      * ^definition = "Specifies the lineItem unit price."
+
+
 
 * totalPriceComponent 0..0
 
