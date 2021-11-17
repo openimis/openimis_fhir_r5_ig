@@ -68,10 +68,10 @@ Description: "Defines an Bill for openIMIS."
       """
     * amount 1..1
       * ^definition = """
-      * unit_price*quantity only for the base
-      * (unit_price*quantity*(1-discount)-deduction)*rate for tax
-      * -1*unit_price*quantity*discount for discount
-      * -1*deduction for deduction"""
+      * unit_price * quantity only for the base
+      * (unit_price * quantity * (1 - discount) - deduction) * rate for tax
+      * -1 * unit_price * quantity*discount for discount
+      * -1 * deduction for deduction"""
       * value 1..1
       * currency 0..1
 
