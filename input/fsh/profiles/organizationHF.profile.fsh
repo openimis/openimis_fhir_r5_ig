@@ -88,3 +88,8 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
 * extension[hfLevel]
   * ^short = "Health Facility Level"
   * ^definition = "Specifies the Health Facility's Level."
+
+* extension contains OrganizationHFCareTypeExtension named careType 1..1 
+* extension[careType]
+  * ^short = "Health Facility Care Type"
+  * ^definition = "Specifies the Health Facility's Care Type."

@@ -14,6 +14,14 @@ Description: "Indicates the level of the Health Facility (Organization)."
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganizationHFLevelVS (required)
 
+Extension: OrganizationHFCareTypeExtension
+Id: organization-hf-care-type
+Title: "Health Facility Care Type (Organization)"
+Description: "Indicates the care type of the Health Facility (Organization)."
+* insert ExtensionContext(OpenIMISHealthFacilityOrganization)
+* value[x] only CodeableConcept
+* valueCodeableConcept from OrganizationHFCareTypeVS (required)
+
 Extension: OrganizationPHLegalFormExtension
 Id:        organization-ph-legal-form
 Title:    "Legal Forms (Organization)"

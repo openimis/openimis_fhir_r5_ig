@@ -10,6 +10,12 @@ Title: "Health Facility Level (Organization)"
 Description: "Indicates the level of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended."
 * codes from system OrganizationHFLevelCS
 
+ValueSet: OrganizationHFCareTypeVS
+Id: organization-hf-care-type
+Title: "Health Facility Care Type (Organization)"
+Description: "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended."
+* codes from system OrganizationHFCareTypeCS
+
 ValueSet: OrganizationPHLegalFormVS
 Id: organization-ph-legal-form
 Title: "Legal Forms (Organization)"

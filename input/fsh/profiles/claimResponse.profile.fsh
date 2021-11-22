@@ -33,7 +33,7 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
 
 * type.coding from ClaimVisitTypeVS (required)
   * ^short = "Visit type"
-  * ^definition = "Mapped to inpatient or outpatient visit type."
+  * ^definition = "Mapped to Emergency, Referrals or Other visit type."
 
 * subType 0..0
 * use = FHIRClaimUseCodes#claim "Claim"

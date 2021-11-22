@@ -15,6 +15,14 @@ Description: "Indicates the level of the Health Facility (Organization). Values 
 * #C "Health Centre"
 * #H "Hospital"
 
+CodeSystem: OrganizationHFCareTypeCS
+Id: organization-hf-care-type
+Title: "Health Facility Care Type (Organization)"
+Description: "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended."
+* #I "In-Patient"
+* #O "Out-Patient"
+* #B "Both"
+
 CodeSystem: OrganizationPHLegalFormCS
 Id: organization-ph-legal-form
 Title: "Legal Forms (Organization)"
