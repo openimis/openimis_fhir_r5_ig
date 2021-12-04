@@ -69,3 +69,9 @@ Description: "Defines a Medication for openIMIS which maps to a Medical Item."
 * extension[type]
   * ^short = "Medication Type"
   * ^definition = "The type of the Medical Item."
+
+* extension contains MedicationLevelExtension named level 0..1 
+* extension[level]
+  * valueCodeableConcept = MedicationLevelCS#M "Medication" 
+  * ^short = "Level"
+  * ^definition = "Specifies the level of the Medication. Value is hardcodded and only retrived through GET. Required by openIMIS Claim-AI module."

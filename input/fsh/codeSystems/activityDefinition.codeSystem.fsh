@@ -14,3 +14,12 @@ Title: "Service Type (ActivityDefinition)"
 Description: "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended."
 * #C "Curative"
 * #P "Preventive"
+
+CodeSystem: ActivityDefinitionLevelCS
+Id: activity-definition-level
+Title: "Level (ActivityDefinition)"
+Description: "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended."
+* #S "Simple Service"
+* #V "Visit"
+* #D "Day of stay"
+* #H "Hospital case"

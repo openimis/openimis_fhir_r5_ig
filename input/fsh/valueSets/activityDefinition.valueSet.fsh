@@ -25,3 +25,9 @@ Id: activity-definition-service-type
 Title: "Service Type (ActivityDefinition)"
 Description: "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended."
 * codes from system ActivityDefinitionServiceTypeCS
+
+ValueSet: ActivityDefinitionLevelVS
+Id: activity-definition-level
+Title: "Level (ActivityDefinition)"
+Description: "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended."
+* codes from system ActivityDefinitionLevelCS

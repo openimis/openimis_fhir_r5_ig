@@ -64,4 +64,13 @@ Description: "Indicates the Item type for the Medication."
 * value[x] only CodeableConcept
 * valueCodeableConcept from MedicationItemTypeVS (required)
 
+Extension: MedicationLevelExtension
+Id:        medication-level
+Title: "Level (Medication)"
+Description: "Indicates the Level for a Medication."
+* insert ExtensionContext(OpenIMISMedication)
+* value[x] only CodeableConcept
+* valueCodeableConcept from MedicationLevelVS (required)
+
+
 

@@ -143,3 +143,8 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
 * extension[unitPrice]
   * ^short = "Unit Price"
   * ^definition = "Specifies the Medical Service unit price."
+
+* extension contains ActivityDefinitionLevelExtension named level 0..1 
+* extension[level]
+  * ^short = "Level"
+  * ^definition = "Specifies the level of the ActivityDefinition."
