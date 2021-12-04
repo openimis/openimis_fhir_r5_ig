@@ -52,7 +52,7 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
 * requestor 1..1 
 * requestor only Reference(OpenIMISClaimAdministratorPractitioner)
 
-* request 0..0
+* request 1..1
 
 * outcome 1..1
   * ^definition = """The outcome is based on Claim status:

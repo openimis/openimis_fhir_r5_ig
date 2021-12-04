@@ -20,6 +20,7 @@ Description: """
 * created = "2021-09-17"
 
 * requestor = Reference(Rushila-Dani-CA)
+* request = Reference(Claim001)
 
 * outcome = FHIRClaimProcessingCodes#partial "Partial Processing"
 
