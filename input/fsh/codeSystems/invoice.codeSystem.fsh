@@ -25,5 +25,6 @@ CodeSystem: BillChargeItemCS
 Id: bill-charge-item
 Title: "ChargeItem (Bill Invoice)"
 Description: "Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended."
-* #claim "Claim"
-* #contribution "Contribution"
+* #claim "Claim" "Fee-for-service or Capitation amount"
+* #commission "Commission" "Commission amount"
+* #fees "Fees" "Fees amount"
