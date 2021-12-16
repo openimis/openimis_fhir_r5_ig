@@ -1,5 +1,4 @@
 FROM openjdk:11-jdk-buster
-MAINTAINER Josh Mandel
 
 RUN apt-get update && apt-get -y install python3 python3-pip gosu openssl wget graphviz
 

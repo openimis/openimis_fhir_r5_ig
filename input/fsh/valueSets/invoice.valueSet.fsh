@@ -1,3 +1,11 @@
+ValueSet: InvoiceStatusVS
+Id: invoice-status
+Title: "Status (Invoice)"
+Description: "Indicates the status for an Invoice. Values limited by openIMIS. Can not be extended."
+* FHIRInvoiceStatus#issued "Issued" 
+* FHIRInvoiceStatus#balanced "Balanced" 
+* FHIRInvoiceStatus#cancelled "Cancelled" 
+
 ValueSet: InvoiceTypeVS
 Id: invoice-type
 Title: "Type (Invoice)"

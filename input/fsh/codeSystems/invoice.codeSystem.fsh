@@ -2,9 +2,9 @@ CodeSystem: InvoiceTypeCS
 Id: invoice-type
 Title: "Type (Invoice)"
 Description: "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended."
-* #contribution "Contribution"
-* #contract "Contract"
-* #funding "Funding"
+* #contribution "Contribution" "To pay the contribution for a Policy under the Informal Sector coverage."
+* #contract "Contract" "To pay the contributions under the Formal Sector coverage."
+* #funding "Funding" "To create a request for external funds."
 
 CodeSystem: InvoiceChargeItemCS
 Id: invoice-charge-item
