@@ -1,5 +1,4 @@
-@startuml "Enrollment process"
-
+@startuml
 autonumber
 
 participant "PoS" as pos
@@ -50,5 +49,4 @@ group Create Policy
     him <-- oi: HTTP 200 Contract 
     pos <-- him: HTTP 200 Contract
 end
-
 @enduml
