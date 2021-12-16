@@ -1,8 +1,12 @@
 These are the use cases supported by this Implementation Guide:
 
-### Nurse schedule for home care 
+### Enrollment 
 
-In this use case, the user (a nurse) prepares the visit to a patient in home care by consulting the scheduled administrations for a patient. This synchronization ensures that the nurse is up to date with latest medication changes.
+In this use case, a Point of Service (PoS) is enrolling a Family/Group within openIMIS. This is done through the Contract resource that links the Group, Patients and InsurancePlan resources. 
 
-{% include oI-fhir-usecase1.svg %}
+The process is done in two steps:
+1. Synchronization of the openIMIS configuration referenced by the necessary resources.
+2. Posting the Patients (members of the family), Group (the family) and Contract (enrolment information).
+
+{% include oI-fhir-enrollment-usecase.svg %}
 

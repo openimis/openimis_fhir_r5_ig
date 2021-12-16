@@ -34,9 +34,9 @@ Description: "Example of an Invoice covering the contribution payment by a famil
 
 * totalNet
   * value = 10000
-  * currency = USD
+  * currency = CurrencyCode#EUR "Euro"
 
 * totalGross 
   * value = 10000
-  * currency = USD
+  * currency = CurrencyCode#EUR "Euro"
 
