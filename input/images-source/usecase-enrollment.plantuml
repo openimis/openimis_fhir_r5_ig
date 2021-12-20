@@ -16,7 +16,7 @@ group Get openIMIS configuration
         pos <-- him: HTTP 200 CodeSystem 
     end 
 
-    loop for Resource in (Location, InsurancePlan)
+    loop for Resource in (Location, InsurancePlan, Practitioner@EO)
         pos -> him: GET Resource
         him -> oi: GET Resource 
         oi -> oi: Read Resource \nfrom DB

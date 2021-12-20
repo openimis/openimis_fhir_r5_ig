@@ -1,0 +1,40 @@
+@startuml Claiming
+autonumber
+
+participant "PoS" as pos
+participant "HIM" as him
+participant "openIMIS" as oi 
+
+group Get openIMIS configuration
+    loop for CodeSystem in (diagnosis)
+        pos -> him: GET CodeSystem
+        him -> oi: GET CodeSystem 
+        oi -> oi: Read configuration \nfrom DB
+        him <-- oi: HTTP 200 CodeSystem 
+        pos <-- him: HTTP 200 CodeSystem 
+    end 
+
+    loop for Resource in (ActivityDefinition, Medication, Practitioner@CA, Organization@HF)
+        pos -> him: GET Resource
+        him -> oi: GET Resource 
+        oi -> oi: Read Resource \nfrom DB
+        him <-- oi: HTTP 200 Resource 
+        pos <-- him: HTTP 200 Resource 
+    end 
+end
+
+...
+
+note across: Enquire Workflow (Get Patient's Coverage) 
+
+group Submit Claim
+
+    pos -> him: POST Claim
+    him -> oi: POST Claim 
+    oi -> oi: Create Claim
+    oi -> oi: Run rule-based checks 
+    him <-- oi: HTTP 200 ClaimResponse 
+    pos <-- him: HTTP 200 ClaimResponse
+    
+end
+@enduml
