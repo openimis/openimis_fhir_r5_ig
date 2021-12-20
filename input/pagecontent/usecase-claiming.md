@@ -13,4 +13,4 @@ The process is done in two steps:
 1. Synchronization of the openIMIS configuration referenced by the necessary resources.
 2. Posting the Patients (members of the family), Group (the family) and Contract (enrolment information).
 
-{% include usecase-enrollment.svg %}
+{% include usecase-claiming.svg %}
