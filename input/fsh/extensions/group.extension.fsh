@@ -42,7 +42,7 @@ Title:    "Group Type (Group)"
 Description: "Indicates the type of the Group. Values defined by openIMIS. Can be extended."
 * insert ExtensionContext(Group)
 * value[x] only CodeableConcept
-* valueCodeableConcept from GroupTypesVS (example)
+* valueCodeableConcept from GroupTypeVS (example)
 
 Extension: GroupConfirmationExtension
 Id:        group-confirmation

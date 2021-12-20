@@ -23,7 +23,7 @@ Description: "Example of openIMIS Patient"
 * extension[educationLevel].valueCodeableConcept = PatientEducationLevelCS#4 "University"
 * extension[profession].valueCodeableConcept = PatientProfessionCS#2 "Employee"
 * extension[identification].extension[number].valueString = "NationaID1"
-* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N
+* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypeCS#N
 * extension[cardIssued].valueBoolean = true
 * extension[group].valueReference = Reference(doe-family)
 * extension[vulnerability].valueBoolean = true
@@ -48,7 +48,7 @@ Description: "Example of openIMIS Patient"
 * extension[educationLevel].valueCodeableConcept = PatientEducationLevelCS#4 "University"
 * extension[profession].valueCodeableConcept = PatientProfessionCS#3 "Self Employee"
 * extension[identification].extension[number].valueString = "NationaID2"
-* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypesCS#N "National ID"
+* extension[identification].extension[type].valueCodeableConcept = PatientIdentificationTypeCS#N "National ID"
 * extension[cardIssued].valueBoolean = true
 * extension[group].valueReference = Reference(doe-family)
 

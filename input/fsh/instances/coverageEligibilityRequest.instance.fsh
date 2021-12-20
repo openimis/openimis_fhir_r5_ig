@@ -15,7 +15,7 @@ Description: """
 * patient = Reference(joe-doe)
 
 * created = "2021-09-17"
-* insurer = Reference(openIMIS)
+* insurer = Reference(openIMIS-Implementation)
 
 * item[+]
   * category = ClaimItemCategoryCS#service "Service"

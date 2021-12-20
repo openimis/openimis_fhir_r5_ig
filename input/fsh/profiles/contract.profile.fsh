@@ -48,7 +48,11 @@ Description: """
   * ^short = "Insured Group"
   * ^definition = """Reference to the Group/Family that is enroled. Mapped to `Policy.FamilyID`."""
 
-* authority 0..0
+* authority 0..1
+* authority only Reference(OpenIMISInsuranceOrganization)
+  * ^short = "Insurance Instance"
+  * ^definition = """Reference to the Insurance Instance."""
+
 * domain 0..0
 * site 0..0
 * name 0..0 // can be used to display the name of the head of the family

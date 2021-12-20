@@ -35,7 +35,7 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
 * disposition 0..0
 
 * insurer 1..1
-* insurer = Reference(openIMIS)
+* insurer only Reference(OpenIMISInsuranceOrganization)
   * ^definition = "Hardcodded as openIMIS doesn't support multiple insurance organizations."
 
 * insurance 0..* 

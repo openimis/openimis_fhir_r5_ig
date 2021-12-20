@@ -1,0 +1,28 @@
+@startuml Enquire 
+autonumber
+
+participant "PoS" as pos
+participant "HIM" as him
+participant "openIMIS" as oi 
+
+group Get openIMIS configuration
+    loop for Resource in (ActivityDefinition, Medication)
+        pos -> him: GET Resource
+        him -> oi: GET Resource 
+        oi -> oi: Read Resource\n values
+        him <-- oi: HTTP 200 Resource 
+        pos <-- him: HTTP 200 Resource 
+    end 
+end 
+
+...
+
+group Enquire Insuree
+    pos -> him: POST CoverageEligibilityRequest
+    him -> oi: POST CoverageEligibilityRequest 
+    oi -> oi: Read Insuree
+    oi -> oi: Read Policy
+    him <-- oi: HTTP 200 CoverageEligibilityResponse 
+    pos <-- him: HTTP 200 CoverageEligibilityResponse
+end
+@enduml

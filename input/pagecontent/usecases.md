@@ -1,12 +1,6 @@
-These are the use cases supported by this Implementation Guide:
+This FHIR IG was created to specify the FHIR resources that are managed by openIMIS. The following use cases are covered with the available profiles:
 
-### Enrollment 
-
-In this use case, a Point of Service (PoS) is enrolling a Family/Group within openIMIS. This is done through the Contract resource that links the Group, Patients and InsurancePlan resources. 
-
-The process is done in two steps:
-1. Synchronization of the openIMIS configuration referenced by the necessary resources.
-2. Posting the Patients (members of the family), Group (the family) and Contract (enrolment information).
-
-{% include oI-fhir-enrollment.svg %}
+- [Enrollment](usecase-enrollment.html) of a family (Informal Sector) or a group (Formal Sector) to the insurance  
+- [Enquiring](usecase-enquire.html) of an insuree before receiving medical services and items 
+-  
 

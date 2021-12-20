@@ -52,5 +52,5 @@ Description: "Specifies the Patient/Insuree official identification and the type
     type 0..1 MS 
 * extension[number].value[x] only string
 * extension[type].value[x] only CodeableConcept
-* extension[type].valueCodeableConcept from PatientIdentificationTypesVS (example)
+* extension[type].valueCodeableConcept from PatientIdentificationTypeVS (example)
 

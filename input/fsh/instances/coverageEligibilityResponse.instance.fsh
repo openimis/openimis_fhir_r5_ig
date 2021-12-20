@@ -18,7 +18,7 @@ Description: """
 * request = Reference(JoeDoeEnquiring)
 * outcome = FHIRClaimProcessingCodes#complete "Processing Complete"
 
-* insurer = Reference(openIMIS)
+* insurer = Reference(openIMIS-Implementation)
 
 * insurance[+] 
   * coverage = Reference(JoeDoeCoverage)

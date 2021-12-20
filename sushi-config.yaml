@@ -22,27 +22,29 @@ template: #local-template
 
 menu:
   Overview: index.html
-  FHIR Design: specification.html
-  Use Cases: usecases.html
-  Connected Partner: connected_partner.html
-  Future Plans: future.html
+  #FHIR Design: specification.html
+  Use Cases: #usecases.html
+    Enrollment: usecase-enrollment.html
+    Enquire: usecase-enquire.html
+  #Connected Partner: connected_partner.html
+  #Future Plans: future.html
   Artifacts:
     Patient: artifacts.html#1
-  Glossary: glossary.html
+  #Glossary: glossary.html
   Credits: credits.html
   
 pages:
   index.md:
     title: openIMIS FHIR Overview
-  specification.md:
-    title: FHIR Design and Overview
-  usecases.md:
-    title: Integration Use Cases
-  connected_partner.md:
-    title: Becoming a Connected Partner
-  future.md:
-    title: Future Plans
-  glossary.md:
-    title: Glossary
+  #specification.md:
+  #  title: FHIR Design and Overview
+  usecase-enrollment.md:
+    title: Enrollment Use Case
+  #connected_partner.md:
+  #  title: Becoming a Connected Partner
+  #future.md:
+  #  title: Future Plans
+  #glossary.md:
+  #  title: Glossary
   credits.md:
     title: Credits

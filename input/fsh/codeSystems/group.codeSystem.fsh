@@ -1,6 +1,6 @@
-CodeSystem: GroupTypesCS
-Id: group-types
-Title: "Group Types (Group)"
+CodeSystem: GroupTypeCS
+Id: group-type
+Title: "Group Type (Group)"
 Description: "Indicates the type of the Group. Values defined by openIMIS. Can be extended."
 * #C "Council"
 * #G "Organization"

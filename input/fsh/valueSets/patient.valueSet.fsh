@@ -22,12 +22,12 @@ Description: "Indicates the Education level of a Patient"
 
 ValueSet: PatientProfessionVS
 Id: patient-profession
-Title: "Patient Profession Value Set"
+Title: "Profession (Patient)"
 Description: "Indicates the profession of a Patient"
 * codes from system PatientProfessionCS
 
-ValueSet: PatientIdentificationTypesVS
-Id: patient-identification-types
-Title: "Identification Types (Patient)"
+ValueSet: PatientIdentificationTypeVS
+Id: patient-identification-type
+Title: "Identification Type (Patient)"
 Description: "Indicates the type of document the Patient used to identify himself."
-* codes from system PatientIdentificationTypesCS
+* codes from system PatientIdentificationTypeCS

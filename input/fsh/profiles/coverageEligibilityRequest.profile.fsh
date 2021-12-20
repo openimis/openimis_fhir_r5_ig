@@ -33,7 +33,7 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
 * provider 0..0
 
 * insurer 1..1
-* insurer = Reference(openIMIS)
+* insurer only Reference(OpenIMISInsuranceOrganization)
   * ^definition = "Hardcodded as openIMIS doesn't support multiple insurance organizations."
 
 * facility 0..0

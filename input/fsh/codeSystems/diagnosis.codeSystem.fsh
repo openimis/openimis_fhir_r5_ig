@@ -1,6 +1,6 @@
 CodeSystem: DiagnosisICD10Level1CS
 Id: diagnosis-ICD10-level1
-Title: "ICD 10 Level 1 diagnosis"
+Title: "ICD 10 Level 1 diagnosis (Claim)"
 Description: "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS."
 * #A00 "Cholera"
 * #A01 "Typhoid and paratyphoid fevers"

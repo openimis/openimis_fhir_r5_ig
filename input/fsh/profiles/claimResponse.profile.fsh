@@ -46,7 +46,7 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
   * ^definition = "Date when the claim response was created."
 
 * insurer 1..1
-* insurer = Reference(openIMIS)
+* insurer only Reference(OpenIMISInsuranceOrganization)
   * ^definition = "Hardcodded as openIMIS doesn't support multiple insurance organizations."
 
 * requestor 1..1 

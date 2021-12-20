@@ -18,6 +18,7 @@ Description: """
 * patient = Reference(john-doe)
 
 * created = "2021-09-17"
+* insurer = Reference(openIMIS-Implementation)
 
 * requestor = Reference(Rushila-Dani-CA)
 * request = Reference(Claim001)

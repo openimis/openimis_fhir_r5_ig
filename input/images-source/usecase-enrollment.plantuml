@@ -1,0 +1,57 @@
+@startuml Enrollment
+autonumber
+
+participant "PoS" as pos
+participant "HIM" as him
+participant "openIMIS" as oi 
+
+group Get openIMIS configuration
+    loop for CodeSystem in (patient-education-level, patient-profession,\n\
+    patient-identification-types, patient-contact-relationship\n\
+    group-types, group-confirmation-type)
+        pos -> him: GET CodeSystem
+        him -> oi: GET CodeSystem 
+        oi -> oi: Read configuration \nfrom DB
+        him <-- oi: HTTP 200 CodeSystem 
+        pos <-- him: HTTP 200 CodeSystem 
+    end 
+
+    loop for Resource in (Location, InsurancePlan)
+        pos -> him: GET Resource
+        him -> oi: GET Resource 
+        oi -> oi: Read Resource \nfrom DB
+        him <-- oi: HTTP 200 Resource 
+        pos <-- him: HTTP 200 Resource 
+    end 
+end
+
+...
+
+group Enroll Family/Group
+
+    loop for Insuree as Patient in Family/Group
+        pos -> him: POST Patient
+        him -> oi: POST Patient 
+        oi -> oi: Create Insuree
+        him <-- oi: HTTP 200 Patient 
+        pos <-- him: HTTP 200 Patient 
+    end
+
+    group Create Family/Group
+        pos -> him: POST Group
+        him -> oi: POST Group 
+        oi -> oi: Create Family
+        him <-- oi: HTTP 200 Group 
+        pos <-- him: HTTP 200 Group
+    end
+
+    group Create Policy
+        pos -> him: POST Contract
+        him -> oi: POST Contract 
+        oi -> oi: Create Policy
+        oi -> oi: Attach Policy to Insurees
+        him <-- oi: HTTP 200 Contract 
+        pos <-- him: HTTP 200 Contract
+    end
+end
+@enduml

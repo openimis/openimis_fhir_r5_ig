@@ -2,7 +2,7 @@
 // Code System for openIMIS Identifiers
 CodeSystem: OpenIMISIdentifierCS
 Id:         openimis-identifiers
-Title:     "openIMIS Identifiers code system"
+Title:     "openIMIS Identifiers (All)"
 Description: "Identifiers that are specific to openIMIS and could not be found in standard sources."
 * #UUID  
     "UUID unique identifier"
