@@ -33,8 +33,9 @@ Title: "openIMIS Capability Statement"
 Usage: #definition
 * name = "openIMIS Capability Statement"
 * rest.mode = #server
+* rest.security.service = http://terminology.hl7.org/CodeSystem/restful-security-service#OAuth "OAuth"
 * status = #draft
-* date = "2021-05-07"
+* date = "2021-12-21"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format = #json

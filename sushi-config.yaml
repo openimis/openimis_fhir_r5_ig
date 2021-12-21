@@ -29,6 +29,7 @@ menu:
     Claiming: usecase-claiming.html
   #Connected Partner: connected_partner.html
   #Future Plans: future.html
+  Security: security.html
   Artifacts: artifacts.html
   #Glossary: glossary.html
   Credits: credits.html
@@ -50,5 +51,7 @@ pages:
   #  title: Future Plans
   #glossary.md:
   #  title: Glossary
+  security.md:
+    title: Security management
   credits.md:
     title: Credits
