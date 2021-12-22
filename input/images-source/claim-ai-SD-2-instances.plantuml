@@ -1,0 +1,93 @@
+@startuml
+
+box "openIMIS Instance" #lightpink
+  participant "FHIR Module" as FHIR
+  participant "Claim-AI Quality Module" as Quality
+end box
+
+box "Claim-AI Instance" #lightblue
+  participant "FHIR Module" as FHIR_AI
+  participant "Claim Module" as Claim
+  participant "openIMIS DB" as DB
+  participant "Claim-AI Module" as AI
+end box
+
+autonumber
+
+[-> Quality: Scheduled/Event signal
+activate Quality
+activate FHIR_AI
+
+Quality->FHIR: Build FHIR Claim Bundle
+activate FHIR
+Quality<--FHIR: FHIR Claim Bundle\nwith Contained Resources
+deactivate FHIR
+
+Quality->FHIR_AI: Send FHIR Claim Bundle\nwith Contained Resources
+
+FHIR_AI->FHIR_AI: Validate FHIR Claim Bundle
+
+alt FHIR Claim Bundle valid
+
+  FHIR_AI->Claim: Call\nSubmitClaims(noIDs, noCheck)
+  activate Claim
+  Claim->DB: Save Claims
+  activate DB
+  DB-->Claim: Claims Saved
+  deactivate DB
+  
+  Claim->AI: Trigger ClaimsSubmitted Signal
+  activate AI
+  FHIR_AI<--Claim: Claims submitted
+  FHIR_AI-->Quality: ClaimBundle Accepted
+  
+  deactivate Claim
+
+  AI->DB: Read Claims
+  activate DB
+  DB-->AI: Claims
+  deactivate DB
+  AI->AI: Adjudicate\nClaims
+  AI->DB: Update Claims
+  activate DB 
+  DB-->AI: Claims updated
+  deactivate DB
+  
+  deactivate AI
+  
+  ...
+
+  [-> Quality: Scheduled/Event signal
+
+  Quality->FHIR_AI: Get FHIR ClaimResponse Bundle
+  
+  FHIR_AI->Claim: Call\nGetClaims()
+  activate Claim
+  Claim->DB: Read Claims
+  activate DB
+  DB-->Claim: Claims
+  deactivate DB
+  
+  Claim-->FHIR_AI: Claims
+  deactivate Claim
+  
+  FHIR_AI-->Quality: Send FHIR ClaimResponse Bundle
+
+  Quality->Quality: Update ClaimResponses status
+
+  Quality->FHIR: Save FHIR ClaimResponse Bundle
+  activate FHIR
+  Quality<--FHIR: FHIR ClaimResponse Bundle Saved
+  deactivate FHIR
+
+else FHIR Claim Bundle not valid
+
+AI->Quality: ClaimValidationError
+
+end
+
+
+
+deactivate Quality
+
+@enduml

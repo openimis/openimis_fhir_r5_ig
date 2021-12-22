@@ -1,0 +1,38 @@
+@startuml
+
+box "Claim-AI Instance" #lightblue
+  participant "Claim Module" as Claim
+  participant "openIMIS DB" as DB
+  participant "Claim-AI Module" as AI
+end box
+
+autonumber
+
+  [->Claim: GQL SubmitClaims()
+  activate Claim
+  Claim->Claim: Check Claims
+  
+  Claim->DB: Save Claims
+  activate DB
+  DB-->Claim: Claims Saved
+  deactivate DB
+  
+  Claim->AI: Trigger ClaimsSubmitted Signal
+  activate AI
+  
+  deactivate Claim
+
+  AI->DB: Read Claims
+  activate DB
+  DB-->AI: Claims
+  deactivate DB
+  AI->AI: Adjudicate\nClaims
+  AI->DB: Update Claims
+  activate DB 
+  DB-->AI: Claims updated
+  deactivate DB
+  
+  deactivate AI
+  
+
+@enduml
