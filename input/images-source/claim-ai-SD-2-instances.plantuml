@@ -18,39 +18,41 @@ autonumber
 activate Quality
 activate FHIR_AI
 
-Quality->FHIR: Build FHIR Claim Bundle
+Quality->FHIR: Build FHIR Claim
 activate FHIR
-Quality<--FHIR: FHIR Claim Bundle\nwith Contained Resources
+Quality<--FHIR: FHIR Claim \nwith Contained Resources
 deactivate FHIR
 
-Quality->FHIR_AI: Send FHIR Claim Bundle\nwith Contained Resources
+Quality->FHIR_AI: Send FHIR Claim \nwith Contained Resources
 
-FHIR_AI->FHIR_AI: Validate FHIR Claim Bundle
+FHIR_AI->FHIR_AI: Validate FHIR Claim
 
 alt FHIR Claim Bundle valid
 
-  FHIR_AI->Claim: Call\nSubmitClaims(noIDs, noCheck)
+  FHIR_AI->Claim: Call\nEnterAndSubmitClaims(noCheck)
   activate Claim
-  Claim->DB: Save Claims
+  Claim->DB: Save Claim
   activate DB
-  DB-->Claim: Claims Saved
+  DB-->Claim: Claim Saved
   deactivate DB
   
-  Claim->AI: Trigger ClaimsSubmitted Signal
+  Claim->AI: Trigger ClaimSubmitted Signal
   activate AI
-  FHIR_AI<--Claim: Claims submitted
-  FHIR_AI-->Quality: ClaimBundle Accepted
+  FHIR_AI<--Claim: Claim submitted
+  FHIR_AI-->Quality: Claim Accepted
+
+  Quality->Quality: Create scheduled task\nto retrieve response
   
   deactivate Claim
 
-  AI->DB: Read Claims
+  AI->DB: Read Claim
   activate DB
-  DB-->AI: Claims
+  DB-->AI: Claim
   deactivate DB
-  AI->AI: Adjudicate\nClaims
-  AI->DB: Update Claims
+  AI->AI: Adjudicate\nClaim
+  AI->DB: Update Claim
   activate DB 
-  DB-->AI: Claims updated
+  DB-->AI: Claim updated
   deactivate DB
   
   deactivate AI
@@ -59,30 +61,30 @@ alt FHIR Claim Bundle valid
 
   [-> Quality: Scheduled/Event signal
 
-  Quality->FHIR_AI: Get FHIR ClaimResponse Bundle
+  Quality->FHIR_AI: Get FHIR ClaimResponse
   
-  FHIR_AI->Claim: Call\nGetClaims()
+  FHIR_AI->Claim: Call\nGetClaim()
   activate Claim
-  Claim->DB: Read Claims
+  Claim->DB: Read Claim
   activate DB
-  DB-->Claim: Claims
+  DB-->Claim: Claim
   deactivate DB
   
-  Claim-->FHIR_AI: Claims
+  Claim-->FHIR_AI: Claim
   deactivate Claim
   
-  FHIR_AI-->Quality: Send FHIR ClaimResponse Bundle
+  FHIR_AI-->Quality: Send FHIR ClaimResponse 
 
   Quality->Quality: Update ClaimResponses status
 
-  Quality->FHIR: Save FHIR ClaimResponse Bundle
+  Quality->FHIR: Save FHIR ClaimResponse 
   activate FHIR
-  Quality<--FHIR: FHIR ClaimResponse Bundle Saved
+  Quality<--FHIR: FHIR ClaimResponse Saved
   deactivate FHIR
 
 else FHIR Claim Bundle not valid
 
-AI->Quality: ClaimValidationError
+FHIR_AI->Quality: ClaimValidationError
 
 end
 

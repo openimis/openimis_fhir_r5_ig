@@ -10,8 +10,8 @@ fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
 publisher:
-  name: Swiss TPH
-  url: https://www.swisstph.ch/en/
+  name: openIMIS Initiative
+  url: https://www.openimis.org
 contact:
   - name: Dragos Dobre
     telecom:
