@@ -32,3 +32,5 @@ Description: "Submit payment notice."
 * amount 1..1
   * value 1..1
   * currency 0..1
+
+  * paymentStatus 1..1
