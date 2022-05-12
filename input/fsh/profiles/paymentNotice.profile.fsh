@@ -33,4 +33,4 @@ Description: "Submit payment notice."
   * value 1..1
   * currency 0..1
 
-  * paymentStatus 1..1
+* paymentStatus 1..1 
