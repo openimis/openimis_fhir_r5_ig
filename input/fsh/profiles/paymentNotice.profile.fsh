@@ -6,7 +6,7 @@ Id: openimis-payment-notice
 Title: "openIMIS Payment Notice"
 Description: "Submit payment notice."
 
-* identifier 1..1
+* identifier 0..1
   * type 1..1  
   * value 1..1
 * identifier.type.coding.code = OpenIMISIdentifierCS#UUID
@@ -14,7 +14,7 @@ Description: "Submit payment notice."
   * ^definition = "Unique UUID."
 
 * status 1..1
-* request 1..1 
+* request 0..1 
 * request only Reference(OpenIMISInvoice or OpenIMISBill)
 
 * response 0..0
