@@ -1,8 +1,8 @@
 {% raw %}
-<blockquote class="stu-note">
+<!--<blockquote class="stu-note">
 <p>
 This specification is currently published as a Draft Standard on the openIMIS github and is not intended for implementation. Feedback is welcome but readers should understand that there is more work to be done in testing the profiles and operations defined in this guide. </p>
-</blockquote>
+</blockquote>-->
 {% endraw %}
 
 ### openIMIS Application Overview
