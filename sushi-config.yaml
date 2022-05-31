@@ -5,7 +5,7 @@ title: "openIMIS FHIR R4 Implementation Guide"
 description: This IG is about the mapping and usage of FHIR R4 to integrate openIMIS with other external systems.
 status: draft
 license: CC0-1.0
-version: 0.1.0
+version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
