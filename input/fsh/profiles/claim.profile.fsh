@@ -111,7 +111,7 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * diagnosisCodeableConcept from DiagnosisICD10Level1VS (example)
   * type 0..0
   * onAdmission 0..0
-  * packageCode 0..0
+  //* packageCode 0..0 // REMOVED: PackageCode is removed in R5
   * ^short = "Diagnosis"
   * ^definition = """One main diagnosis is mandatory. Up to four sub-diagnosis can be added if necessary. 
   The values are dependent on the actual implementation."""
@@ -171,7 +171,7 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * net 0..0
   * udi 0..0
   * bodySite 0..0
-  * subSite 0..0
+  // * subSite 0..0 // REMOVED: SusSite is removed in R5
   * encounter 0..0
   * detail 0..0
 

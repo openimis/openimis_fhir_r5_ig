@@ -33,50 +33,10 @@ Description: "Defines an Organization for openIMIS which maps to a Policy Holder
 * name 1..1 
 * alias 0..0 // not used
 
-* telecom 0..3
-  * value 1..1 
-* telecom ^slicing.discriminator.type = #value
-* telecom ^slicing.discriminator.path = "system"
-* telecom ^slicing.rules = #closed
-* telecom contains
-    email 0..1 and
-    phone 0..1 and 
-    fax 0..1 
-* telecom[email].system = FHIRContactPointSystemCS#email 
-  * ^short = "PolicyHolder email"
-  * ^definition = "PolicyHolder email contact."
-* telecom[phone].system = FHIRContactPointSystemCS#phone
-  * ^short = "PolicyHolder phone"
-  * ^definition = "PolicyHolder phone contact."
-* telecom[fax].system = FHIRContactPointSystemCS#fax
-  * ^short = "PolicyHolder fax"
-  * ^definition = "PolicyHolder fax contact."
-
-* address 1..1 MS // HF address => state->district
-  * type = FHIRAddressType#physical
-  * country 0..0 // Not used 
-  // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
-  * state 1..1 MS // mapped to Region 
-    * ^short = "State/Region"
-    * ^definition = "PolicyHolder's State/Region name as it is configured in openIMIS."
-  // Location.LocationName from HF's District (HF.LocationId)
-  * district 1..1 MS // mapped to District 
-    * ^short = "District"
-    * ^definition = "PolicyHolder's District name as it is configured in openIMIS."
-  * extension contains AddressMunicipalityExtension named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
-    * ^short = "Municipality/Ward"
-    * ^definition = "Insuree's Municipality/Ward name as it is configured in openIMIS."
-  * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
-    * ^short = "City/Village"
-    * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
-  * postalCode 0..0 // not used
-  * line 0..1 // HFAddress
-  * extension contains AddressLocationReferenceExtension named location 1..1 MS 
-
-* partOf 0..0 // not used
-
+// REMOVED: telecom is moved under contact
 * contact 0..1
   * purpose 0..0
+  * purpose = ContactEntityTypeCS#PAYOR
   * name 1..1
     * use 0..0
     * text 1..1
@@ -85,11 +45,49 @@ Description: "Defines an Organization for openIMIS which maps to a Policy Holder
     * prefix 0..0
     * suffix 0..0
     * period 0..0
-
-  * telecom 0..0
-  * address 0..0
   * ^short = "PolicyHolder contact"
   * ^definition = "PolicyHolder contact details. "
+  * telecom 0..3 MS
+    * value 1..1 
+  * telecom ^slicing.discriminator.type = #value
+  * telecom ^slicing.discriminator.path = "system"
+  * telecom ^slicing.rules = #open
+  * telecom contains
+      email 0..1 and
+      phone 0..1 and 
+      fax 0..1 
+  * telecom[email].system = #email 
+    * ^short = "PolicyHolder email"
+    * ^definition = "PolicyHolder email contact."
+  * telecom[phone].system = #phone
+    * ^short = "PolicyHolder phone"
+    * ^definition = "PolicyHolder phone contact."
+  * telecom[fax].system = #fax
+    * ^short = "PolicyHolder fax"
+    * ^definition = "PolicyHolder fax contact."
+
+  * address 0..0 MS // HF address => state->district
+    * type = FHIRAddressType#physical
+    * country 0..0 // Not used 
+    // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
+    * state 1..1 MS // mapped to Region 
+      * ^short = "State/Region"
+      * ^definition = "PolicyHolder's State/Region name as it is configured in openIMIS."
+    // Location.LocationName from HF's District (HF.LocationId)
+    * district 1..1 MS // mapped to District 
+      * ^short = "District"
+      * ^definition = "PolicyHolder's District name as it is configured in openIMIS."
+    * extension contains AddressMunicipalityExtension named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
+      * ^short = "Municipality/Ward"
+      * ^definition = "Insuree's Municipality/Ward name as it is configured in openIMIS."
+    * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
+      * ^short = "City/Village"
+      * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
+    * postalCode 0..0 // not used
+    * line 0..1 // HFAddress
+    * extension contains AddressLocationReferenceExtension named location 1..1 MS 
+
+* partOf 0..0 // not used
 
 * extension contains OrganizationPHLegalFormExtension named legalForm 0..1 
 * extension[legalForm]

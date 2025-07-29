@@ -30,6 +30,9 @@ Description: "Defines a Coverage for openIMIS which maps to a Policy."
   * cancelled: policy suspended
   * draft: policy idle"""
 
+// NEW: kind is a new mandatory field in R5
+* kind = #insurance
+
 * type 0..0 // could be used later if different kinds of benefit packages are covered by openIMIS
 
 * policyHolder only Reference(OpenIMISPatient)
@@ -48,8 +51,9 @@ Description: "Defines a Coverage for openIMIS which maps to a Policy."
     * ^short = "Expiry date"
     * ^definition = """Date when the enrolment/renewal will actual end. Mapped to `Policy.ExpiryDate`."""
 
-* payor 1..1
-* payor only Reference(OpenIMISPatient or OpenIMISPolicyHolderOrganization)
+// REMOVED: payor is removed in R5
+// * payor 1..1
+// * payor only Reference(OpenIMISPatient or OpenIMISPolicyHolderOrganization)
 
 * class 1..1
   * type = FHIRCoverageClassCodes#plan "Plan"

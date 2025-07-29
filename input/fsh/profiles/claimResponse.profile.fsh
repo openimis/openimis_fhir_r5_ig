@@ -68,7 +68,7 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
 * item 1..*
   * itemSequence 1..1
   * noteNumber 0..0
-  * adjudication 1..4
+  * adjudication 0..4 // UPDATED: Min Cardinality changed from 1 to 0
     * category from ClaimStatusVS (required)
     * reason 1..1
       * coding 1..1
@@ -82,8 +82,8 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
       * currency 0..1
       * ^definition = "Unit price."
 
-    * value 1..1
-      * ^definition = "Quantity provided."
+    // * value 1..1 REMOVED: value is removed in R5
+    //   * ^definition = "Quantity provided."
   
   * detail 0..0
 

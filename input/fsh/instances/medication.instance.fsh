@@ -7,10 +7,10 @@ Description: "Example of openIMIS Medication"
 * identifier[UUID].type = OpenIMISIdentifierCS#UUID
 * code = SNOMEDCTMedicationCodes#7947003 
   * text = "ACETYLSALICYLIC ACID (ASPIRIN) TABS 300MG"
-* form = SNOMEDCTFormCodes#385055001 "Tablet"
-* amount 
-  * numerator
-    * value = 1000.00
+// * form = SNOMEDCTFormCodes#385055001 "Tablet"
+// * amount 
+//   * numerator
+//     * value = 1000.00
 * extension[unitPrice].valueMoney
   * value = 10.00
   * currency = CurrencyCode#EUR "Euro"

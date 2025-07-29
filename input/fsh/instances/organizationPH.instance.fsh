@@ -7,24 +7,17 @@ Description: "Example of openIMIS PolicyHolder"
 * identifier[UUID].type = OpenIMISIdentifierCS#UUID
 * type = OrganizationTypeCS#bus
 * name = "My Trade"
-* telecom[email]
-  * system = FHIRContactPointSystemCS#email 
-  * value = "contact@mytrade.org"
-* telecom[phone]
-  * system = FHIRContactPointSystemCS#phone
-  * value = "0102030405"
-* telecom[fax]
-  * system = FHIRContactPointSystemCS#fax
-  * value = "0102030450"
-* address
-  * line = "54 Pasay"
-  * state = "Ultha"
-  * district = "Rapta"
-  * extension[municipality].valueString = "Jamu"
-  * city = "Jamula"
-  * extension[location].valueReference = Reference(Jamula-village)
-* contact 
+* contact
   * name 
     * text = "John Doe"
+  * telecom[email]
+    * system = #email 
+    * value = "contact@mytrade.org"
+  * telecom[phone]
+    * system = #phone
+    * value = "0102030405"
+  * telecom[fax]
+    * system = #fax
+    * value = "0102030450"
 * extension[legalForm].valueCodeableConcept = OrganizationPHLegalFormCS#1 "Personal Company"
 * extension[activity].valueCodeableConcept = OrganizationPHActivityCS#2 "Industry"

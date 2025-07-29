@@ -37,6 +37,7 @@ CodeSystem: PatientIdentificationTypeCS
 Id: patient-identification-type
 Title: "Identification Type (Patient)"
 Description: "Indicates the type of document the Patient used to identify himself. Values defined by openIMIS. Can be extended."
+* ^url = "https://openimis.github.io/openimis_fhir_r4_ig/CodeSystem-patient-identification-types"
 * #D "Driver's License"
 * #N "National ID"
 * #P "Passport"

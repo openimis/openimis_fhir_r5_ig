@@ -18,11 +18,11 @@ Description: """
   * start = "2021-07-01"
   * end = "2022-06-30"
 
-* payor = Reference(jane-doe)
+// * payor = Reference(jane-doe) // REMOVED: payor is removed in R5
 
 * class
   * type = FHIRCoverageClassCodes#plan "Plan"
-  * value = "RX01"
+  * value.value = "RX01"
   * name = "Regional fixed enrolment"
     
 * extension[enrollDate].valueDate = "2021-01-28"

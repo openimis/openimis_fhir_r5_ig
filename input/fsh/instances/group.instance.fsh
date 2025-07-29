@@ -6,7 +6,8 @@ Description: "Example of openIMIS Group"
 * identifier[Code].value = "123456788"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
 * type = GroupTypeCS#person
-* actual = true
+// * actual = true // REMOVED: actual is removed in R5
+* membership = #definitional
 * active = true
 * name = "Doe Jane"
 * quantity = 2

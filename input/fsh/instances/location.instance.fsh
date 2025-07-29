@@ -5,7 +5,7 @@ Description: "Example of a Village"
 * identifier[Code].value = "R1D1M2V1"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
 * name = "Jamula"
-* physicalType = LocationTypeCS#V "Village"
+* form = LocationTypeCS#V "Village"
 * partOf = Reference(Jamu-municipality)
 
 Instance: Jamu-municipality
@@ -15,7 +15,7 @@ Description: "Example of a municipality"
 * identifier[Code].value = "R1D1M2"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
 * name = "Jamu"
-* physicalType = LocationTypeCS#W "Municipality/Ward"
+* form = LocationTypeCS#W "Municipality/Ward"
 * partOf = Reference(Jimara-district)
 
 Instance: Jimara-district
@@ -25,7 +25,7 @@ Description: "Example of a district"
 * identifier[Code].value = "R1D1"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
 * name = "Jimara"
-* physicalType = LocationTypeCS#D "District"
+* form = LocationTypeCS#D "District"
 * partOf = Reference(Upper-River-Region)
 
 Instance: Upper-River-Region
@@ -35,4 +35,4 @@ Description: "Example of a Region"
 * identifier[Code].value = "R1"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
 * name = "Upper River Region"
-* physicalType = LocationTypeCS#R "Region"
+* form = LocationTypeCS#R "Region"

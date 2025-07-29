@@ -13,17 +13,17 @@ Description: """
 * about = Reference(Claim001)
 
 * payload[CareRendered]
-  * contentString = "yes"
+  * contentCodeableConcept = FeedbackPayloadCS#CareRendered 
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#CareRendered 
 * payload[PaymentAsked]
-  * contentString = "no"
+  * contentCodeableConcept = FeedbackPayloadCS#PaymentAsked 
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#PaymentAsked 
 * payload[DrugPrescribed]
-  * contentString = "yes"
+  * contentCodeableConcept = FeedbackPayloadCS#DrugPrescribed 
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugPrescribed 
 * payload[DrugReceived]
-  * contentString = "yes"
+  * contentCodeableConcept = FeedbackPayloadCS#DrugReceived 
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugReceived 
 * payload[Asessment]
-  * contentString = "4"
+  * contentCodeableConcept = FeedbackPayloadCS#Asessment 
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#Asessment 
