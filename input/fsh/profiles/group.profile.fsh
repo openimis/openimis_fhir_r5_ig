@@ -32,7 +32,7 @@ Description: "Defines a Group for openIMIS which maps to an Family"
   * ^definition = "Mentions if the Group/Family has an Active Policy."
 
 * type = GroupTypeCS#person // always person
-* actual = true // always true
+* membership = #definitional // always true // RENAMED: actual is renamed to membership
 * code 0..0 // not used
 
 * name 0..1 // The name by which the Group/Family is known. Only for GET Group

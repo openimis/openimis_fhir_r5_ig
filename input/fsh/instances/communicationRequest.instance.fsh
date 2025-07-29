@@ -7,6 +7,7 @@ Description: """
             """
 
 * status = FHIRRequestStatus#active "Active"
+* intent = #order
 * statusReason = FeedbackStatusCS#4 "Selected"
 
 * subject = Reference(john-doe)
@@ -14,19 +15,19 @@ Description: """
 * about = Reference(Claim001)
 
 * payload[CareRendered]
-  * contentString = "Care Rendered? (yes|no)"
+  * contentCodeableConcept.text = "Care Rendered? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#CareRendered 
 * payload[PaymentAsked]
-  * contentString = "Payment Asked? (yes|no)"
+  * contentCodeableConcept.text = "Payment Asked? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#PaymentAsked 
 * payload[DrugPrescribed]
-  * contentString = "Drug Prescribed? (yes|no)"
+  * contentCodeableConcept.text = "Drug Prescribed? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugPrescribed 
 * payload[DrugReceived]
-  * contentString = "Drug Received? (yes|no)"
+  * contentCodeableConcept.text = "Drug Received? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugReceived 
 * payload[Asessment]
-  * contentString = "Asessment? (0|1|2|3|4|5)"
+  * contentCodeableConcept.text = "Asessment? (0|1|2|3|4|5)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#Asessment 
 
 * recipient = Reference(Roberts-Jeb-EO)

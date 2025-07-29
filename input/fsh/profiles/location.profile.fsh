@@ -42,13 +42,19 @@ Description: "Defines a Location for openIMIS which maps to a Location"
 * description 0..0
 * mode = LocationModeCS#instance "Instance"
 * type 0..0
-* telecom 0..0 
+// * telecom 0..0 // REMOVED: telecom is moved under Location.contact.telecom in R5 
 * address 0..0 
 
-* physicalType 1..1 MS 
+// PhysicalType is removed in R5 and renamed to form
+// * physicalType 1..1 MS 
+//   * ^short = "Location type"
+//   * ^definition = "Location type specifying the level of location."
+// * physicalType from LocationTypeVS (required)
+
+* form 1..1 MS
   * ^short = "Location type"
   * ^definition = "Location type specifying the level of location."
-* physicalType from LocationTypeVS (required)
+* form from LocationTypeVS (required)
 
 * position 0..0
 * managingOrganization 0..0
@@ -57,5 +63,5 @@ Description: "Defines a Location for openIMIS which maps to a Location"
 * partOf only Reference(OpenIMISLocation)
 
 * hoursOfOperation 0..0
-* availabilityExceptions 0..0
+// * availabilityExceptions 0..0 // REMOVED: Removed and moved to Location.hoursOfOperation.notAvailable.description
 * endpoint 0..0

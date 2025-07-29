@@ -35,7 +35,7 @@ Description: "Defines a CommunicationRequest for openIMIS which maps to the Clai
 * encounter 0..0
 
 * payload  5..5
-  * content[x] only string
+  * content[x] only CodeableConcept
   * extension contains CommunicationPayloadTypeExtension named type 1..1 
 * payload ^slicing.discriminator.type = #value
 * payload ^slicing.discriminator.path = "extension[type].valueCodeableConcept.coding.code"
@@ -47,19 +47,24 @@ Description: "Defines a CommunicationRequest for openIMIS which maps to the Clai
     DrugReceived 1..1 and
     Asessment 1..1
 * payload[CareRendered]
-  * contentString = "Care Rendered? (yes|no)"
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.text = "Care Rendered? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#CareRendered 
 * payload[PaymentAsked]
-  * contentString = "Payment Asked? (yes|no)"
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.text = "Payment Asked? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#PaymentAsked 
 * payload[DrugPrescribed]
-  * contentString = "Drug Prescribed? (yes|no)"
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.text = "Drug Prescribed? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugPrescribed 
 * payload[DrugReceived]
-  * contentString = "Drug Received? (yes|no)"
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.text = "Drug Received? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugReceived 
 * payload[Asessment]
-  * contentString = "Asessment? (0|1|2|3|4|5)"
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.text = "Asessment? (0|1|2|3|4|5)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#Asessment 
 
 * occurrence[x] 0..0
@@ -71,8 +76,9 @@ Description: "Defines a CommunicationRequest for openIMIS which maps to the Clai
   * ^short = "Enrolment Officer"
   * ^definition = "Enrolment Officer having enroled the insuree."
 
-* sender 0..0
-* reasonCode 0..0
-* reasonReference 0..0
+* informationProvider 0..0 // RENAMED: sender is renamed to informationProvider in R5
+// * reasonCode 0..0 // REMOVED: in R5
+// * reasonReference 0..0 // REMOVED; in R5
+* reason 0..0
 * note 0..0
 

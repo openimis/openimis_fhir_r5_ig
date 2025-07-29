@@ -7,9 +7,12 @@ Description: "Example of openIMIS Health Facility"
 * identifier[UUID].type = OpenIMISIdentifierCS#UUID
 * type = OrganizationTypeCS#prov
 * name = "Rapta District Hospital"
-* address[0]
-  * type = FHIRAddressType#physical
-  * state = "Ultha"
-  * district = "Rapta"
-  * extension[locationDistrict].valueReference = Reference(Jimara-district)
+* contact
+  * name
+    * text = "Rapta District Hospital Contact"
+  * address[0]
+    * type = FHIRAddressType#physical
+    * state = "Ultha"
+    * district = "Rapta"
+    * extension[locationDistrict].valueReference = Reference(Jimara-district)
 * extension[legalForm].valueCodeableConcept = OrganizationHFLegalFormCS#D "District organization"

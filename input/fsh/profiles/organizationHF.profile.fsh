@@ -33,52 +33,49 @@ Description: "Defines an Organization for openIMIS which maps to a Health Facili
 * name 1..1 
 * alias 0..0 // not used
 
-* telecom 0..3
-  * value 1..1 
-* telecom ^slicing.discriminator.type = #value
-* telecom ^slicing.discriminator.path = "system"
-* telecom ^slicing.rules = #closed
-* telecom contains
-    email 0..1 and
-    phone 0..1 and 
-    fax 0..1 
-* telecom[email].system = FHIRContactPointSystemCS#email 
-  * ^short = "Health Facility email"
-  * ^definition = "Health Facility email contact."
-* telecom[phone].system = FHIRContactPointSystemCS#phone
-  * ^short = "Health Facility phone"
-  * ^definition = "Health Facility phone contact."
-* telecom[fax].system = FHIRContactPointSystemCS#fax
-  * ^short = "Health Facility fax"
-  * ^definition = "Health Facility fax contact."
-
-* address 1..1 MS // HF address => state->district
-  * type = FHIRAddressType#physical
-  * country 0..0 // Not used 
-  // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
-  * state 1..1 MS // mapped to Region 
-    * ^short = "State/Region"
-    * ^definition = "Health Facility's State/Region name as it is configured in openIMIS."
-  // Location.LocationName from HF's District (HF.LocationId)
-  * district 1..1 MS // mapped to District 
-    * ^short = "District"
-    * ^definition = "Health Facility's District name as it is configured in openIMIS."
-  * city 0..0 // not used
-  * postalCode 0..0 // not used
-  * line 0..1 // HFAddress
-  * extension contains AddressLocationReferenceExtension named locationDistrict 1..1 MS 
-
-* partOf 0..0 // not used
-
+// REMOVED: telecom is moved under contact
 * contact 0..*
   * purpose 1..1
   * purpose = ContactEntityTypeCS#PAYOR
   * name 1..1
-  * telecom 0..*
-  * address 0..1
   * ^short = "Claim Administrator contact"
   * ^definition = "Claim Administrator contact details. Contains the list of all CA attached to the Health Facility. Only available in GET Organization."
+  * telecom 0..3
+    * value 1..1 
+  * telecom ^slicing.discriminator.type = #value
+  * telecom ^slicing.discriminator.path = "system"
+  * telecom ^slicing.rules = #closed
+  * telecom contains
+      email 0..1 and
+      phone 0..1 and 
+      fax 0..1 
+  * telecom[email].system = FHIRContactPointSystemCS#email 
+    * ^short = "Health Facility email"
+    * ^definition = "Health Facility email contact."
+  * telecom[phone].system = FHIRContactPointSystemCS#phone
+    * ^short = "Health Facility phone"
+    * ^definition = "Health Facility phone contact."
+  * telecom[fax].system = FHIRContactPointSystemCS#fax
+    * ^short = "Health Facility fax"
+    * ^definition = "Health Facility fax contact."
 
+  * address 1..1 MS // HF address => state->district
+    * type = FHIRAddressType#physical
+    * country 0..0 // Not used 
+    // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
+    * state 1..1 MS // mapped to Region 
+      * ^short = "State/Region"
+      * ^definition = "Health Facility's State/Region name as it is configured in openIMIS."
+    // Location.LocationName from HF's District (HF.LocationId)
+    * district 1..1 MS // mapped to District 
+      * ^short = "District"
+      * ^definition = "Health Facility's District name as it is configured in openIMIS."
+    * city 0..0 // not used
+    * postalCode 0..0 // not used
+    * line 0..1 // HFAddress
+    * extension contains AddressLocationReferenceExtension named locationDistrict 1..1 MS 
+
+* partOf 0..0 // not used
 * extension contains OrganizationHFLegalFormExtension named legalForm 0..1 
 * extension[legalForm]
   * ^short = "Legal Form"

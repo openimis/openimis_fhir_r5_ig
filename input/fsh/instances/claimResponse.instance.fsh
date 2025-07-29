@@ -30,7 +30,7 @@ Description: """
     * reason 
       * coding = ClaimRejectionReasonsCS#0 "ACCEPTED"
 
-    * value = 1
+    // * value = 1 // REMOVED: value is removed in R5
     * amount 
       * value = 40.00
     
@@ -42,7 +42,7 @@ Description: """
     * category = ClaimStatusCS#4 "Checked"
     * reason 
       * coding = ClaimRejectionReasonsCS#0 "ACCEPTED"
-    * value = 2
+    // * value = 2 // REMOVED: value is removed from adjudication
     * amount 
       * value = 10.00
   

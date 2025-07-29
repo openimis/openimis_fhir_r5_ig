@@ -46,26 +46,31 @@ Description: "Defines a Enrolment Officer Practitioner Role for openIMIS."
 * location only Reference(OpenIMISLocation)
 * healthcareService 0..0
 
-* telecom 0..2 
-  * value 1..1 
-* telecom ^slicing.discriminator.type = #value
-* telecom ^slicing.discriminator.path = "system"
-* telecom ^slicing.rules = #closed
-* telecom contains
-    email 0..1 and
-    phone 0..1
-* telecom[email]
-  * system = FHIRContactPointSystemCS#email 
-  * ^short = "Enrolment Officer email"
-  * ^definition = "Enrolment Officer email contact."
-* telecom[phone]
-  * system = FHIRContactPointSystemCS#phone
-  * ^short = "Enrolment Officer phone"
-  * ^definition = "Enrolment Officer phone contact."
+// REMOVED: telecom is moved under contact
+* contact 0..*
+  * purpose 1..1
+  * purpose = ContactEntityTypeCS#PAYOR
+  * name 1..1
+  * telecom 0..2 
+    * value 1..1 
+  * telecom ^slicing.discriminator.type = #value
+  * telecom ^slicing.discriminator.path = "system"
+  * telecom ^slicing.rules = #closed
+  * telecom contains
+      email 0..1 and
+      phone 0..1
+  * telecom[email]
+    * system = FHIRContactPointSystemCS#email 
+    * ^short = "Enrolment Officer email"
+    * ^definition = "Enrolment Officer email contact."
+  * telecom[phone]
+    * system = FHIRContactPointSystemCS#phone
+    * ^short = "Enrolment Officer phone"
+    * ^definition = "Enrolment Officer phone contact."
 
-* availableTime 0..0
-* notAvailable 0..0
-* availabilityExceptions 0..0
+// * availableTime 0..0 // REMOVED: moved to PractitionerRole.availability.availableTime
+// * notAvailable 0..0 // REMOVED: moved to PractitionerRole.availability.notAvailableTime
+// * availabilityExceptions 0..0 // REMOVED: moved to PractitionerRole.availability.notAvailableTime.description
 * endpoint 0..0
 
 * extension contains PractitionerRoleSubstitutionReferenceExtension named substitution 0..1 
