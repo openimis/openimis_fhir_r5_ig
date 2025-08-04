@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
-  <id value="openimis_fhir_r4"/>
+  <id value="openimis_fhir_r5"/>
 <!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
-  <url value="http://demo.openimis.org/fhir-ig/openimis_fhir_r4/ImplementationGuide/openimis_fhir_r4"/>
+  <url value="http://demo.openimis.org/fhir-ig/openimis_fhir_r5/ImplementationGuide/openimis_fhir_r5"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0-test"/>
-  <name value="openIMISFHIRR4"/>
-  <title value="openIMIS FHIR R4 Implementation Guide"/>
+  <name value="openIMISFHIRR5"/>
+  <title value="openIMIS FHIR R5 Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="Swiss TPH"/>
@@ -25,7 +25,7 @@
       <value value="dragos.dobre@swisstph.ch"/>
     </telecom>
   </contact>
-  <description value="This IG is about the mapping and usage of FHIR R4 to integrate openIMIS with other external systems."/>
+  <description value="This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems."/>
   <jurisdiction>
     <!-- This will drive SNOMED release used -->
     <coding>
@@ -38,11 +38,11 @@
       -->
     </coding>
   </jurisdiction>
-  <packageId value="org.openimis.fhir.r4"/>
+  <packageId value="org.openimis.fhir.r5"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
-  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="5.0.0"/>
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
@@ -54,7 +54,7 @@
       <generation value="html"/>
       <page>
         <nameUrl value="index.html"/>
-        <title value="openIMIS FHIR R4 Home Page"/>
+        <title value="openIMIS FHIR R5 Home Page"/>
         <generation value="html"/>
       </page>
       <page>
