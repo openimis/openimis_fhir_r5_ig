@@ -157,8 +157,6 @@ Description: """
           * ^short = "Policy Value"
           * ^definition = """Cost of the policy. Mapped through `Policy.PolicyValue`."""
       * payment 0..0
-//        * ^short = "Payment receipt"
-//        * ^definition = """Receipt number for the payment. Mapped through `Premium.Receipt`."""
       * paymentDate 0..0
       * responsible 0..0
       * recipient 0..0
