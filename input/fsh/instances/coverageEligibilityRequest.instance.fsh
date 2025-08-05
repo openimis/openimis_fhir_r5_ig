@@ -18,7 +18,7 @@ Description: """
 * insurer = Reference(openIMIS-Implementation)
 
 * item[+]
-  * category = ClaimItemCategoryCS#service "Service"
+  * category = CoverageItemCategoryCS#service "Service"
   * productOrService
     * text = "A1"
 
