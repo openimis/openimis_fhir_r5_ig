@@ -31,9 +31,10 @@ Instance: openIMISCapabilityStatement
 InstanceOf: CapabilityStatement
 Title: "openIMIS Capability Statement"
 Usage: #definition
-* name = "openIMIS Capability Statement"
+* name = "openIMISCapabilityStatement"
+* description = "Capability Statement for openIMIS FHIR R5 Implementation Guide"
 * rest.mode = #server
-* rest.security.service = http://terminology.hl7.org/CodeSystem/restful-security-service#OAuth "OAuth"
+* rest.security.service = http://hl7.org/fhir/restful-security-service#OAuth "OAuth"
 * status = #draft
 * date = "2022-05-24"
 * kind = #requirements
@@ -42,7 +43,7 @@ Usage: #definition
 
 // ActivityDefinition requirements
 * insert SupportResource(ActivityDefinition, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-activitiy-definition.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activitiy-definition, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -51,7 +52,7 @@ Usage: #definition
 
  // Claim requirements
 * insert SupportResource(Claim, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-claim.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -61,7 +62,7 @@ Usage: #definition
 
  // ClaimResponse requirements
 * insert SupportResource(ClaimResponse, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-claim-response.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -70,12 +71,12 @@ Usage: #definition
 
 // Communication requirements
 * insert SupportResource(Communication, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-communication.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 
 // CommunicationRequest requirements
 * insert SupportResource(CommunicationRequest, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-communication-request.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
@@ -83,7 +84,7 @@ Usage: #definition
 
 // Contract requirements
 * insert SupportResource(Contract, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-contract.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -93,7 +94,7 @@ Usage: #definition
 
 // Coverage requirements
 * insert SupportResource(Coverage, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-coverage.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -101,12 +102,12 @@ Usage: #definition
 
 // CoverageEligibilityRequest requirements
 * insert SupportResource(CoverageEligibilityRequest, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-coverage-eligibility-request.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 
 // Group requirements
 * insert SupportResource(Group, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-group.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -116,9 +117,9 @@ Usage: #definition
 
 // Organization requirements
 * insert SupportResource(Organization, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-health-facility-organization.html, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-policy-holder-organization.html, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-insurance-organization.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -127,7 +128,7 @@ Usage: #definition
 
 // InsurancePlan requirements
 * insert SupportResource(InsurancePlan, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-insurance-plan.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -136,8 +137,8 @@ Usage: #definition
 
 // Invoice requirements
 * insert SupportResource(Invoice, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-invoice-invoice.html, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-invoice-bill.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-bill, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -145,7 +146,7 @@ Usage: #definition
 
 // Location  requirements
 * insert SupportResource(Location, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-location.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -154,7 +155,7 @@ Usage: #definition
 
 // Medication requirements
 * insert SupportResource(Medication, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-medication.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -163,7 +164,7 @@ Usage: #definition
 
 // Patient requirements
 * insert SupportResource(Patient, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-patient.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 * insert SupportInteraction(#update, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
@@ -174,8 +175,8 @@ Usage: #definition
 
 // Practitioner requirements
 * insert SupportResource(Practitioner, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-claim-administrator-practitioner.html, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-enrolment-officer-practitioner.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -184,8 +185,8 @@ Usage: #definition
 
 // PractitionerRole requirements
 * insert SupportResource(PractitionerRole, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-claim-administrator-practitioner-role.html, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-enrolment-officer-practitioner-role.html, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner-role, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner-role, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -193,8 +194,8 @@ Usage: #definition
 * insert SupportSearchParam(identifier, http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier, #token, #SHALL)
 
 // Subscription requirements
-* insert SupportResource(Patient, #SHALL)
-* insert SupportProfile(https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/StructureDefinition-openimis-subscription.html, #SHALL)
+* insert SupportResource(Subscription, #SHALL)
+* insert SupportProfile(https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 * insert SupportInteraction(#update, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
