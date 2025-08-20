@@ -5,7 +5,7 @@ Description: "Example of openIMIS Group"
 * identifier[UUID].type = OpenIMISIdentifierCS#UUID
 * identifier[Code].value = "123456788"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
-* type = GroupTypeCS#person
+* type = FHIRGroupTypeCS#person
 // * actual = true // REMOVED: actual is removed in R5
 * membership = #definitional
 * active = true
