@@ -40,7 +40,7 @@ Description: "The Context a Medication can be prescribed."
 * extension[Age]
   * value[x] only UsageContext
   * valueUsageContext
-    * code = UsageContextTypeCS#age "Age"
+    * code = UsageContextTypeCS#age "Age Range"
     * value[x] only CodeableConcept
     * valueCodeableConcept
       * coding 1..2 
