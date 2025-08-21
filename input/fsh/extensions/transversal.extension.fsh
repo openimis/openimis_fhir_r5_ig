@@ -7,6 +7,7 @@ Description: "The unit price for a Medication or ActivityDefinition."
 * insert ExtensionContext(OpenIMISInvoice)
 * insert ExtensionContext(ActivityDefinition)
 * insert ExtensionContext(Invoice.lineItem.priceComponent)
+* insert ExtensionContext(Medication)
 
 * value[x] only Money
 * valueMoney 
