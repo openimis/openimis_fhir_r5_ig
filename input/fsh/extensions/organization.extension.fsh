@@ -3,6 +3,7 @@ Id:        organization-hf-legal-form
 Title:    "Legal Forms (Organization)"
 Description: "Indicates the legal forms of the Health Facility Organization. "
 * insert ExtensionContext(OpenIMISHealthFacilityOrganization)
+* insert ExtensionContext(Organization)
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganizationHFLegalFormVS (example)
 
@@ -11,6 +12,7 @@ Id:        organization-hf-level
 Title:    "Health Facility Level (Organization)"
 Description: "Indicates the level of the Health Facility (Organization)."
 * insert ExtensionContext(OpenIMISHealthFacilityOrganization)
+* insert ExtensionContext(Organization)
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganizationHFLevelVS (required)
 
@@ -19,6 +21,7 @@ Id: organization-hf-care-type
 Title: "Health Facility Care Type (Organization)"
 Description: "Indicates the care type of the Health Facility (Organization)."
 * insert ExtensionContext(OpenIMISHealthFacilityOrganization)
+* insert ExtensionContext(Organization)
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganizationHFCareTypeVS (required)
 
