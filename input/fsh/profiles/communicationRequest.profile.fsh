@@ -37,8 +37,8 @@ Description: "Defines a CommunicationRequest for openIMIS which maps to the Clai
 * payload  5..5
   * content[x] only CodeableConcept
   * extension contains CommunicationPayloadTypeExtension named type 1..1 
-* payload ^slicing.discriminator.type = #value
-* payload ^slicing.discriminator.path = "extension[type].valueCodeableConcept.coding.code"
+* payload ^slicing.discriminator.type = #pattern
+* payload ^slicing.discriminator.path = "content.ofType(CodeableConcept).text"
 * payload ^slicing.rules = #closed
 * payload contains
     CareRendered 1..1 and

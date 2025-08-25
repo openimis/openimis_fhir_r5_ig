@@ -42,7 +42,7 @@ Description: "Defines a Communication for openIMIS which maps to the Feedback in
   * extension contains CommunicationPayloadTypeExtension named type 1..1
 
 * payload ^slicing.discriminator.type = #value
-* payload ^slicing.discriminator.path = "extension[type].valueCodeableConcept.coding.code"
+* payload ^slicing.discriminator.path = "extension.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type').valueCodeableConcept.coding.code"
 * payload ^slicing.rules = #closed
 
 * payload contains
