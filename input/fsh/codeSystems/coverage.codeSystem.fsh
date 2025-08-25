@@ -30,7 +30,7 @@ Description: "Indicates the type of benefit under a Coverage. Values defined by 
 //* #service_left "service_left"
 * #item_left "Items left"
 //* #min_date_service "min_date_service"
-* #min_date_item "Mininum date"
+* #min_date_item "Minimum date"
 //* #service_ok "service_ok"
 //* #item_ok "Item ok"
 

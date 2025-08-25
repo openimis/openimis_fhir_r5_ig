@@ -52,5 +52,5 @@ Id: coverage-item-benefit-type
 Title: "Type of benefit (Coverage)"
 Description: "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended."
 * CoverageItemBenefitTypeCS#item_left "Items left"
-* CoverageItemBenefitTypeCS#min_date_item "Mininum date"
+* CoverageItemBenefitTypeCS#min_date_item "Minimum date"
 
