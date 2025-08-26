@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-rejection-reasons> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "claim-rejection-reasons"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet claim-rejection-reasons</b></p><a name=\"claim-rejection-reasons\"> </a><a name=\"hcclaim-rejection-reasons\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-claim-rejection-reasons.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons</code></a></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-rejection-reasons"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ClaimRejectionReasonsVS"] ; # 
+  fhir:title [ fhir:v "Rejection reasons (Claim)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons"^^xsd:anyURI ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

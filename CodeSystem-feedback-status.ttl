@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "feedback-status"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem feedback-status</b></p><a name=\"feedback-status\"> </a><a name=\"hcfeedback-status\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"feedback-status-4\"> </a></td><td>Selected</td><td>Selected for Feedback</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"feedback-status-8\"> </a></td><td>Delivered</td><td>Feedback delivered</td></tr><tr><td style=\"white-space:nowrap\">16<a name=\"feedback-status-16\"> </a></td><td>Bypassed</td><td>Feedback bypassed</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FeedbackStatusCS"] ; # 
+  fhir:title [ fhir:v "Feedback Status (CommunicationRequest)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Indicates the Feedback Status for a CommunicationRequest. Partial list defined by openIMIS. Can not be extended."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Selected" ] ;
+     fhir:definition [ fhir:v "Selected for Feedback" ]
+  ] [
+     fhir:code [ fhir:v "8" ] ;
+     fhir:display [ fhir:v "Delivered" ] ;
+     fhir:definition [ fhir:v "Feedback delivered" ]
+  ] [
+     fhir:code [ fhir:v "16" ] ;
+     fhir:display [ fhir:v "Bypassed" ] ;
+     fhir:definition [ fhir:v "Feedback bypassed" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

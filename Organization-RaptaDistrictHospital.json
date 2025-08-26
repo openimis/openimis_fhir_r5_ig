@@ -1,0 +1,78 @@
+{
+  "resourceType" : "Organization",
+  "id" : "RaptaDistrictHospital",
+  "meta" : {
+    "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization RaptaDistrictHospital</b></p><a name=\"RaptaDistrictHospital\"> </a><a name=\"hcRaptaDistrictHospital\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-health-facility-organization.html\">openIMIS Health Facility Organization</a></p></div><p><b>Health Facility Care Type (Organization)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type B}\">Both</span></p><p><b>Legal Forms (Organization)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form D}\">District organization</span></p><p><b>identifier</b>: Unique code/RAHOS001, UUID unique identifier/D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Rapta District Hospital</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Name</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type PAYOR}\">Payor</span></td><td>Rapta District Hospital Contact</td><td>Ultha </td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type",
+        "code" : "B",
+        "display" : "Both"
+      }]
+    }
+  },
+  {
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-legal-form",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form",
+        "code" : "D",
+        "display" : "District organization"
+      }]
+    }
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers",
+        "code" : "Code"
+      }]
+    },
+    "value" : "RAHOS001"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers",
+        "code" : "UUID"
+      }]
+    },
+    "value" : "D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "prov"
+    }]
+  }],
+  "name" : "Rapta District Hospital",
+  "contact" : [{
+    "purpose" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
+        "code" : "PAYOR"
+      }]
+    },
+    "name" : [{
+      "text" : "Rapta District Hospital Contact"
+    }],
+    "address" : {
+      "extension" : [{
+        "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference",
+        "valueReference" : {
+          "reference" : "Location/Jimara-district"
+        }
+      }],
+      "type" : "physical",
+      "district" : "Rapta",
+      "state" : "Ultha"
+    }
+  }]
+}

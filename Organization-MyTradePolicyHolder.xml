@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="MyTradePolicyHolder"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization MyTradePolicyHolder</b></p><a name="MyTradePolicyHolder"> </a><a name="hcMyTradePolicyHolder"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-policy-holder-organization.html">openIMIS Policy Holder Organization</a></p></div><p><b>Legal Forms (Organization)</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form 1}">Personal Company</span></p><p><b>Activity (Organization)</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity 2}">Industry</span></p><p><b>identifier</b>: Unique code/1234, UUID unique identifier/4c87928a-cf9c-4f4b-aeeb-61041c84547f</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type bus}">Non-Healthcare Business or Corporation</span></p><p><b>name</b>: My Trade</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td style="display: none">*</td><td>John Doe</td><td><a href="mailto:contact@mytrade.org">contact@mytrade.org</a>, ph: 0102030405, fax: 0102030450</td></tr></table></div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-legal-form">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form"/>
+        <code value="1"/>
+        <display value="Personal Company"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-activity">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity"/>
+        <code value="2"/>
+        <display value="Industry"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="Code"/>
+      </coding>
+    </type>
+    <value value="1234"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="UUID"/>
+      </coding>
+    </type>
+    <value value="4c87928a-cf9c-4f4b-aeeb-61041c84547f"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="bus"/>
+    </coding>
+  </type>
+  <name value="My Trade"/>
+  <contact>
+    <name>
+      <text value="John Doe"/>
+    </name>
+    <telecom>
+      <system value="email"/>
+      <value value="contact@mytrade.org"/>
+    </telecom>
+    <telecom>
+      <system value="phone"/>
+      <value value="0102030405"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="0102030450"/>
+    </telecom>
+  </contact>
+</Organization>

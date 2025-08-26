@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "openimis-identifiers",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet openimis-identifiers</b></p><a name=\"openimis-identifiers\"> </a><a name=\"hcopenimis-identifiers\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-openimis-identifiers.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/openimis-identifiers",
+  "version" : "0.1.0",
+  "name" : "OpenIMISIdentifierVS",
+  "title" : "openIMIS Identifiers Value Set",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the Identifier type",
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"
+    }]
+  }
+}

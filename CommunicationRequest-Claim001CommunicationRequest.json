@@ -1,0 +1,99 @@
+{
+  "resourceType" : "CommunicationRequest",
+  "id" : "Claim001CommunicationRequest",
+  "meta" : {
+    "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CommunicationRequest Claim001CommunicationRequest</b></p><a name=\"Claim001CommunicationRequest\"> </a><a name=\"hcClaim001CommunicationRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-communication-request.html\">openIMIS CommunicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>statusReason</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status 4}\">Selected</span></p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href=\"Patient-john-doe.html\">John Doe  Male, DoB: 1962-02-05 ( Unique code)</a></p><p><b>about</b>: <a href=\"Claim-Claim001.html\">Claim: identifier = Unique code; status = active; type = Other; use = claim; billablePeriod = 2021-09-15 --&gt; 2021-09-15; created = 2021-09-16; priority = Normal</a></p><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload CareRendered}\">Care Rendered? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:\">Care Rendered? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload PaymentAsked}\">Payment Asked? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:\">Payment Asked? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugPrescribed}\">Drug Prescribed? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:\">Drug Prescribed? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugReceived}\">Drug Received? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:\">Drug Received? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload Asessment}\">Asessment? (0|1|2|3|4|5)</span></p><p><b>content</b>: <span title=\"Codes:\">Asessment? (0|1|2|3|4|5)</span></p></blockquote><p><b>recipient</b>: <a href=\"Practitioner-Roberts-Jeb-EO.html\">Practitioner Jeb Roberts (official)</a></p></div>"
+  },
+  "status" : "active",
+  "statusReason" : {
+    "coding" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status",
+      "code" : "4",
+      "display" : "Selected"
+    }]
+  },
+  "intent" : "order",
+  "subject" : {
+    "reference" : "Patient/john-doe"
+  },
+  "about" : [{
+    "reference" : "Claim/Claim001"
+  }],
+  "payload" : [{
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "CareRendered"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "text" : "Care Rendered? (yes|no)"
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "PaymentAsked"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "text" : "Payment Asked? (yes|no)"
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "DrugPrescribed"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "text" : "Drug Prescribed? (yes|no)"
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "DrugReceived"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "text" : "Drug Received? (yes|no)"
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "Asessment"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "text" : "Asessment? (0|1|2|3|4|5)"
+    }
+  }],
+  "recipient" : [{
+    "reference" : "Practitioner/Roberts-Jeb-EO"
+  }]
+}

@@ -1,0 +1,49 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "invoice-charge-item",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem invoice-charge-item</b></p><a name=\"invoice-charge-item\"> </a><a name=\"hcinvoice-charge-item\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-charge-item</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">contribution<a name=\"invoice-charge-item-contribution\"> </a></td><td>Contribution</td></tr><tr><td style=\"white-space:nowrap\">policy<a name=\"invoice-charge-item-policy\"> </a></td><td>Policy</td></tr></table></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-charge-item",
+  "version" : "0.1.0",
+  "name" : "InvoiceChargeItemCS",
+  "title" : "ChargeItem (Invoice)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the ChargeItem for a lineItem from an Invoice. Values defined by openIMIS. Can not be extended.",
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "contribution",
+    "display" : "Contribution"
+  },
+  {
+    "code" : "policy",
+    "display" : "Policy"
+  }]
+}

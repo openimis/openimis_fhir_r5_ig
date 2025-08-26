@@ -1,0 +1,965 @@
+{
+  "package": "openimis.fhir.r5",
+  "version": "0.1.0",
+  "fhirVersion": "5.0.0",
+  "extensions": [
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/activity-definition-level",
+      "title": "Level (ActivityDefinition)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference",
+      "title": "Location Reference (Address)",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-municipality",
+      "title": "Municipality (Address)",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference",
+      "title": "Item Reference (Claim)",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "title": "Payload Type (CommunicationRequest | Communication)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/contract-premium",
+      "title": "Premium (Contract)",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept",
+        "Money",
+        "id",
+        "Extension",
+        "decimal",
+        "code",
+        "string",
+        "date",
+        "CodeableConcept",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "integer64",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "CodeableReference",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "RatioRange",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Availability",
+        "ExtendedContactDetail",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date",
+      "title": "Effective Date (Coverage)",
+      "types": [
+        "date"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date",
+      "title": "Enrollment Date (Coverage)",
+      "types": [
+        "date"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-policy-status",
+      "title": "Policy Status (Coverage)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-address",
+      "title": "Poverty Status (Group)",
+      "types": [
+        "Address",
+        "id",
+        "Extension",
+        "Extension",
+        "Extension",
+        "code",
+        "code",
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "Period"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-confirmation",
+      "title": "Confirmation (Group)",
+      "types": [
+        "string",
+        "CodeableConcept",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "integer64",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "CodeableReference",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "RatioRange",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Availability",
+        "ExtendedContactDetail",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-poverty-status",
+      "title": "Poverty Status (Group)",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-type",
+      "title": "Group Type (Group)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-conversion",
+      "title": "Conversion Product (InsurancePlan)",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-discount",
+      "title": "Discount (InsurancePlan)",
+      "types": [
+        "code",
+        "decimal",
+        "Quantity",
+        "id",
+        "Extension",
+        "decimal",
+        "code",
+        "string",
+        "uri",
+        "code",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "integer64",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "CodeableReference",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "RatioRange",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Availability",
+        "ExtendedContactDetail",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-max-installments",
+      "title": "Max Installments (InsurancePlan)",
+      "types": [
+        "unsignedInt"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-period",
+      "title": "Period (InsurancePlan)",
+      "types": [
+        "code",
+        "Quantity",
+        "id",
+        "Extension",
+        "decimal",
+        "code",
+        "string",
+        "uri",
+        "code",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "integer64",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "CodeableReference",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "RatioRange",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Availability",
+        "ExtendedContactDetail",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-start-cycle",
+      "title": "Cycle Start (InsurancePlan)",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-frequency",
+      "title": "Frequency (Medication)",
+      "types": [
+        "Timing",
+        "id",
+        "Extension",
+        "Extension",
+        "dateTime",
+        "Element",
+        "string",
+        "Extension",
+        "Duration",
+        "Range",
+        "Period",
+        "positiveInt",
+        "positiveInt",
+        "decimal",
+        "decimal",
+        "code",
+        "positiveInt",
+        "positiveInt",
+        "decimal",
+        "decimal",
+        "code",
+        "code",
+        "time",
+        "code",
+        "unsignedInt",
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-level",
+      "title": "Level (Medication)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-type",
+      "title": "Medication Type (Medication)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-usage-context",
+      "title": "UsageContext (Medication)",
+      "types": [
+        "UsageContext",
+        "id",
+        "Extension",
+        "Coding",
+        "CodeableConcept",
+        "id",
+        "Extension",
+        "Coding",
+        "string",
+        "UsageContext",
+        "id",
+        "Extension",
+        "Coding",
+        "CodeableConcept",
+        "id",
+        "Extension",
+        "Coding",
+        "string",
+        "UsageContext",
+        "id",
+        "Extension",
+        "Coding",
+        "CodeableConcept",
+        "id",
+        "Extension",
+        "Coding",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "integer64",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "CodeableReference",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "RatioRange",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Availability",
+        "ExtendedContactDetail",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type",
+      "title": "Health Facility Care Type (Organization)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-legal-form",
+      "title": "Legal Forms (Organization)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-level",
+      "title": "Health Facility Level (Organization)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-activity",
+      "title": "Activity (Organization)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-legal-form",
+      "title": "Legal Forms (Organization)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-card-issued",
+      "title": "Card Issued (Patient)",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-education-level",
+      "title": "Education Level (Patient)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-group-reference",
+      "title": "Group Reference (Patient)",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-identification",
+      "title": "Identification (Patient)",
+      "types": [
+        "string",
+        "CodeableConcept",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "integer64",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "CodeableReference",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "RatioRange",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Availability",
+        "ExtendedContactDetail",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-is-head",
+      "title": "IsHead (Patient)",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-profession",
+      "title": "Profession (Patient)",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-vulnerability-status",
+      "title": "Vulnerability Status (Patient)",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/practitioner-role-substitution-reference",
+      "title": "Substitution Reference (PractitionerRole)",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price",
+      "title": "Unit Price (Medication|ActivityDefinition)",
+      "types": [
+        "Money",
+        "id",
+        "Extension",
+        "decimal",
+        "code"
+      ]
+    }
+  ],
+  "profiles": {
+    "ActivityDefinition": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition",
+        "title": "openIMIS ActivityDefinition"
+      }
+    ],
+    "Claim": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim",
+        "title": "openIMIS Claim"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner",
+        "title": "openIMIS Enrolment Officer Practitioner"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner-role",
+        "title": "openIMIS Enrolment Officer Practitioner Role"
+      }
+    ],
+    "ClaimResponse": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response",
+        "title": "openIMIS Claim Response"
+      }
+    ],
+    "Communication": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication",
+        "title": "openIMIS Communication"
+      }
+    ],
+    "CommunicationRequest": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request",
+        "title": "openIMIS CommunicationRequest"
+      }
+    ],
+    "Contract": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract",
+        "title": "openIMIS Contract"
+      }
+    ],
+    "Coverage": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage",
+        "title": "openIMIS Coverage"
+      }
+    ],
+    "CoverageEligibilityRequest": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request",
+        "title": "openIMIS CoverageEligibilityRequest"
+      }
+    ],
+    "CoverageEligibilityResponse": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-response",
+        "title": "openIMIS CoverageEligibilityResponse"
+      }
+    ],
+    "Group": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group",
+        "title": "openIMIS Group"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization",
+        "title": "openIMIS Policy Holder Organization"
+      }
+    ],
+    "InsurancePlan": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan",
+        "title": "openIMIS Insurance Plan"
+      }
+    ],
+    "Invoice": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-bill",
+        "title": "openIMIS Bill"
+      },
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice",
+        "title": "openIMIS Invoice"
+      }
+    ],
+    "Location": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location",
+        "title": "openIMIS Location"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication",
+        "title": "openIMIS Medication"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient",
+        "title": "openIMIS Patient"
+      }
+    ],
+    "PaymentNotice": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-payment-notice",
+        "title": "openIMIS Payment Notice"
+      }
+    ],
+    "Subscription": [
+      {
+        "url": "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription",
+        "title": "openIMIS Subscription"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-implements": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/activity-definition-level": [
+      "ActivityDefinition"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference": [
+      "Extension.value[x]",
+      "Organization.contact.address",
+      "Patient.address",
+      "Practitioner.address"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-municipality": [
+      "Extension.value[x]",
+      "Organization.contact.address",
+      "Patient.address"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference": [
+      "Claim.item",
+      "ClaimResponse.item"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type": [
+      "Communication.payload",
+      "CommunicationRequest.payload"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/contract-premium": [
+      "Contract.term.asset"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date": [
+      "Coverage"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date": [
+      "Coverage"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-address": [
+      "Group"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-confirmation": [
+      "Group"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-poverty-status": [
+      "Group"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-type": [
+      "Group"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-conversion": [
+      "InsurancePlan"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-discount": [
+      "InsurancePlan"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-max-installments": [
+      "InsurancePlan"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-period": [
+      "InsurancePlan"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-start-cycle": [
+      "InsurancePlan"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-frequency": [
+      "Medication"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-level": [
+      "Medication"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-type": [
+      "Medication"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-usage-context": [
+      "Medication"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type": [
+      "Organization"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-legal-form": [
+      "Organization"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-level": [
+      "Organization"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-activity": [
+      "Organization"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-legal-form": [
+      "Organization"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-card-issued": [
+      "Patient"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-education-level": [
+      "Patient"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-group-reference": [
+      "Patient"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-identification": [
+      "Patient"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-is-head": [
+      "Patient"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-profession": [
+      "Patient"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-vulnerability-status": [
+      "Patient"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/practitioner-role-substitution-reference": [
+      "PractitionerRole"
+    ],
+    "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price": [
+      "ActivityDefinition",
+      "Invoice.lineItem.priceComponent",
+      "Medication"
+    ]
+  }
+}

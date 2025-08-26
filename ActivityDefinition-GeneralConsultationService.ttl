@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/ActivityDefinition/GeneralConsultationService> a fhir:ActivityDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "GeneralConsultationService"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<div>\n    <table class=\"grid dict\">\n\n        \n        <tr>\n            <th scope=\"row\"><b>Title: </b></th>\n            <td style=\"padding-left: 4px;\">General Consultation</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Id: </b></th>\n            <td style=\"padding-left: 4px;\">GeneralConsultationService</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Version: </b></th>\n            <td style=\"padding-left: 4px;\">0.1.0</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\">\n                <b>\n                    \n                        \n                            Code identifier:\n                        \n                    \n                </b>\n            </th>\n            <td style=\"padding-left: 4px;\">\n                \n                <p style=\"margin-bottom: 5px;\">\n                    <span>A1</span>\n                </p>\n                \n            </td>\n        </tr>\n        \n        <tr>\n            <th scope=\"row\">\n                <b>\n                    \n                        \n                            UUID identifier:\n                        \n                    \n                </b>\n            </th>\n            <td style=\"padding-left: 4px;\">\n                \n                <p style=\"margin-bottom: 5px;\">\n                    <span>db2c3a6c-af07-49bd-8f6a-96aa1fc2bcf9</span>\n                </p>\n                \n            </td>\n        </tr>\n        \n\n        \n\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Date (date last changed): </b></th>\n            <td style=\"padding-left: 4px;\">2020-01-01</td>\n        </tr>\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Publisher (steward): </b></th>\n            <td style=\"padding-left: 4px;\">openIMIS Initiative</td>\n        </tr>\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Use Context: </b></th>\n            <td style=\"padding-left: 4px;\">\n                <table class=\"grid-dict\">\n                    <tr>\n                        <th><b>code</b></th>\n                        <th><b>value</b></th>\n                    </tr>\n                    \n                        <tr>\n                            <td>venue</td>\n                            <td/>\n                        </tr>\n                    \n                        <tr>\n                            <td>gender</td>\n                            <td/>\n                        </tr>\n                    \n                        <tr>\n                            <td>age</td>\n                            <td/>\n                        </tr>\n                    \n                </table>\n            </td>\n        </tr>\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Topic: </b></th>\n            <td style=\"padding-left: 4px;\">P</td>\n        </tr>\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n        \n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n    </table>\n</div>\n</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Money ;
+       fhir:value [ fhir:v "40"^^xsd:decimal ] ;
+       fhir:currency [ fhir:v "EUR" ]
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/ActivityDefinition/GeneralConsultationService"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "A1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "db2c3a6c-af07-49bd-8f6a-96aa1fc2bcf9" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "A1"] ; # 
+  fhir:title [ fhir:v "General Consultation"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2020-01-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:useContext ( [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "venue" ] ;
+       fhir:display [ fhir:v "Clinical Venue" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AMB" ] ;
+         fhir:display [ fhir:v "ambulatory" ]
+       ] )
+     ]
+  ] [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "gender" ] ;
+       fhir:display [ fhir:v "Gender" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "male" ] ;
+         fhir:display [ fhir:v "Male" ]
+       ] [
+         fhir:system [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "female" ] ;
+         fhir:display [ fhir:v "Female" ]
+       ] )
+     ]
+  ] [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "age" ] ;
+       fhir:display [ fhir:v "Age Range" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "adult" ] ;
+         fhir:display [ fhir:v "Adult" ]
+       ] [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "child" ] ;
+         fhir:display [ fhir:v "Child" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:topic ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-service-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "P" ] ;
+       fhir:display [ fhir:v "Preventive" ]
+     ] )
+  ] ) ; # 
+  fhir:timing [
+     a fhir:Timing ;
+     fhir:repeat [
+       fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+       fhir:period [ fhir:v "0"^^xsd:decimal ] ;
+       fhir:periodUnit [ fhir:v "d" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

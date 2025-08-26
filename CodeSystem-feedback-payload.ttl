@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "feedback-payload"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem feedback-payload</b></p><a name=\"feedback-payload\"> </a><a name=\"hcfeedback-payload\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CareRendered<a name=\"feedback-payload-CareRendered\"> </a></td><td>Care Rendered? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">PaymentAsked<a name=\"feedback-payload-PaymentAsked\"> </a></td><td>Payment Asked? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">DrugPrescribed<a name=\"feedback-payload-DrugPrescribed\"> </a></td><td>Drug Prescribed? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">DrugReceived<a name=\"feedback-payload-DrugReceived\"> </a></td><td>Drug Received? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">Asessment<a name=\"feedback-payload-Asessment\"> </a></td><td>Asessment? (0|1|2|3|4|5)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FeedbackPayloadCS"] ; # 
+  fhir:title [ fhir:v "Feedback Payload (CommunicationRequest | Communication)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "CareRendered" ] ;
+     fhir:display [ fhir:v "Care Rendered? (yes|no)" ]
+  ] [
+     fhir:code [ fhir:v "PaymentAsked" ] ;
+     fhir:display [ fhir:v "Payment Asked? (yes|no)" ]
+  ] [
+     fhir:code [ fhir:v "DrugPrescribed" ] ;
+     fhir:display [ fhir:v "Drug Prescribed? (yes|no)" ]
+  ] [
+     fhir:code [ fhir:v "DrugReceived" ] ;
+     fhir:display [ fhir:v "Drug Received? (yes|no)" ]
+  ] [
+     fhir:code [ fhir:v "Asessment" ] ;
+     fhir:display [ fhir:v "Asessment? (0|1|2|3|4|5)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

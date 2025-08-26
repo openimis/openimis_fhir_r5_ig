@@ -1,0 +1,796 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionLevelVS",
+      "title" : "Level (ActivityDefinition)",
+      "description" : "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-activity-definition-level.html" : "Level (ActivityDefinition)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-service-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionServiceTypeVS",
+      "title" : "Service Type (ActivityDefinition)",
+      "description" : "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-service-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionUsageContextTypeVS",
+      "title" : "Usage Context Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context Type for an ActivityDefinition.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/usage-context-type"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-venue-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionUsageContextVenueTypeVS",
+      "title" : "Usage Context for Venue Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context for Venue Type for an ActivityDefinition.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-workflow-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionUsageContextWorkflowTypeVS",
+      "title" : "Usage Context for Workflow Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context for Workflow Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-usage-context-workflow-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/bill-charge-item",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "BillChargeItemVS",
+      "title" : "ChargeItem (Bill Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-charge-item"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/bill-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "BillTypeVS",
+      "title" : "Type (Bill Invoice)",
+      "description" : "Indicates the Type for Bill. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-item-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimItemCategoryVS",
+      "title" : "Category of the item (Claim)",
+      "description" : "Indicates the category for the item under a Claim. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-item-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-rejection-reasons",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimRejectionReasonsVS",
+      "title" : "Rejection reasons (Claim)",
+      "description" : "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimStatusVS",
+      "title" : "Status of the claim (Claim|ClaimResponse)",
+      "description" : "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimSupportingInfoCategoryVS",
+      "title" : "Category of the supporting info (Claim)",
+      "description" : "Indicates the category for the supportiong info under a Claim. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-visit-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimVisitTypeVS",
+      "title" : "Visit Type Codes (Claim)",
+      "description" : "Indicates the visit type of the Claim. \nValues limited by openIMIS.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-visit-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/communication-request-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CommunicationRequestStatusVS",
+      "title" : "Claim Feedback Status (CommunicationRequest)",
+      "description" : "Indicates the status of a feedback (Claim).",
+      "systems" : ["http://hl7.org/fhir/request-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractPremiumCategoryVS",
+      "title" : "Premium Category (Contract)",
+      "description" : "Indicates the category of the premium for the Contract. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-payer",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractPremiumPayerVS",
+      "title" : "Premium Payer (Contract)",
+      "description" : "Indicates the payer of the premium for the Contract. Can be extended in openIMIS. Need to match openIMIS database payer list.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-payer"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractPremiumTypeVS",
+      "title" : "Premium Type (Contract)",
+      "description" : "Indicates the type of the premium for the Contract. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-resource-party-role",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractResourcePartyRoleVS",
+      "title" : "Resource Party Role (Contract)",
+      "description" : "Indicates the participant engagement type for the Contract term.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-scope",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractScopeVS",
+      "title" : "Scope (Contract)",
+      "description" : "Indicates the scope for the Contract. Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-scope"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-status-codes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractStatusCodesVS",
+      "title" : "Status Codes (Contract)",
+      "description" : "Indicates the status of the Contract. Values limited by openIMIS.",
+      "systems" : ["http://hl7.org/fhir/contract-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemBenefitTypeItemServiceVS",
+      "title" : "Type of benefit (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type-amount-left",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemBenefitTypeAmountLeftVS",
+      "title" : "Type of benefit as amount left (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type-total-left",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemBenefitTypeTotalLeftVS",
+      "title" : "Type of benefit as total left (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemCategoryVS",
+      "title" : "Category of the item (Coverage)",
+      "description" : "Indicates the category for the item under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-category-item-service",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemCategoryItemServiceVS",
+      "title" : "Partial categories of the item (Coverage)",
+      "description" : "Indicates the category for the item, only for medical items and services, under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageStatusVS",
+      "title" : "Coverage Status (Coverage)",
+      "description" : "Indicates the status of a Coverage (Policy).",
+      "systems" : ["http://hl7.org/fhir/fm-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/diagnosis-ICD10-level1",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DiagnosisICD10Level1VS",
+      "title" : "ICD 10 Level 1 diagnosis",
+      "description" : "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/diagnosis-ICD10-level1"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-payload",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FeedbackPayloadVS",
+      "title" : "Feedback Payload (CommunicationRequest | Communication)",
+      "description" : "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-communication-payload-type.html" : "Payload Type (CommunicationRequest | Communication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FeedbackStatusVS",
+      "title" : "Feedback Status (CommunicationRequest)",
+      "description" : "Indicates the Feedback Status for a CommunicationRequest. Partial list defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/group-confirmation-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GroupConfirmationTypeVS",
+      "title" : "Confirmation Types (Group)",
+      "description" : "Indicates the confirmation type for the Group. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-confirmation-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-group-confirmation.html" : "Confirmation (Group)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/group-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GroupTypeVS",
+      "title" : "Group Type (Group)",
+      "description" : "Indicates the type of the Group. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-group-type.html" : "Group Type (Group)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-benefit-limit",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanCoverageBenefitLimitVS",
+      "title" : "Coverage Benefit Limit Types (InsurancePlan)",
+      "description" : "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanCoverageTypeVS",
+      "title" : "Coverage Type (InsurancePlan)",
+      "description" : "Indicates the Coverage Type for an InsurancePlan.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/insurance-plan-type"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-discount-kind",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanDiscountKindVS",
+      "title" : null,
+      "description" : "",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-discount-kind"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-insurance-plan-discount.html" : "Discount (InsurancePlan)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-general-cost-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanGeneralCostTypeVS",
+      "title" : "General Cost Type (InsurancePlan)",
+      "description" : "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-period-kind",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanPeriodKindVS",
+      "title" : null,
+      "description" : "",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-insurance-plan-period.html" : "Period (InsurancePlan)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-publication-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanPublicationStatusVS",
+      "title" : "Publication Status (InsurancePlan)",
+      "description" : "Indicates the Publication Status for an InsurancePlan.",
+      "systems" : ["http://hl7.org/fhir/publication-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-charge-item",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoiceChargeItemVS",
+      "title" : "ChargeItem (Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from an Invoice. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-charge-item"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-price-component-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoicePriceComponentTypeVS",
+      "title" : "PriceComponent Type (Invoice)",
+      "description" : "Indicates the Type for a PriceComponent from an Invoice.",
+      "systems" : ["http://hl7.org/fhir/price-component-type"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoiceStatusVS",
+      "title" : "Status (Invoice)",
+      "description" : "Indicates the status for an Invoice. Values limited by openIMIS. Can not be extended.",
+      "systems" : ["http://hl7.org/fhir/invoice-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoiceTypeVS",
+      "title" : "Type (Invoice)",
+      "description" : "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/location-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "LocationTypeVS",
+      "title" : "Location Type (Location)",
+      "description" : "Indicates the location type. Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/location-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-item-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "MedicationItemTypeVS",
+      "title" : "Item Type (Medication)",
+      "description" : "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-medication-type.html" : "Medication Type (Medication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "MedicationLevelVS",
+      "title" : "Level (Medication)",
+      "description" : "Indicates the Level for a Medication. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-medication-level.html" : "Level (Medication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/openimis-identifiers",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OpenIMISIdentifierVS",
+      "title" : "openIMIS Identifiers Value Set",
+      "description" : "Indicates the Identifier type",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-care-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationHFCareTypeVS",
+      "title" : "Health Facility Care Type (Organization)",
+      "description" : "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-hf-care-type.html" : "Health Facility Care Type (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-legal-form",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationHFLegalFormVS",
+      "title" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the Health Facility Organization. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-hf-legal-form.html" : "Legal Forms (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationHFLevelVS",
+      "title" : "Health Facility Level (Organization)",
+      "description" : "Indicates the level of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-hf-level.html" : "Health Facility Level (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-ph-activity",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationPHActivityVS",
+      "title" : "Activity (Organization)",
+      "description" : "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-ph-activity.html" : "Activity (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-ph-legal-form",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationPHLegalFormVS",
+      "title" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-ph-legal-form.html" : "Legal Forms (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-contact-relationship",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientContactRelationshipVS",
+      "title" : "Contact Relationship (Patient)",
+      "description" : "Indicates the Relationship of a Patient with the Head of the Family.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-contact-relationship"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-education-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientEducationLevelVS",
+      "title" : "Education Level (Patient)",
+      "description" : "Indicates the Education level of a Patient",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-education-level.html" : "Education Level (Patient)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-identification-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientIdentificationTypeVS",
+      "title" : "Identification Type (Patient)",
+      "description" : "Indicates the type of document the Patient used to identify himself.",
+      "systems" : [
+        "https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-identification.html" : "Identification (Patient)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-marital-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientMaritalStatusVS",
+      "title" : "Marital Status (Patient)",
+      "description" : "Indicates the Marital status of a Patient",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-profession",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientProfessionVS",
+      "title" : "Profession (Patient)",
+      "description" : "Indicates the profession of a Patient",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-profession.html" : "Profession (Patient)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/practitioner-qualification-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PractitionerQualificationTypeVS",
+      "title" : "Practitioner Qualification Type",
+      "description" : "Indicates the Qualification Type of a Practitioner.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-age-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "UsageContextAgeTypeVS",
+      "title" : "Usage Context for Age Type (ActivityDefinition|Medication)",
+      "description" : "Indicates the Usage Context for Age Type for an ActivityDefinition or Medication.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-gender-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "UsageContextGenderTypeVS",
+      "title" : "Usage Context for Gender Type (ActivityDefinition|Medication)",
+      "description" : "Indicates the Usage Context for Gender Type for an ActivityDefinition or Medication.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    }
+  ]
+}

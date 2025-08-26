@@ -1,0 +1,738 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CapabilityStatement/openIMISCapabilityStatement> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "openIMISCapabilityStatement"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement openIMISCapabilityStatement</b></p><a name=\"openIMISCapabilityStatement\"> </a><a name=\"hcopenIMISCapabilityStatement\"> </a><h2 id=\"title\">openIMIS Capability Statement</h2><ul><li>Implementation Guide Version: 0.1.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>json</code></li><li>Published on: 2022-05-24 </li><li>Published by: openIMIS Initiative </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>server</code></h3></div><div class=\"panel-body\"><div class=\"lead\"><em>Security</em></div><div class=\"row\"><div class=\"col-lg-6\">Enable CORS: no</div><div class=\"col-lg-6\">Security services supported: <code>OAuth</code></div></div></div></div><h3 id=\"resourcesCap1\">Capabilities by Resource/Profile</h3><h4 id=\"resourcesSummary1\">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class=\"text-center\"><b title=\"GET a resource (read interaction)\">R</b></th><th class=\"text-center\"><b title=\"GET all set of resources of the type (search interaction)\">S</b></th><th class=\"text-center\"><b title=\"PUT a new resource version (update interaction)\">U</b></th><th class=\"text-center\"><b title=\"POST a new resource (create interaction)\">C</b></th><th class=\"text-center\"><b title=\"DELETE a resource (delete interaction)\">D</b></th><th><b title=\"Required and recommended search parameters\">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href=\"#ActivityDefinition1-1\">ActivityDefinition</a></td><td>Supported Profiles<br/>  <code>https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activitiy-definition</code></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Claim1-2\">Claim</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-claim.html\">openIMIS Claim</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#ClaimResponse1-3\">ClaimResponse</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-claim-response.html\">openIMIS Claim Response</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Communication1-4\">Communication</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-communication.html\">openIMIS Communication</a></td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td/><td/><td/><td/></tr><tr><td><a href=\"#CommunicationRequest1-5\">CommunicationRequest</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-communication-request.html\">openIMIS CommunicationRequest</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Contract1-6\">Contract</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-contract.html\">openIMIS Contract</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Coverage1-7\">Coverage</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-coverage.html\">openIMIS Coverage</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated</td><td/><td/><td/></tr><tr><td><a href=\"#CoverageEligibilityRequest1-8\">CoverageEligibilityRequest</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-coverage-eligibility-request.html\">openIMIS CoverageEligibilityRequest</a></td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td/><td/><td/><td/></tr><tr><td><a href=\"#Group1-9\">Group</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-group.html\">openIMIS Group</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Organization1-10\">Organization</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-health-facility-organization.html\">openIMIS Health Facility Organization</a><br/>  <a href=\"StructureDefinition-openimis-policy-holder-organization.html\">openIMIS Policy Holder Organization</a><br/>  <a href=\"StructureDefinition-openimis-insurance-organization.html\">openIMIS Insurance Organization</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#InsurancePlan1-11\">InsurancePlan</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-insurance-plan.html\">openIMIS Insurance Plan</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Invoice1-12\">Invoice</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-invoice-invoice.html\">openIMIS Invoice</a><br/>  <a href=\"StructureDefinition-openimis-invoice-bill.html\">openIMIS Bill</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated</td><td/><td/><td/></tr><tr><td><a href=\"#Location1-13\">Location</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-location.html\">openIMIS Location</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Medication1-14\">Medication</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-medication.html\">openIMIS Medication</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Patient1-15\">Patient</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-patient.html\">openIMIS Patient</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Practitioner1-16\">Practitioner</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-claim-administrator-practitioner.html\">openIMIS Claim Administrator Practitioner</a><br/>  <a href=\"StructureDefinition-openimis-enrolment-officer-practitioner.html\">openIMIS Enrolment Officer Practitioner</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#PractitionerRole1-17\">PractitionerRole</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-claim-administrator-practitioner-role.html\">openIMIS Claim Administrator Practitioner Role</a><br/>  <a href=\"StructureDefinition-openimis-enrolment-officer-practitioner-role.html\">openIMIS Enrolment Officer Practitioner Role</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Subscription1-18\">Subscription</a></td><td>Supported Profiles<br/>  <a href=\"StructureDefinition-openimis-subscription.html\">openIMIS Subscription</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td>_id, _lastUpdated</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"ActivityDefinition1-1\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>ActivityDefinition</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/activitydefinition.html\">ActivityDefinition</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><code>https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activitiy-definition</code></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/activitydefinition.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Claim1-2\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Claim</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/claim.html\">Claim</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>create</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-claim.html\">openIMIS Claim</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"ClaimResponse1-3\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>ClaimResponse</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/claimresponse.html\">ClaimResponse</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-claim-response.html\">openIMIS Claim Response</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Communication1-4\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Communication</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/communication.html\">Communication</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-communication.html\">openIMIS Communication</a></p></div></div><p/></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"CommunicationRequest1-5\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>CommunicationRequest</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/communicationrequest.html\">CommunicationRequest</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-communication-request.html\">openIMIS CommunicationRequest</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Contract1-6\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Contract</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/contract.html\">Contract</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>, <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-contract.html\">openIMIS Contract</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/contract.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Coverage1-7\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Coverage</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/coverage.html\">Coverage</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-coverage.html\">openIMIS Coverage</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"CoverageEligibilityRequest1-8\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>CoverageEligibilityRequest</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/coverageeligibilityrequest.html\">CoverageEligibilityRequest</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-coverage-eligibility-request.html\">openIMIS CoverageEligibilityRequest</a></p></div></div><p/></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Group1-9\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Group</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/group.html\">Group</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>, <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-group.html\">openIMIS Group</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/group.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Organization1-10\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Organization</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/organization.html\">Organization</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-health-facility-organization.html\">openIMIS Health Facility Organization</a><br/><a href=\"StructureDefinition-openimis-policy-holder-organization.html\">openIMIS Policy Holder Organization</a><br/><a href=\"StructureDefinition-openimis-insurance-organization.html\">openIMIS Insurance Organization</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"InsurancePlan1-11\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>InsurancePlan</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/insuranceplan.html\">InsurancePlan</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-insurance-plan.html\">openIMIS Insurance Plan</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/insuranceplan.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Invoice1-12\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Invoice</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/invoice.html\">Invoice</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-invoice-invoice.html\">openIMIS Invoice</a><br/><a href=\"StructureDefinition-openimis-invoice-bill.html\">openIMIS Bill</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Location1-13\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Location</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/location.html\">Location</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-location.html\">openIMIS Location</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Medication1-14\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Medication</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/medication.html\">Medication</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-medication.html\">openIMIS Medication</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Patient1-15\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Patient</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>, <code>update</code>, <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-patient.html\">openIMIS Patient</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/patient.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Practitioner1-16\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Practitioner</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/practitioner.html\">Practitioner</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-claim-administrator-practitioner.html\">openIMIS Claim Administrator Practitioner</a><br/><a href=\"StructureDefinition-openimis-enrolment-officer-practitioner.html\">openIMIS Enrolment Officer Practitioner</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"PractitionerRole1-17\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>PractitionerRole</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/practitionerrole.html\">PractitionerRole</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-claim-administrator-practitioner-role.html\">openIMIS Claim Administrator Practitioner Role</a><br/><a href=\"StructureDefinition-openimis-enrolment-officer-practitioner-role.html\">openIMIS Enrolment Officer Practitioner Role</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitionerrole.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Subscription1-18\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Subscription</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/subscription.html\">Subscription</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>, <code>update</code>, <code>read</code>, <code>delete</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-openimis-subscription.html\">openIMIS Subscription</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CapabilityStatement/openIMISCapabilityStatement"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "openIMISCapabilityStatement"] ; # 
+  fhir:title [ fhir:v "openIMIS Capability Statement"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2022-05-24"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Capability Statement for openIMIS FHIR R5 Implementation Guide"] ; # 
+  fhir:kind [ fhir:v "requirements"] ; # 
+  fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
+  fhir:format ( [ fhir:v "json"] ) ; # 
+  fhir:rest ( [
+     fhir:mode [ fhir:v "server" ] ;
+     fhir:security [
+       fhir:service ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/restful-security-service"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "OAuth" ] ;
+           fhir:display [ fhir:v "OAuth" ]
+         ] )
+       ] )
+     ] ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "ActivityDefinition" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activitiy-definition"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activitiy-definition>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Location-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Claim" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Claim-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Claim-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "ClaimResponse" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Claim-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Claim-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Communication" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "CommunicationRequest" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Claim-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Claim-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Contract" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Practitioner-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Coverage" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "CoverageEligibilityRequest" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Group" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Group-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Group-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Organization" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization>
+       ] [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization>
+       ] [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Organization-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Organization-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "InsurancePlan" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/InsurancePlan-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/InsurancePlan-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Invoice" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice>
+       ] [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-bill"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-bill>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Location" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Location-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Medication" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Medication-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Medication-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Patient" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Patient-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Patient-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Practitioner" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner>
+       ] [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Practitioner-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "PractitionerRole" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner-role"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner-role>
+       ] [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner-role"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner-role>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "SHALL"
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "Subscription" ] ;
+       fhir:supportedProfile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription>
+       ] ) ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "_id" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-id"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:type [ fhir:v "token" ]
+       ] [
+         fhir:name [ fhir:v "_lastUpdated" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:type [ fhir:v "date" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

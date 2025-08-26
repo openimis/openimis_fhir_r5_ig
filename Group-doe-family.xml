@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Group xmlns="http://hl7.org/fhir">
+  <id value="doe-family"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Group doe-family</b></p><a name="doe-family"> </a><a name="hcdoe-family"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-group.html">openIMIS Group</a></p></div><p><b>Poverty Status (Group)</b>: </p><p><b>Poverty Status (Group)</b>: false</p><p><b>Group Type (Group)</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-type H}">Household</span></p><blockquote><p><b>Confirmation (Group)</b></p><ul><li>number: Reg123456</li><li>type: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-confirmation-type B}">Municipality</span></li></ul></blockquote><p><b>identifier</b>: UUID unique identifier/D30F70DF-D10B-43D4-BF31-5137C118AD82, Unique code/123456788</p><p><b>active</b>: true</p><p><b>type</b>: Person</p><p><b>membership</b>: Definitional</p><p><b>name</b>: Doe Jane</p><p><b>quantity</b>: 2</p><blockquote><p><b>member</b></p><p><b>entity</b>: <a href="Patient-john-doe.html">John Doe  Male, DoB: 1962-02-05 ( Unique code)</a></p></blockquote><blockquote><p><b>member</b></p><p><b>entity</b>: <a href="Patient-jane-doe.html">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</a></p></blockquote></div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-address">
+    <valueAddress>
+      <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference">
+        <valueReference>
+          <reference value="Location/Jamula-village"/>
+        </valueReference>
+      </extension>
+    </valueAddress>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-poverty-status">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-type">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-type"/>
+        <code value="H"/>
+        <display value="Household"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-confirmation">
+    <extension url="number">
+      <valueString value="Reg123456"/>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-confirmation-type"/>
+          <code value="B"/>
+          <display value="Municipality"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="UUID"/>
+      </coding>
+    </type>
+    <value value="D30F70DF-D10B-43D4-BF31-5137C118AD82"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="Code"/>
+      </coding>
+    </type>
+    <value value="123456788"/>
+  </identifier>
+  <active value="true"/>
+  <type value="person"/>
+  <membership value="definitional"/>
+  <name value="Doe Jane"/>
+  <quantity value="2"/>
+  <member>
+    <entity>
+      <reference value="Patient/john-doe"/>
+    </entity>
+  </member>
+  <member>
+    <entity>
+      <reference value="Patient/jane-doe"/>
+    </entity>
+  </member>
+</Group>

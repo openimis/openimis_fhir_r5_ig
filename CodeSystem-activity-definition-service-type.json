@@ -1,0 +1,49 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "activity-definition-service-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem activity-definition-service-type</b></p><a name=\"activity-definition-service-type\"> </a><a name=\"hcactivity-definition-service-type\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-service-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">C<a name=\"activity-definition-service-type-C\"> </a></td><td>Curative</td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"activity-definition-service-type-P\"> </a></td><td>Preventive</td></tr></table></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-service-type",
+  "version" : "0.1.0",
+  "name" : "ActivityDefinitionServiceTypeCS",
+  "title" : "Service Type (ActivityDefinition)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "C",
+    "display" : "Curative"
+  },
+  {
+    "code" : "P",
+    "display" : "Preventive"
+  }]
+}

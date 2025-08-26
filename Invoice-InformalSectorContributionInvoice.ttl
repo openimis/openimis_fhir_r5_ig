@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Invoice/InformalSectorContributionInvoice> a fhir:Invoice ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "InformalSectorContributionInvoice"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Invoice InformalSectorContributionInvoice</b></p><a name=\"InformalSectorContributionInvoice\"> </a><a name=\"hcInformalSectorContributionInvoice\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-invoice-invoice.html\">openIMIS Invoice</a></p></div><p><b>identifier</b>: Code/IV-BCUL0001-13000001-2021-09, UUID/D33E703F-D10B-43D8-9578-5137C118AD84</p><p><b>status</b>: issued</p><p><b>type</b>: <span title=\"Codes:\">contribution</span></p><p><b>recipient</b>: <a href=\"Patient-jane-doe.html\">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</a></p><p><b>date</b>: 2021-01-28</p><p><b>issuer</b>: <a href=\"Organization-openIMIS-Implementation.html\">Organization openIMIS Implementation</a></p><blockquote><p><b>lineItem</b></p><p><b>chargeItem</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-charge-item policy}\">Policy</span></p><blockquote><p><b>priceComponent</b></p><p><b>Unit Price (Medication|ActivityDefinition)</b>: 10000</p><p><b>type</b>: base price</p><p><b>code</b>: <span title=\"Codes:\">BCUL0001</span></p><p><b>factor</b>: 1</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>10000</td></tr></table></blockquote></blockquote><h3>TotalNets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10000</td><td>Euro</td></tr></table><h3>TotalGrosses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10000</td><td>Euro</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "IV-BCUL0001-13000001-2021-09" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "D33E703F-D10B-43D8-9578-5137C118AD84" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "issued"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:code [ fhir:v "contribution" ]
+     ] )
+  ] ; # 
+  fhir:recipient [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/jane-doe> ;
+     fhir:reference [ fhir:v "Patient/jane-doe" ]
+  ] ; # 
+  fhir:date [ fhir:v "2021-01-28"^^xsd:date] ; # 
+  fhir:issuer [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Organization/openIMIS-Implementation> ;
+     fhir:reference [ fhir:v "Organization/openIMIS-Implementation" ]
+  ] ; # 
+  fhir:lineItem ( [
+     fhir:chargeItem [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-charge-item"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "policy" ] ;
+         fhir:display [ fhir:v "Policy" ]
+       ] )
+     ] ;
+     fhir:priceComponent ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Money ;
+           fhir:value [ fhir:v "10000"^^xsd:decimal ]
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "base" ] ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:code [ fhir:v "Code" ]
+         ] ) ;
+         fhir:text [ fhir:v "BCUL0001" ]
+       ] ;
+       fhir:factor [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:amount [
+         fhir:value [ fhir:v "10000"^^xsd:decimal ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:totalNet [
+     fhir:value [ fhir:v "10000"^^xsd:decimal ] ;
+     fhir:currency [ fhir:v "EUR" ]
+  ] ; # 
+  fhir:totalGross [
+     fhir:value [ fhir:v "10000"^^xsd:decimal ] ;
+     fhir:currency [ fhir:v "EUR" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

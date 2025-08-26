@@ -1,0 +1,124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Communication/Claim001Communication> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Claim001Communication"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication Claim001Communication</b></p><a name=\"Claim001Communication\"> </a><a name=\"hcClaim001Communication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-communication.html\">openIMIS Communication</a></p></div><p><b>status</b>: Completed</p><p><b>subject</b>: <a href=\"Patient-john-doe.html\">John Doe  Male, DoB: 1962-02-05 ( Unique code)</a></p><p><b>about</b>: <a href=\"Claim-Claim001.html\">Claim: identifier = Unique code; status = active; type = Other; use = claim; billablePeriod = 2021-09-15 --&gt; 2021-09-15; created = 2021-09-16; priority = Normal</a></p><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload CareRendered}\">Care Rendered? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload CareRendered}\">Care Rendered? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload PaymentAsked}\">Payment Asked? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload PaymentAsked}\">Payment Asked? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugPrescribed}\">Drug Prescribed? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugPrescribed}\">Drug Prescribed? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugReceived}\">Drug Received? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugReceived}\">Drug Received? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload Asessment}\">Asessment? (0|1|2|3|4|5)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload Asessment}\">Asessment? (0|1|2|3|4|5)</span></p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:subject [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/john-doe> ;
+     fhir:reference [ fhir:v "Patient/john-doe" ]
+  ] ; # 
+  fhir:about ( [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Claim/Claim001> ;
+     fhir:reference [ fhir:v "Claim/Claim001" ]
+  ] ) ; # 
+  fhir:payload ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "CareRendered" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "CareRendered" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "PaymentAsked" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PaymentAsked" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "DrugPrescribed" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DrugPrescribed" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "DrugReceived" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DrugReceived" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Asessment" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Asessment" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

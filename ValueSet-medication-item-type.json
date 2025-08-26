@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "medication-item-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medication-item-type</b></p><a name=\"medication-item-type\"> </a><a name=\"hcmedication-item-type\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-medication-item-type.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-item-type",
+  "version" : "0.1.0",
+  "name" : "MedicationItemTypeVS",
+  "title" : "Item Type (Medication)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type"
+    }]
+  }
+}

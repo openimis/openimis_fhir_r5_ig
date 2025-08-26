@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "diagnosis-ICD10-level1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet diagnosis-ICD10-level1</b></p><a name=\"diagnosis-ICD10-level1\"> </a><a name=\"hcdiagnosis-ICD10-level1\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-diagnosis-ICD10-level1.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/diagnosis-ICD10-level1</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/diagnosis-ICD10-level1",
+  "version" : "0.1.0",
+  "name" : "DiagnosisICD10Level1VS",
+  "title" : "ICD 10 Level 1 diagnosis",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/diagnosis-ICD10-level1"
+    }]
+  }
+}

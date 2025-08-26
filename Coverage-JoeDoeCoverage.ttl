@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Coverage/JoeDoeCoverage> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "JoeDoeCoverage"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage JoeDoeCoverage</b></p><a name=\"JoeDoeCoverage\"> </a><a name=\"hcJoeDoeCoverage\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-coverage.html\">openIMIS Coverage</a></p></div><p><b>Enrollment Date (Coverage)</b>: 2021-01-28</p><p><b>Effective Date (Coverage)</b>: 2021-01-28</p><p><b>identifier</b>: UUID unique identifier/D30F70DF-D10B-43D4-BF31-5137C118AD84</p><p><b>status</b>: Active</p><p><b>kind</b>: Insurance</p><p><b>policyHolder</b>: <a href=\"Patient-jane-doe.html\">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</a></p><p><b>beneficiary</b>: <code>joe-doe</code></p><p><b>period</b>: 2021-07-01 --&gt; 2022-06-30</p><h3>Classes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/coverage-class plan}\">Plan</span></td><td>RX01</td><td>Regional fixed enrolment</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:date ;
+       fhir:v "2021-01-28"^^xsd:date
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:date ;
+       fhir:v "2021-01-28"^^xsd:date
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "D30F70DF-D10B-43D4-BF31-5137C118AD84" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "insurance"] ; # 
+  fhir:policyHolder [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/jane-doe> ;
+     fhir:reference [ fhir:v "Patient/jane-doe" ]
+  ] ; # 
+  fhir:beneficiary [
+     fhir:reference [ fhir:v "joe-doe" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2021-07-01"^^xsd:date ] ;
+     fhir:end [ fhir:v "2022-06-30"^^xsd:date ]
+  ] ; # 
+  fhir:class ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "plan" ] ;
+         fhir:display [ fhir:v "Plan" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "RX01" ]
+     ] ;
+     fhir:name [ fhir:v "Regional fixed enrolment" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

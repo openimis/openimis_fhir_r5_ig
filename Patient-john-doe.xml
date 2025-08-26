@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="john-doe"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient john-doe</b></p><a name="john-doe"> </a><a name="hcjohn-doe"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-patient.html">openIMIS Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">John Doe  Male, DoB: 1962-02-05 ( Unique code)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">Married</span></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3">5 Tsoka Jamula Ultha (home)</td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: Brother/Sister">Brother/Sister:</td><td colspan="3"><ul><li>John Doe </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Specifies the Patient/Insuree's education level"><a href="StructureDefinition-patient-education-level.html">Education Level (Patient)</a></td><td colspan="3"><span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level 4}">University</span></td></tr><tr><td style="background-color: #f3f5da" title="Whether a card was issued to the Patient/Insuree during enrolment."><a href="StructureDefinition-patient-card-issued.html">Card Issued (Patient)</a></td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Specifies the Patient/Insuree official identification and the type of identification document.">Identification (Patient):</td><td colspan="3"><ul><li>number: NationaID1</li><li>type: <span title="Codes:{https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types N}">National ID</span></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Specifies the Patient/Insuree's profession"><a href="StructureDefinition-patient-profession.html">Profession (Patient)</a></td><td colspan="3"><span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession 2}">Employee</span></td></tr><tr><td style="background-color: #f3f5da" title="Whether the Patient/Insuree is the Head of the Family."><a href="StructureDefinition-patient-is-head.html">IsHead (Patient)</a></td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="The reference to the Group/Family the Patient/Insuree is part of."><a href="StructureDefinition-patient-group-reference.html">Group Reference (Patient)</a></td><td colspan="3"><a href="Group-doe-family.html">Group Doe Jane</a></td></tr><tr><td style="background-color: #f3f5da" title="Whether the Patient/Insuree has the vulnerability status."><a href="StructureDefinition-patient-vulnerability-status.html">Vulnerability Status (Patient)</a></td><td colspan="3">true</td></tr></table></div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-is-head">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-education-level">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level"/>
+        <code value="4"/>
+        <display value="University"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-profession">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession"/>
+        <code value="2"/>
+        <display value="Employee"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-identification">
+    <extension url="number">
+      <valueString value="NationaID1"/>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types"/>
+          <code value="N"/>
+          <display value="National ID"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-card-issued">
+    <valueBoolean value="true"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-group-reference">
+    <valueReference>
+      <reference value="Group/doe-family"/>
+    </valueReference>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-vulnerability-status">
+    <valueBoolean value="true"/>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="Code"/>
+      </coding>
+    </type>
+    <value value="123456789"/>
+  </identifier>
+  <name>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1962-02-05"/>
+  <address>
+    <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-municipality">
+      <valueString value="Jamu"/>
+    </extension>
+    <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference">
+      <valueReference>
+        <reference value="Location/Jamula-village"/>
+      </valueReference>
+    </extension>
+    <use value="home"/>
+    <line value="5 Tsoka"/>
+    <city value="Jamula"/>
+    <district value="Rapta"/>
+    <state value="Ultha"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="M"/>
+    </coding>
+  </maritalStatus>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-contact-relationship"/>
+        <code value="1"/>
+      </coding>
+    </relationship>
+    <name>
+      <family value="Doe"/>
+      <given value="John"/>
+    </name>
+  </contact>
+</Patient>

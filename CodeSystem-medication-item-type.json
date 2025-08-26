@@ -1,0 +1,49 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "medication-item-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem medication-item-type</b></p><a name=\"medication-item-type\"> </a><a name=\"hcmedication-item-type\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">D<a name=\"medication-item-type-D\"> </a></td><td>Drug</td></tr><tr><td style=\"white-space:nowrap\">M<a name=\"medication-item-type-M\"> </a></td><td>Medical consumable</td></tr></table></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type",
+  "version" : "0.1.0",
+  "name" : "MedicationItemTypeCS",
+  "title" : "Item Type (Medication)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended.",
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "D",
+    "display" : "Drug"
+  },
+  {
+    "code" : "M",
+    "display" : "Medical consumable"
+  }]
+}

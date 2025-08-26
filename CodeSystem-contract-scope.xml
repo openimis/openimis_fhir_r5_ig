@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="contract-scope"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem contract-scope</b></p><a name="contract-scope"> </a><a name="hccontract-scope"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-scope</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">formal<a name="contract-scope-formal"> </a></td><td>Formal Sector</td></tr><tr><td style="white-space:nowrap">informal<a name="contract-scope-informal"> </a></td><td>Informal Sector</td></tr></table></div>
+  </text>
+  <url value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-scope"/>
+  <version value="0.1.0"/>
+  <name value="ContractScopeCS"/>
+  <title value="Scope (Contract)"/>
+  <status value="draft"/>
+  <date value="2025-08-26T15:39:34+00:00"/>
+  <publisher value="openIMIS Initiative"/>
+  <contact>
+    <name value="openIMIS Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.openimis.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Dragos Dobre"/>
+    <telecom>
+      <system value="email"/>
+      <value value="dragos.dobre@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Hiren Soni"/>
+    <telecom>
+      <system value="email"/>
+      <value value="hiren.soni@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Indicates the scope for the Contract. Values defined by openIMIS. Cannot be extended."/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="formal"/>
+    <display value="Formal Sector"/>
+  </concept>
+  <concept>
+    <code value="informal"/>
+    <display value="Informal Sector"/>
+  </concept>
+</CodeSystem>

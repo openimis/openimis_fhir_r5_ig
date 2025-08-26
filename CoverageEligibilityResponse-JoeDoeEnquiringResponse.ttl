@@ -1,0 +1,170 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CoverageEligibilityResponse/JoeDoeEnquiringResponse> a fhir:CoverageEligibilityResponse ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "JoeDoeEnquiringResponse"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-response"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-response>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CoverageEligibilityResponse JoeDoeEnquiringResponse</b></p><a name=\"JoeDoeEnquiringResponse\"> </a><a name=\"hcJoeDoeEnquiringResponse\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-coverage-eligibility-response.html\">openIMIS CoverageEligibilityResponse</a></p></div><p><b>identifier</b>: UUID unique identifier/D30F70DF-D10B-43D4-9578-5137C118AD84</p><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage benefits</p><p><b>patient</b>: <code>joe-doe</code></p><p><b>created</b>: 2021-09-17</p><p><b>request</b>: <a href=\"CoverageEligibilityRequest-JoeDoeEnquiring.html\">CoverageEligibilityRequest: identifier = UUID unique identifier; status = active; purpose = benefits; created = 2021-09-17</a></p><p><b>outcome</b>: Processing Complete</p><p><b>insurer</b>: <a href=\"Organization-openIMIS-Implementation.html\">Organization openIMIS Implementation</a></p><blockquote><p><b>insurance</b></p><p><b>coverage</b>: <a href=\"Coverage-JoeDoeCoverage.html\">Coverage: extension = 2021-01-28,2021-01-28; identifier = UUID unique identifier; status = active; kind = insurance; period = 2021-07-01 --&gt; 2022-06-30</a></p><p><b>benefitPeriod</b>: 2021-07-01 --&gt; 2022-06-30</p><blockquote><p><b>item</b></p><p><b>category</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category benefit}\">Benefit Package</span></p><p><b>name</b>: RX01</p><p><b>description</b>: Regional fixed enrolment</p><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type admissions_left}\">total_admissions</span></p><p><b>allowed</b>: 2</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type consultations_left}\">total_consultations</span></p><p><b>allowed</b>: 4</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type surgeries_left}\">total_surgeries</span></p><p><b>allowed</b>: 1</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type deliveries_left}\">total_deliveries</span></p><p><b>allowed</b>: 1</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type hospitalization_amount}\">hospitalization_amount</span></p><p><b>allowed</b>: 25000</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type consultation_amount}\">consultation_amount</span></p><p><b>allowed</b>: 15000</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type surgery_amount}\">surgery_amount</span></p><p><b>allowed</b>: 70000</p></blockquote><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type delivery_amount}\">delivery_amount</span></p><p><b>allowed</b>: 15000</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>productOrService</b>: <span title=\"Codes:\">A1</span></p><p><b>excluded</b>: false</p></blockquote></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "D30F70DF-D10B-43D4-9578-5137C118AD84" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:purpose ( [ fhir:v "benefits"] ) ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "joe-doe" ]
+  ] ; # 
+  fhir:created [ fhir:v "2021-09-17"^^xsd:date] ; # 
+  fhir:request [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CoverageEligibilityRequest/JoeDoeEnquiring> ;
+     fhir:reference [ fhir:v "CoverageEligibilityRequest/JoeDoeEnquiring" ]
+  ] ; # 
+  fhir:outcome [ fhir:v "complete"] ; # 
+  fhir:insurer [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Organization/openIMIS-Implementation> ;
+     fhir:reference [ fhir:v "Organization/openIMIS-Implementation" ]
+  ] ; # 
+  fhir:insurance ( [
+     fhir:coverage [
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Coverage/JoeDoeCoverage> ;
+       fhir:reference [ fhir:v "Coverage/JoeDoeCoverage" ]
+     ] ;
+     fhir:benefitPeriod [
+       fhir:start [ fhir:v "2021-07-01"^^xsd:date ] ;
+       fhir:end [ fhir:v "2022-06-30"^^xsd:date ]
+     ] ;
+     fhir:item ( [
+       fhir:category [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "benefit" ]
+         ] )
+       ] ;
+       fhir:name [ fhir:v "RX01" ] ;
+       fhir:description [ fhir:v "Regional fixed enrolment" ] ;
+       fhir:benefit ( [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "admissions_left" ] ;
+             fhir:display [ fhir:v "total_admissions" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:unsignedInt ;
+           fhir:v "2"^^xsd:nonNegativeInteger
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "consultations_left" ] ;
+             fhir:display [ fhir:v "total_consultations" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:unsignedInt ;
+           fhir:v "4"^^xsd:nonNegativeInteger
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "surgeries_left" ] ;
+             fhir:display [ fhir:v "total_surgeries" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:unsignedInt ;
+           fhir:v "1"^^xsd:nonNegativeInteger
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "deliveries_left" ] ;
+             fhir:display [ fhir:v "total_deliveries" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:unsignedInt ;
+           fhir:v "1"^^xsd:nonNegativeInteger
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "hospitalization_amount" ] ;
+             fhir:display [ fhir:v "hospitalization_amount" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:Money ;
+           fhir:value [ fhir:v "25000"^^xsd:decimal ]
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "consultation_amount" ] ;
+             fhir:display [ fhir:v "consultation_amount" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:Money ;
+           fhir:value [ fhir:v "15000"^^xsd:decimal ]
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "surgery_amount" ] ;
+             fhir:display [ fhir:v "surgery_amount" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:Money ;
+           fhir:value [ fhir:v "70000"^^xsd:decimal ]
+         ]
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "delivery_amount" ] ;
+             fhir:display [ fhir:v "delivery_amount" ]
+           ] )
+         ] ;
+         fhir:allowed [
+           a fhir:Money ;
+           fhir:value [ fhir:v "15000"^^xsd:decimal ]
+         ]
+       ] )
+     ] [
+       fhir:productOrService [
+         fhir:text [ fhir:v "A1" ]
+       ] ;
+       fhir:excluded [ fhir:v false ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

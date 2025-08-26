@@ -1,0 +1,57 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "patient-profession",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem patient-profession</b></p><a name=\"patient-profession\"> </a><a name=\"hcpatient-profession\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"patient-profession-1\"> </a></td><td>Housewife</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"patient-profession-2\"> </a></td><td>Employee</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"patient-profession-3\"> </a></td><td>Self Employee</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"patient-profession-4\"> </a></td><td>Other</td></tr></table></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession",
+  "version" : "0.1.0",
+  "name" : "PatientProfessionCS",
+  "title" : "Profession (Patient)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the profession of a Patient. Values defined by openIMIS. Can be extended.",
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "1",
+    "display" : "Housewife"
+  },
+  {
+    "code" : "2",
+    "display" : "Employee"
+  },
+  {
+    "code" : "3",
+    "display" : "Self Employee"
+  },
+  {
+    "code" : "4",
+    "display" : "Other"
+  }]
+}

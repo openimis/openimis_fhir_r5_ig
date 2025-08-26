@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Patient/john-doe> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "john-doe"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient john-doe</b></p><a name=\"john-doe\"> </a><a name=\"hcjohn-doe\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-patient.html\">openIMIS Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">John Doe  Male, DoB: 1962-02-05 ( Unique code)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">5 Tsoka Jamula Ultha (home)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Brother/Sister\">Brother/Sister:</td><td colspan=\"3\"><ul><li>John Doe </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Specifies the Patient/Insuree's education level\"><a href=\"StructureDefinition-patient-education-level.html\">Education Level (Patient)</a></td><td colspan=\"3\"><span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level 4}\">University</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Whether a card was issued to the Patient/Insuree during enrolment.\"><a href=\"StructureDefinition-patient-card-issued.html\">Card Issued (Patient)</a></td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Specifies the Patient/Insuree official identification and the type of identification document.\">Identification (Patient):</td><td colspan=\"3\"><ul><li>number: NationaID1</li><li>type: <span title=\"Codes:{https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types N}\">National ID</span></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Specifies the Patient/Insuree's profession\"><a href=\"StructureDefinition-patient-profession.html\">Profession (Patient)</a></td><td colspan=\"3\"><span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession 2}\">Employee</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Whether the Patient/Insuree is the Head of the Family.\"><a href=\"StructureDefinition-patient-is-head.html\">IsHead (Patient)</a></td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The reference to the Group/Family the Patient/Insuree is part of.\"><a href=\"StructureDefinition-patient-group-reference.html\">Group Reference (Patient)</a></td><td colspan=\"3\"><a href=\"Group-doe-family.html\">Group Doe Jane</a></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Whether the Patient/Insuree has the vulnerability status.\"><a href=\"StructureDefinition-patient-vulnerability-status.html\">Vulnerability Status (Patient)</a></td><td colspan=\"3\">true</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-is-head"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-education-level"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "4" ] ;
+         fhir:display [ fhir:v "University" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-profession"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "2" ] ;
+         fhir:display [ fhir:v "Employee" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "number"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "NationaID1"
+       ]
+     ] [
+       fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "N" ] ;
+           fhir:display [ fhir:v "National ID" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-identification"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-card-issued"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-group-reference"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Group/doe-family> ;
+       fhir:reference [ fhir:v "Group/doe-family" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-vulnerability-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "123456789" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Doe" ] ;
+     fhir:given ( [ fhir:v "John" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1962-02-05"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-municipality"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Jamu"
+       ]
+     ] [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Location/Jamula-village> ;
+         fhir:reference [ fhir:v "Location/Jamula-village" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "5 Tsoka" ] ) ;
+     fhir:city [ fhir:v "Jamula" ] ;
+     fhir:district [ fhir:v "Rapta" ] ;
+     fhir:state [ fhir:v "Ultha" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "M" ]
+     ] )
+  ] ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-contact-relationship"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:family [ fhir:v "Doe" ] ;
+       fhir:given ( [ fhir:v "John" ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

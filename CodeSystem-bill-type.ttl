@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bill-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem bill-type</b></p><a name=\"bill-type\"> </a><a name=\"hcbill-type\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">claim-batch<a name=\"bill-type-claim-batch\"> </a></td><td>Claim batch payment</td><td>How much the insurance need to pay the HF for the claims reimbursment.</td></tr><tr><td style=\"white-space:nowrap\">commission<a name=\"bill-type-commission\"> </a></td><td>Commission</td><td>How much the insurance need to pay the commission to EO.</td></tr><tr><td style=\"white-space:nowrap\">fees<a name=\"bill-type-fees\"> </a></td><td>Fees</td><td>How much the insurance need to pay the payment platform for the fee for payment service.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "BillTypeCS"] ; # 
+  fhir:title [ fhir:v "Type (Bill Invoice)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Indicates the Type for Bill. Values defined by openIMIS. Can not be extended."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "claim-batch" ] ;
+     fhir:display [ fhir:v "Claim batch payment" ] ;
+     fhir:definition [ fhir:v "How much the insurance need to pay the HF for the claims reimbursment." ]
+  ] [
+     fhir:code [ fhir:v "commission" ] ;
+     fhir:display [ fhir:v "Commission" ] ;
+     fhir:definition [ fhir:v "How much the insurance need to pay the commission to EO." ]
+  ] [
+     fhir:code [ fhir:v "fees" ] ;
+     fhir:display [ fhir:v "Fees" ] ;
+     fhir:definition [ fhir:v "How much the insurance need to pay the payment platform for the fee for payment service." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

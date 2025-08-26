@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "patient-identification-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet patient-identification-type</b></p><a name=\"patient-identification-type\"> </a><a name=\"hcpatient-identification-type\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-patient-identification-type.html\"><code>https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-identification-type",
+  "version" : "0.1.0",
+  "name" : "PatientIdentificationTypeVS",
+  "title" : "Identification Type (Patient)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the type of document the Patient used to identify himself.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types"
+    }]
+  }
+}

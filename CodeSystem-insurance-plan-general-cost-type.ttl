@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "insurance-plan-general-cost-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem insurance-plan-general-cost-type</b></p><a name=\"insurance-plan-general-cost-type\"> </a><a name=\"hcinsurance-plan-general-cost-type\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">lumpsum<a name=\"insurance-plan-general-cost-type-lumpsum\"> </a></td><td>Lumpsum</td></tr><tr><td style=\"white-space:nowrap\">premiumAdult<a name=\"insurance-plan-general-cost-type-premiumAdult\"> </a></td><td>Premium Adult</td></tr><tr><td style=\"white-space:nowrap\">premiumChild<a name=\"insurance-plan-general-cost-type-premiumChild\"> </a></td><td>Premium Child</td></tr><tr><td style=\"white-space:nowrap\">registrationLumpsum<a name=\"insurance-plan-general-cost-type-registrationLumpsum\"> </a></td><td>Registration Lumpsum</td></tr><tr><td style=\"white-space:nowrap\">registrationFee<a name=\"insurance-plan-general-cost-type-registrationFee\"> </a></td><td>Registration Fee</td></tr><tr><td style=\"white-space:nowrap\">generalAssemblyLumpSum<a name=\"insurance-plan-general-cost-type-generalAssemblyLumpSum\"> </a></td><td>General Assembly Lump Sum</td></tr><tr><td style=\"white-space:nowrap\">generalAssemblyFee<a name=\"insurance-plan-general-cost-type-generalAssemblyFee\"> </a></td><td>General Assembly Fee</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "InsurancePlanGeneralCostTypeCS"] ; # 
+  fhir:title [ fhir:v "General Cost Type (InsurancePlan)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "lumpsum" ] ;
+     fhir:display [ fhir:v "Lumpsum" ]
+  ] [
+     fhir:code [ fhir:v "premiumAdult" ] ;
+     fhir:display [ fhir:v "Premium Adult" ]
+  ] [
+     fhir:code [ fhir:v "premiumChild" ] ;
+     fhir:display [ fhir:v "Premium Child" ]
+  ] [
+     fhir:code [ fhir:v "registrationLumpsum" ] ;
+     fhir:display [ fhir:v "Registration Lumpsum" ]
+  ] [
+     fhir:code [ fhir:v "registrationFee" ] ;
+     fhir:display [ fhir:v "Registration Fee" ]
+  ] [
+     fhir:code [ fhir:v "generalAssemblyLumpSum" ] ;
+     fhir:display [ fhir:v "General Assembly Lump Sum" ]
+  ] [
+     fhir:code [ fhir:v "generalAssemblyFee" ] ;
+     fhir:display [ fhir:v "General Assembly Fee" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

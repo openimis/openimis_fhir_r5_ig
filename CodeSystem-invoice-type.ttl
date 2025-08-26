@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "invoice-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem invoice-type</b></p><a name=\"invoice-type\"> </a><a name=\"hcinvoice-type\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">contribution<a name=\"invoice-type-contribution\"> </a></td><td>Contribution</td><td>To pay the contribution for a Policy under the Informal Sector coverage.</td></tr><tr><td style=\"white-space:nowrap\">contract<a name=\"invoice-type-contract\"> </a></td><td>Contract</td><td>To pay the contributions under the Formal Sector coverage.</td></tr><tr><td style=\"white-space:nowrap\">funding<a name=\"invoice-type-funding\"> </a></td><td>Funding</td><td>To create a request for external funds.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "InvoiceTypeCS"] ; # 
+  fhir:title [ fhir:v "Type (Invoice)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "contribution" ] ;
+     fhir:display [ fhir:v "Contribution" ] ;
+     fhir:definition [ fhir:v "To pay the contribution for a Policy under the Informal Sector coverage." ]
+  ] [
+     fhir:code [ fhir:v "contract" ] ;
+     fhir:display [ fhir:v "Contract" ] ;
+     fhir:definition [ fhir:v "To pay the contributions under the Formal Sector coverage." ]
+  ] [
+     fhir:code [ fhir:v "funding" ] ;
+     fhir:display [ fhir:v "Funding" ] ;
+     fhir:definition [ fhir:v "To create a request for external funds." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

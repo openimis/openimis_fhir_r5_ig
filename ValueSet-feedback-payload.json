@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "feedback-payload",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet feedback-payload</b></p><a name=\"feedback-payload\"> </a><a name=\"hcfeedback-payload\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-feedback-payload.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-payload",
+  "version" : "0.1.0",
+  "name" : "FeedbackPayloadVS",
+  "title" : "Feedback Payload (CommunicationRequest | Communication)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"
+    }]
+  }
+}

@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "insurance-plan-period-kind"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem insurance-plan-period-kind</b></p><a name=\"insurance-plan-period-kind\"> </a><a name=\"hcinsurance-plan-period-kind\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">administration<a name=\"insurance-plan-period-kind-administration\"> </a></td><td>Administration</td></tr><tr><td style=\"white-space:nowrap\">grace-payment<a name=\"insurance-plan-period-kind-grace-payment\"> </a></td><td>Grace (Payment)</td></tr><tr><td style=\"white-space:nowrap\">grace-renewal<a name=\"insurance-plan-period-kind-grace-renewal\"> </a></td><td>Grace (Renewal)</td></tr><tr><td style=\"white-space:nowrap\">grace-enrolment<a name=\"insurance-plan-period-kind-grace-enrolment\"> </a></td><td>Grace (Enrolment)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "InsurancePlanPeriodKindCS"] ; # 
+  fhir:title [ fhir:v "InsurancePlan Period Kind"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "administration" ] ;
+     fhir:display [ fhir:v "Administration" ]
+  ] [
+     fhir:code [ fhir:v "grace-payment" ] ;
+     fhir:display [ fhir:v "Grace (Payment)" ]
+  ] [
+     fhir:code [ fhir:v "grace-renewal" ] ;
+     fhir:display [ fhir:v "Grace (Renewal)" ]
+  ] [
+     fhir:code [ fhir:v "grace-enrolment" ] ;
+     fhir:display [ fhir:v "Grace (Enrolment)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

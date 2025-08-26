@@ -1,0 +1,3519 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/action-participant-function",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ActionParticipantFunction",
+      "title" : "Action Participant Function",
+      "description" : "The function performed by the participant for the action.",
+      "systems" : ["http://hl7.org/fhir/action-participant-function"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3052"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3052"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/action-participant-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ActionParticipantType",
+      "title" : "Action Participant Type",
+      "description" : "The type of participant for the action.",
+      "systems" : ["http://hl7.org/fhir/action-participant-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.794",
+        "2.16.840.1.113883.4.642.3.811"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.794",
+        "2.16.840.1.113883.4.642.3.811"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/address-type",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AddressType",
+      "title" : "AddressType",
+      "description" : "The type of an address (physical / postal).",
+      "systems" : ["http://hl7.org/fhir/address-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.69"],
+      "sources" : ["2.16.840.1.113883.4.642.3.69"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-group-address.html" : "Poverty Status (Group)"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/address-use",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AddressUse",
+      "title" : "AddressUse",
+      "description" : "The use of an address.",
+      "systems" : ["http://hl7.org/fhir/address-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.67"],
+      "sources" : ["2.16.840.1.113883.4.642.3.67"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-group-address.html" : "Poverty Status (Group)"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adjudication-error",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "AdjudicationErrorCodes",
+      "title" : "Adjudication Error Codes",
+      "description" : "This value set includes a smattering of adjudication codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/adjudication-error"],
+      "oids" : ["2.16.840.1.113883.4.642.3.39"],
+      "sources" : ["2.16.840.1.113883.4.642.3.39"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adjudication-reason",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "AdjudicationReasonCodes",
+      "title" : "Adjudication Reason Codes",
+      "description" : "This value set includes smattering of Adjudication Reason codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/adjudication-reason"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.598",
+        "2.16.840.1.113883.4.642.3.590"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.598",
+        "2.16.840.1.113883.4.642.3.590"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/all-languages",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AllLanguages",
+      "title" : "All Languages",
+      "description" : "This value set includes all possible codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.21"],
+      "sources" : ["2.16.840.1.113883.4.642.3.21"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/all-resource-types",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AllResourceTypes",
+      "title" : "All Resource Types",
+      "description" : "All fhir resource types (including abstract resources)",
+      "systems" : ["http://hl7.org/fhir/fhir-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3294"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3294"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/asset-availability",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceAssetAvailiabilityCodes",
+      "title" : "Contract Resource Asset Availiability codes",
+      "description" : "This value set has asset availability codes.",
+      "systems" : ["http://hl7.org/fhir/asset-availability"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1295"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1295"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/benefit-network",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "NetworkTypeCodes",
+      "title" : "Network Type Codes",
+      "description" : "This value set includes a smattering of Network type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/benefit-network"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.600",
+        "2.16.840.1.113883.4.642.3.608"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.600",
+        "2.16.840.1.113883.4.642.3.608"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/benefit-term",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "BenefitTermCodes",
+      "title" : "Benefit Term Codes",
+      "description" : "This value set includes a smattering of Benefit Term codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/benefit-term"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.612",
+        "2.16.840.1.113883.4.642.3.604"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.612",
+        "2.16.840.1.113883.4.642.3.604"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/benefit-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "BenefitTypeCodes",
+      "title" : "Benefit Type Codes",
+      "description" : "This value set includes a smattering of Benefit type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/benefit-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.598",
+        "2.16.840.1.113883.4.642.3.606"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.598",
+        "2.16.840.1.113883.4.642.3.606"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/benefit-unit",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "UnitTypeCodes",
+      "title" : "Unit Type Codes",
+      "description" : "This value set includes a smattering of Unit type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/benefit-unit"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.602",
+        "2.16.840.1.113883.4.642.3.610"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.602",
+        "2.16.840.1.113883.4.642.3.610"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/body-site",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTBodyStructures",
+      "title" : "SNOMED CT Body Structures",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.653",
+        "2.16.840.1.113883.4.642.2.78",
+        "2.16.840.1.113883.4.642.3.141"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.653",
+        "2.16.840.1.113883.4.642.2.78",
+        "2.16.840.1.113883.4.642.3.141"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "PracticeSettingCodeValueSet",
+      "title" : "Practice Setting Code Value Set",
+      "description" : "This is the code representing the clinical specialty of the clinician or provider who    interacted with, treated, or provided a service to/for the patient. The value set used    for clinical specialty has been limited by HITSP to the value set reproduced from HITSP    C80 Table 2-149 Clinical Specialty Value Set Definition.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.134",
+        "2.16.840.1.113883.3.88.12.80.72"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.134",
+        "2.16.840.1.113883.3.88.12.80.72"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-careteamrole",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ClaimCareTeamRoleCodes",
+      "title" : "Claim Care Team Role Codes",
+      "description" : "This value set includes sample Claim Care Team Role codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/claimcareteamrole"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.586",
+        "2.16.840.1.113883.4.642.3.578"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.586",
+        "2.16.840.1.113883.4.642.3.578"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-decision",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ClaimAdjudicationDecisionsCodes",
+      "title" : "Claim Adjudication Decision Codes",
+      "description" : "This value set includes Claim Adjudication Decision codes.",
+      "systems" : ["http://hl7.org/fhir/claim-decision"],
+      "oids" : ["2.16.840.1.113883.4.642.3.2983"],
+      "sources" : ["2.16.840.1.113883.4.642.3.2983"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-decision-reason",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ClaimAdjudicationDecisionReasonCodes",
+      "title" : "Claim Adjudication Decision Reason Codes",
+      "description" : "This value set includes example Claim Adjudication Decision Reason codes.",
+      "systems" : ["http://hl7.org/fhir/claim-decision-reason"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-exception",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExceptionCodes",
+      "title" : "Exception Codes",
+      "description" : "This value set includes sample Exception codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/claim-exception"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.572",
+        "2.16.840.1.113883.4.642.2.307",
+        "2.16.840.1.113883.4.642.3.580"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.572",
+        "2.16.840.1.113883.4.642.2.307",
+        "2.16.840.1.113883.4.642.3.580"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-modifiers",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ModifierTypeCodes",
+      "title" : "Modifier type Codes",
+      "description" : "This value set includes sample Modifier type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/modifiers"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.536",
+        "2.16.840.1.113883.4.642.2.311",
+        "2.16.840.1.113883.4.642.3.528"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.536",
+        "2.16.840.1.113883.4.642.2.311",
+        "2.16.840.1.113883.4.642.3.528"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-outcome",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ClaimProcessingCodes",
+      "title" : "Claim Processing Codes",
+      "description" : "This value set includes Claim Processing Outcome codes.",
+      "systems" : ["http://hl7.org/fhir/claim-outcome"],
+      "oids" : ["2.16.840.1.113883.4.642.3.2984"],
+      "sources" : ["2.16.840.1.113883.4.642.3.2984"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-subtype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleClaimSubTypeCodes",
+      "title" : "Example Claim SubType Codes",
+      "description" : "This value set includes sample Claim SubType codes which are used to distinguish the claim types for example within type institutional there may be subtypes for emergency services, bed stay and transportation.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-claimsubtype"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.558",
+        "2.16.840.1.113883.4.642.3.566"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.558",
+        "2.16.840.1.113883.4.642.3.566"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ClaimTypeCodes",
+      "title" : "Claim Type Codes",
+      "description" : "This value set includes Claim Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/claim-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.558",
+        "2.16.840.1.113883.4.642.3.550"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.558",
+        "2.16.840.1.113883.4.642.3.550"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/claim-use",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "Use",
+      "title" : "Use",
+      "description" : "The purpose of the Claim: predetermination, preauthorization, claim.",
+      "systems" : ["http://hl7.org/fhir/claim-use"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.536",
+        "2.16.840.1.113883.4.642.3.544"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.536",
+        "2.16.840.1.113883.4.642.3.544"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.232",
+        "2.16.840.1.113883.4.642.3.227",
+        "2.16.840.1.113883.4.642.2.115"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.232",
+        "2.16.840.1.113883.4.642.3.227",
+        "2.16.840.1.113883.4.642.2.115"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/communication-category",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CommunicationCategory",
+      "title" : "Communication Category",
+      "description" : "Codes for general categories of communications such as alerts, instructions, etc.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/communication-category"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.172",
+        "2.16.840.1.113883.4.642.3.162"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.172",
+        "2.16.840.1.113883.4.642.3.162"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/communication-not-done-reason",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CommunicationNotDoneReason",
+      "title" : "Communication Not Done Reason",
+      "description" : "Codes for the reason why a communication did not happen.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.164",
+        "2.16.840.1.113883.4.642.3.174"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.164",
+        "2.16.840.1.113883.4.642.3.174"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/communication-topic",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CommunicationTopic",
+      "title" : "Communication Topic",
+      "description" : "Codes describing the purpose or content of the communication.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/communication-topic"],
+      "oids" : ["2.16.840.1.113883.4.642.3.983"],
+      "sources" : ["2.16.840.1.113883.4.642.3.983"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/consent-content-class",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ConsentContentClass",
+      "title" : "Consent Content Class",
+      "description" : "This value set includes the FHIR resource types, along with some other important content class codes",
+      "systems" : ["urn:ietf:rfc:3986", "urn:ietf:bcp:13", "http://loinc.org"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.745",
+        "2.16.840.1.113883.4.642.3.747"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.745",
+        "2.16.840.1.113883.4.642.3.747"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "ContactPointSystem",
+      "title" : "ContactPointSystem",
+      "description" : "Telecommunications form for contact point.",
+      "systems" : ["http://hl7.org/fhir/contact-point-system"],
+      "oids" : ["2.16.840.1.113883.4.642.3.71"],
+      "sources" : ["2.16.840.1.113883.4.642.3.71"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "ContactPointUse",
+      "title" : "ContactPointUse",
+      "description" : "Use of contact point.",
+      "systems" : ["http://hl7.org/fhir/contact-point-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.73"],
+      "sources" : ["2.16.840.1.113883.4.642.3.73"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-action",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractActionCodes",
+      "title" : "Contract Action Codes",
+      "description" : "This value set includes sample Contract Action codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contractaction"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.727",
+        "2.16.840.1.113883.4.642.2.100",
+        "2.16.840.1.113883.4.642.3.739"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.727",
+        "2.16.840.1.113883.4.642.2.100",
+        "2.16.840.1.113883.4.642.3.739"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-actionstatus",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceActionStatusCodes",
+      "title" : "Contract Resource Action Status codes",
+      "description" : "This value set contract specific codes for action status.",
+      "systems" : ["http://hl7.org/fhir/contract-action-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1303"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1303"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-actorrole",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractActorRoleCodes",
+      "title" : "Contract Actor Role Codes",
+      "description" : "This value set includes sample Contract Actor Role codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contractactorrole"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.741",
+        "2.16.840.1.113883.4.642.2.102",
+        "2.16.840.1.113883.4.642.3.729"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.741",
+        "2.16.840.1.113883.4.642.2.102",
+        "2.16.840.1.113883.4.642.3.729"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-assetcontext",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceAssetContextCodes",
+      "title" : "Contract Resource Asset Context codes",
+      "description" : "This value set contract specific codes for asset context.",
+      "systems" : ["http://hl7.org/fhir/contract-asset-context"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1297"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1297"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-assetscope",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceAssetScopeCodes",
+      "title" : "Contract Resource Asset Scope codes",
+      "description" : "This value set contract specific codes for asset scope.",
+      "systems" : ["http://hl7.org/fhir/contract-asset-scope"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1293"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1293"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-assetsubtype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceAssetSubTypeCodes",
+      "title" : "Contract Resource Asset Sub-Type codes",
+      "description" : "This value set contract specific codes for asset subtype.",
+      "systems" : ["http://hl7.org/fhir/contract-asset-subtype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1301"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1301"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-assettype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceAssetTypeCodes",
+      "title" : "Contract Resource Asset Type codes",
+      "description" : "This value set contract specific codes for asset type.",
+      "systems" : ["http://hl7.org/fhir/contract-asset-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1299"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1299"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-content-derivative",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractContentDerivationCodes",
+      "title" : "Contract Content Derivation Codes",
+      "description" : "This is an example set of Content Derivative type codes, which represent the minimal content derived from the basal information source at a specific stage in its lifecycle, which is sufficient to manage that source information, for example, in a repository, registry, processes and workflows, for making access control decisions, and providing query responses.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/contract-content-derivative"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.745",
+        "2.16.840.1.113883.4.642.3.733"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.745",
+        "2.16.840.1.113883.4.642.3.733"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-decision-mode",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceDecisionModeCodes",
+      "title" : "Contract Resource Decision Mode codes",
+      "description" : "This value set contract specific codes for decision modes.",
+      "systems" : ["http://hl7.org/fhir/contract-decision-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1291"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1291"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-definition-subtype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceDefinitionSubtypeCodes",
+      "title" : "Contract Resource Definition Subtype codes",
+      "description" : "This value set contract specific codes for status.",
+      "systems" : ["http://hl7.org/fhir/contract-definition-subtype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1212"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1212"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-definition-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceDefinitionTypeCodes",
+      "title" : "Contract Resource Definition Type codes",
+      "description" : "This value set contract specific codes for status.",
+      "systems" : ["http://hl7.org/fhir/contract-definition-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1210"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1210"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-expiration-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceExpirationTypeCodes",
+      "title" : "Contract Resource Expiration Type codes",
+      "description" : "This value set contract specific codes for status.",
+      "systems" : ["http://hl7.org/fhir/contract-expiration-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1214"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1214"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-legalstate",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceLegalStateCodes",
+      "title" : "Contract Resource Legal State codes",
+      "description" : "This value set contract specific codes for status.",
+      "systems" : ["http://hl7.org/fhir/contract-legalstate"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1206"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1206"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-party-role",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourcePartyRoleCodes",
+      "title" : "Contract Resource Party Role codes",
+      "description" : "This value set contract specific codes for offer party participation.",
+      "systems" : ["http://hl7.org/fhir/contract-party-role"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1224"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1224"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-publicationstatus",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourcePublicationStatusCodes",
+      "title" : "Contract Resource Publication Status codes",
+      "description" : "This value set contract specific codes for status.",
+      "systems" : ["http://hl7.org/fhir/contract-publicationstatus"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1208"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1208"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-security-category",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceScopeCodes",
+      "title" : "Contract Resource Scope codes",
+      "description" : "This value set contract specific codes for security category.",
+      "systems" : ["http://hl7.org/fhir/contract-security-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1220"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1220"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-security-classification",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceScopeCodes",
+      "title" : "Contract Resource Scope codes",
+      "description" : "This value set contract specific codes for security classification.",
+      "systems" : ["http://hl7.org/fhir/contract-security-classification"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1218"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1218"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-security-control",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractResourceSecurityControlCodes",
+      "title" : "Contract Resource Security Control codes",
+      "description" : "This value set contract specific codes for security control.",
+      "systems" : ["http://hl7.org/fhir/contract-security-control"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1222"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1222"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-signer-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractSignerTypeCodes",
+      "title" : "Contract Signer Type Codes",
+      "description" : "This value set includes sample Contract Signer Type codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/contractsignertypecodes"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.99",
+        "2.16.840.1.113883.4.642.3.737",
+        "2.16.840.1.113883.4.642.3.725"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.99",
+        "2.16.840.1.113883.4.642.3.737",
+        "2.16.840.1.113883.4.642.3.725"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-subtype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractSubtypeCodes",
+      "title" : "Contract Subtype Codes",
+      "description" : "This value set includes sample Contract Subtype codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contractsubtypecodes"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.731",
+        "2.16.840.1.113883.4.642.3.719",
+        "2.16.840.1.113883.4.642.2.96"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.731",
+        "2.16.840.1.113883.4.642.3.719",
+        "2.16.840.1.113883.4.642.2.96"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-term-subtype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractTermSubtypeCodes",
+      "title" : "Contract Term Subtype Codes",
+      "description" : "This value set includes sample Contract Term SubType codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/contracttermsubtypecodes"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.98",
+        "2.16.840.1.113883.4.642.3.723",
+        "2.16.840.1.113883.4.642.3.735"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.98",
+        "2.16.840.1.113883.4.642.3.723",
+        "2.16.840.1.113883.4.642.3.735"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-term-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractTermTypeCodes",
+      "title" : "Contract Term Type Codes",
+      "description" : "This value set includes sample Contract Term Type codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/contracttermtypecodes"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.97",
+        "2.16.840.1.113883.4.642.3.733",
+        "2.16.840.1.113883.4.642.3.721"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.97",
+        "2.16.840.1.113883.4.642.3.733",
+        "2.16.840.1.113883.4.642.3.721"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contract-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContractTypeCodes",
+      "title" : "Contract Type Codes",
+      "description" : "This value set includes sample Contract Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contract-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.729",
+        "2.16.840.1.113883.4.642.3.717",
+        "2.16.840.1.113883.4.642.2.95"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.729",
+        "2.16.840.1.113883.4.642.3.717",
+        "2.16.840.1.113883.4.642.2.95"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-class",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CoverageClassCodes",
+      "title" : "Coverage Class Codes",
+      "description" : "This value set includes Coverage Class codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-class"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1009"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1009"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-copay-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CoverageCopayTypeCodes",
+      "title" : "Coverage Copay Type Codes",
+      "description" : "This value set includes sample Coverage Copayment Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-copay-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.527"],
+      "sources" : ["2.16.840.1.113883.4.642.3.527"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-financial-exception",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleCoverageFinancialExceptionCodes",
+      "title" : "Example Coverage Financial Exception Codes",
+      "description" : "This value set includes Example Coverage Financial Exception Codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1328"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1328"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-kind",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "Kind",
+      "title" : "Kind",
+      "description" : "The kind of coverage: insurance, selfpay or other.",
+      "systems" : ["http://hl7.org/fhir/coverage-kind"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3244"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3244"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverage-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CoverageTypeAndSelfPayCodes",
+      "title" : "Coverage Type and Self-Pay Codes",
+      "description" : "This value set includes Coverage Type codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/coverage-selfpay",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.520",
+        "2.16.840.1.113883.4.642.3.514"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.520",
+        "2.16.840.1.113883.4.642.3.514"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/coverageeligibilityresponse-ex-auth-support",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CoverageEligibilityResponseAuthSupportCodes",
+      "title" : "CoverageEligibilityResponse Auth Support Codes",
+      "description" : "This value set includes CoverageEligibilityResponse Auth Support codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1393"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1393"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/currencies",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "Currencies",
+      "title" : "Currencies",
+      "description" : "Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-codes.html)",
+      "systems" : ["urn:iso:std:iso:4217"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1025"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1025"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-unit-price.html" : "Unit Price (Medication|ActivityDefinition)",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/datestype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "DatesTypeCodes",
+      "title" : "Dates Type Codes",
+      "description" : "This value set includes sample Dates Type codes.",
+      "systems" : ["http://hl7.org/fhir/datestype"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "DaysOfWeek",
+      "title" : "Days Of Week",
+      "description" : "The days of the week.",
+      "systems" : ["http://hl7.org/fhir/days-of-week"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.512",
+        "2.16.840.1.113883.4.642.2.302",
+        "2.16.840.1.113883.4.642.3.506"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.512",
+        "2.16.840.1.113883.4.642.2.302",
+        "2.16.840.1.113883.4.642.3.506"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-medication-frequency.html" : "Frequency (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/eligibility-outcome",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "EligibilityOutcome",
+      "title" : "Eligibility Outcome",
+      "description" : "The outcome of the processing.",
+      "systems" : ["http://hl7.org/fhir/eligibility-outcome"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3233"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3233"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/eligibilityrequest-purpose",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "EligibilityRequestPurpose",
+      "title" : "Eligibility Request Purpose",
+      "description" : "A code specifying the types of information being requested.",
+      "systems" : ["http://hl7.org/fhir/eligibilityrequest-purpose"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1182"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1182"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/eligibilityresponse-purpose",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "EligibilityResponsePurpose",
+      "title" : "Eligibility Response Purpose",
+      "description" : "A code specifying the types of information being requested.",
+      "systems" : ["http://hl7.org/fhir/eligibilityresponse-purpose"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1184"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1184"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/event-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "EventStatus",
+      "title" : "EventStatus",
+      "description" : "Codes identifying the lifecycle stage of an event.",
+      "systems" : ["http://hl7.org/fhir/event-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.109"],
+      "sources" : ["2.16.840.1.113883.4.642.3.109"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/event-timing",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "EventTiming",
+      "title" : "EventTiming",
+      "description" : "Real-world event relating to the schedule.",
+      "systems" : [
+        "http://hl7.org/fhir/event-timing",
+        "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.75"],
+      "sources" : ["2.16.840.1.113883.4.642.3.75"],
+      "uses" : {
+      },
+      "StructureDefinition-medication-frequency.html" : "Frequency (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "BenefitCategoryCodes",
+      "title" : "Benefit Category Codes",
+      "description" : "This value set includes examples of Benefit Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-benefitcategory"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1174"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1174"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleDiagnosisOnAdmissionCodes",
+      "title" : "Example Diagnosis on Admission Codes",
+      "description" : "This value set includes example Diagnosis on Admission codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1169"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1169"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosisrelatedgroup",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleDiagnosisRelatedGroupCodes",
+      "title" : "Example Diagnosis Related Group Codes",
+      "description" : "This value set includes example Diagnosis Related Group codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.588",
+        "2.16.840.1.113883.4.642.3.580"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.588",
+        "2.16.840.1.113883.4.642.3.580"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosistype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleDiagnosisTypeCodes",
+      "title" : "Example Diagnosis Type Codes",
+      "description" : "This value set includes example Diagnosis Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-diagnosistype"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.590",
+        "2.16.840.1.113883.4.642.3.582"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.590",
+        "2.16.840.1.113883.4.642.3.582"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-paymenttype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExamplePaymentTypeCodes",
+      "title" : "Example Payment Type Codes",
+      "description" : "This value set includes example Payment Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-paymenttype"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.616",
+        "2.16.840.1.113883.4.642.3.608"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.616",
+        "2.16.840.1.113883.4.642.3.608"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-procedure-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleProcedureTypeCodes",
+      "title" : "Example Procedure Type Codes",
+      "description" : "This value set includes example Procedure Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-procedure-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1387"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1387"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-program-code",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleProgramReasonCodes",
+      "title" : "Example Program Reason Codes",
+      "description" : "This value set includes sample Program Reason Span codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-programcode"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.576",
+        "2.16.840.1.113883.4.642.3.568"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.576",
+        "2.16.840.1.113883.4.642.3.568"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ex-revenue-center",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleRevenueCenterCodes",
+      "title" : "Example Revenue Center Codes",
+      "description" : "This value set includes sample Revenue Center codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-revenue-center"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.586",
+        "2.16.840.1.113883.4.642.3.594"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.586",
+        "2.16.840.1.113883.4.642.3.594"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/fm-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "FinancialResourceStatusCodes",
+      "title" : "Financial Resource Status Codes",
+      "description" : "This value set includes Status codes.",
+      "systems" : ["http://hl7.org/fhir/fm-status"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.584",
+        "2.16.840.1.113883.4.642.3.592"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.584",
+        "2.16.840.1.113883.4.642.3.592"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/forms",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "FormCodes",
+      "title" : "Form Codes",
+      "description" : "This value set includes a sample set of Forms codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/forms-codes"],
+      "oids" : ["2.16.840.1.113883.4.642.3.37"],
+      "sources" : ["2.16.840.1.113883.4.642.3.37"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/fundsreserve",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "FundsReservationCodes",
+      "title" : "Funds Reservation Codes",
+      "description" : "This value set includes sample funds reservation type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/fundsreserve"],
+      "oids" : ["2.16.840.1.113883.4.642.3.33"],
+      "sources" : ["2.16.840.1.113883.4.642.3.33"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/group-membership-basis",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "GroupMembershipBasis",
+      "title" : "Group Membership Basis",
+      "description" : "Basis for membership in a group",
+      "systems" : ["http://hl7.org/fhir/group-membership-basis"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3069"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3069"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-group.html" : "openIMIS Group"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/group-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "GroupType",
+      "title" : "Group Type",
+      "description" : "Types of resources that are part of group.",
+      "systems" : ["http://hl7.org/fhir/group-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.277",
+        "2.16.840.1.113883.4.642.2.156",
+        "2.16.840.1.113883.4.642.3.284"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.277",
+        "2.16.840.1.113883.4.642.2.156",
+        "2.16.840.1.113883.4.642.3.284"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-group.html" : "openIMIS Group"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/icd-10",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ICD10Codes",
+      "title" : "ICD-10 Codes",
+      "description" : "This value set includes sample ICD-10 codes.",
+      "systems" : ["http://hl7.org/fhir/sid/icd-10"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.531",
+        "2.16.840.1.113883.4.642.3.523",
+        "2.16.840.1.113883.4.642.2.308"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.531",
+        "2.16.840.1.113883.4.642.3.523",
+        "2.16.840.1.113883.4.642.2.308"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/icd-10-procedures",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ICD10ProcedureCodes",
+      "title" : "ICD-10 Procedure Codes",
+      "description" : "This value set includes sample ICD-10 Procedure codes.",
+      "systems" : ["http://hl7.org/fhir/sid/ex-icd-10-procedures"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.574",
+        "2.16.840.1.113883.4.642.3.566"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.574",
+        "2.16.840.1.113883.4.642.3.566"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "IdentifierTypeCodes",
+      "title" : "Identifier Type Codes",
+      "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+      "oids" : ["2.16.840.1.113883.4.642.3.45"],
+      "sources" : ["2.16.840.1.113883.4.642.3.45"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "IdentifierUse",
+      "title" : "IdentifierUse",
+      "description" : "Identifies the purpose for this identifier, if known .",
+      "systems" : ["http://hl7.org/fhir/identifier-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.57"],
+      "sources" : ["2.16.840.1.113883.4.642.3.57"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/insuranceplan-applicability",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "BenefitCostApplicability",
+      "title" : "Benefit Cost Applicability",
+      "description" : "Whether the cost applies to in-network or out-of-network providers.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/applicability"],
+      "oids" : ["2.16.840.1.113883.4.642.3.0"],
+      "sources" : ["2.16.840.1.113883.4.642.3.0"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/jurisdiction",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "JurisdictionValueSet",
+      "title" : "Jurisdiction ValueSet",
+      "description" : "This value set defines a base set of codes for country, country subdivision and region    for indicating where a resource is intended to be used.   \r\n   \r\n   Note: The codes for countries and country subdivisions are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)    while the codes for \"supra-national\" regions are from    [UN Standard country or area codes for statistical use (M49)](http://unstats.un.org/unsd/methods/m49/m49.htm).",
+      "systems" : [
+        "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "urn:iso:std:iso:3166",
+        "urn:iso:std:iso:3166:-2"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.48"],
+      "sources" : ["2.16.840.1.113883.4.642.3.48"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.891",
+        "2.16.840.1.113883.4.642.3.20"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.891",
+        "2.16.840.1.113883.4.642.3.20"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/link-type",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "LinkType",
+      "title" : "Link Type",
+      "description" : "The type of link between this Patient resource and another Patient/RelatedPerson resource.",
+      "systems" : ["http://hl7.org/fhir/link-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.234",
+        "2.16.840.1.113883.4.642.3.423",
+        "2.16.840.1.113883.4.642.3.412"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.234",
+        "2.16.840.1.113883.4.642.3.423",
+        "2.16.840.1.113883.4.642.3.412"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/location-characteristic",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "LocationCharacteristic",
+      "title" : "Location Characteristic",
+      "description" : "Example Set of Location Characteristics",
+      "systems" : ["http://hl7.org/fhir/location-characteristic"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3079"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3079"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/location-mode",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "LocationMode",
+      "title" : "Location Mode",
+      "description" : "Indicates whether a resource instance represents a specific location or a class of locations.",
+      "systems" : ["http://hl7.org/fhir/location-mode"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.321",
+        "2.16.840.1.113883.4.642.2.181",
+        "2.16.840.1.113883.4.642.3.330"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.321",
+        "2.16.840.1.113883.4.642.2.181",
+        "2.16.840.1.113883.4.642.3.330"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/location-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "LocationStatus",
+      "title" : "Location Status",
+      "description" : "Indicates whether the location is still in use.",
+      "systems" : ["http://hl7.org/fhir/location-status"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.323",
+        "2.16.840.1.113883.4.642.3.332",
+        "2.16.840.1.113883.4.642.2.182"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.323",
+        "2.16.840.1.113883.4.642.3.332",
+        "2.16.840.1.113883.4.642.2.182"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+      "title" : "SNOMED CT Medication As Needed Reason Codes",
+      "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.89", "2.16.840.1.113883.4.642.3.96"],
+      "sources" : ["2.16.840.1.113883.4.642.3.89", "2.16.840.1.113883.4.642.3.96"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationCodes",
+      "title" : "SNOMED CT Medication Codes",
+      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.375",
+        "2.16.840.1.113883.4.642.2.199",
+        "2.16.840.1.113883.4.642.3.360"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.375",
+        "2.16.840.1.113883.4.642.2.199",
+        "2.16.840.1.113883.4.642.3.360"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTFormCodes",
+      "title" : "SNOMED CT Form Codes",
+      "description" : "This value set includes all dose form codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.359",
+        "2.16.840.1.113883.4.642.2.198",
+        "2.16.840.1.113883.4.642.3.374"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.359",
+        "2.16.840.1.113883.4.642.2.198",
+        "2.16.840.1.113883.4.642.3.374"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-ingredientstrength",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "MedicationIngredientStrengthCodes",
+      "title" : "Medication Ingredient Strength Codes",
+      "description" : "Medication Ingredient Strength Codes",
+      "systems" : [
+        "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1953"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1953"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "MedicationStatusCodes",
+      "title" : "Medication Status Codes",
+      "description" : "Medication Status Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medication-status"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.376",
+        "2.16.840.1.113883.4.642.3.363"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.376",
+        "2.16.840.1.113883.4.642.3.363"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "MimeTypes",
+      "title" : "Mime Types",
+      "description" : "This value set includes all possible codes from BCP-13 (see http://tools.ietf.org/html/bcp13)",
+      "systems" : ["urn:ietf:bcp:13"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1024"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1024"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/missing-tooth-reason",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "MissingToothReasonCodes",
+      "title" : "Missing Tooth Reason Codes",
+      "description" : "This value set includes sample Missing Tooth Reason codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/missingtoothreason"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.310",
+        "2.16.840.1.113883.4.642.3.534",
+        "2.16.840.1.113883.4.642.3.526"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.310",
+        "2.16.840.1.113883.4.642.3.534",
+        "2.16.840.1.113883.4.642.3.526"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/name-use",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "NameUse",
+      "title" : "NameUse",
+      "description" : "The use of a human name.",
+      "systems" : ["http://hl7.org/fhir/name-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.65"],
+      "sources" : ["2.16.840.1.113883.4.642.3.65"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/note-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "NoteType",
+      "title" : "NoteType",
+      "description" : "The presentation types of notes.",
+      "systems" : ["http://hl7.org/fhir/note-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.15"],
+      "sources" : ["2.16.840.1.113883.4.642.3.15"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/organization-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "OrganizationType",
+      "title" : "Organization Type",
+      "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.228",
+        "2.16.840.1.113883.4.642.3.414",
+        "2.16.840.1.113883.4.642.3.403"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.228",
+        "2.16.840.1.113883.4.642.3.414",
+        "2.16.840.1.113883.4.642.3.403"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/participant-resource-types",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "ParticipantResourceTypes",
+      "title" : "Participant Resource Types",
+      "description" : "All Resource Types that represent participant resources",
+      "systems" : ["http://hl7.org/fhir/fhir-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3301"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3301"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/participation-role-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ParticipationRoleType",
+      "title" : "Participation Role Type",
+      "description" : "This FHIR value set is comprised of Actor participation Type codes, which can be used to value FHIR agents, actors, and other role elements. The codes are intended to express how the agent participated in some activity. Sometimes refered to the agent functional-role relative to the activity.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+        "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+        "http://dicom.nema.org/resources/ontology/DCM"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.54"],
+      "sources" : ["2.16.840.1.113883.4.642.3.54"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/payeetype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ClaimPayeeTypeCodes",
+      "title" : "Claim Payee Type Codes",
+      "description" : "This value set includes sample Payee Type codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/payeetype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.31"],
+      "sources" : ["2.16.840.1.113883.4.642.3.31"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/payment-adjustment-reason",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "PaymentAdjustmentReasonCodes",
+      "title" : "Payment Adjustment Reason Codes",
+      "description" : "This value set includes smattering of Payment Adjustment Reason codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/payment-adjustment-reason"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.600",
+        "2.16.840.1.113883.4.642.3.592"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.600",
+        "2.16.840.1.113883.4.642.3.592"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/payment-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "PaymentStatusCodes",
+      "title" : "Payment Status Codes",
+      "description" : "This value set includes a sample set of Payment Status codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/paymentstatus"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.334",
+        "2.16.840.1.113883.4.642.3.643",
+        "2.16.840.1.113883.4.642.3.628"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.334",
+        "2.16.840.1.113883.4.642.3.643",
+        "2.16.840.1.113883.4.642.3.628"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/practitioner-role",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "PractitionerRole",
+      "title" : "Practitioner Role",
+      "description" : "This example value set defines a set of codes that can be used to indicate the role of a Practitioner.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/practitioner-role",
+        "http://snomed.info/sct"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.430",
+        "2.16.840.1.113883.4.642.2.251",
+        "2.16.840.1.113883.4.642.3.439"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.430",
+        "2.16.840.1.113883.4.642.2.251",
+        "2.16.840.1.113883.4.642.3.439"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ProcedureCodesSNOMEDCT",
+      "title" : "Procedure Codes (SNOMED CT)",
+      "description" : "Procedure Code: All SNOMED CT procedure codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.418",
+        "2.16.840.1.113883.4.642.3.427",
+        "2.16.840.1.113883.4.642.2.417"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.418",
+        "2.16.840.1.113883.4.642.3.427",
+        "2.16.840.1.113883.4.642.2.417"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/process-priority",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ProcessPriorityCodes",
+      "title" : "Process Priority Codes",
+      "description" : "This value set includes the financial processing priority codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/processpriority"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.552",
+        "2.16.840.1.113883.4.642.3.544",
+        "2.16.840.1.113883.4.642.2.319"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.552",
+        "2.16.840.1.113883.4.642.3.544",
+        "2.16.840.1.113883.4.642.2.319"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/provider-qualification",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleProviderQualificationCodes",
+      "title" : "Example Provider Qualification Codes",
+      "description" : "This value set includes sample Provider Qualification codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-providerqualification"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.562",
+        "2.16.840.1.113883.4.642.3.570"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.562",
+        "2.16.840.1.113883.4.642.3.570"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/publication-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "PublicationStatus",
+      "title" : "PublicationStatus",
+      "description" : "The lifecycle status of an artifact.",
+      "systems" : ["http://hl7.org/fhir/publication-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.59"],
+      "sources" : ["2.16.840.1.113883.4.642.3.59"],
+      "uses" : {
+      },
+      "StructureDefinition-insurance-plan-period.html" : "Period (InsurancePlan)",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-insurance-plan-discount.html" : "Discount (InsurancePlan)"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/related-claim-relationship",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleRelatedClaimRelationshipCodes",
+      "title" : "Example Related Claim Relationship Codes",
+      "description" : "This value set includes sample Related Claim Relationship codes.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.568",
+        "2.16.840.1.113883.4.642.3.560"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.568",
+        "2.16.840.1.113883.4.642.3.560"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-intent",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "RequestIntent",
+      "title" : "RequestIntent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+      "systems" : ["http://hl7.org/fhir/request-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.113"],
+      "sources" : ["2.16.840.1.113883.4.642.3.113"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "RequestPriority",
+      "description" : "Identifies the level of importance to be assigned to actioning the request.",
+      "systems" : ["http://hl7.org/fhir/request-priority"],
+      "oids" : ["2.16.840.1.113883.4.642.3.115"],
+      "sources" : ["2.16.840.1.113883.4.642.3.115"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-resource-types",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "RequestResourceTypes",
+      "title" : "Request Resource Types",
+      "description" : "All Resource Types that represent request resources",
+      "systems" : ["http://hl7.org/fhir/fhir-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1058"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1058"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/search-comparator",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SearchComparator",
+      "title" : "Search Comparator",
+      "description" : "What Search Comparator Codes are supported in search.",
+      "systems" : ["http://hl7.org/fhir/search-comparator"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.622",
+        "2.16.840.1.113883.4.642.3.637"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.622",
+        "2.16.840.1.113883.4.642.3.637"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/search-modifier-code",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SearchModifierCode",
+      "title" : "Search Modifier Code",
+      "description" : "A supported modifier for a search parameter.",
+      "systems" : ["http://hl7.org/fhir/search-modifier-code"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.624",
+        "2.16.840.1.113883.4.642.3.639",
+        "2.16.840.1.113883.4.642.2.92"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.624",
+        "2.16.840.1.113883.4.642.3.639",
+        "2.16.840.1.113883.4.642.2.92"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SecurityRoleType",
+      "title" : "Security Role Type",
+      "description" : "This value set contains example structural roles. In general, two types of roles can be distinguished: structural roles and functional roles. Structural Roles reflect human or organizational categories (hierarchies), and describe prerequisites, feasibilities, or competences for actions. Functional roles are bound to the realization or performance of actions.",
+      "systems" : ["sample-security-structural-roles"],
+      "oids" : ["2.16.840.1.113883.4.642.3.978"],
+      "sources" : ["2.16.840.1.113883.4.642.3.978"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-mode",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ServiceMode",
+      "title" : "Service Mode",
+      "description" : "An example set of Service Modes that could be applicable to use to characterize HealthcareServices or PractitionerRoles while searching",
+      "systems" : ["http://hl7.org/fhir/service-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.4.3322"],
+      "sources" : ["2.16.840.1.113883.4.642.4.3322"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-place",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ExampleServicePlaceCodes",
+      "title" : "Example Service Place Codes",
+      "description" : "This value set includes a smattering of Service Place codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-serviceplace"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.564",
+        "2.16.840.1.113883.4.642.3.556"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.564",
+        "2.16.840.1.113883.4.642.3.556"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-uscls",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "USCLSCodes",
+      "title" : "USCLS Codes",
+      "description" : "This value set includes a smattering of USCLS codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-USCLS"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.314",
+        "2.16.840.1.113883.4.642.3.542",
+        "2.16.840.1.113883.4.642.3.534"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.314",
+        "2.16.840.1.113883.4.642.3.542",
+        "2.16.840.1.113883.4.642.3.534"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SubscriberRelationshipCodes",
+      "title" : "SubscriberPolicyholder Relationship Codes",
+      "description" : "This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1385"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1385"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscription-channel-type",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "SubscriptionChannelType",
+      "title" : "Subscription Channel Type",
+      "description" : "Core-defined FHIR channel types allowed for use in Subscriptions.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/subscription-channel-type"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.500",
+        "2.16.840.1.113883.4.642.3.493",
+        "2.16.840.1.113883.4.642.2.294"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.500",
+        "2.16.840.1.113883.4.642.3.493",
+        "2.16.840.1.113883.4.642.2.294"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscription-payload-content",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SubscriptionPayloadContent",
+      "title" : "Subscription Payload Content",
+      "description" : "Codes to represent how much resource content to send in the notification payload.",
+      "systems" : ["http://hl7.org/fhir/subscription-payload-content"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3154"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3154"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscription-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "SubscriptionStatusCodes",
+      "title" : "Subscription Status",
+      "description" : "State values for FHIR Subscriptions.",
+      "systems" : ["http://hl7.org/fhir/subscription-status"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.502",
+        "2.16.840.1.113883.4.642.2.295",
+        "2.16.840.1.113883.4.642.3.495"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.502",
+        "2.16.840.1.113883.4.642.2.295",
+        "2.16.840.1.113883.4.642.3.495"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscription-types",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "SubscriptionTypes",
+      "title" : "Types used with Subscriptions",
+      "description" : "Types used with Subscriptions",
+      "systems" : [
+        "http://hl7.org/fhir/fhir-types",
+        "http://hl7.org/fhir/fhir-old-types"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.4.3319"],
+      "sources" : ["2.16.840.1.113883.4.642.4.3319"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/surface",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SurfaceCodes",
+      "title" : "Surface Codes",
+      "description" : "This value set includes a smattering of FDI tooth surface codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/FDI-surface"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.316",
+        "2.16.840.1.113883.4.642.3.546",
+        "2.16.840.1.113883.4.642.3.538"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.2.316",
+        "2.16.840.1.113883.4.642.3.546",
+        "2.16.840.1.113883.4.642.3.538"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/timing-abbreviation",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "TimingAbbreviation",
+      "title" : "TimingAbbreviation",
+      "description" : "Code for a known / defined timing pattern.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation",
+        "http://terminology.hl7.org/CodeSystem/timing-abbreviation"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.78"],
+      "sources" : ["2.16.840.1.113883.4.642.3.78"],
+      "uses" : {
+      },
+      "StructureDefinition-medication-frequency.html" : "Frequency (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/tooth",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "OralSiteCodes",
+      "title" : "Oral Site Codes",
+      "description" : "This value set includes a smattering of FDI oral site codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/ex-tooth"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.532",
+        "2.16.840.1.113883.4.642.3.540",
+        "2.16.840.1.113883.4.642.2.313"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.532",
+        "2.16.840.1.113883.4.642.3.540",
+        "2.16.840.1.113883.4.642.2.313"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/units-of-time",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "UnitsOfTime",
+      "title" : "UnitsOfTime",
+      "description" : "A unit of time (units from UCUM).",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.77"],
+      "sources" : ["2.16.840.1.113883.4.642.3.77"],
+      "uses" : {
+      },
+      "StructureDefinition-medication-frequency.html" : "Frequency (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/use-context",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ContextOfUseValueSet",
+      "title" : "Context of Use ValueSet",
+      "description" : "This value set defines a base set of codes that can be used to indicate that the content in a resource was developed with a focus and intent of supporting use within particular contexts.",
+      "systems" : [
+        "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "http://hl7.org/fhir/administrative-gender",
+        "urn:iso:std:iso:3166",
+        "http://nucc.org/provider-taxonomy",
+        "http://hl7.org/fhir/CodeSystem/usage-context-agreement-scope",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "http://terminology.hl7.org/CodeSystem/v2-0265",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.28"],
+      "sources" : ["2.16.840.1.113883.4.642.3.28"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/version-algorithm",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "VersionAlgorithm",
+      "title" : "Version Algorithm",
+      "description" : "Indicates the mechanism used to compare versions to determine which is more current.",
+      "systems" : ["http://hl7.org/fhir/version-algorithm"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3103"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3103"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/action-participant-role",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ActionParticipantRole",
+      "title" : "Action Participant Role",
+      "description" : "Either a practitioner role or a relationship type.  Note from UTG import - may have been a temporary entry that subsequently disappeared from the FHIR source; unable to locate.   Version set to 0.1.0",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
+        "http://terminology.hl7.org/CodeSystem/v2-0131",
+        "http://terminology.hl7.org/CodeSystem/practitioner-role",
+        "http://snomed.info/sct",
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/contactentity-type",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ContactEntityType",
+      "title" : "Contact entity type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.416"],
+      "sources" : ["2.16.840.1.113883.4.642.3.416"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/usage-context-type",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "UsageContextType",
+      "title" : "UsageContextType",
+      "description" : "A code that specifies a type of context being specified by a usage context.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/usage-context-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.101"],
+      "sources" : ["2.16.840.1.113883.4.642.3.101"],
+      "uses" : {
+      },
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0116",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSBedStatus",
+      "title" : "hl7VS-bedStatus",
+      "description" : "Value Set of codes that specify the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0116"],
+      "oids" : ["2.16.840.1.113883.21.51"],
+      "sources" : ["2.16.840.1.113883.21.51"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0360",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSDegreeLicenseCertificate",
+      "title" : "hl7VS-degreeLicenseCertificate",
+      "description" : "Concepts specifying an educational degree (e.g., MD).  Used in the CNN datatype (names and identifiers of clinicians) in Version 2 messaging.  Used in Version 2 messaging; note that in releases of HL7 prior to 2.3.1, was also used in person names (XPN), but this use was deprecated, then withdrawn in 2.7.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360"],
+      "oids" : ["2.16.840.1.113883.21.236"],
+      "sources" : ["2.16.840.1.113883.21.236"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActConsentDirective",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActConsentDirective",
+      "title" : "ActConsentDirective",
+      "description" : "ActConsentDirective codes are used to specify the type of Consent Directive to which a Consent Directive Act conforms.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.20425"],
+      "sources" : ["2.16.840.1.113883.1.11.20425"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActIncidentCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActIncidentCode",
+      "title" : "ActIncidentCode",
+      "description" : "Set of codes indicating the type of incident or accident.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.16508"],
+      "sources" : ["2.16.840.1.113883.1.11.16508"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActReason",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActReason",
+      "title" : "v3 Code System ActReason",
+      "description" : " A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.  Examples:\r\nExample reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ParticipationMode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ParticipationMode",
+      "title" : "ParticipationMode",
+      "description" : "Identifies the primary means by which an Entity participates in an Act.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"],
+      "oids" : ["2.16.840.1.113883.1.11.16543"],
+      "sources" : ["2.16.840.1.113883.1.11.16543"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "PurposeOfUse",
+      "title" : "PurposeOfUse",
+      "description" : "Supports communication of purpose of use at a general level.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+      "oids" : ["2.16.840.1.113883.1.11.20448"],
+      "sources" : ["2.16.840.1.113883.1.11.20448"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ServiceDeliveryLocationRoleType",
+      "title" : "ServiceDeliveryLocationRoleType",
+      "description" : "A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+      "oids" : ["2.16.840.1.113883.1.11.17660"],
+      "sources" : ["2.16.840.1.113883.1.11.17660"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionLevelVS",
+      "title" : "Level (ActivityDefinition)",
+      "description" : "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-activity-definition-level.html" : "Level (ActivityDefinition)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-service-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionServiceTypeVS",
+      "title" : "Service Type (ActivityDefinition)",
+      "description" : "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-service-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionUsageContextTypeVS",
+      "title" : "Usage Context Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context Type for an ActivityDefinition.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/usage-context-type"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-venue-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionUsageContextVenueTypeVS",
+      "title" : "Usage Context for Venue Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context for Venue Type for an ActivityDefinition.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-workflow-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ActivityDefinitionUsageContextWorkflowTypeVS",
+      "title" : "Usage Context for Workflow Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context for Workflow Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-usage-context-workflow-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/bill-charge-item",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "BillChargeItemVS",
+      "title" : "ChargeItem (Bill Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-charge-item"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/bill-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "BillTypeVS",
+      "title" : "Type (Bill Invoice)",
+      "description" : "Indicates the Type for Bill. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-item-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimItemCategoryVS",
+      "title" : "Category of the item (Claim)",
+      "description" : "Indicates the category for the item under a Claim. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-item-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-rejection-reasons",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimRejectionReasonsVS",
+      "title" : "Rejection reasons (Claim)",
+      "description" : "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimStatusVS",
+      "title" : "Status of the claim (Claim|ClaimResponse)",
+      "description" : "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimSupportingInfoCategoryVS",
+      "title" : "Category of the supporting info (Claim)",
+      "description" : "Indicates the category for the supportiong info under a Claim. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-visit-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ClaimVisitTypeVS",
+      "title" : "Visit Type Codes (Claim)",
+      "description" : "Indicates the visit type of the Claim. \nValues limited by openIMIS.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-visit-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/communication-request-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CommunicationRequestStatusVS",
+      "title" : "Claim Feedback Status (CommunicationRequest)",
+      "description" : "Indicates the status of a feedback (Claim).",
+      "systems" : ["http://hl7.org/fhir/request-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractPremiumCategoryVS",
+      "title" : "Premium Category (Contract)",
+      "description" : "Indicates the category of the premium for the Contract. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-payer",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractPremiumPayerVS",
+      "title" : "Premium Payer (Contract)",
+      "description" : "Indicates the payer of the premium for the Contract. Can be extended in openIMIS. Need to match openIMIS database payer list.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-payer"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractPremiumTypeVS",
+      "title" : "Premium Type (Contract)",
+      "description" : "Indicates the type of the premium for the Contract. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-resource-party-role",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractResourcePartyRoleVS",
+      "title" : "Resource Party Role (Contract)",
+      "description" : "Indicates the participant engagement type for the Contract term.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-scope",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractScopeVS",
+      "title" : "Scope (Contract)",
+      "description" : "Indicates the scope for the Contract. Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-scope"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-status-codes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ContractStatusCodesVS",
+      "title" : "Status Codes (Contract)",
+      "description" : "Indicates the status of the Contract. Values limited by openIMIS.",
+      "systems" : ["http://hl7.org/fhir/contract-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemBenefitTypeItemServiceVS",
+      "title" : "Type of benefit (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type-amount-left",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemBenefitTypeAmountLeftVS",
+      "title" : "Type of benefit as amount left (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type-total-left",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemBenefitTypeTotalLeftVS",
+      "title" : "Type of benefit as total left (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemCategoryVS",
+      "title" : "Category of the item (Coverage)",
+      "description" : "Indicates the category for the item under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-category-item-service",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageItemCategoryItemServiceVS",
+      "title" : "Partial categories of the item (Coverage)",
+      "description" : "Indicates the category for the item, only for medical items and services, under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CoverageStatusVS",
+      "title" : "Coverage Status (Coverage)",
+      "description" : "Indicates the status of a Coverage (Policy).",
+      "systems" : ["http://hl7.org/fhir/fm-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/diagnosis-ICD10-level1",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DiagnosisICD10Level1VS",
+      "title" : "ICD 10 Level 1 diagnosis",
+      "description" : "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/diagnosis-ICD10-level1"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-payload",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FeedbackPayloadVS",
+      "title" : "Feedback Payload (CommunicationRequest | Communication)",
+      "description" : "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
+      "StructureDefinition-communication-payload-type.html" : "Payload Type (CommunicationRequest | Communication)",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FeedbackStatusVS",
+      "title" : "Feedback Status (CommunicationRequest)",
+      "description" : "Indicates the Feedback Status for a CommunicationRequest. Partial list defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/group-confirmation-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GroupConfirmationTypeVS",
+      "title" : "Confirmation Types (Group)",
+      "description" : "Indicates the confirmation type for the Group. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-confirmation-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-group-confirmation.html" : "Confirmation (Group)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/group-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GroupTypeVS",
+      "title" : "Group Type (Group)",
+      "description" : "Indicates the type of the Group. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-group-type.html" : "Group Type (Group)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-benefit-limit",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanCoverageBenefitLimitVS",
+      "title" : "Coverage Benefit Limit Types (InsurancePlan)",
+      "description" : "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanCoverageTypeVS",
+      "title" : "Coverage Type (InsurancePlan)",
+      "description" : "Indicates the Coverage Type for an InsurancePlan.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/insurance-plan-type"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-discount-kind",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanDiscountKindVS",
+      "title" : null,
+      "description" : "",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-discount-kind"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-insurance-plan-discount.html" : "Discount (InsurancePlan)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-general-cost-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanGeneralCostTypeVS",
+      "title" : "General Cost Type (InsurancePlan)",
+      "description" : "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-period-kind",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanPeriodKindVS",
+      "title" : null,
+      "description" : "",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-insurance-plan-period.html" : "Period (InsurancePlan)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-publication-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InsurancePlanPublicationStatusVS",
+      "title" : "Publication Status (InsurancePlan)",
+      "description" : "Indicates the Publication Status for an InsurancePlan.",
+      "systems" : ["http://hl7.org/fhir/publication-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-charge-item",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoiceChargeItemVS",
+      "title" : "ChargeItem (Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from an Invoice. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-charge-item"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-price-component-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoicePriceComponentTypeVS",
+      "title" : "PriceComponent Type (Invoice)",
+      "description" : "Indicates the Type for a PriceComponent from an Invoice.",
+      "systems" : ["http://hl7.org/fhir/price-component-type"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoiceStatusVS",
+      "title" : "Status (Invoice)",
+      "description" : "Indicates the status for an Invoice. Values limited by openIMIS. Can not be extended.",
+      "systems" : ["http://hl7.org/fhir/invoice-status"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "InvoiceTypeVS",
+      "title" : "Type (Invoice)",
+      "description" : "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/location-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "LocationTypeVS",
+      "title" : "Location Type (Location)",
+      "description" : "Indicates the location type. Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/location-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-item-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "MedicationItemTypeVS",
+      "title" : "Item Type (Medication)",
+      "description" : "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-medication-type.html" : "Medication Type (Medication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "MedicationLevelVS",
+      "title" : "Level (Medication)",
+      "description" : "Indicates the Level for a Medication. Values defined by openIMIS. Can not be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-medication-level.html" : "Level (Medication)",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/openimis-identifiers",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OpenIMISIdentifierVS",
+      "title" : "openIMIS Identifiers Value Set",
+      "description" : "Indicates the Identifier type",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-care-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationHFCareTypeVS",
+      "title" : "Health Facility Care Type (Organization)",
+      "description" : "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-hf-care-type.html" : "Health Facility Care Type (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-legal-form",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationHFLegalFormVS",
+      "title" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the Health Facility Organization. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-hf-legal-form.html" : "Legal Forms (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationHFLevelVS",
+      "title" : "Health Facility Level (Organization)",
+      "description" : "Indicates the level of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-hf-level.html" : "Health Facility Level (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-ph-activity",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationPHActivityVS",
+      "title" : "Activity (Organization)",
+      "description" : "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-ph-activity.html" : "Activity (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-ph-legal-form",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "OrganizationPHLegalFormVS",
+      "title" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-organization-ph-legal-form.html" : "Legal Forms (Organization)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-contact-relationship",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientContactRelationshipVS",
+      "title" : "Contact Relationship (Patient)",
+      "description" : "Indicates the Relationship of a Patient with the Head of the Family.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-contact-relationship"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-education-level",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientEducationLevelVS",
+      "title" : "Education Level (Patient)",
+      "description" : "Indicates the Education level of a Patient",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-education-level.html" : "Education Level (Patient)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-identification-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientIdentificationTypeVS",
+      "title" : "Identification Type (Patient)",
+      "description" : "Indicates the type of document the Patient used to identify himself.",
+      "systems" : [
+        "https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-identification.html" : "Identification (Patient)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-marital-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientMaritalStatusVS",
+      "title" : "Marital Status (Patient)",
+      "description" : "Indicates the Marital status of a Patient",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-profession",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientProfessionVS",
+      "title" : "Profession (Patient)",
+      "description" : "Indicates the profession of a Patient",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-patient-profession.html" : "Profession (Patient)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/practitioner-qualification-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PractitionerQualificationTypeVS",
+      "title" : "Practitioner Qualification Type",
+      "description" : "Indicates the Qualification Type of a Practitioner.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type"
+      ]
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-age-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "UsageContextAgeTypeVS",
+      "title" : "Usage Context for Age Type (ActivityDefinition|Medication)",
+      "description" : "Indicates the Usage Context for Age Type for an ActivityDefinition or Medication.",
+      "systems" : [
+        "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-gender-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "UsageContextGenderTypeVS",
+      "title" : "Usage Context for Gender Type (ActivityDefinition|Medication)",
+      "description" : "Indicates the Usage Context for Gender Type for an ActivityDefinition or Medication.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "uses" : {
+      },
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+    }
+  ]
+}

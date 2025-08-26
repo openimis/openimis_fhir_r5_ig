@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Location/Upper-River-Region> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Upper-River-Region"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location Upper-River-Region</b></p><a name=\"Upper-River-Region\"> </a><a name=\"hcUpper-River-Region\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-location.html\">openIMIS Location</a></p></div><p><b>identifier</b>: Unique code/R1</p><p><b>name</b>: Upper River Region</p><p><b>form</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/location-type R}\">Region</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "R1" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Upper River Region"] ; # 
+  fhir:form [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/location-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "R" ] ;
+       fhir:display [ fhir:v "Region" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

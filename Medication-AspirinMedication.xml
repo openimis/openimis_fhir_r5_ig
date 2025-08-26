@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="AspirinMedication"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication AspirinMedication</b></p><a name="AspirinMedication"> </a><a name="hcAspirinMedication"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-medication.html">openIMIS Medication</a></p></div><p><b>Unit Price (Medication|ActivityDefinition)</b>: <span title="Euro">€10.00</span> (EUR)</p><p><b>Medication Type (Medication)</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type D}">Drug</span></p><p><b>Frequency (Medication)</b>: Once per 0 days</p><blockquote><p><b>UsageContext (Medication)</b></p><ul><li>CareType: <span title="{http://terminology.hl7.org/CodeSystem/usage-context-type venue}">Clinical Venue</span> = <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span></li><li>Gender: <span title="{http://terminology.hl7.org/CodeSystem/usage-context-type gender}">Gender</span> = <span title="Codes:{http://hl7.org/fhir/administrative-gender male}, {http://hl7.org/fhir/administrative-gender female}">Male</span></li><li>Age: <span title="{http://terminology.hl7.org/CodeSystem/usage-context-type age}">Age Range</span> = <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type adult}, {https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type child}">Adult</span></li></ul></blockquote><p><b>identifier</b>: Unique code/0001, UUID unique identifier/71EFB78B-64EE-4A68-BE29-87DAF566EB20</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 7947003}">ACETYLSALICYLIC ACID (ASPIRIN) TABS 300MG</span></p></div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price">
+    <valueMoney>
+      <value value="10"/>
+      <currency value="EUR"/>
+    </valueMoney>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-type">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type"/>
+        <code value="D"/>
+        <display value="Drug"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-frequency">
+    <valueTiming>
+      <repeat>
+        <frequency value="1"/>
+        <period value="0"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </valueTiming>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-usage-context">
+    <extension url="CareType">
+      <valueUsageContext>
+        <code>
+          <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+          <code value="venue"/>
+          <display value="Clinical Venue"/>
+        </code>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="AMB"/>
+            <display value="ambulatory"/>
+          </coding>
+        </valueCodeableConcept>
+      </valueUsageContext>
+    </extension>
+    <extension url="Gender">
+      <valueUsageContext>
+        <code>
+          <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+          <code value="gender"/>
+          <display value="Gender"/>
+        </code>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/administrative-gender"/>
+            <code value="male"/>
+            <display value="Male"/>
+          </coding>
+          <coding>
+            <system value="http://hl7.org/fhir/administrative-gender"/>
+            <code value="female"/>
+            <display value="Female"/>
+          </coding>
+        </valueCodeableConcept>
+      </valueUsageContext>
+    </extension>
+    <extension url="Age">
+      <valueUsageContext>
+        <code>
+          <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+          <code value="age"/>
+          <display value="Age Range"/>
+        </code>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"/>
+            <code value="adult"/>
+            <display value="Adult"/>
+          </coding>
+          <coding>
+            <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"/>
+            <code value="child"/>
+            <display value="Child"/>
+          </coding>
+        </valueCodeableConcept>
+      </valueUsageContext>
+    </extension>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="Code"/>
+      </coding>
+    </type>
+    <value value="0001"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="UUID"/>
+      </coding>
+    </type>
+    <value value="71EFB78B-64EE-4A68-BE29-87DAF566EB20"/>
+  </identifier>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="7947003"/>
+    </coding>
+    <text value="ACETYLSALICYLIC ACID (ASPIRIN) TABS 300MG"/>
+  </code>
+</Medication>

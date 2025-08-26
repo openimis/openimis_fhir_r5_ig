@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Practitioner/Rushila-Dani-CA> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Rushila-Dani-CA"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner Rushila-Dani-CA</b></p><a name=\"Rushila-Dani-CA\"> </a><a name=\"hcRushila-Dani-CA\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-claim-administrator-practitioner.html\">openIMIS Claim Administrator Practitioner</a></p></div><p><b>identifier</b>: Unique code/JMDP0011, UUID unique identifier/EBC45DFA-8E42-4A5F-8AB7-7EE4D797D842</p><p><b>name</b>: Dani Rushila </p><p><b>telecom</b>: <a href=\"mailto:rushila.dani@openimis.org\">rushila.dani@openimis.org</a></p><p><b>birthDate</b>: 1979-10-09</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type CA}\">Claim Administrator</span></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "JMDP0011" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "EBC45DFA-8E42-4A5F-8AB7-7EE4D797D842" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Rushila" ] ;
+     fhir:given ( [ fhir:v "Dani" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "rushila.dani@openimis.org" ]
+  ] ) ; # 
+  fhir:birthDate [ fhir:v "1979-10-09"^^xsd:date] ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "CA" ] ;
+         fhir:display [ fhir:v "Claim Administrator" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

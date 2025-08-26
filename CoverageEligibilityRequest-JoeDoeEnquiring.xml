@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CoverageEligibilityRequest xmlns="http://hl7.org/fhir">
+  <id value="JoeDoeEnquiring"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CoverageEligibilityRequest JoeDoeEnquiring</b></p><a name="JoeDoeEnquiring"> </a><a name="hcJoeDoeEnquiring"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-coverage-eligibility-request.html">openIMIS CoverageEligibilityRequest</a></p></div><p><b>identifier</b>: UUID unique identifier/D30F70DF-D10B-43D4-9578-5137C118AD84</p><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage benefits</p><p><b>patient</b>: <code>joe-doe</code></p><p><b>created</b>: 2021-09-17</p><p><b>insurer</b>: <a href="Organization-openIMIS-Implementation.html">Organization openIMIS Implementation</a></p><h3>Items</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Category</b></td><td><b>ProductOrService</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category service}">Service</span></td><td><span title="Codes:">A1</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="UUID"/>
+      </coding>
+    </type>
+    <value value="D30F70DF-D10B-43D4-9578-5137C118AD84"/>
+  </identifier>
+  <status value="active"/>
+  <purpose value="benefits"/>
+  <patient>
+    <reference value="joe-doe"/>
+  </patient>
+  <created value="2021-09-17"/>
+  <insurer>
+    <reference value="Organization/openIMIS-Implementation"/>
+  </insurer>
+  <item>
+    <category>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category"/>
+        <code value="service"/>
+        <display value="Service"/>
+      </coding>
+    </category>
+    <productOrService>
+      <text value="A1"/>
+    </productOrService>
+  </item>
+</CoverageEligibilityRequest>

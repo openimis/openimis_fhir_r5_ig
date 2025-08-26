@@ -1,0 +1,3310 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/ImplementationGuide/openimis.fhir.r5> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "openimis.fhir.r5"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide openimis.fhir.r5</b></p><a name=\"openimis.fhir.r5\"> </a><a name=\"hcopenimis.fhir.r5\"> </a><h2>openIMISFHIRR5</h2><p>The official URL for this implementation guide is: </p><pre>https://github.com/openimis/openimis_fhir_r5_ig/ImplementationGuide/openimis.fhir.r5</pre><div><p>This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems.</p>\n</div></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/ImplementationGuide/openimis.fhir.r5"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "openIMISFHIRR5"] ; # 
+  fhir:title [ fhir:v "openIMIS FHIR R5 Implementation Guide"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-26T15:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "openIMIS Initiative" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.openimis.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Dragos Dobre" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "dragos.dobre@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Hiren Soni" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "hiren.soni@swisstph.ch" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems."] ; # 
+  fhir:packageId [ fhir:v "openimis.fhir.r5"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "5.0.0"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r5" ] ;
+     fhir:version [ fhir:v "6.5.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r5" ] ;
+     fhir:version [ fhir:v "5.2.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "hl7.fhir.uv.tools.r5#0.7.1"
+       ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-activity> ;
+         fhir:reference [ fhir:v "StructureDefinition/organization-ph-activity" ]
+       ] ;
+       fhir:name [ fhir:v "Activity (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-ph-activity> ;
+         fhir:reference [ fhir:v "ValueSet/organization-ph-activity" ]
+       ] ;
+       fhir:name [ fhir:v "Activity (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity> ;
+         fhir:reference [ fhir:v "CodeSystem/organization-ph-activity" ]
+       ] ;
+       fhir:name [ fhir:v "Activity (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Medication/AspirinMedication> ;
+         fhir:reference [ fhir:v "Medication/AspirinMedication" ]
+       ] ;
+       fhir:name [ fhir:v "AspirinMedication" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Medication" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-card-issued> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-card-issued" ]
+       ] ;
+       fhir:name [ fhir:v "Card Issued (Patient)" ] ;
+       fhir:description [ fhir:v "Whether a card was issued to the Patient/Insuree during enrolment." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-item-category> ;
+         fhir:reference [ fhir:v "ValueSet/claim-item-category" ]
+       ] ;
+       fhir:name [ fhir:v "Category of the item (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the category for the item under a Claim. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-item-category> ;
+         fhir:reference [ fhir:v "CodeSystem/claim-item-category" ]
+       ] ;
+       fhir:name [ fhir:v "Category of the item (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the category for the item under a Claim. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-category> ;
+         fhir:reference [ fhir:v "ValueSet/coverage-item-category" ]
+       ] ;
+       fhir:name [ fhir:v "Category of the item (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the category for the item under a Coverage. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category> ;
+         fhir:reference [ fhir:v "CodeSystem/coverage-item-category" ]
+       ] ;
+       fhir:name [ fhir:v "Category of the item (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the category for the item under a Coverage. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category> ;
+         fhir:reference [ fhir:v "ValueSet/claim-supporting-info-category" ]
+       ] ;
+       fhir:name [ fhir:v "Category of the supporting info (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the category for the supportiong info under a Claim. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category> ;
+         fhir:reference [ fhir:v "CodeSystem/claim-supporting-info-category" ]
+       ] ;
+       fhir:name [ fhir:v "Category of the supporting info (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the category for the supportiong info under a Claim. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/bill-charge-item> ;
+         fhir:reference [ fhir:v "ValueSet/bill-charge-item" ]
+       ] ;
+       fhir:name [ fhir:v "ChargeItem (Bill Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-charge-item> ;
+         fhir:reference [ fhir:v "CodeSystem/bill-charge-item" ]
+       ] ;
+       fhir:name [ fhir:v "ChargeItem (Bill Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-charge-item> ;
+         fhir:reference [ fhir:v "ValueSet/invoice-charge-item" ]
+       ] ;
+       fhir:name [ fhir:v "ChargeItem (Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the ChargeItem for a lineItem from an Invoice. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-charge-item> ;
+         fhir:reference [ fhir:v "CodeSystem/invoice-charge-item" ]
+       ] ;
+       fhir:name [ fhir:v "ChargeItem (Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the ChargeItem for a lineItem from an Invoice. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/communication-request-status> ;
+         fhir:reference [ fhir:v "ValueSet/communication-request-status" ]
+       ] ;
+       fhir:name [ fhir:v "Claim Feedback Status (CommunicationRequest)" ] ;
+       fhir:description [ fhir:v "Indicates the status of a feedback (Claim)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Claim"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Claim/Claim001> ;
+         fhir:reference [ fhir:v "Claim/Claim001" ]
+       ] ;
+       fhir:name [ fhir:v "Claim001" ] ;
+       fhir:description [ fhir:v "* Example of a Claim" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Communication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Communication/Claim001Communication> ;
+         fhir:reference [ fhir:v "Communication/Claim001Communication" ]
+       ] ;
+       fhir:name [ fhir:v "Claim001Communication" ] ;
+       fhir:description [ fhir:v "Example of a Communication (Feedback)" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CommunicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CommunicationRequest/Claim001CommunicationRequest> ;
+         fhir:reference [ fhir:v "CommunicationRequest/Claim001CommunicationRequest" ]
+       ] ;
+       fhir:name [ fhir:v "Claim001CommunicationRequest" ] ;
+       fhir:description [ fhir:v "* Example of a CommunicationRequest" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ClaimResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ClaimResponse/Claim001> ;
+         fhir:reference [ fhir:v "ClaimResponse/Claim001" ]
+       ] ;
+       fhir:name [ fhir:v "ClaimResponse001" ] ;
+       fhir:description [ fhir:v "* Example of a Claim" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-confirmation> ;
+         fhir:reference [ fhir:v "StructureDefinition/group-confirmation" ]
+       ] ;
+       fhir:name [ fhir:v "Confirmation (Group)" ] ;
+       fhir:description [ fhir:v "Indicates the confirmation for the Group." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/group-confirmation-type> ;
+         fhir:reference [ fhir:v "ValueSet/group-confirmation-type" ]
+       ] ;
+       fhir:name [ fhir:v "Confirmation Types (Group)" ] ;
+       fhir:description [ fhir:v "Indicates the confirmation type for the Group. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-confirmation-type> ;
+         fhir:reference [ fhir:v "CodeSystem/group-confirmation-type" ]
+       ] ;
+       fhir:name [ fhir:v "Confirmation Types (Group)" ] ;
+       fhir:description [ fhir:v "Indicates the confirmation type for the Group. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-contact-relationship> ;
+         fhir:reference [ fhir:v "ValueSet/patient-contact-relationship" ]
+       ] ;
+       fhir:name [ fhir:v "Contact Relationship (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the Relationship of a Patient with the Head of the Family." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-contact-relationship> ;
+         fhir:reference [ fhir:v "CodeSystem/patient-contact-relationship" ]
+       ] ;
+       fhir:name [ fhir:v "Contact Relationship (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the Relationship of a Patient with the Head of the Family. Values defined by openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Subscription"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Subscription/ContributionInvoiceSubscription> ;
+         fhir:reference [ fhir:v "Subscription/ContributionInvoiceSubscription" ]
+       ] ;
+       fhir:name [ fhir:v "ContributionInvoiceSubscription" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Subscription request." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-conversion> ;
+         fhir:reference [ fhir:v "StructureDefinition/insurance-plan-conversion" ]
+       ] ;
+       fhir:name [ fhir:v "Conversion Product (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Reference to the product which replaces the current product in case of renewal after the period end." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-benefit-limit> ;
+         fhir:reference [ fhir:v "ValueSet/insurance-plan-coverage-benefit-limit" ]
+       ] ;
+       fhir:name [ fhir:v "Coverage Benefit Limit Types (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit> ;
+         fhir:reference [ fhir:v "CodeSystem/insurance-plan-coverage-benefit-limit" ]
+       ] ;
+       fhir:name [ fhir:v "Coverage Benefit Limit Types (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-status> ;
+         fhir:reference [ fhir:v "ValueSet/coverage-status" ]
+       ] ;
+       fhir:name [ fhir:v "Coverage Status (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the status of a Coverage (Policy)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-type> ;
+         fhir:reference [ fhir:v "ValueSet/insurance-plan-coverage-type" ]
+       ] ;
+       fhir:name [ fhir:v "Coverage Type (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Indicates the Coverage Type for an InsurancePlan." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-start-cycle> ;
+         fhir:reference [ fhir:v "StructureDefinition/insurance-plan-start-cycle" ]
+       ] ;
+       fhir:name [ fhir:v "Cycle Start (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Defines the starting date for a new cycle in InsurancePlan." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-discount> ;
+         fhir:reference [ fhir:v "StructureDefinition/insurance-plan-discount" ]
+       ] ;
+       fhir:name [ fhir:v "Discount (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Defines the discount to be applied for enrolment and renewal in InsurancePlan." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Group"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Group/doe-family> ;
+         fhir:reference [ fhir:v "Group/doe-family" ]
+       ] ;
+       fhir:name [ fhir:v "doe-family" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Group" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-education-level> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-education-level" ]
+       ] ;
+       fhir:name [ fhir:v "Education Level (Patient)" ] ;
+       fhir:description [ fhir:v "Specifies the Patient/Insuree's education level" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-education-level> ;
+         fhir:reference [ fhir:v "ValueSet/patient-education-level" ]
+       ] ;
+       fhir:name [ fhir:v "Education Level (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the Education level of a Patient" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level> ;
+         fhir:reference [ fhir:v "CodeSystem/patient-education-level" ]
+       ] ;
+       fhir:name [ fhir:v "Education Level (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the Education level of a Patient. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date> ;
+         fhir:reference [ fhir:v "StructureDefinition/coverage-effective-date" ]
+       ] ;
+       fhir:name [ fhir:v "Effective Date (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the date from which the policy is effective" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date> ;
+         fhir:reference [ fhir:v "StructureDefinition/coverage-enroll-date" ]
+       ] ;
+       fhir:name [ fhir:v "Enrollment Date (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the date of enrollment for a Coverage." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-payload> ;
+         fhir:reference [ fhir:v "ValueSet/feedback-payload" ]
+       ] ;
+       fhir:name [ fhir:v "Feedback Payload (CommunicationRequest | Communication)" ] ;
+       fhir:description [ fhir:v "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload> ;
+         fhir:reference [ fhir:v "CodeSystem/feedback-payload" ]
+       ] ;
+       fhir:name [ fhir:v "Feedback Payload (CommunicationRequest | Communication)" ] ;
+       fhir:description [ fhir:v "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-status> ;
+         fhir:reference [ fhir:v "ValueSet/feedback-status" ]
+       ] ;
+       fhir:name [ fhir:v "Feedback Status (CommunicationRequest)" ] ;
+       fhir:description [ fhir:v "Indicates the Feedback Status for a CommunicationRequest. Partial list defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-status> ;
+         fhir:reference [ fhir:v "CodeSystem/feedback-status" ]
+       ] ;
+       fhir:name [ fhir:v "Feedback Status (CommunicationRequest)" ] ;
+       fhir:description [ fhir:v "Indicates the Feedback Status for a CommunicationRequest. Partial list defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-frequency> ;
+         fhir:reference [ fhir:v "StructureDefinition/medication-frequency" ]
+       ] ;
+       fhir:name [ fhir:v "Frequency (Medication)" ] ;
+       fhir:description [ fhir:v "The frequency a Medication can be prescribed." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ActivityDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ActivityDefinition/GeneralConsultationService> ;
+         fhir:reference [ fhir:v "ActivityDefinition/GeneralConsultationService" ]
+       ] ;
+       fhir:name [ fhir:v "General Consultation" ] ;
+       fhir:description [ fhir:v "Example of openIMIS ActivityDefinition" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-general-cost-type> ;
+         fhir:reference [ fhir:v "ValueSet/insurance-plan-general-cost-type" ]
+       ] ;
+       fhir:name [ fhir:v "General Cost Type (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type> ;
+         fhir:reference [ fhir:v "CodeSystem/insurance-plan-general-cost-type" ]
+       ] ;
+       fhir:name [ fhir:v "General Cost Type (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-group-reference> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-group-reference" ]
+       ] ;
+       fhir:name [ fhir:v "Group Reference (Patient)" ] ;
+       fhir:description [ fhir:v "The reference to the Group/Family the Patient/Insuree is part of." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-type> ;
+         fhir:reference [ fhir:v "StructureDefinition/group-type" ]
+       ] ;
+       fhir:name [ fhir:v "Group Type (Group)" ] ;
+       fhir:description [ fhir:v "Indicates the type of the Group. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/group-type> ;
+         fhir:reference [ fhir:v "ValueSet/group-type" ]
+       ] ;
+       fhir:name [ fhir:v "Group Type (Group)" ] ;
+       fhir:description [ fhir:v "Indicates the type of the Group. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-type> ;
+         fhir:reference [ fhir:v "CodeSystem/group-type" ]
+       ] ;
+       fhir:name [ fhir:v "Group Type (Group)" ] ;
+       fhir:description [ fhir:v "Indicates the type of the Group. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type> ;
+         fhir:reference [ fhir:v "StructureDefinition/organization-hf-care-type" ]
+       ] ;
+       fhir:name [ fhir:v "Health Facility Care Type (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the care type of the Health Facility (Organization)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-care-type> ;
+         fhir:reference [ fhir:v "ValueSet/organization-hf-care-type" ]
+       ] ;
+       fhir:name [ fhir:v "Health Facility Care Type (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type> ;
+         fhir:reference [ fhir:v "CodeSystem/organization-hf-care-type" ]
+       ] ;
+       fhir:name [ fhir:v "Health Facility Care Type (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-level> ;
+         fhir:reference [ fhir:v "StructureDefinition/organization-hf-level" ]
+       ] ;
+       fhir:name [ fhir:v "Health Facility Level (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the level of the Health Facility (Organization)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-level> ;
+         fhir:reference [ fhir:v "ValueSet/organization-hf-level" ]
+       ] ;
+       fhir:name [ fhir:v "Health Facility Level (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the level of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-level> ;
+         fhir:reference [ fhir:v "CodeSystem/organization-hf-level" ]
+       ] ;
+       fhir:name [ fhir:v "Health Facility Level (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the level of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/diagnosis-ICD10-level1> ;
+         fhir:reference [ fhir:v "ValueSet/diagnosis-ICD10-level1" ]
+       ] ;
+       fhir:name [ fhir:v "ICD 10 Level 1 diagnosis" ] ;
+       fhir:description [ fhir:v "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/diagnosis-ICD10-level1> ;
+         fhir:reference [ fhir:v "CodeSystem/diagnosis-ICD10-level1" ]
+       ] ;
+       fhir:name [ fhir:v "ICD 10 Level 1 diagnosis (Claim)" ] ;
+       fhir:description [ fhir:v "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-identification> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-identification" ]
+       ] ;
+       fhir:name [ fhir:v "Identification (Patient)" ] ;
+       fhir:description [ fhir:v "Specifies the Patient/Insuree official identification and the type of identification document." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-identification-type> ;
+         fhir:reference [ fhir:v "ValueSet/patient-identification-type" ]
+       ] ;
+       fhir:name [ fhir:v "Identification Type (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the type of document the Patient used to identify himself." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-identification-type> ;
+         fhir:reference [ fhir:v "CodeSystem/patient-identification-type" ]
+       ] ;
+       fhir:name [ fhir:v "Identification Type (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the type of document the Patient used to identify himself. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Contract"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Contract/InformalSectorContract> ;
+         fhir:reference [ fhir:v "Contract/InformalSectorContract" ]
+       ] ;
+       fhir:name [ fhir:v "InformalSectorContract" ] ;
+       fhir:description [ fhir:v "* Example of a contract for the Informal Sector enrolment" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Invoice"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Invoice/InformalSectorContributionInvoice> ;
+         fhir:reference [ fhir:v "Invoice/InformalSectorContributionInvoice" ]
+       ] ;
+       fhir:name [ fhir:v "InformalSectorContributionInvoice" ] ;
+       fhir:description [ fhir:v "Example of an Invoice covering the contribution payment by a family under Informal Sector scheme." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind> ;
+         fhir:reference [ fhir:v "CodeSystem/insurance-plan-period-kind" ]
+       ] ;
+       fhir:name [ fhir:v "InsurancePlan Period Kind" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-discount-kind> ;
+         fhir:reference [ fhir:v "CodeSystem/insurance-plan-discount-kind" ]
+       ] ;
+       fhir:name [ fhir:v "InsurancePlanDiscountKindCS" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-discount-kind> ;
+         fhir:reference [ fhir:v "ValueSet/insurance-plan-discount-kind" ]
+       ] ;
+       fhir:name [ fhir:v "InsurancePlanDiscountKindVS" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-period-kind> ;
+         fhir:reference [ fhir:v "ValueSet/insurance-plan-period-kind" ]
+       ] ;
+       fhir:name [ fhir:v "InsurancePlanPeriodKindVS" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-is-head> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-is-head" ]
+       ] ;
+       fhir:name [ fhir:v "IsHead (Patient)" ] ;
+       fhir:description [ fhir:v "Whether the Patient/Insuree is the Head of the Family." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference> ;
+         fhir:reference [ fhir:v "StructureDefinition/claim-item-reference" ]
+       ] ;
+       fhir:name [ fhir:v "Item Reference (Claim)" ] ;
+       fhir:description [ fhir:v "The reference to the Medication or ActivityDefinition for an item within a Claim." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-item-type> ;
+         fhir:reference [ fhir:v "ValueSet/medication-item-type" ]
+       ] ;
+       fhir:name [ fhir:v "Item Type (Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type> ;
+         fhir:reference [ fhir:v "CodeSystem/medication-item-type" ]
+       ] ;
+       fhir:name [ fhir:v "Item Type (Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Location/Jamu-municipality> ;
+         fhir:reference [ fhir:v "Location/Jamu-municipality" ]
+       ] ;
+       fhir:name [ fhir:v "Jamu-municipality" ] ;
+       fhir:description [ fhir:v "Example of a municipality" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Location/Jamula-village> ;
+         fhir:reference [ fhir:v "Location/Jamula-village" ]
+       ] ;
+       fhir:name [ fhir:v "Jamula-village" ] ;
+       fhir:description [ fhir:v "Example of a Village" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/jane-doe> ;
+         fhir:reference [ fhir:v "Patient/jane-doe" ]
+       ] ;
+       fhir:name [ fhir:v "jane-doe" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Patient" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Location/Jimara-district> ;
+         fhir:reference [ fhir:v "Location/Jimara-district" ]
+       ] ;
+       fhir:name [ fhir:v "Jimara-district" ] ;
+       fhir:description [ fhir:v "Example of a district" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Coverage"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Coverage/JoeDoeCoverage> ;
+         fhir:reference [ fhir:v "Coverage/JoeDoeCoverage" ]
+       ] ;
+       fhir:name [ fhir:v "JoeDoeCoverage" ] ;
+       fhir:description [ fhir:v "* Example of a Coverage" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CoverageEligibilityRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CoverageEligibilityRequest/JoeDoeEnquiring> ;
+         fhir:reference [ fhir:v "CoverageEligibilityRequest/JoeDoeEnquiring" ]
+       ] ;
+       fhir:name [ fhir:v "JoeDoeEnquiring" ] ;
+       fhir:description [ fhir:v "* Example of CoverageEligibilityRequest" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CoverageEligibilityResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CoverageEligibilityResponse/JoeDoeEnquiringResponse> ;
+         fhir:reference [ fhir:v "CoverageEligibilityResponse/JoeDoeEnquiringResponse" ]
+       ] ;
+       fhir:name [ fhir:v "JoeDoeEnquiringResponse" ] ;
+       fhir:description [ fhir:v "* Example of CoverageEligibilityResponse" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-response"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-response>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/john-doe> ;
+         fhir:reference [ fhir:v "Patient/john-doe" ]
+       ] ;
+       fhir:name [ fhir:v "john-doe" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Patient" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-legal-form> ;
+         fhir:reference [ fhir:v "StructureDefinition/organization-hf-legal-form" ]
+       ] ;
+       fhir:name [ fhir:v "Legal Forms (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the legal forms of the Health Facility Organization." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-legal-form> ;
+         fhir:reference [ fhir:v "StructureDefinition/organization-ph-legal-form" ]
+       ] ;
+       fhir:name [ fhir:v "Legal Forms (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the legal forms of the PolicyHolder Organization." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-legal-form> ;
+         fhir:reference [ fhir:v "ValueSet/organization-hf-legal-form" ]
+       ] ;
+       fhir:name [ fhir:v "Legal Forms (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the legal forms of the Health Facility Organization. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-ph-legal-form> ;
+         fhir:reference [ fhir:v "ValueSet/organization-ph-legal-form" ]
+       ] ;
+       fhir:name [ fhir:v "Legal Forms (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the legal forms of the PolicyHolder Organization. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form> ;
+         fhir:reference [ fhir:v "CodeSystem/organization-hf-legal-form" ]
+       ] ;
+       fhir:name [ fhir:v "Legal Forms (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the legal forms of the Organization. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form> ;
+         fhir:reference [ fhir:v "CodeSystem/organization-ph-legal-form" ]
+       ] ;
+       fhir:name [ fhir:v "Legal Forms (Organization)" ] ;
+       fhir:description [ fhir:v "Indicates the legal forms of the PolicyHolder Organization. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/activity-definition-level> ;
+         fhir:reference [ fhir:v "StructureDefinition/activity-definition-level" ]
+       ] ;
+       fhir:name [ fhir:v "Level (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Level for an ActivityDefinition." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-level> ;
+         fhir:reference [ fhir:v "ValueSet/activity-definition-level" ]
+       ] ;
+       fhir:name [ fhir:v "Level (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-level> ;
+         fhir:reference [ fhir:v "CodeSystem/activity-definition-level" ]
+       ] ;
+       fhir:name [ fhir:v "Level (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-level> ;
+         fhir:reference [ fhir:v "StructureDefinition/medication-level" ]
+       ] ;
+       fhir:name [ fhir:v "Level (Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Level for a Medication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-level> ;
+         fhir:reference [ fhir:v "ValueSet/medication-level" ]
+       ] ;
+       fhir:name [ fhir:v "Level (Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Level for a Medication. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-level> ;
+         fhir:reference [ fhir:v "CodeSystem/medication-level" ]
+       ] ;
+       fhir:name [ fhir:v "Level (Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Level for a Medication. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference> ;
+         fhir:reference [ fhir:v "StructureDefinition/address-location-reference" ]
+       ] ;
+       fhir:name [ fhir:v "Location Reference (Address)" ] ;
+       fhir:description [ fhir:v "The reference to address' location for City/Village level." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/location-type> ;
+         fhir:reference [ fhir:v "ValueSet/location-type" ]
+       ] ;
+       fhir:name [ fhir:v "Location Type (Location)" ] ;
+       fhir:description [ fhir:v "Indicates the location type. Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/location-type> ;
+         fhir:reference [ fhir:v "CodeSystem/location-type" ]
+       ] ;
+       fhir:name [ fhir:v "Location Type (Location)" ] ;
+       fhir:description [ fhir:v "Indicates the location type. Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-marital-status> ;
+         fhir:reference [ fhir:v "ValueSet/patient-marital-status" ]
+       ] ;
+       fhir:name [ fhir:v "Marital Status (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the Marital status of a Patient" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-max-installments> ;
+         fhir:reference [ fhir:v "StructureDefinition/insurance-plan-max-installments" ]
+       ] ;
+       fhir:name [ fhir:v "Max Installments (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Maximal number of instalments in which contributions for a policy may be paid." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-type> ;
+         fhir:reference [ fhir:v "StructureDefinition/medication-type" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Type (Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Item type for the Medication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-municipality> ;
+         fhir:reference [ fhir:v "StructureDefinition/address-municipality" ]
+       ] ;
+       fhir:name [ fhir:v "Municipality (Address)" ] ;
+       fhir:description [ fhir:v "The location level between District and City/Village." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Organization/MyTradePolicyHolder> ;
+         fhir:reference [ fhir:v "Organization/MyTradePolicyHolder" ]
+       ] ;
+       fhir:name [ fhir:v "MyTradePolicyHolder" ] ;
+       fhir:description [ fhir:v "Example of openIMIS PolicyHolder" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-activity-definition" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS ActivityDefinition" ] ;
+       fhir:description [ fhir:v "Defines a ActivityDefinition for openIMIS which maps to a Medical Service." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-bill> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-invoice-bill" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Bill" ] ;
+       fhir:description [ fhir:v "Defines an Bill for openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CapabilityStatement/openIMISCapabilityStatement> ;
+         fhir:reference [ fhir:v "CapabilityStatement/openIMISCapabilityStatement" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Capability Statement" ] ;
+       fhir:description [ fhir:v "Capability Statement for openIMIS FHIR R5 Implementation Guide" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-claim" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Claim" ] ;
+       fhir:description [ fhir:v "Defines a Claim for openIMIS which maps to a Claim." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-claim-administrator-practitioner" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Claim Administrator Practitioner" ] ;
+       fhir:description [ fhir:v "Defines a Practitioner for openIMIS which maps to a Claim Administrator." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner-role> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-claim-administrator-practitioner-role" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Claim Administrator Practitioner Role" ] ;
+       fhir:description [ fhir:v "Defines a Claim Administrator Practitioner Role for openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-claim-response" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Claim Response" ] ;
+       fhir:description [ fhir:v "Defines a ClaimResponse for openIMIS which maps to a Claim. The ClaimResponse resource contains the adjudication result of a Claim." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-communication" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Communication" ] ;
+       fhir:description [ fhir:v "Defines a Communication for openIMIS which maps to the Feedback in openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-communication-request" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS CommunicationRequest" ] ;
+       fhir:description [ fhir:v "Defines a CommunicationRequest for openIMIS which maps to the Claim request for feedback in openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-contract" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Contract" ] ;
+       fhir:description [ fhir:v "Defines a Contract for openIMIS use to enrol a Family/Group. Mapped mostly to Policy and will link Group/Family and Patient/Insurees." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-coverage" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Coverage" ] ;
+       fhir:description [ fhir:v "Defines a Coverage for openIMIS which maps to a Policy." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-coverage-eligibility-request" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS CoverageEligibilityRequest" ] ;
+       fhir:description [ fhir:v "Defines a CoverageEligibilityRequest for openIMIS to enquire an Insuree." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-response> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-coverage-eligibility-response" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS CoverageEligibilityResponse" ] ;
+       fhir:description [ fhir:v "Defines a CoverageEligibilityResponse for openIMIS to get the enquire information for an Insuree." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-enrolment-officer-practitioner" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Enrolment Officer Practitioner" ] ;
+       fhir:description [ fhir:v "Defines a Practitioner for openIMIS which maps to an Enrolment Officer." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner-role> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-enrolment-officer-practitioner-role" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Enrolment Officer Practitioner Role" ] ;
+       fhir:description [ fhir:v "Defines a Enrolment Officer Practitioner Role for openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-group" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Group" ] ;
+       fhir:description [ fhir:v "Defines a Group for openIMIS which maps to an Family" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-health-facility-organization" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Health Facility Organization" ] ;
+       fhir:description [ fhir:v "Defines an Organization for openIMIS which maps to a Health Facility" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers> ;
+         fhir:reference [ fhir:v "CodeSystem/openimis-identifiers" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Identifiers (All)" ] ;
+       fhir:description [ fhir:v "Identifiers that are specific to openIMIS and could not be found in standard sources." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/openimis-identifiers> ;
+         fhir:reference [ fhir:v "ValueSet/openimis-identifiers" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Identifiers Value Set" ] ;
+       fhir:description [ fhir:v "Indicates the Identifier type" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-insurance-organization" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Insurance Organization" ] ;
+       fhir:description [ fhir:v "Defines an Organization for openIMIS which maps to the openIMIS implementation as Insurance. \nThis is required in different resources." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-insurance-plan" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Insurance Plan" ] ;
+       fhir:description [ fhir:v "Defines an Insurance Plan for openIMIS which maps to a Product." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-invoice-invoice" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Invoice" ] ;
+       fhir:description [ fhir:v "Defines an Invoice for openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-location" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Location" ] ;
+       fhir:description [ fhir:v "Defines a Location for openIMIS which maps to a Location" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-medication" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Medication" ] ;
+       fhir:description [ fhir:v "Defines a Medication for openIMIS which maps to a Medical Item." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-patient" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Patient" ] ;
+       fhir:description [ fhir:v "Defines a Patient for openIMIS which maps to an Insuree" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-payment-notice> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-payment-notice" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Payment Notice" ] ;
+       fhir:description [ fhir:v "Submit payment notice." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-policy-holder-organization" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Policy Holder Organization" ] ;
+       fhir:description [ fhir:v "Defines an Organization for openIMIS which maps to a Policy Holder under Formal Sector scheme." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription> ;
+         fhir:reference [ fhir:v "StructureDefinition/openimis-subscription" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS Subscription" ] ;
+       fhir:description [ fhir:v "Allows to subscribe to notification of new or updates entitities." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Organization/openIMIS-Implementation> ;
+         fhir:reference [ fhir:v "Organization/openIMIS-Implementation" ]
+       ] ;
+       fhir:name [ fhir:v "openIMIS-Implementation" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Insurance." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-category-item-service> ;
+         fhir:reference [ fhir:v "ValueSet/coverage-item-category-item-service" ]
+       ] ;
+       fhir:name [ fhir:v "Partial categories of the item (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the category for the item, only for medical items and services, under a Coverage. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type> ;
+         fhir:reference [ fhir:v "StructureDefinition/communication-payload-type" ]
+       ] ;
+       fhir:name [ fhir:v "Payload Type (CommunicationRequest | Communication)" ] ;
+       fhir:description [ fhir:v "Indicates the payload type for a Communication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-period> ;
+         fhir:reference [ fhir:v "StructureDefinition/insurance-plan-period" ]
+       ] ;
+       fhir:name [ fhir:v "Period (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Defines the number of months a certain period is valid in InsurancePlan." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-policy-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/coverage-policy-status" ]
+       ] ;
+       fhir:name [ fhir:v "Policy Status (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the policy status for a Coverage." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-address> ;
+         fhir:reference [ fhir:v "StructureDefinition/group-address" ]
+       ] ;
+       fhir:name [ fhir:v "Poverty Status (Group)" ] ;
+       fhir:description [ fhir:v "Whether the Group has the poverty status." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-poverty-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/group-poverty-status" ]
+       ] ;
+       fhir:name [ fhir:v "Poverty Status (Group)" ] ;
+       fhir:description [ fhir:v "Whether the Group has the poverty status." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/practitioner-qualification-type> ;
+         fhir:reference [ fhir:v "ValueSet/practitioner-qualification-type" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner Qualification Type" ] ;
+       fhir:description [ fhir:v "Indicates the Qualification Type of a Practitioner." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/contract-premium> ;
+         fhir:reference [ fhir:v "StructureDefinition/contract-premium" ]
+       ] ;
+       fhir:name [ fhir:v "Premium (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates a premium for a Contract. This is a complex extension." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-category> ;
+         fhir:reference [ fhir:v "ValueSet/contract-premium-category" ]
+       ] ;
+       fhir:name [ fhir:v "Premium Category (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the category of the premium for the Contract. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-category> ;
+         fhir:reference [ fhir:v "CodeSystem/contract-premium-category" ]
+       ] ;
+       fhir:name [ fhir:v "Premium Category (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the category of the premium for the Contract. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-payer> ;
+         fhir:reference [ fhir:v "ValueSet/contract-premium-payer" ]
+       ] ;
+       fhir:name [ fhir:v "Premium Payer (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the payer of the premium for the Contract. Can be extended in openIMIS. Need to match openIMIS database payer list." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-payer> ;
+         fhir:reference [ fhir:v "CodeSystem/contract-premium-payer" ]
+       ] ;
+       fhir:name [ fhir:v "Premium Payer (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the payer of the premium for the Contract. Can be extended in openIMIS. Need to match openIMIS database payer list." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-premium-type> ;
+         fhir:reference [ fhir:v "ValueSet/contract-premium-type" ]
+       ] ;
+       fhir:name [ fhir:v "Premium Type (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the type of the premium for the Contract. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-type> ;
+         fhir:reference [ fhir:v "CodeSystem/contract-premium-type" ]
+       ] ;
+       fhir:name [ fhir:v "Premium Type (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the type of the premium for the Contract. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-price-component-type> ;
+         fhir:reference [ fhir:v "ValueSet/invoice-price-component-type" ]
+       ] ;
+       fhir:name [ fhir:v "PriceComponent Type (Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the Type for a PriceComponent from an Invoice." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-profession> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-profession" ]
+       ] ;
+       fhir:name [ fhir:v "Profession (Patient)" ] ;
+       fhir:description [ fhir:v "Specifies the Patient/Insuree's profession" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/patient-profession> ;
+         fhir:reference [ fhir:v "ValueSet/patient-profession" ]
+       ] ;
+       fhir:name [ fhir:v "Profession (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the profession of a Patient" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession> ;
+         fhir:reference [ fhir:v "CodeSystem/patient-profession" ]
+       ] ;
+       fhir:name [ fhir:v "Profession (Patient)" ] ;
+       fhir:description [ fhir:v "Indicates the profession of a Patient. Values defined by openIMIS. Can be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-publication-status> ;
+         fhir:reference [ fhir:v "ValueSet/insurance-plan-publication-status" ]
+       ] ;
+       fhir:name [ fhir:v "Publication Status (InsurancePlan)" ] ;
+       fhir:description [ fhir:v "Indicates the Publication Status for an InsurancePlan." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type> ;
+         fhir:reference [ fhir:v "CodeSystem/practitioner-qualification-type" ]
+       ] ;
+       fhir:name [ fhir:v "Qualification Type (Practitioner)" ] ;
+       fhir:description [ fhir:v "Indicates the Qualification Type of a Practitioner." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Organization/RaptaDistrictHospital> ;
+         fhir:reference [ fhir:v "Organization/RaptaDistrictHospital" ]
+       ] ;
+       fhir:name [ fhir:v "RaptaDistrictHospital" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Health Facility" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-rejection-reasons> ;
+         fhir:reference [ fhir:v "ValueSet/claim-rejection-reasons" ]
+       ] ;
+       fhir:name [ fhir:v "Rejection reasons (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons> ;
+         fhir:reference [ fhir:v "CodeSystem/claim-rejection-reasons" ]
+       ] ;
+       fhir:name [ fhir:v "Rejection Reasons (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-resource-party-role> ;
+         fhir:reference [ fhir:v "ValueSet/contract-resource-party-role" ]
+       ] ;
+       fhir:name [ fhir:v "Resource Party Role (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the participant engagement type for the Contract term." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role> ;
+         fhir:reference [ fhir:v "CodeSystem/contract-resource-party-role" ]
+       ] ;
+       fhir:name [ fhir:v "Resource Party Role (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the participant engagement type for the Contract term." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Practitioner/Roberts-Jeb-EO> ;
+         fhir:reference [ fhir:v "Practitioner/Roberts-Jeb-EO" ]
+       ] ;
+       fhir:name [ fhir:v "Roberts-Jeb-EO" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Practitioner for Enrolment Officer." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Practitioner/Rushila-Dani-CA> ;
+         fhir:reference [ fhir:v "Practitioner/Rushila-Dani-CA" ]
+       ] ;
+       fhir:name [ fhir:v "Rushila-Dani-CA" ] ;
+       fhir:description [ fhir:v "Example of openIMIS Practitioner for Claim Administrator." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "InsurancePlan"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/InsurancePlan/RX01> ;
+         fhir:reference [ fhir:v "InsurancePlan/RX01" ]
+       ] ;
+       fhir:name [ fhir:v "RX01" ] ;
+       fhir:description [ fhir:v "Example of openIMIS InsurancePlan" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "InsurancePlan"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/InsurancePlan/RX02> ;
+         fhir:reference [ fhir:v "InsurancePlan/RX02" ]
+       ] ;
+       fhir:name [ fhir:v "RX02" ] ;
+       fhir:description [ fhir:v "Example of openIMIS InsurancePlan" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-scope> ;
+         fhir:reference [ fhir:v "ValueSet/contract-scope" ]
+       ] ;
+       fhir:name [ fhir:v "Scope (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the scope for the Contract. Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-scope> ;
+         fhir:reference [ fhir:v "CodeSystem/contract-scope" ]
+       ] ;
+       fhir:name [ fhir:v "Scope (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the scope for the Contract. Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-service-type> ;
+         fhir:reference [ fhir:v "ValueSet/activity-definition-service-type" ]
+       ] ;
+       fhir:name [ fhir:v "Service Type (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-service-type> ;
+         fhir:reference [ fhir:v "CodeSystem/activity-definition-service-type" ]
+       ] ;
+       fhir:name [ fhir:v "Service Type (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-status> ;
+         fhir:reference [ fhir:v "ValueSet/invoice-status" ]
+       ] ;
+       fhir:name [ fhir:v "Status (Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the status for an Invoice. Values limited by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-status-codes> ;
+         fhir:reference [ fhir:v "ValueSet/contract-status-codes" ]
+       ] ;
+       fhir:name [ fhir:v "Status Codes (Contract)" ] ;
+       fhir:description [ fhir:v "Indicates the status of the Contract. Values limited by openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-status> ;
+         fhir:reference [ fhir:v "ValueSet/claim-status" ]
+       ] ;
+       fhir:name [ fhir:v "Status of the claim (Claim|ClaimResponse)" ] ;
+       fhir:description [ fhir:v "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status> ;
+         fhir:reference [ fhir:v "CodeSystem/claim-status" ]
+       ] ;
+       fhir:name [ fhir:v "Status of the claim (Claim|ClaimResponse)" ] ;
+       fhir:description [ fhir:v "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/practitioner-role-substitution-reference> ;
+         fhir:reference [ fhir:v "StructureDefinition/practitioner-role-substitution-reference" ]
+       ] ;
+       fhir:name [ fhir:v "Substitution Reference (PractitionerRole)" ] ;
+       fhir:description [ fhir:v "The reference to the Enrolment Officer that will substitute the current one after the period end." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/bill-type> ;
+         fhir:reference [ fhir:v "ValueSet/bill-type" ]
+       ] ;
+       fhir:name [ fhir:v "Type (Bill Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the Type for Bill. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-type> ;
+         fhir:reference [ fhir:v "CodeSystem/bill-type" ]
+       ] ;
+       fhir:name [ fhir:v "Type (Bill Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the Type for Bill. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-type> ;
+         fhir:reference [ fhir:v "ValueSet/invoice-type" ]
+       ] ;
+       fhir:name [ fhir:v "Type (Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type> ;
+         fhir:reference [ fhir:v "CodeSystem/invoice-type" ]
+       ] ;
+       fhir:name [ fhir:v "Type (Invoice)" ] ;
+       fhir:description [ fhir:v "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type> ;
+         fhir:reference [ fhir:v "ValueSet/coverage-item-benefit-type" ]
+       ] ;
+       fhir:name [ fhir:v "Type of benefit (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type> ;
+         fhir:reference [ fhir:v "CodeSystem/coverage-item-benefit-type" ]
+       ] ;
+       fhir:name [ fhir:v "Type of benefit (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type-amount-left> ;
+         fhir:reference [ fhir:v "ValueSet/coverage-item-benefit-type-amount-left" ]
+       ] ;
+       fhir:name [ fhir:v "Type of benefit as amount left (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/coverage-item-benefit-type-total-left> ;
+         fhir:reference [ fhir:v "ValueSet/coverage-item-benefit-type-total-left" ]
+       ] ;
+       fhir:name [ fhir:v "Type of benefit as total left (Coverage)" ] ;
+       fhir:description [ fhir:v "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price> ;
+         fhir:reference [ fhir:v "StructureDefinition/unit-price" ]
+       ] ;
+       fhir:name [ fhir:v "Unit Price (Medication|ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "The unit price for a Medication or ActivityDefinition." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Location/Upper-River-Region> ;
+         fhir:reference [ fhir:v "Location/Upper-River-Region" ]
+       ] ;
+       fhir:name [ fhir:v "Upper-River-Region" ] ;
+       fhir:description [ fhir:v "Example of a Region" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"^^xsd:anyURI ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-age-type> ;
+         fhir:reference [ fhir:v "ValueSet/usage-context-age-type" ]
+       ] ;
+       fhir:name [ fhir:v "Usage Context for Age Type (ActivityDefinition|Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Usage Context for Age Type for an ActivityDefinition or Medication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type> ;
+         fhir:reference [ fhir:v "CodeSystem/usage-context-age-type" ]
+       ] ;
+       fhir:name [ fhir:v "Usage Context for Age Type (ActivityDefinition|Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Usage Context for Age Type for an ActivityDefinition or Medication. Values defined by openIMIS. Cannot be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-gender-type> ;
+         fhir:reference [ fhir:v "ValueSet/usage-context-gender-type" ]
+       ] ;
+       fhir:name [ fhir:v "Usage Context for Gender Type (ActivityDefinition|Medication)" ] ;
+       fhir:description [ fhir:v "Indicates the Usage Context for Gender Type for an ActivityDefinition or Medication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-venue-type> ;
+         fhir:reference [ fhir:v "ValueSet/activity-definition-usage-context-venue-type" ]
+       ] ;
+       fhir:name [ fhir:v "Usage Context for Venue Type (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Usage Context for Venue Type for an ActivityDefinition." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-workflow-type> ;
+         fhir:reference [ fhir:v "ValueSet/activity-definition-usage-context-workflow-type" ]
+       ] ;
+       fhir:name [ fhir:v "Usage Context for Workflow Type (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Usage Context for Workflow Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-usage-context-workflow-type> ;
+         fhir:reference [ fhir:v "CodeSystem/activity-definition-usage-context-workflow-type" ]
+       ] ;
+       fhir:name [ fhir:v "Usage Context for Workflow Type (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Usage Context for Workflow Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-type> ;
+         fhir:reference [ fhir:v "ValueSet/activity-definition-usage-context-type" ]
+       ] ;
+       fhir:name [ fhir:v "Usage Context Type (ActivityDefinition)" ] ;
+       fhir:description [ fhir:v "Indicates the Usage Context Type for an ActivityDefinition." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-usage-context> ;
+         fhir:reference [ fhir:v "StructureDefinition/medication-usage-context" ]
+       ] ;
+       fhir:name [ fhir:v "UsageContext (Medication)" ] ;
+       fhir:description [ fhir:v "The Context a Medication can be prescribed." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-visit-type> ;
+         fhir:reference [ fhir:v "CodeSystem/claim-visit-type" ]
+       ] ;
+       fhir:name [ fhir:v "Visit Type (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the visit type of the Claim. \nValues limited by openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-visit-type> ;
+         fhir:reference [ fhir:v "ValueSet/claim-visit-type" ]
+       ] ;
+       fhir:name [ fhir:v "Visit Type Codes (Claim)" ] ;
+       fhir:description [ fhir:v "Indicates the visit type of the Claim. \nValues limited by openIMIS." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-vulnerability-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-vulnerability-status" ]
+       ] ;
+       fhir:name [ fhir:v "Vulnerability Status (Patient)" ] ;
+       fhir:description [ fhir:v "Whether the Patient/Insuree has the vulnerability status." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] ) ;
+     fhir:page [
+       fhir:source [
+         a fhir:url ;
+         fhir:v "toc.html"^^xsd:anyURI
+       ] ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "index.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "openIMIS FHIR Overview" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "usecase-enrollment.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "usecase-enrollment.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Enrollment Use Case" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "usecase-enquire.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "usecase-enquire.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Enquire Use Case" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "usecase-claiming.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "usecase-claiming.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Claiming Use Case" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "security.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "security.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Security management" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "credits.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "credits.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Credits" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "copyrightyear" ]
+       ] ;
+       fhir:value [ fhir:v "2025+" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "releaselabel" ]
+       ] ;
+       fhir:value [ fhir:v "ci-build" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "autoload-resources" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "template/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "input/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-qa" ]
+       ] ;
+       fhir:value [ fhir:v "temp/qa" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-temp" ]
+       ] ;
+       fhir:value [ fhir:v "temp/pages" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-output" ]
+       ] ;
+       fhir:value [ fhir:v "output" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-tx-cache" ]
+       ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-suppressed-warnings" ]
+       ] ;
+       fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-history" ]
+       ] ;
+       fhir:value [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/history.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-html" ]
+       ] ;
+       fhir:value [ fhir:v "template-page.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-md" ]
+       ] ;
+       fhir:value [ fhir:v "template-page-md.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-contact" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-context" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-copyright" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-jurisdiction" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-license" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-publisher" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-version" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-wg" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active-tables" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "fmm-definition" ]
+       ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "propagate-status" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludelogbinaryformat" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "tabbed-snapshots" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

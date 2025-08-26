@@ -1,0 +1,2668 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "openimis.fhir.r5",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide openimis.fhir.r5</b></p><a name=\"openimis.fhir.r5\"> </a><a name=\"hcopenimis.fhir.r5\"> </a><h2>openIMISFHIRR5</h2><p>The official URL for this implementation guide is: </p><pre>https://github.com/openimis/openimis_fhir_r5_ig/ImplementationGuide/openimis.fhir.r5</pre><div><p>This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems.</p>\n</div></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ImplementationGuide/openimis.fhir.r5",
+  "version" : "0.1.0",
+  "name" : "openIMISFHIRR5",
+  "title" : "openIMIS FHIR R5 Implementation Guide",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems.",
+  "packageId" : "openimis.fhir.r5",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["5.0.0"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r5",
+    "version" : "6.5.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r5",
+    "version" : "5.2.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r5#0.7.1"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/organization-ph-activity"
+      },
+      "name" : "Activity (Organization)",
+      "description" : "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/organization-ph-activity"
+      },
+      "name" : "Activity (Organization)",
+      "description" : "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/organization-ph-activity"
+      },
+      "name" : "Activity (Organization)",
+      "description" : "Indicates the activity of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/AspirinMedication"
+      },
+      "name" : "AspirinMedication",
+      "description" : "Example of openIMIS Medication",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/patient-card-issued"
+      },
+      "name" : "Card Issued (Patient)",
+      "description" : "Whether a card was issued to the Patient/Insuree during enrolment.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/claim-item-category"
+      },
+      "name" : "Category of the item (Claim)",
+      "description" : "Indicates the category for the item under a Claim. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/claim-item-category"
+      },
+      "name" : "Category of the item (Claim)",
+      "description" : "Indicates the category for the item under a Claim. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/coverage-item-category"
+      },
+      "name" : "Category of the item (Coverage)",
+      "description" : "Indicates the category for the item under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/coverage-item-category"
+      },
+      "name" : "Category of the item (Coverage)",
+      "description" : "Indicates the category for the item under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/claim-supporting-info-category"
+      },
+      "name" : "Category of the supporting info (Claim)",
+      "description" : "Indicates the category for the supportiong info under a Claim. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/claim-supporting-info-category"
+      },
+      "name" : "Category of the supporting info (Claim)",
+      "description" : "Indicates the category for the supportiong info under a Claim. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/bill-charge-item"
+      },
+      "name" : "ChargeItem (Bill Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/bill-charge-item"
+      },
+      "name" : "ChargeItem (Bill Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/invoice-charge-item"
+      },
+      "name" : "ChargeItem (Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from an Invoice. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/invoice-charge-item"
+      },
+      "name" : "ChargeItem (Invoice)",
+      "description" : "Indicates the ChargeItem for a lineItem from an Invoice. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/communication-request-status"
+      },
+      "name" : "Claim Feedback Status (CommunicationRequest)",
+      "description" : "Indicates the status of a feedback (Claim).",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Claim"
+      }],
+      "reference" : {
+        "reference" : "Claim/Claim001"
+      },
+      "name" : "Claim001",
+      "description" : "* Example of a Claim",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Communication"
+      }],
+      "reference" : {
+        "reference" : "Communication/Claim001Communication"
+      },
+      "name" : "Claim001Communication",
+      "description" : "Example of a Communication (Feedback)",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CommunicationRequest"
+      }],
+      "reference" : {
+        "reference" : "CommunicationRequest/Claim001CommunicationRequest"
+      },
+      "name" : "Claim001CommunicationRequest",
+      "description" : "* Example of a CommunicationRequest",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ClaimResponse"
+      }],
+      "reference" : {
+        "reference" : "ClaimResponse/Claim001"
+      },
+      "name" : "ClaimResponse001",
+      "description" : "* Example of a Claim",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/group-confirmation"
+      },
+      "name" : "Confirmation (Group)",
+      "description" : "Indicates the confirmation for the Group.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/group-confirmation-type"
+      },
+      "name" : "Confirmation Types (Group)",
+      "description" : "Indicates the confirmation type for the Group. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/group-confirmation-type"
+      },
+      "name" : "Confirmation Types (Group)",
+      "description" : "Indicates the confirmation type for the Group. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/patient-contact-relationship"
+      },
+      "name" : "Contact Relationship (Patient)",
+      "description" : "Indicates the Relationship of a Patient with the Head of the Family.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/patient-contact-relationship"
+      },
+      "name" : "Contact Relationship (Patient)",
+      "description" : "Indicates the Relationship of a Patient with the Head of the Family. Values defined by openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Subscription"
+      }],
+      "reference" : {
+        "reference" : "Subscription/ContributionInvoiceSubscription"
+      },
+      "name" : "ContributionInvoiceSubscription",
+      "description" : "Example of openIMIS Subscription request.",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/insurance-plan-conversion"
+      },
+      "name" : "Conversion Product (InsurancePlan)",
+      "description" : "Reference to the product which replaces the current product in case of renewal after the period end.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/insurance-plan-coverage-benefit-limit"
+      },
+      "name" : "Coverage Benefit Limit Types (InsurancePlan)",
+      "description" : "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/insurance-plan-coverage-benefit-limit"
+      },
+      "name" : "Coverage Benefit Limit Types (InsurancePlan)",
+      "description" : "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/coverage-status"
+      },
+      "name" : "Coverage Status (Coverage)",
+      "description" : "Indicates the status of a Coverage (Policy).",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/insurance-plan-coverage-type"
+      },
+      "name" : "Coverage Type (InsurancePlan)",
+      "description" : "Indicates the Coverage Type for an InsurancePlan.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/insurance-plan-start-cycle"
+      },
+      "name" : "Cycle Start (InsurancePlan)",
+      "description" : "Defines the starting date for a new cycle in InsurancePlan.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/insurance-plan-discount"
+      },
+      "name" : "Discount (InsurancePlan)",
+      "description" : "Defines the discount to be applied for enrolment and renewal in InsurancePlan.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Group"
+      }],
+      "reference" : {
+        "reference" : "Group/doe-family"
+      },
+      "name" : "doe-family",
+      "description" : "Example of openIMIS Group",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-group"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/patient-education-level"
+      },
+      "name" : "Education Level (Patient)",
+      "description" : "Specifies the Patient/Insuree's education level",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/patient-education-level"
+      },
+      "name" : "Education Level (Patient)",
+      "description" : "Indicates the Education level of a Patient",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/patient-education-level"
+      },
+      "name" : "Education Level (Patient)",
+      "description" : "Indicates the Education level of a Patient. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/coverage-effective-date"
+      },
+      "name" : "Effective Date (Coverage)",
+      "description" : "Indicates the date from which the policy is effective",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/coverage-enroll-date"
+      },
+      "name" : "Enrollment Date (Coverage)",
+      "description" : "Indicates the date of enrollment for a Coverage.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/feedback-payload"
+      },
+      "name" : "Feedback Payload (CommunicationRequest | Communication)",
+      "description" : "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/feedback-payload"
+      },
+      "name" : "Feedback Payload (CommunicationRequest | Communication)",
+      "description" : "Indicates the Feedback Payload code for a CommunicationRequest and Communication. List defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/feedback-status"
+      },
+      "name" : "Feedback Status (CommunicationRequest)",
+      "description" : "Indicates the Feedback Status for a CommunicationRequest. Partial list defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/feedback-status"
+      },
+      "name" : "Feedback Status (CommunicationRequest)",
+      "description" : "Indicates the Feedback Status for a CommunicationRequest. Partial list defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medication-frequency"
+      },
+      "name" : "Frequency (Medication)",
+      "description" : "The frequency a Medication can be prescribed.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/GeneralConsultationService"
+      },
+      "name" : "General Consultation",
+      "description" : "Example of openIMIS ActivityDefinition",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/insurance-plan-general-cost-type"
+      },
+      "name" : "General Cost Type (InsurancePlan)",
+      "description" : "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/insurance-plan-general-cost-type"
+      },
+      "name" : "General Cost Type (InsurancePlan)",
+      "description" : "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/patient-group-reference"
+      },
+      "name" : "Group Reference (Patient)",
+      "description" : "The reference to the Group/Family the Patient/Insuree is part of.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/group-type"
+      },
+      "name" : "Group Type (Group)",
+      "description" : "Indicates the type of the Group. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/group-type"
+      },
+      "name" : "Group Type (Group)",
+      "description" : "Indicates the type of the Group. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/group-type"
+      },
+      "name" : "Group Type (Group)",
+      "description" : "Indicates the type of the Group. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/organization-hf-care-type"
+      },
+      "name" : "Health Facility Care Type (Organization)",
+      "description" : "Indicates the care type of the Health Facility (Organization).",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/organization-hf-care-type"
+      },
+      "name" : "Health Facility Care Type (Organization)",
+      "description" : "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/organization-hf-care-type"
+      },
+      "name" : "Health Facility Care Type (Organization)",
+      "description" : "Indicates the care type of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/organization-hf-level"
+      },
+      "name" : "Health Facility Level (Organization)",
+      "description" : "Indicates the level of the Health Facility (Organization).",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/organization-hf-level"
+      },
+      "name" : "Health Facility Level (Organization)",
+      "description" : "Indicates the level of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/organization-hf-level"
+      },
+      "name" : "Health Facility Level (Organization)",
+      "description" : "Indicates the level of the Health Facility (Organization). Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/diagnosis-ICD10-level1"
+      },
+      "name" : "ICD 10 Level 1 diagnosis",
+      "description" : "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/diagnosis-ICD10-level1"
+      },
+      "name" : "ICD 10 Level 1 diagnosis (Claim)",
+      "description" : "Example of diagnosis to be used with Claim resource. The actual list is configured in openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/patient-identification"
+      },
+      "name" : "Identification (Patient)",
+      "description" : "Specifies the Patient/Insuree official identification and the type of identification document.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/patient-identification-type"
+      },
+      "name" : "Identification Type (Patient)",
+      "description" : "Indicates the type of document the Patient used to identify himself.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/patient-identification-type"
+      },
+      "name" : "Identification Type (Patient)",
+      "description" : "Indicates the type of document the Patient used to identify himself. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Contract"
+      }],
+      "reference" : {
+        "reference" : "Contract/InformalSectorContract"
+      },
+      "name" : "InformalSectorContract",
+      "description" : "* Example of a contract for the Informal Sector enrolment",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Invoice"
+      }],
+      "reference" : {
+        "reference" : "Invoice/InformalSectorContributionInvoice"
+      },
+      "name" : "InformalSectorContributionInvoice",
+      "description" : "Example of an Invoice covering the contribution payment by a family under Informal Sector scheme.",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/insurance-plan-period-kind"
+      },
+      "name" : "InsurancePlan Period Kind",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/insurance-plan-discount-kind"
+      },
+      "name" : "InsurancePlanDiscountKindCS",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/insurance-plan-discount-kind"
+      },
+      "name" : "InsurancePlanDiscountKindVS",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/insurance-plan-period-kind"
+      },
+      "name" : "InsurancePlanPeriodKindVS",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/patient-is-head"
+      },
+      "name" : "IsHead (Patient)",
+      "description" : "Whether the Patient/Insuree is the Head of the Family.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/claim-item-reference"
+      },
+      "name" : "Item Reference (Claim)",
+      "description" : "The reference to the Medication or ActivityDefinition for an item within a Claim.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medication-item-type"
+      },
+      "name" : "Item Type (Medication)",
+      "description" : "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/medication-item-type"
+      },
+      "name" : "Item Type (Medication)",
+      "description" : "Indicates the Medical Item Type for an Medication. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/Jamu-municipality"
+      },
+      "name" : "Jamu-municipality",
+      "description" : "Example of a municipality",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/Jamula-village"
+      },
+      "name" : "Jamula-village",
+      "description" : "Example of a Village",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/jane-doe"
+      },
+      "name" : "jane-doe",
+      "description" : "Example of openIMIS Patient",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/Jimara-district"
+      },
+      "name" : "Jimara-district",
+      "description" : "Example of a district",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Coverage"
+      }],
+      "reference" : {
+        "reference" : "Coverage/JoeDoeCoverage"
+      },
+      "name" : "JoeDoeCoverage",
+      "description" : "* Example of a Coverage",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CoverageEligibilityRequest"
+      }],
+      "reference" : {
+        "reference" : "CoverageEligibilityRequest/JoeDoeEnquiring"
+      },
+      "name" : "JoeDoeEnquiring",
+      "description" : "* Example of CoverageEligibilityRequest",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-request"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CoverageEligibilityResponse"
+      }],
+      "reference" : {
+        "reference" : "CoverageEligibilityResponse/JoeDoeEnquiringResponse"
+      },
+      "name" : "JoeDoeEnquiringResponse",
+      "description" : "* Example of CoverageEligibilityResponse",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage-eligibility-response"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/john-doe"
+      },
+      "name" : "john-doe",
+      "description" : "Example of openIMIS Patient",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/organization-hf-legal-form"
+      },
+      "name" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the Health Facility Organization.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/organization-ph-legal-form"
+      },
+      "name" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the PolicyHolder Organization.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/organization-hf-legal-form"
+      },
+      "name" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the Health Facility Organization. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/organization-ph-legal-form"
+      },
+      "name" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/organization-hf-legal-form"
+      },
+      "name" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the Organization. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/organization-ph-legal-form"
+      },
+      "name" : "Legal Forms (Organization)",
+      "description" : "Indicates the legal forms of the PolicyHolder Organization. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/activity-definition-level"
+      },
+      "name" : "Level (ActivityDefinition)",
+      "description" : "Indicates the Level for an ActivityDefinition.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/activity-definition-level"
+      },
+      "name" : "Level (ActivityDefinition)",
+      "description" : "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/activity-definition-level"
+      },
+      "name" : "Level (ActivityDefinition)",
+      "description" : "Indicates the Level for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medication-level"
+      },
+      "name" : "Level (Medication)",
+      "description" : "Indicates the Level for a Medication.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medication-level"
+      },
+      "name" : "Level (Medication)",
+      "description" : "Indicates the Level for a Medication. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/medication-level"
+      },
+      "name" : "Level (Medication)",
+      "description" : "Indicates the Level for a Medication. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/address-location-reference"
+      },
+      "name" : "Location Reference (Address)",
+      "description" : "The reference to address' location for City/Village level.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/location-type"
+      },
+      "name" : "Location Type (Location)",
+      "description" : "Indicates the location type. Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/location-type"
+      },
+      "name" : "Location Type (Location)",
+      "description" : "Indicates the location type. Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/patient-marital-status"
+      },
+      "name" : "Marital Status (Patient)",
+      "description" : "Indicates the Marital status of a Patient",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/insurance-plan-max-installments"
+      },
+      "name" : "Max Installments (InsurancePlan)",
+      "description" : "Maximal number of instalments in which contributions for a policy may be paid.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medication-type"
+      },
+      "name" : "Medication Type (Medication)",
+      "description" : "Indicates the Item type for the Medication.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/address-municipality"
+      },
+      "name" : "Municipality (Address)",
+      "description" : "The location level between District and City/Village.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/MyTradePolicyHolder"
+      },
+      "name" : "MyTradePolicyHolder",
+      "description" : "Example of openIMIS PolicyHolder",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-activity-definition"
+      },
+      "name" : "openIMIS ActivityDefinition",
+      "description" : "Defines a ActivityDefinition for openIMIS which maps to a Medical Service.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-invoice-bill"
+      },
+      "name" : "openIMIS Bill",
+      "description" : "Defines an Bill for openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/openIMISCapabilityStatement"
+      },
+      "name" : "openIMIS Capability Statement",
+      "description" : "Capability Statement for openIMIS FHIR R5 Implementation Guide",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-claim"
+      },
+      "name" : "openIMIS Claim",
+      "description" : "Defines a Claim for openIMIS which maps to a Claim.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-claim-administrator-practitioner"
+      },
+      "name" : "openIMIS Claim Administrator Practitioner",
+      "description" : "Defines a Practitioner for openIMIS which maps to a Claim Administrator.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-claim-administrator-practitioner-role"
+      },
+      "name" : "openIMIS Claim Administrator Practitioner Role",
+      "description" : "Defines a Claim Administrator Practitioner Role for openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-claim-response"
+      },
+      "name" : "openIMIS Claim Response",
+      "description" : "Defines a ClaimResponse for openIMIS which maps to a Claim. The ClaimResponse resource contains the adjudication result of a Claim.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-communication"
+      },
+      "name" : "openIMIS Communication",
+      "description" : "Defines a Communication for openIMIS which maps to the Feedback in openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-communication-request"
+      },
+      "name" : "openIMIS CommunicationRequest",
+      "description" : "Defines a CommunicationRequest for openIMIS which maps to the Claim request for feedback in openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-contract"
+      },
+      "name" : "openIMIS Contract",
+      "description" : "Defines a Contract for openIMIS use to enrol a Family/Group. Mapped mostly to Policy and will link Group/Family and Patient/Insurees.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-coverage"
+      },
+      "name" : "openIMIS Coverage",
+      "description" : "Defines a Coverage for openIMIS which maps to a Policy.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-coverage-eligibility-request"
+      },
+      "name" : "openIMIS CoverageEligibilityRequest",
+      "description" : "Defines a CoverageEligibilityRequest for openIMIS to enquire an Insuree.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-coverage-eligibility-response"
+      },
+      "name" : "openIMIS CoverageEligibilityResponse",
+      "description" : "Defines a CoverageEligibilityResponse for openIMIS to get the enquire information for an Insuree.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-enrolment-officer-practitioner"
+      },
+      "name" : "openIMIS Enrolment Officer Practitioner",
+      "description" : "Defines a Practitioner for openIMIS which maps to an Enrolment Officer.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-enrolment-officer-practitioner-role"
+      },
+      "name" : "openIMIS Enrolment Officer Practitioner Role",
+      "description" : "Defines a Enrolment Officer Practitioner Role for openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-group"
+      },
+      "name" : "openIMIS Group",
+      "description" : "Defines a Group for openIMIS which maps to an Family",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-health-facility-organization"
+      },
+      "name" : "openIMIS Health Facility Organization",
+      "description" : "Defines an Organization for openIMIS which maps to a Health Facility",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/openimis-identifiers"
+      },
+      "name" : "openIMIS Identifiers (All)",
+      "description" : "Identifiers that are specific to openIMIS and could not be found in standard sources.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/openimis-identifiers"
+      },
+      "name" : "openIMIS Identifiers Value Set",
+      "description" : "Indicates the Identifier type",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-insurance-organization"
+      },
+      "name" : "openIMIS Insurance Organization",
+      "description" : "Defines an Organization for openIMIS which maps to the openIMIS implementation as Insurance. \nThis is required in different resources.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-insurance-plan"
+      },
+      "name" : "openIMIS Insurance Plan",
+      "description" : "Defines an Insurance Plan for openIMIS which maps to a Product.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-invoice-invoice"
+      },
+      "name" : "openIMIS Invoice",
+      "description" : "Defines an Invoice for openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-location"
+      },
+      "name" : "openIMIS Location",
+      "description" : "Defines a Location for openIMIS which maps to a Location",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-medication"
+      },
+      "name" : "openIMIS Medication",
+      "description" : "Defines a Medication for openIMIS which maps to a Medical Item.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-patient"
+      },
+      "name" : "openIMIS Patient",
+      "description" : "Defines a Patient for openIMIS which maps to an Insuree",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-payment-notice"
+      },
+      "name" : "openIMIS Payment Notice",
+      "description" : "Submit payment notice.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-policy-holder-organization"
+      },
+      "name" : "openIMIS Policy Holder Organization",
+      "description" : "Defines an Organization for openIMIS which maps to a Policy Holder under Formal Sector scheme.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/openimis-subscription"
+      },
+      "name" : "openIMIS Subscription",
+      "description" : "Allows to subscribe to notification of new or updates entitities.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/openIMIS-Implementation"
+      },
+      "name" : "openIMIS-Implementation",
+      "description" : "Example of openIMIS Insurance.",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/coverage-item-category-item-service"
+      },
+      "name" : "Partial categories of the item (Coverage)",
+      "description" : "Indicates the category for the item, only for medical items and services, under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/communication-payload-type"
+      },
+      "name" : "Payload Type (CommunicationRequest | Communication)",
+      "description" : "Indicates the payload type for a Communication.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/insurance-plan-period"
+      },
+      "name" : "Period (InsurancePlan)",
+      "description" : "Defines the number of months a certain period is valid in InsurancePlan.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/coverage-policy-status"
+      },
+      "name" : "Policy Status (Coverage)",
+      "description" : "Indicates the policy status for a Coverage.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/group-address"
+      },
+      "name" : "Poverty Status (Group)",
+      "description" : "Whether the Group has the poverty status.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/group-poverty-status"
+      },
+      "name" : "Poverty Status (Group)",
+      "description" : "Whether the Group has the poverty status.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/practitioner-qualification-type"
+      },
+      "name" : "Practitioner Qualification Type",
+      "description" : "Indicates the Qualification Type of a Practitioner.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/contract-premium"
+      },
+      "name" : "Premium (Contract)",
+      "description" : "Indicates a premium for a Contract. This is a complex extension.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/contract-premium-category"
+      },
+      "name" : "Premium Category (Contract)",
+      "description" : "Indicates the category of the premium for the Contract. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/contract-premium-category"
+      },
+      "name" : "Premium Category (Contract)",
+      "description" : "Indicates the category of the premium for the Contract. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/contract-premium-payer"
+      },
+      "name" : "Premium Payer (Contract)",
+      "description" : "Indicates the payer of the premium for the Contract. Can be extended in openIMIS. Need to match openIMIS database payer list.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/contract-premium-payer"
+      },
+      "name" : "Premium Payer (Contract)",
+      "description" : "Indicates the payer of the premium for the Contract. Can be extended in openIMIS. Need to match openIMIS database payer list.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/contract-premium-type"
+      },
+      "name" : "Premium Type (Contract)",
+      "description" : "Indicates the type of the premium for the Contract. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/contract-premium-type"
+      },
+      "name" : "Premium Type (Contract)",
+      "description" : "Indicates the type of the premium for the Contract. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/invoice-price-component-type"
+      },
+      "name" : "PriceComponent Type (Invoice)",
+      "description" : "Indicates the Type for a PriceComponent from an Invoice.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/patient-profession"
+      },
+      "name" : "Profession (Patient)",
+      "description" : "Specifies the Patient/Insuree's profession",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/patient-profession"
+      },
+      "name" : "Profession (Patient)",
+      "description" : "Indicates the profession of a Patient",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/patient-profession"
+      },
+      "name" : "Profession (Patient)",
+      "description" : "Indicates the profession of a Patient. Values defined by openIMIS. Can be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/insurance-plan-publication-status"
+      },
+      "name" : "Publication Status (InsurancePlan)",
+      "description" : "Indicates the Publication Status for an InsurancePlan.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/practitioner-qualification-type"
+      },
+      "name" : "Qualification Type (Practitioner)",
+      "description" : "Indicates the Qualification Type of a Practitioner.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/RaptaDistrictHospital"
+      },
+      "name" : "RaptaDistrictHospital",
+      "description" : "Example of openIMIS Health Facility",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/claim-rejection-reasons"
+      },
+      "name" : "Rejection reasons (Claim)",
+      "description" : "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/claim-rejection-reasons"
+      },
+      "name" : "Rejection Reasons (Claim)",
+      "description" : "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/contract-resource-party-role"
+      },
+      "name" : "Resource Party Role (Contract)",
+      "description" : "Indicates the participant engagement type for the Contract term.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/contract-resource-party-role"
+      },
+      "name" : "Resource Party Role (Contract)",
+      "description" : "Indicates the participant engagement type for the Contract term.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/Roberts-Jeb-EO"
+      },
+      "name" : "Roberts-Jeb-EO",
+      "description" : "Example of openIMIS Practitioner for Enrolment Officer.",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/Rushila-Dani-CA"
+      },
+      "name" : "Rushila-Dani-CA",
+      "description" : "Example of openIMIS Practitioner for Claim Administrator.",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "InsurancePlan"
+      }],
+      "reference" : {
+        "reference" : "InsurancePlan/RX01"
+      },
+      "name" : "RX01",
+      "description" : "Example of openIMIS InsurancePlan",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "InsurancePlan"
+      }],
+      "reference" : {
+        "reference" : "InsurancePlan/RX02"
+      },
+      "name" : "RX02",
+      "description" : "Example of openIMIS InsurancePlan",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/contract-scope"
+      },
+      "name" : "Scope (Contract)",
+      "description" : "Indicates the scope for the Contract. Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/contract-scope"
+      },
+      "name" : "Scope (Contract)",
+      "description" : "Indicates the scope for the Contract. Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/activity-definition-service-type"
+      },
+      "name" : "Service Type (ActivityDefinition)",
+      "description" : "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/activity-definition-service-type"
+      },
+      "name" : "Service Type (ActivityDefinition)",
+      "description" : "Indicates the Service Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/invoice-status"
+      },
+      "name" : "Status (Invoice)",
+      "description" : "Indicates the status for an Invoice. Values limited by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/contract-status-codes"
+      },
+      "name" : "Status Codes (Contract)",
+      "description" : "Indicates the status of the Contract. Values limited by openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/claim-status"
+      },
+      "name" : "Status of the claim (Claim|ClaimResponse)",
+      "description" : "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/claim-status"
+      },
+      "name" : "Status of the claim (Claim|ClaimResponse)",
+      "description" : "Indicates the status of the Claim. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/practitioner-role-substitution-reference"
+      },
+      "name" : "Substitution Reference (PractitionerRole)",
+      "description" : "The reference to the Enrolment Officer that will substitute the current one after the period end.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/bill-type"
+      },
+      "name" : "Type (Bill Invoice)",
+      "description" : "Indicates the Type for Bill. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/bill-type"
+      },
+      "name" : "Type (Bill Invoice)",
+      "description" : "Indicates the Type for Bill. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/invoice-type"
+      },
+      "name" : "Type (Invoice)",
+      "description" : "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/invoice-type"
+      },
+      "name" : "Type (Invoice)",
+      "description" : "Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/coverage-item-benefit-type"
+      },
+      "name" : "Type of benefit (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/coverage-item-benefit-type"
+      },
+      "name" : "Type of benefit (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/coverage-item-benefit-type-amount-left"
+      },
+      "name" : "Type of benefit as amount left (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/coverage-item-benefit-type-total-left"
+      },
+      "name" : "Type of benefit as total left (Coverage)",
+      "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/unit-price"
+      },
+      "name" : "Unit Price (Medication|ActivityDefinition)",
+      "description" : "The unit price for a Medication or ActivityDefinition.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/Upper-River-Region"
+      },
+      "name" : "Upper-River-Region",
+      "description" : "Example of a Region",
+      "isExample" : true,
+      "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location"]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/usage-context-age-type"
+      },
+      "name" : "Usage Context for Age Type (ActivityDefinition|Medication)",
+      "description" : "Indicates the Usage Context for Age Type for an ActivityDefinition or Medication.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/usage-context-age-type"
+      },
+      "name" : "Usage Context for Age Type (ActivityDefinition|Medication)",
+      "description" : "Indicates the Usage Context for Age Type for an ActivityDefinition or Medication. Values defined by openIMIS. Cannot be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/usage-context-gender-type"
+      },
+      "name" : "Usage Context for Gender Type (ActivityDefinition|Medication)",
+      "description" : "Indicates the Usage Context for Gender Type for an ActivityDefinition or Medication.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/activity-definition-usage-context-venue-type"
+      },
+      "name" : "Usage Context for Venue Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context for Venue Type for an ActivityDefinition.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/activity-definition-usage-context-workflow-type"
+      },
+      "name" : "Usage Context for Workflow Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context for Workflow Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/activity-definition-usage-context-workflow-type"
+      },
+      "name" : "Usage Context for Workflow Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context for Workflow Type for an ActivityDefinition. Values defined by openIMIS. Can not be extended.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/activity-definition-usage-context-type"
+      },
+      "name" : "Usage Context Type (ActivityDefinition)",
+      "description" : "Indicates the Usage Context Type for an ActivityDefinition.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medication-usage-context"
+      },
+      "name" : "UsageContext (Medication)",
+      "description" : "The Context a Medication can be prescribed.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/claim-visit-type"
+      },
+      "name" : "Visit Type (Claim)",
+      "description" : "Indicates the visit type of the Claim. \nValues limited by openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/claim-visit-type"
+      },
+      "name" : "Visit Type Codes (Claim)",
+      "description" : "Indicates the visit type of the Claim. \nValues limited by openIMIS.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/patient-vulnerability-status"
+      },
+      "name" : "Vulnerability Status (Patient)",
+      "description" : "Whether the Patient/Insuree has the vulnerability status.",
+      "isExample" : false
+    }],
+    "page" : {
+      "sourceUrl" : "toc.html",
+      "name" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "sourceUrl" : "index.html",
+        "name" : "index.html",
+        "title" : "openIMIS FHIR Overview",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "usecase-enrollment.html",
+        "name" : "usecase-enrollment.html",
+        "title" : "Enrollment Use Case",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "usecase-enquire.html",
+        "name" : "usecase-enquire.html",
+        "title" : "Enquire Use Case",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "usecase-claiming.html",
+        "name" : "usecase-claiming.html",
+        "title" : "Claiming Use Case",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "security.html",
+        "name" : "security.html",
+        "title" : "Security management",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "credits.html",
+        "name" : "credits.html",
+        "title" : "Credits",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "copyrightyear"
+      },
+      "value" : "2025+"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "releaselabel"
+      },
+      "value" : "ci-build"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "autoload-resources"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/examples"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/extensions"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/models"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/operations"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/profiles"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/maps"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/testing"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/history"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "template/config"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "input/images"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "template/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "input/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-qa"
+      },
+      "value" : "temp/qa"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-temp"
+      },
+      "value" : "temp/pages"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-output"
+      },
+      "value" : "output"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-tx-cache"
+      },
+      "value" : "input-cache/txcache"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-suppressed-warnings"
+      },
+      "value" : "input/ignoreWarnings.txt"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-history"
+      },
+      "value" : "https://github.com/openimis/openimis_fhir_r5_ig/history.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-html"
+      },
+      "value" : "template-page.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-md"
+      },
+      "value" : "template-page-md.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-contact"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-context"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-copyright"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-jurisdiction"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-license"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-publisher"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-version"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-wg"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "active-tables"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "fmm-definition"
+      },
+      "value" : "http://hl7.org/fhir/versions.html#maturity"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "propagate-status"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludelogbinaryformat"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "tabbed-snapshots"
+      },
+      "value" : "true"
+    }]
+  }
+}

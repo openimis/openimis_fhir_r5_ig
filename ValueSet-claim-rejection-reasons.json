@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "claim-rejection-reasons",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet claim-rejection-reasons</b></p><a name=\"claim-rejection-reasons\"> </a><a name=\"hcclaim-rejection-reasons\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-claim-rejection-reasons.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-rejection-reasons",
+  "version" : "0.1.0",
+  "name" : "ClaimRejectionReasonsVS",
+  "title" : "Rejection reasons (Claim)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the rejection reason of an item from a Claim. \nValues limited by openIMIS.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons"
+    }]
+  }
+}

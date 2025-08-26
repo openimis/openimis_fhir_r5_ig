@@ -1,0 +1,42 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "insurance-plan-period-kind",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet insurance-plan-period-kind</b></p><a name=\"insurance-plan-period-kind\"> </a><a name=\"hcinsurance-plan-period-kind\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-insurance-plan-period-kind.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-period-kind",
+  "version" : "0.1.0",
+  "name" : "InsurancePlanPeriodKindVS",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-period-kind"
+    }]
+  }
+}

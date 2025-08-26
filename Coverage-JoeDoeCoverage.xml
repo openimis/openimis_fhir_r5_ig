@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="JoeDoeCoverage"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Coverage JoeDoeCoverage</b></p><a name="JoeDoeCoverage"> </a><a name="hcJoeDoeCoverage"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-coverage.html">openIMIS Coverage</a></p></div><p><b>Enrollment Date (Coverage)</b>: 2021-01-28</p><p><b>Effective Date (Coverage)</b>: 2021-01-28</p><p><b>identifier</b>: UUID unique identifier/D30F70DF-D10B-43D4-BF31-5137C118AD84</p><p><b>status</b>: Active</p><p><b>kind</b>: Insurance</p><p><b>policyHolder</b>: <a href="Patient-jane-doe.html">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</a></p><p><b>beneficiary</b>: <code>joe-doe</code></p><p><b>period</b>: 2021-07-01 --&gt; 2022-06-30</p><h3>Classes</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/coverage-class plan}">Plan</span></td><td>RX01</td><td>Regional fixed enrolment</td></tr></table></div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date">
+    <valueDate value="2021-01-28"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date">
+    <valueDate value="2021-01-28"/>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="UUID"/>
+      </coding>
+    </type>
+    <value value="D30F70DF-D10B-43D4-BF31-5137C118AD84"/>
+  </identifier>
+  <status value="active"/>
+  <kind value="insurance"/>
+  <policyHolder>
+    <reference value="Patient/jane-doe"/>
+  </policyHolder>
+  <beneficiary>
+    <reference value="joe-doe"/>
+  </beneficiary>
+  <period>
+    <start value="2021-07-01"/>
+    <end value="2022-06-30"/>
+  </period>
+  <class>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+        <code value="plan"/>
+        <display value="Plan"/>
+      </coding>
+    </type>
+    <value>
+      <value value="RX01"/>
+    </value>
+    <name value="Regional fixed enrolment"/>
+  </class>
+</Coverage>

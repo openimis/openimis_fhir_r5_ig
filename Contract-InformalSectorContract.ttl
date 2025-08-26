@@ -1,0 +1,139 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Contract/InformalSectorContract> a fhir:Contract ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "InformalSectorContract"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-contract>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Contract InformalSectorContract</b></p><a name=\"InformalSectorContract\"> </a><a name=\"hcInformalSectorContract\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-contract.html\">openIMIS Contract</a></p></div><p><b>status</b>: Executed</p><p><b>issued</b>: 2021-07-28</p><p><b>subject</b>: <a href=\"Group-doe-family.html\">Group Doe Jane</a></p><p><b>author</b>: <a href=\"Practitioner-Roberts-Jeb-EO.html\">Practitioner Jeb Roberts (official)</a></p><p><b>scope</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-scope informal}\">Informal Sector</span></p><blockquote><p><b>term</b></p><blockquote><p><b>offer</b></p><h3>Parties</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td><td><b>Role</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Patient-jane-doe.html\">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</a></td><td><span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role beneficiary}\">Beneficiary</span></td></tr></table></blockquote><blockquote><p><b>asset</b></p><blockquote><p><b>Premium (Contract)</b></p><ul><li>category: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-category C}\">Contribution and Others</span></li><li>amount: <span title=\"Euro\">€1,000.00</span> (EUR)</li><li>receipt: RE184</li><li>date: 2021-07-28</li><li>type: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-type C}\">Cash</span></li><li>payer: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-payer beneficiary}\">Beneficiary</span></li></ul></blockquote><p><b>typeReference</b>: </p><ul><li><a href=\"Patient-jane-doe.html\">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</a></li><li><a href=\"Patient-john-doe.html\">John Doe  Male, DoB: 1962-02-05 ( Unique code)</a></li></ul><p><b>period</b>: 2021-07-01 --&gt; 2022-06-30</p><p><b>usePeriod</b>: 2021-07-28 --&gt; 2022-06-30</p><blockquote><p><b>valuedItem</b></p><p><b>entity</b>: <a href=\"InsurancePlan-RX01.html\">InsurancePlan Regional fixed enrolment</a></p><h3>Nets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>1000</td><td>Euro</td></tr></table></blockquote></blockquote></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "executed"] ; # 
+  fhir:issued [ fhir:v "2021-07-28"^^xsd:date] ; # 
+  fhir:subject ( [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Group/doe-family> ;
+     fhir:reference [ fhir:v "Group/doe-family" ]
+  ] ) ; # 
+  fhir:author [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Practitioner/Roberts-Jeb-EO> ;
+     fhir:reference [ fhir:v "Practitioner/Roberts-Jeb-EO" ]
+  ] ; # 
+  fhir:scope [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-scope"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "informal" ] ;
+       fhir:display [ fhir:v "Informal Sector" ]
+     ] )
+  ] ; # 
+  fhir:term ( [
+     fhir:offer [
+       fhir:party ( [
+         fhir:reference ( [
+           fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/jane-doe> ;
+           fhir:reference [ fhir:v "Patient/jane-doe" ]
+         ] ) ;
+         fhir:role [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "beneficiary" ] ;
+             fhir:display [ fhir:v "Beneficiary" ]
+           ] )
+         ]
+       ] )
+     ] ;
+     fhir:asset ( [
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "category"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-category"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "C" ] ;
+               fhir:display [ fhir:v "Contribution and Others" ]
+             ] )
+           ]
+         ] [
+           fhir:url [ fhir:v "amount"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:Money ;
+             fhir:value [ fhir:v "1000"^^xsd:decimal ] ;
+             fhir:currency [ fhir:v "EUR" ]
+           ]
+         ] [
+           fhir:url [ fhir:v "receipt"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "RE184"
+           ]
+         ] [
+           fhir:url [ fhir:v "date"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:date ;
+             fhir:v "2021-07-28"^^xsd:date
+           ]
+         ] [
+           fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-type"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "C" ] ;
+               fhir:display [ fhir:v "Cash" ]
+             ] )
+           ]
+         ] [
+           fhir:url [ fhir:v "payer"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:CodeableConcept ;
+             fhir:coding ( [
+               fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-payer"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "beneficiary" ] ;
+               fhir:display [ fhir:v "Beneficiary" ]
+             ] )
+           ]
+         ] ) ;
+         fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/contract-premium"^^xsd:anyURI ]
+       ] ) ;
+       fhir:typeReference ( [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/jane-doe> ;
+         fhir:reference [ fhir:v "Patient/jane-doe" ]
+       ] [
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/john-doe> ;
+         fhir:reference [ fhir:v "Patient/john-doe" ]
+       ] ) ;
+       fhir:period ( [
+         fhir:start [ fhir:v "2021-07-01"^^xsd:date ] ;
+         fhir:end [ fhir:v "2022-06-30"^^xsd:date ]
+       ] ) ;
+       fhir:usePeriod ( [
+         fhir:start [ fhir:v "2021-07-28"^^xsd:date ] ;
+         fhir:end [ fhir:v "2022-06-30"^^xsd:date ]
+       ] ) ;
+       fhir:valuedItem ( [
+         fhir:entity [
+           a fhir:Reference ;
+           fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/InsurancePlan/RX01> ;
+           fhir:reference [ fhir:v "InsurancePlan/RX01" ]
+         ] ;
+         fhir:net [
+           fhir:value [ fhir:v "1000"^^xsd:decimal ] ;
+           fhir:currency [ fhir:v "EUR" ]
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

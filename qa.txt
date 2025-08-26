@@ -1,0 +1,881 @@
+openIMISFHIRR5 : Validation Results
+=========================================
+
+err = 29, warn = 241, info = 219
+IG Publisher Version: 2.0.15
+Generated Tue Aug 26 15:42:35 UTC 2025. FHIR version 5.0.0 for openimis.fhir.r5#0.1.0 (canonical = https://github.com/openimis/openimis_fhir_r5_ig)
+ Build Errors : 5 / 7 / 0
+ /github/workspace/fsh-generated/resources/ActivityDefinition-GeneralConsultationService : 3 / 0 / 5
+ /github/workspace/fsh-generated/resources/CapabilityStatement-openIMISCapabilityStatement : 4 / 2 / 1
+ /github/workspace/fsh-generated/resources/Claim-Claim001 : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/ClaimResponse-Claim001 : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/CodeSystem-activity-definition-level : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-activity-definition-service-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-activity-definition-usage-context-workflow-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-bill-charge-item : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-bill-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-claim-item-category : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-claim-rejection-reasons : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-claim-status : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-claim-supporting-info-category : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-claim-visit-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-contract-premium-category : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-contract-premium-payer : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-contract-premium-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-contract-resource-party-role : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-contract-scope : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-coverage-item-benefit-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-coverage-item-category : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-diagnosis-ICD10-level1 : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-feedback-payload : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-feedback-status : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-group-confirmation-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-group-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-insurance-plan-coverage-benefit-limit : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-insurance-plan-discount-kind : 0 / 4 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-insurance-plan-general-cost-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-insurance-plan-period-kind : 0 / 3 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-invoice-charge-item : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-invoice-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-location-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-medication-item-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-medication-level : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-openimis-identifiers : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-organization-hf-care-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-organization-hf-legal-form : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-organization-hf-level : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-organization-ph-activity : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-organization-ph-legal-form : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-patient-contact-relationship : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-patient-education-level : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-patient-identification-type : 2 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-patient-profession : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-practitioner-qualification-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-usage-context-age-type : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/Communication-Claim001Communication : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/CommunicationRequest-Claim001CommunicationRequest : 0 / 0 / 7
+ /github/workspace/fsh-generated/resources/Contract-InformalSectorContract : 0 / 0 / 6
+ /github/workspace/fsh-generated/resources/Coverage-JoeDoeCoverage : 1 / 0 / 2
+ /github/workspace/fsh-generated/resources/CoverageEligibilityRequest-JoeDoeEnquiring : 1 / 0 / 2
+ /github/workspace/fsh-generated/resources/CoverageEligibilityResponse-JoeDoeEnquiringResponse : 1 / 0 / 11
+ /github/workspace/fsh-generated/resources/Group-doe-family : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/ImplementationGuide-openimis.fhir.r5 : 0 / 1 / 16
+ /github/workspace/fsh-generated/resources/InsurancePlan-RX01 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/InsurancePlan-RX02 : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Invoice-InformalSectorContributionInvoice : 0 / 5 / 1
+ /github/workspace/fsh-generated/resources/Location-Jamu-municipality : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Location-Jamula-village : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Location-Jimara-district : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Location-Upper-River-Region : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Medication-AspirinMedication : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/Organization-MyTradePolicyHolder : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/Organization-RaptaDistrictHospital : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/Organization-openIMIS-Implementation : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Patient-jane-doe : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/Patient-john-doe : 0 / 0 / 5
+ /github/workspace/fsh-generated/resources/Practitioner-Roberts-Jeb-EO : 0 / 0 / 4
+ /github/workspace/fsh-generated/resources/Practitioner-Rushila-Dani-CA : 0 / 0 / 4
+ /github/workspace/fsh-generated/resources/StructureDefinition-activity-definition-level : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-address-location-reference : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-address-municipality : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-claim-item-reference : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-communication-payload-type : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-contract-premium : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-coverage-effective-date : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-coverage-enroll-date : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-coverage-policy-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-group-address : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-group-confirmation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-group-poverty-status : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-group-type : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-insurance-plan-conversion : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-insurance-plan-discount : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-insurance-plan-max-installments : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-insurance-plan-period : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-insurance-plan-start-cycle : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medication-frequency : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medication-level : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medication-type : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medication-usage-context : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-activity-definition : 2 / 6 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-claim : 0 / 4 / 9
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-claim-administrator-practitioner : 0 / 1 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-claim-administrator-practitioner-role : 0 / 3 / 6
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-claim-response : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-communication : 0 / 2 / 11
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-communication-request : 0 / 4 / 13
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-contract : 0 / 3 / 4
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-coverage : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-coverage-eligibility-request : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-coverage-eligibility-response : 0 / 1 / 5
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-enrolment-officer-practitioner : 0 / 1 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-enrolment-officer-practitioner-role : 0 / 3 / 6
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-group : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-health-facility-organization : 0 / 1 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-insurance-organization : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-insurance-plan : 0 / 21 / 19
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-invoice-bill : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-invoice-invoice : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-location : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-medication : 0 / 2 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-patient : 0 / 4 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-payment-notice : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-policy-holder-organization : 0 / 4 / 3
+ /github/workspace/fsh-generated/resources/StructureDefinition-openimis-subscription : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization-hf-care-type : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization-hf-legal-form : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization-hf-level : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization-ph-activity : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization-ph-legal-form : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-patient-card-issued : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-patient-education-level : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-patient-group-reference : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-patient-identification : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-patient-is-head : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-patient-profession : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-patient-vulnerability-status : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-practitioner-role-substitution-reference : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-unit-price : 3 / 0 / 1
+ /github/workspace/fsh-generated/resources/Subscription-ContributionInvoiceSubscription : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-activity-definition-level : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-activity-definition-service-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-activity-definition-usage-context-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-activity-definition-usage-context-venue-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-activity-definition-usage-context-workflow-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-bill-charge-item : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-bill-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-claim-item-category : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-claim-rejection-reasons : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-claim-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-claim-supporting-info-category : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-claim-visit-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-communication-request-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-contract-premium-category : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-contract-premium-payer : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-contract-premium-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-contract-resource-party-role : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-contract-scope : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-contract-status-codes : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-coverage-item-benefit-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-coverage-item-benefit-type-amount-left : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-coverage-item-benefit-type-total-left : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-coverage-item-category : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-coverage-item-category-item-service : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-coverage-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-diagnosis-ICD10-level1 : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/ValueSet-feedback-payload : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-feedback-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-group-confirmation-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-group-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-insurance-plan-coverage-benefit-limit : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-insurance-plan-coverage-type : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/ValueSet-insurance-plan-discount-kind : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-insurance-plan-general-cost-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-insurance-plan-period-kind : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-insurance-plan-publication-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-invoice-charge-item : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-invoice-price-component-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-invoice-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-invoice-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-location-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-medication-item-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-medication-level : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-openimis-identifiers : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-organization-hf-care-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-organization-hf-legal-form : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-organization-hf-level : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-organization-ph-activity : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-organization-ph-legal-form : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-patient-contact-relationship : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-patient-education-level : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-patient-identification-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-patient-marital-status : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-patient-profession : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-practitioner-qualification-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-usage-context-age-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-usage-context-gender-type : 0 / 1 / 1
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/insurance-plan-discount-kind.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/insurance-plan-period-kind.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource CodeSystem/insurance-plan-period-kind.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource CodeSystem/insurance-plan-discount-kind.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: credits.html#/html/body/div/div/div/div/div/ul/li/a at Line 193, column 8: The link 'www.swisstph.ch' for "Swiss Tropical and Public Health Institute" cannot be resolved
+ERROR: usecase-claiming.html#/html/body/div/div/div/div/div/ul/li/a at Line 199, column 8: The link 'StructureDefinition-openimis-activitiy-definition.html' for "ActivityDefinition" cannot be resolved
+ERROR: usecase-enquire.html#/html/body/div/div/div/div/div/ul/li/a at Line 194, column 8: The link 'StructureDefinition-openimis-activitiy-definition.html' for "ActivityDefinition" cannot be resolved
+ERROR: usecase-enrollment.html#/html/body/div/div/div/div/div/ul/li/a at Line 196, column 8: The link 'CodeSystem-patient-identification-types.html' for "patient-identification-type" cannot be resolved
+ERROR: usecase-enrollment.html#/html/body/div/div/div/div/div/ul/li/a at Line 198, column 8: The link 'CodeSystem-group-types.html' for "group-type" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ActivityDefinition-GeneralConsultationService.json ==
+ERROR: ActivityDefinition/GeneralConsultationService: ActivityDefinition: ActivityDefinition.version: max allowed = 0, but found 1 (from https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition|0.1.0)
+ERROR: ActivityDefinition/GeneralConsultationService: ActivityDefinition: ActivityDefinition.publisher: max allowed = 0, but found 1 (from https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition|0.1.0)
+ERROR: ActivityDefinition/GeneralConsultationService: ActivityDefinition: ActivityDefinition.contact: max allowed = 0, but found 3 (from https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition|0.1.0)
+INFORMATION: ActivityDefinition/GeneralConsultationService: ActivityDefinition.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: ActivityDefinition/GeneralConsultationService: ActivityDefinition.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: ActivityDefinition/GeneralConsultationService: ActivityDefinition.useContext[2].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type|0.1.0
+INFORMATION: Resource: The resource ActivityDefinition/GeneralConsultationService could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CapabilityStatement-openIMISCapabilityStatement.json ==
+WARNING: CapabilityStatement/openIMISCapabilityStatement: CapabilityStatement.rest[0].resource[0].supportedProfile[0]: A definition could not be found for Canonical URL 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activitiy-definition'
+ERROR: CapabilityStatement/openIMISCapabilityStatement: CapabilityStatement.rest[0].resource[1].searchParam[2].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Claim-identifier'
+ERROR: CapabilityStatement/openIMISCapabilityStatement: CapabilityStatement.rest[0].resource[2].searchParam[2].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Claim-identifier'
+ERROR: CapabilityStatement/openIMISCapabilityStatement: CapabilityStatement.rest[0].resource[4].searchParam[1].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Claim-identifier'
+ERROR: CapabilityStatement/openIMISCapabilityStatement: CapabilityStatement.rest[0].resource[13].searchParam[2].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Medication-identifier'
+WARNING: CapabilityStatement/openIMISCapabilityStatement: CapabilityStatement: Constraint failed: cnl-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
+== fsh-generated/resources/Claim-Claim001.json ==
+INFORMATION: Claim/Claim001: Claim.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Claim/Claim001: Claim.diagnosis[0].diagnosis.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/diagnosis-ICD10-level1|0.1.0
+== fsh-generated/resources/ClaimResponse-Claim001.json ==
+INFORMATION: ClaimResponse/Claim001: ClaimResponse.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: ClaimResponse/Claim001: ClaimResponse.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: ClaimResponse/Claim001: ClaimResponse.item[0].adjudication[0].reason: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons|0.1.0
+INFORMATION: ClaimResponse/Claim001: ClaimResponse.item[1].adjudication[0].reason: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons|0.1.0
+== fsh-generated/resources/CodeSystem-activity-definition-level.json ==
+INFORMATION: CodeSystem/activity-definition-level: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/activity-definition-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/activity-definition-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-activity-definition-service-type.json ==
+INFORMATION: CodeSystem/activity-definition-service-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/activity-definition-service-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/activity-definition-service-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-activity-definition-usage-context-workflow-type.json ==
+INFORMATION: CodeSystem/activity-definition-usage-context-workflow-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/activity-definition-usage-context-workflow-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/activity-definition-usage-context-workflow-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-bill-charge-item.json ==
+INFORMATION: CodeSystem/bill-charge-item: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/bill-charge-item: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/bill-charge-item: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-bill-type.json ==
+INFORMATION: CodeSystem/bill-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/bill-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/bill-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-claim-item-category.json ==
+INFORMATION: CodeSystem/claim-item-category: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/claim-item-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/claim-item-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-claim-rejection-reasons.json ==
+INFORMATION: CodeSystem/claim-rejection-reasons: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/claim-rejection-reasons: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/claim-rejection-reasons: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-claim-status.json ==
+INFORMATION: CodeSystem/claim-status: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/claim-status: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/claim-status: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-claim-supporting-info-category.json ==
+INFORMATION: CodeSystem/claim-supporting-info-category: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/claim-supporting-info-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/claim-supporting-info-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-claim-visit-type.json ==
+INFORMATION: CodeSystem/claim-visit-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/claim-visit-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/claim-visit-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-contract-premium-category.json ==
+INFORMATION: CodeSystem/contract-premium-category: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/contract-premium-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/contract-premium-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-contract-premium-payer.json ==
+INFORMATION: CodeSystem/contract-premium-payer: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/contract-premium-payer: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/contract-premium-payer: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-contract-premium-type.json ==
+INFORMATION: CodeSystem/contract-premium-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/contract-premium-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/contract-premium-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-contract-resource-party-role.json ==
+INFORMATION: CodeSystem/contract-resource-party-role: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/contract-resource-party-role: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/contract-resource-party-role: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-contract-scope.json ==
+INFORMATION: CodeSystem/contract-scope: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/contract-scope: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/contract-scope: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-coverage-item-benefit-type.json ==
+INFORMATION: CodeSystem/coverage-item-benefit-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/coverage-item-benefit-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/coverage-item-benefit-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-coverage-item-category.json ==
+INFORMATION: CodeSystem/coverage-item-category: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/coverage-item-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/coverage-item-category: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-diagnosis-ICD10-level1.json ==
+INFORMATION: CodeSystem/diagnosis-ICD10-level1: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/diagnosis-ICD10-level1: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/diagnosis-ICD10-level1: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-feedback-payload.json ==
+INFORMATION: CodeSystem/feedback-payload: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/feedback-payload: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/feedback-payload: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-feedback-status.json ==
+INFORMATION: CodeSystem/feedback-status: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/feedback-status: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/feedback-status: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-group-confirmation-type.json ==
+INFORMATION: CodeSystem/group-confirmation-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/group-confirmation-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/group-confirmation-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-group-type.json ==
+INFORMATION: CodeSystem/group-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/group-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/group-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-insurance-plan-coverage-benefit-limit.json ==
+INFORMATION: CodeSystem/insurance-plan-coverage-benefit-limit: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/insurance-plan-coverage-benefit-limit: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/insurance-plan-coverage-benefit-limit: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-insurance-plan-discount-kind.json ==
+INFORMATION: CodeSystem/insurance-plan-discount-kind: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/insurance-plan-discount-kind: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.title is mandatory, but it is not present
+WARNING: CodeSystem/insurance-plan-discount-kind: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/insurance-plan-discount-kind: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.description is mandatory, but it is not present
+WARNING: CodeSystem/insurance-plan-discount-kind: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-insurance-plan-general-cost-type.json ==
+INFORMATION: CodeSystem/insurance-plan-general-cost-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/insurance-plan-general-cost-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/insurance-plan-general-cost-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-insurance-plan-period-kind.json ==
+INFORMATION: CodeSystem/insurance-plan-period-kind: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/insurance-plan-period-kind: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/insurance-plan-period-kind: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.description is mandatory, but it is not present
+WARNING: CodeSystem/insurance-plan-period-kind: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-invoice-charge-item.json ==
+INFORMATION: CodeSystem/invoice-charge-item: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/invoice-charge-item: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/invoice-charge-item: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-invoice-type.json ==
+INFORMATION: CodeSystem/invoice-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/invoice-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/invoice-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-location-type.json ==
+INFORMATION: CodeSystem/location-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/location-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/location-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-medication-item-type.json ==
+INFORMATION: CodeSystem/medication-item-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/medication-item-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/medication-item-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-medication-level.json ==
+INFORMATION: CodeSystem/medication-level: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/medication-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/medication-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-openimis-identifiers.json ==
+INFORMATION: CodeSystem/openimis-identifiers: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/openimis-identifiers: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/openimis-identifiers: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-organization-hf-care-type.json ==
+INFORMATION: CodeSystem/organization-hf-care-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/organization-hf-care-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/organization-hf-care-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-organization-hf-legal-form.json ==
+INFORMATION: CodeSystem/organization-hf-legal-form: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/organization-hf-legal-form: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/organization-hf-legal-form: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-organization-hf-level.json ==
+INFORMATION: CodeSystem/organization-hf-level: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/organization-hf-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/organization-hf-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-organization-ph-activity.json ==
+INFORMATION: CodeSystem/organization-ph-activity: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/organization-ph-activity: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/organization-ph-activity: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-organization-ph-legal-form.json ==
+INFORMATION: CodeSystem/organization-ph-legal-form: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/organization-ph-legal-form: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/organization-ph-legal-form: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-patient-contact-relationship.json ==
+INFORMATION: CodeSystem/patient-contact-relationship: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/patient-contact-relationship: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/patient-contact-relationship: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-patient-education-level.json ==
+INFORMATION: CodeSystem/patient-education-level: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/patient-education-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/patient-education-level: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-patient-identification-type.json ==
+ERROR: CodeSystem.where(url = 'https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-patient-identification-type.json - the canonical URL (https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-identification-type) does not match the URL (https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types)
+INFORMATION: CodeSystem/patient-identification-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/patient-identification-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/patient-identification-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+ERROR: /github/workspace/fsh-generated/resources/CodeSystem-patient-identification-type: URL Mismatch https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-identification-type vs https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types
+== fsh-generated/resources/CodeSystem-patient-profession.json ==
+INFORMATION: CodeSystem/patient-profession: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/patient-profession: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/patient-profession: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-practitioner-qualification-type.json ==
+INFORMATION: CodeSystem/practitioner-qualification-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/practitioner-qualification-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/practitioner-qualification-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-usage-context-age-type.json ==
+INFORMATION: CodeSystem/usage-context-age-type: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/usage-context-age-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/usage-context-age-type: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/Communication-Claim001Communication.json ==
+INFORMATION: Communication/Claim001Communication: Communication.payload[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[0].content.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[1].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[1].content.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[2].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[2].content.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[3].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[3].content.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[4].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: Communication/Claim001Communication: Communication.payload[4].content.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+== fsh-generated/resources/CommunicationRequest-Claim001CommunicationRequest.json ==
+INFORMATION: CommunicationRequest/Claim001CommunicationRequest: CommunicationRequest.status: Reference to experimental CodeSystem http://hl7.org/fhir/request-status|5.0.0
+INFORMATION: CommunicationRequest/Claim001CommunicationRequest: CommunicationRequest.payload[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: CommunicationRequest/Claim001CommunicationRequest: CommunicationRequest.payload[1].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: CommunicationRequest/Claim001CommunicationRequest: CommunicationRequest.payload[2].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: CommunicationRequest/Claim001CommunicationRequest: CommunicationRequest.payload[3].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: CommunicationRequest/Claim001CommunicationRequest: CommunicationRequest.payload[4].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+== fsh-generated/resources/Contract-InformalSectorContract.json ==
+INFORMATION: Contract/InformalSectorContract: Contract.status: Reference to experimental CodeSystem http://hl7.org/fhir/contract-status|5.0.0
+INFORMATION: Contract/InformalSectorContract: Contract.term[0].offer.party[0].role: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role|0.1.0
+INFORMATION: Contract/InformalSectorContract: Contract.term[0].asset[0].extension[0].extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-category|0.1.0
+INFORMATION: Contract/InformalSectorContract: Contract.term[0].asset[0].extension[0].extension[4].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-type|0.1.0
+INFORMATION: Contract/InformalSectorContract: Contract.term[0].asset[0].extension[0].extension[5].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-premium-payer|0.1.0
+== fsh-generated/resources/Coverage-JoeDoeCoverage.json ==
+INFORMATION: Coverage/JoeDoeCoverage: Coverage.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+ERROR: Coverage/JoeDoeCoverage: Coverage.beneficiary: Unable to resolve resource with reference 'joe-doe'
+== fsh-generated/resources/CoverageEligibilityRequest-JoeDoeEnquiring.json ==
+INFORMATION: CoverageEligibilityRequest/JoeDoeEnquiring: CoverageEligibilityRequest.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+ERROR: CoverageEligibilityRequest/JoeDoeEnquiring: CoverageEligibilityRequest.patient: Unable to resolve resource with reference 'joe-doe'
+== fsh-generated/resources/CoverageEligibilityResponse-JoeDoeEnquiringResponse.json ==
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+ERROR: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.patient: Unable to resolve resource with reference 'joe-doe'
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].category: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[2].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[3].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[4].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[5].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[6].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: CoverageEligibilityResponse/JoeDoeEnquiringResponse: CoverageEligibilityResponse.insurance[0].item[0].benefit[7].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+== fsh-generated/resources/Group-doe-family.json ==
+INFORMATION: Group/doe-family: Group.extension[2].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-type|0.1.0
+INFORMATION: Group/doe-family: Group.extension[3].extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/group-confirmation-type|0.1.0
+INFORMATION: Group/doe-family: Group.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Group/doe-family: Group.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/ImplementationGuide-openimis.fhir.r5.json ==
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[3].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[4].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[5].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[6].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[7].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[8].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[9].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[10].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[11].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[12].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[13].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[14].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[15].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[16].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/openimis.fhir.r5: ImplementationGuide.definition.parameter[22].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+WARNING: ImplementationGuide/openimis.fhir.r5: ImplementationGuide: Constraint failed: cnl-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/ImplementationGuide)
+== fsh-generated/resources/InsurancePlan-RX01.json ==
+INFORMATION: InsurancePlan/RX01: InsurancePlan.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/InsurancePlan-RX02.json ==
+INFORMATION: InsurancePlan/RX02: InsurancePlan.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Invoice-InformalSectorContributionInvoice.json ==
+WARNING: Invoice/InformalSectorContributionInvoice: Invoice.identifier[0].type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: Invoice/InformalSectorContributionInvoice: Invoice.identifier[1].type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: Invoice/InformalSectorContributionInvoice: Invoice.type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: Invoice/InformalSectorContributionInvoice: Invoice.type.coding[0]: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: Invoice/InformalSectorContributionInvoice: Invoice.lineItem[0].priceComponent[0].code.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+== fsh-generated/resources/Location-Jamu-municipality.json ==
+INFORMATION: Location/Jamu-municipality: Location.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Location-Jamula-village.json ==
+INFORMATION: Location/Jamula-village: Location.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Location-Jimara-district.json ==
+INFORMATION: Location/Jimara-district: Location.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Location-Upper-River-Region.json ==
+INFORMATION: Location/Upper-River-Region: Location.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Medication-AspirinMedication.json ==
+INFORMATION: Medication/AspirinMedication: Medication.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type|0.1.0
+INFORMATION: Medication/AspirinMedication: Medication.extension[3].extension[2].value.ofType(UsageContext).value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type|0.1.0
+INFORMATION: Medication/AspirinMedication: Medication.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Medication/AspirinMedication: Medication.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Organization-MyTradePolicyHolder.json ==
+INFORMATION: Organization/MyTradePolicyHolder: Organization.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form|0.1.0
+INFORMATION: Organization/MyTradePolicyHolder: Organization.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity|0.1.0
+INFORMATION: Organization/MyTradePolicyHolder: Organization.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Organization/MyTradePolicyHolder: Organization.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Organization-RaptaDistrictHospital.json ==
+INFORMATION: Organization/RaptaDistrictHospital: Organization.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type|0.1.0
+INFORMATION: Organization/RaptaDistrictHospital: Organization.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form|0.1.0
+INFORMATION: Organization/RaptaDistrictHospital: Organization.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Organization/RaptaDistrictHospital: Organization.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Organization-openIMIS-Implementation.json ==
+INFORMATION: Organization/openIMIS-Implementation: Organization.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Patient-jane-doe.json ==
+INFORMATION: Patient/jane-doe: Patient.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level|0.1.0
+INFORMATION: Patient/jane-doe: Patient.extension[2].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession|0.1.0
+INFORMATION: Patient/jane-doe: Patient.extension[3].extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types|0.1.0
+INFORMATION: Patient/jane-doe: Patient.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Patient-john-doe.json ==
+INFORMATION: Patient/john-doe: Patient.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level|0.1.0
+INFORMATION: Patient/john-doe: Patient.extension[2].value.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession|0.1.0
+INFORMATION: Patient/john-doe: Patient.extension[3].extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types|0.1.0
+INFORMATION: Patient/john-doe: Patient.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+== fsh-generated/resources/Practitioner-Roberts-Jeb-EO.json ==
+INFORMATION: Practitioner/Roberts-Jeb-EO: Practitioner.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Practitioner/Roberts-Jeb-EO: Practitioner.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Practitioner/Roberts-Jeb-EO: Practitioner.qualification[0].code: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+== fsh-generated/resources/Practitioner-Rushila-Dani-CA.json ==
+INFORMATION: Practitioner/Rushila-Dani-CA: Practitioner.identifier[0].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Practitioner/Rushila-Dani-CA: Practitioner.identifier[1].type: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers|0.1.0
+INFORMATION: Practitioner/Rushila-Dani-CA: Practitioner.qualification[0].code: Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+== fsh-generated/resources/StructureDefinition-activity-definition-level.json ==
+ERROR: StructureDefinition/activity-definition-level: StructureDefinition.context[0]: The element OpenIMISActivityDefinition is not valid
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/activity-definition-level'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-address-location-reference.json ==
+== fsh-generated/resources/StructureDefinition-address-municipality.json ==
+== fsh-generated/resources/StructureDefinition-claim-item-reference.json ==
+== fsh-generated/resources/StructureDefinition-communication-payload-type.json ==
+ERROR: StructureDefinition/communication-payload-type: StructureDefinition.context[2]: The element OpenIMISCommunicationRequest is not valid
+== fsh-generated/resources/StructureDefinition-contract-premium.json ==
+== fsh-generated/resources/StructureDefinition-coverage-effective-date.json ==
+== fsh-generated/resources/StructureDefinition-coverage-enroll-date.json ==
+== fsh-generated/resources/StructureDefinition-coverage-policy-status.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-policy-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-group-address.json ==
+== fsh-generated/resources/StructureDefinition-group-confirmation.json ==
+== fsh-generated/resources/StructureDefinition-group-poverty-status.json ==
+== fsh-generated/resources/StructureDefinition-group-type.json ==
+== fsh-generated/resources/StructureDefinition-insurance-plan-conversion.json ==
+== fsh-generated/resources/StructureDefinition-insurance-plan-discount.json ==
+== fsh-generated/resources/StructureDefinition-insurance-plan-max-installments.json ==
+== fsh-generated/resources/StructureDefinition-insurance-plan-period.json ==
+== fsh-generated/resources/StructureDefinition-insurance-plan-start-cycle.json ==
+== fsh-generated/resources/StructureDefinition-medication-frequency.json ==
+ERROR: StructureDefinition/medication-frequency: StructureDefinition.context[0]: The element OpenIMISMedication is not valid
+== fsh-generated/resources/StructureDefinition-medication-level.json ==
+ERROR: StructureDefinition/medication-level: StructureDefinition.context[0]: The element OpenIMISMedication is not valid
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-level'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-medication-type.json ==
+ERROR: StructureDefinition/medication-type: StructureDefinition.context[0]: The element OpenIMISMedication is not valid
+== fsh-generated/resources/StructureDefinition-medication-usage-context.json ==
+ERROR: StructureDefinition/medication-usage-context: StructureDefinition.context[0]: The element OpenIMISMedication is not valid
+== fsh-generated/resources/StructureDefinition-openimis-activity-definition.json ==
+ERROR: StructureDefinition/openimis-activity-definition: StructureDefinition.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-implements could not be found so is not allowed here
+ERROR: StructureDefinition/openimis-activity-definition: StructureDefinition.extension[0].url: No definition could be found for URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-implements'
+WARNING: StructureDefinition/openimis-activity-definition: StructureDefinition.snapshot.element[73].binding: The definition for the element 'ActivityDefinition.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-activity-definition: StructureDefinition.snapshot.element[79].binding: The definition for the element 'ActivityDefinition.subject[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/participant-resource-types' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-activity-definition: StructureDefinition.snapshot.element[125].binding: The definition for the element 'ActivityDefinition.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-activity-definition: StructureDefinition.snapshot.element[143].binding: The definition for the element 'ActivityDefinition.intent' binds to the value set 'http://hl7.org/fhir/ValueSet/request-intent|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-activity-definition: StructureDefinition.snapshot.element[144].binding: The definition for the element 'ActivityDefinition.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-activity-definition: StructureDefinition.snapshot: The slice 'UUID' on path 'ActivityDefinition.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-claim.json ==
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.snapshot.element[124].slicing.discriminator[0].type: The code 'pattern' is valid but is deprecated
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.snapshot.element[139].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category|0.1.0
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.snapshot.element[149].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category|0.1.0
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.snapshot.element[159].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category|0.1.0
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.differential.element[30].slicing.discriminator[0].type: The code 'pattern' is valid but is deprecated
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.differential.element[37].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category|0.1.0
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.differential.element[40].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category|0.1.0
+INFORMATION: StructureDefinition/openimis-claim: StructureDefinition.differential.element[43].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category|0.1.0
+WARNING: StructureDefinition/openimis-claim: StructureDefinition.differential.element[30].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead (if this is not an inherited slicing)
+WARNING: StructureDefinition/openimis-claim: StructureDefinition.snapshot.element[70].binding: The definition for the element 'Claim.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-claim: StructureDefinition.snapshot.element[124].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead (if this is not an inherited slicing)
+WARNING: StructureDefinition/openimis-claim: StructureDefinition.snapshot: The slice 'UUID' on path 'Claim.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-claim-administrator-practitioner.json ==
+INFORMATION: StructureDefinition/openimis-claim-administrator-practitioner: StructureDefinition.snapshot.element[114].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+INFORMATION: StructureDefinition/openimis-claim-administrator-practitioner: StructureDefinition.differential.element[25].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+WARNING: StructureDefinition/openimis-claim-administrator-practitioner: StructureDefinition.snapshot: The slice 'UUID' on path 'Practitioner.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-claim-administrator-practitioner-role.json ==
+INFORMATION: StructureDefinition/openimis-claim-administrator-practitioner-role: StructureDefinition.snapshot.element[73].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+INFORMATION: StructureDefinition/openimis-claim-administrator-practitioner-role: StructureDefinition.snapshot.element[80].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: StructureDefinition/openimis-claim-administrator-practitioner-role: StructureDefinition.differential.element[14].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+INFORMATION: StructureDefinition/openimis-claim-administrator-practitioner-role: StructureDefinition.differential.element[18].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: StructureDefinition/openimis-claim-administrator-practitioner-role: StructureDefinition.snapshot.element[73].pattern.ofType(CodeableConcept): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+WARNING: StructureDefinition/openimis-claim-administrator-practitioner-role: StructureDefinition.snapshot.element[74].binding: The definition for the element 'PractitionerRole.specialty' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-practice-codes' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-claim-administrator-practitioner-role: StructureDefinition.snapshot: The slice 'UUID' on path 'PractitionerRole.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner-role'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-openimis-claim-response.json ==
+WARNING: StructureDefinition/openimis-claim-response: StructureDefinition.snapshot.element[70].binding: The definition for the element 'ClaimResponse.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-claim-response: StructureDefinition.snapshot: The slice 'UUID' on path 'ClaimResponse.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-communication.json ==
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.snapshot.element[42].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.snapshot.element[63].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.snapshot.element[84].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.snapshot.element[105].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.snapshot.element[126].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.differential.element[27].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.differential.element[35].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.differential.element[39].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication: StructureDefinition.differential.element[43].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+WARNING: StructureDefinition/openimis-communication: StructureDefinition.snapshot.element[15].binding: The definition for the element 'Communication.status' binds to the value set 'http://hl7.org/fhir/ValueSet/event-status|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-communication: StructureDefinition.snapshot.element[18].binding: The definition for the element 'Communication.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-openimis-communication-request.json ==
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[23].slicing.discriminator[0].type: The code 'pattern' is valid but is deprecated
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[36].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[50].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[64].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[78].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[92].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.differential.element[13].slicing.discriminator[0].type: The code 'pattern' is valid but is deprecated
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.differential.element[19].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.differential.element[23].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.differential.element[27].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+INFORMATION: StructureDefinition/openimis-communication-request: StructureDefinition.differential.element[35].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload|0.1.0
+WARNING: StructureDefinition/openimis-communication-request: StructureDefinition.differential.element[13].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead (if this is not an inherited slicing)
+WARNING: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[15].binding: The definition for the element 'CommunicationRequest.intent' binds to the value set 'http://hl7.org/fhir/ValueSet/request-intent|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[17].binding: The definition for the element 'CommunicationRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-communication-request: StructureDefinition.snapshot.element[23].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead (if this is not an inherited slicing)
+== fsh-generated/resources/StructureDefinition-openimis-contract.json ==
+INFORMATION: StructureDefinition/openimis-contract: StructureDefinition.snapshot.element[111].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role|0.1.0
+INFORMATION: StructureDefinition/openimis-contract: StructureDefinition.snapshot.element[231].mapping[1].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/openimis-contract: StructureDefinition.differential.element[44].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role|0.1.0
+WARNING: StructureDefinition/openimis-contract: StructureDefinition.snapshot.element[52].binding: The definition for the element 'Contract.legalState' binds to the value set 'http://hl7.org/fhir/ValueSet/contract-legalstate' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-contract: StructureDefinition.snapshot.element[80].binding: The definition for the element 'Contract.contentDefinition.publicationStatus' binds to the value set 'http://hl7.org/fhir/ValueSet/contract-publicationstatus|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-contract: StructureDefinition.snapshot.element[133].binding: The definition for the element 'Contract.term.asset.relationship' binds to the value set 'http://hl7.org/fhir/ValueSet/consent-content-class' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-openimis-coverage.json ==
+WARNING: StructureDefinition/openimis-coverage: StructureDefinition.snapshot: The slice 'UUID' on path 'Coverage.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-coverage-eligibility-request.json ==
+WARNING: StructureDefinition/openimis-coverage-eligibility-request: StructureDefinition.snapshot.element[49].binding: The definition for the element 'CoverageEligibilityRequest.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|5.0.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-openimis-coverage-eligibility-response.json ==
+INFORMATION: StructureDefinition/openimis-coverage-eligibility-response: StructureDefinition.snapshot.element[182].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: StructureDefinition/openimis-coverage-eligibility-response: StructureDefinition.snapshot.element[189].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: StructureDefinition/openimis-coverage-eligibility-response: StructureDefinition.differential.element[54].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+INFORMATION: StructureDefinition/openimis-coverage-eligibility-response: StructureDefinition.differential.element[57].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-benefit-type|0.1.0
+WARNING: StructureDefinition/openimis-coverage-eligibility-response: StructureDefinition.snapshot.element[49].binding: The definition for the element 'CoverageEligibilityResponse.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|5.0.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-openimis-enrolment-officer-practitioner.json ==
+INFORMATION: StructureDefinition/openimis-enrolment-officer-practitioner: StructureDefinition.snapshot.element[127].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+INFORMATION: StructureDefinition/openimis-enrolment-officer-practitioner: StructureDefinition.differential.element[34].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+WARNING: StructureDefinition/openimis-enrolment-officer-practitioner: StructureDefinition.snapshot: The slice 'UUID' on path 'Practitioner.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-enrolment-officer-practitioner-role.json ==
+INFORMATION: StructureDefinition/openimis-enrolment-officer-practitioner-role: StructureDefinition.snapshot.element[78].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+INFORMATION: StructureDefinition/openimis-enrolment-officer-practitioner-role: StructureDefinition.snapshot.element[85].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: StructureDefinition/openimis-enrolment-officer-practitioner-role: StructureDefinition.differential.element[17].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/practitioner-qualification-type|0.1.0
+INFORMATION: StructureDefinition/openimis-enrolment-officer-practitioner-role: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: StructureDefinition/openimis-enrolment-officer-practitioner-role: StructureDefinition.snapshot.element[78].pattern.ofType(CodeableConcept): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+WARNING: StructureDefinition/openimis-enrolment-officer-practitioner-role: StructureDefinition.snapshot.element[79].binding: The definition for the element 'PractitionerRole.specialty' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-practice-codes' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-enrolment-officer-practitioner-role: StructureDefinition.snapshot: The slice 'UUID' on path 'PractitionerRole.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner-role'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-openimis-group.json ==
+WARNING: StructureDefinition/openimis-group: StructureDefinition.snapshot: The slice 'UUID' on path 'Group.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-health-facility-organization.json ==
+INFORMATION: StructureDefinition/openimis-health-facility-organization: StructureDefinition.snapshot.element[91].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: StructureDefinition/openimis-health-facility-organization: StructureDefinition.differential.element[19].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+WARNING: StructureDefinition/openimis-health-facility-organization: StructureDefinition.snapshot: The slice 'UUID' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-insurance-organization.json ==
+INFORMATION: StructureDefinition/openimis-insurance-organization: StructureDefinition.snapshot.element[48].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: StructureDefinition/openimis-insurance-organization: StructureDefinition.differential.element[10].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+== fsh-generated/resources/StructureDefinition-openimis-insurance-plan.json ==
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[119].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[127]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[143].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[151]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[175].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[183]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[194].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[202]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[213].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[221]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[232].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[240]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[251].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[259]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[270].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[278]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[289].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[297]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[42].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[43]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[50].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[51]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[62].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[63]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[66].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[67]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[70].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[71]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[74].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[75]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[78].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[79]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[82].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[83]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[86].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type|0.1.0
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.differential.element[87]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition: The definition builds on 'http://hl7.org/fhir/StructureDefinition/InsurancePlan' which is experimental, but this definition is not labeled as experimental
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot.element[319].binding: The definition for the element 'InsurancePlan.plan.specificCost.benefit.cost.applicability' binds to the value set 'http://hl7.org/fhir/ValueSet/insuranceplan-applicability|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-insurance-plan: StructureDefinition.snapshot: The slice 'UUID' on path 'InsurancePlan.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-invoice-bill.json ==
+WARNING: StructureDefinition/openimis-invoice-bill: StructureDefinition: The definition builds on 'http://hl7.org/fhir/StructureDefinition/Invoice' which is experimental, but this definition is not labeled as experimental
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-bill'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-openimis-invoice-invoice.json ==
+WARNING: StructureDefinition/openimis-invoice-invoice: StructureDefinition: The definition builds on 'http://hl7.org/fhir/StructureDefinition/Invoice' which is experimental, but this definition is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-openimis-location.json ==
+WARNING: StructureDefinition/openimis-location: StructureDefinition.snapshot: The slice 'UUID' on path 'Location.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-medication.json ==
+INFORMATION: StructureDefinition/openimis-medication: StructureDefinition.snapshot.element[16].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-level|0.1.0
+INFORMATION: StructureDefinition/openimis-medication: StructureDefinition.differential.element[8].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-level|0.1.0
+WARNING: StructureDefinition/openimis-medication: StructureDefinition.snapshot.element[93].binding: The definition for the element 'Medication.ingredient.strength[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/medication-ingredientstrength' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/openimis-medication: StructureDefinition.snapshot: The slice 'UUID' on path 'Medication.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-patient.json ==
+INFORMATION: StructureDefinition.snapshot.element[114]: The slice definition for Patient.address has a maximum of 1 but the slices add up to a maximum of 2. Check that this is what is intended
+INFORMATION: StructureDefinition.snapshot.element[161]: The slice definition for Patient.photo has a maximum of 1 but the slices add up to a maximum of 2. Check that this is what is intended
+WARNING: StructureDefinition/openimis-patient: StructureDefinition.snapshot: The slice 'UUID' on path 'Patient.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/openimis-patient: StructureDefinition.snapshot: The slice 'InsureeAddress' on path 'Patient.address' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/openimis-patient: StructureDefinition.snapshot: The slice 'URL' on path 'Patient.photo' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/openimis-patient: StructureDefinition.snapshot: The slice 'Data' on path 'Patient.photo' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-payment-notice.json ==
+WARNING: StructureDefinition/openimis-payment-notice: StructureDefinition.snapshot.element[29].binding: The definition for the element 'PaymentNotice.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-payment-notice'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-openimis-policy-holder-organization.json ==
+INFORMATION: StructureDefinition/openimis-policy-holder-organization: StructureDefinition.snapshot.element[90].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: StructureDefinition/openimis-policy-holder-organization: StructureDefinition.differential.element[18].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+WARNING: StructureDefinition/openimis-policy-holder-organization: StructureDefinition.snapshot: The slice 'UUID' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/openimis-policy-holder-organization: StructureDefinition.snapshot: The slice 'email' on path 'Organization.contact.telecom' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/openimis-policy-holder-organization: StructureDefinition.snapshot: The slice 'phone' on path 'Organization.contact.telecom' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/openimis-policy-holder-organization: StructureDefinition.snapshot: The slice 'fax' on path 'Organization.contact.telecom' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+== fsh-generated/resources/StructureDefinition-openimis-subscription.json ==
+== fsh-generated/resources/StructureDefinition-organization-hf-care-type.json ==
+ERROR: StructureDefinition/organization-hf-care-type: StructureDefinition.context[0]: The element OpenIMISHealthFacilityOrganization is not valid
+== fsh-generated/resources/StructureDefinition-organization-hf-legal-form.json ==
+ERROR: StructureDefinition/organization-hf-legal-form: StructureDefinition.context[0]: The element OpenIMISHealthFacilityOrganization is not valid
+== fsh-generated/resources/StructureDefinition-organization-hf-level.json ==
+ERROR: StructureDefinition/organization-hf-level: StructureDefinition.context[0]: The element OpenIMISHealthFacilityOrganization is not valid
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-level'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-organization-ph-activity.json ==
+ERROR: StructureDefinition/organization-ph-activity: StructureDefinition.context[0]: The element OpenIMISPolicyHolderOrganization is not valid
+== fsh-generated/resources/StructureDefinition-organization-ph-legal-form.json ==
+ERROR: StructureDefinition/organization-ph-legal-form: StructureDefinition.context[0]: The element OpenIMISPolicyHolderOrganization is not valid
+== fsh-generated/resources/StructureDefinition-patient-card-issued.json ==
+== fsh-generated/resources/StructureDefinition-patient-education-level.json ==
+== fsh-generated/resources/StructureDefinition-patient-group-reference.json ==
+== fsh-generated/resources/StructureDefinition-patient-identification.json ==
+== fsh-generated/resources/StructureDefinition-patient-is-head.json ==
+== fsh-generated/resources/StructureDefinition-patient-profession.json ==
+== fsh-generated/resources/StructureDefinition-patient-vulnerability-status.json ==
+== fsh-generated/resources/StructureDefinition-practitioner-role-substitution-reference.json ==
+ERROR: StructureDefinition/practitioner-role-substitution-reference: StructureDefinition.context[0]: The element OpenIMISEnrolmentOfficerPractitioner is not valid
+WARNING: StructureDefinition.where(url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/practitioner-role-substitution-reference'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-unit-price.json ==
+ERROR: StructureDefinition/unit-price: StructureDefinition.context[0]: The element OpenIMISMedication is not valid
+ERROR: StructureDefinition/unit-price: StructureDefinition.context[1]: The element OpenIMISActivityDefinition is not valid
+ERROR: StructureDefinition/unit-price: StructureDefinition.context[2]: The element OpenIMISInvoice is not valid
+== fsh-generated/resources/Subscription-ContributionInvoiceSubscription.json ==
+== fsh-generated/resources/ValueSet-activity-definition-level.json ==
+WARNING: ValueSet/activity-definition-level: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-activity-definition-service-type.json ==
+WARNING: ValueSet/activity-definition-service-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-activity-definition-usage-context-type.json ==
+WARNING: ValueSet/activity-definition-usage-context-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-activity-definition-usage-context-venue-type.json ==
+WARNING: ValueSet/activity-definition-usage-context-venue-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-activity-definition-usage-context-workflow-type.json ==
+WARNING: ValueSet/activity-definition-usage-context-workflow-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-bill-charge-item.json ==
+WARNING: ValueSet/bill-charge-item: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-bill-type.json ==
+WARNING: ValueSet/bill-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-claim-item-category.json ==
+WARNING: ValueSet/claim-item-category: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-claim-rejection-reasons.json ==
+WARNING: ValueSet/claim-rejection-reasons: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-claim-status.json ==
+WARNING: ValueSet/claim-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-claim-supporting-info-category.json ==
+WARNING: ValueSet/claim-supporting-info-category: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-claim-visit-type.json ==
+WARNING: ValueSet/claim-visit-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-communication-request-status.json ==
+WARNING: ValueSet/communication-request-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-contract-premium-category.json ==
+WARNING: ValueSet/contract-premium-category: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-contract-premium-payer.json ==
+WARNING: ValueSet/contract-premium-payer: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-contract-premium-type.json ==
+WARNING: ValueSet/contract-premium-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-contract-resource-party-role.json ==
+WARNING: ValueSet/contract-resource-party-role: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-contract-scope.json ==
+WARNING: ValueSet/contract-scope: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-contract-status-codes.json ==
+WARNING: ValueSet/contract-status-codes: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-coverage-item-benefit-type.json ==
+WARNING: ValueSet/coverage-item-benefit-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-coverage-item-benefit-type-amount-left.json ==
+WARNING: ValueSet/coverage-item-benefit-type-amount-left: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-coverage-item-benefit-type-total-left.json ==
+WARNING: ValueSet/coverage-item-benefit-type-total-left: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-coverage-item-category.json ==
+WARNING: ValueSet/coverage-item-category: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-coverage-item-category-item-service.json ==
+WARNING: ValueSet/coverage-item-category-item-service: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-coverage-status.json ==
+WARNING: ValueSet/coverage-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-diagnosis-ICD10-level1.json ==
+WARNING: ValueSet/diagnosis-ICD10-level1: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+INFORMATION: ValueSet.where(id = 'diagnosis-ICD10-level1'): The value set expansion is too large, and only a subset has been displayed
+== fsh-generated/resources/ValueSet-feedback-payload.json ==
+WARNING: ValueSet/feedback-payload: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-feedback-status.json ==
+WARNING: ValueSet/feedback-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-group-confirmation-type.json ==
+WARNING: ValueSet/group-confirmation-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-group-type.json ==
+WARNING: ValueSet/group-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-insurance-plan-coverage-benefit-limit.json ==
+WARNING: ValueSet/insurance-plan-coverage-benefit-limit: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-insurance-plan-coverage-type.json ==
+INFORMATION: ValueSet/insurance-plan-coverage-type: ValueSet.compose.include[0]: The value set references CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' which has status 'fragment'
+WARNING: ValueSet/insurance-plan-coverage-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-insurance-plan-discount-kind.json ==
+WARNING: ValueSet/insurance-plan-discount-kind: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.title is mandatory, but it is not present
+WARNING: ValueSet/insurance-plan-discount-kind: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: ValueSet/insurance-plan-discount-kind: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.description is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-insurance-plan-general-cost-type.json ==
+WARNING: ValueSet/insurance-plan-general-cost-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-insurance-plan-period-kind.json ==
+WARNING: ValueSet/insurance-plan-period-kind: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.title is mandatory, but it is not present
+WARNING: ValueSet/insurance-plan-period-kind: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: ValueSet/insurance-plan-period-kind: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.description is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-insurance-plan-publication-status.json ==
+WARNING: ValueSet/insurance-plan-publication-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-invoice-charge-item.json ==
+WARNING: ValueSet/invoice-charge-item: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-invoice-price-component-type.json ==
+WARNING: ValueSet/invoice-price-component-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-invoice-status.json ==
+WARNING: ValueSet/invoice-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-invoice-type.json ==
+WARNING: ValueSet/invoice-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-location-type.json ==
+WARNING: ValueSet/location-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-medication-item-type.json ==
+WARNING: ValueSet/medication-item-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-medication-level.json ==
+WARNING: ValueSet/medication-level: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-openimis-identifiers.json ==
+WARNING: ValueSet/openimis-identifiers: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-organization-hf-care-type.json ==
+WARNING: ValueSet/organization-hf-care-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-organization-hf-legal-form.json ==
+WARNING: ValueSet/organization-hf-legal-form: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-organization-hf-level.json ==
+WARNING: ValueSet/organization-hf-level: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-organization-ph-activity.json ==
+WARNING: ValueSet/organization-ph-activity: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-organization-ph-legal-form.json ==
+WARNING: ValueSet/organization-ph-legal-form: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-patient-contact-relationship.json ==
+WARNING: ValueSet/patient-contact-relationship: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-patient-education-level.json ==
+WARNING: ValueSet/patient-education-level: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-patient-identification-type.json ==
+WARNING: ValueSet/patient-identification-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-patient-marital-status.json ==
+WARNING: ValueSet/patient-marital-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-patient-profession.json ==
+WARNING: ValueSet/patient-profession: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-practitioner-qualification-type.json ==
+WARNING: ValueSet/practitioner-qualification-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-usage-context-age-type.json ==
+WARNING: ValueSet/usage-context-age-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-usage-context-gender-type.json ==
+WARNING: ValueSet/usage-context-gender-type: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present

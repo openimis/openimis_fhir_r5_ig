@@ -1,0 +1,53 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "claim-visit-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem claim-visit-type</b></p><a name=\"claim-visit-type\"> </a><a name=\"hcclaim-visit-type\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-visit-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">E<a name=\"claim-visit-type-E\"> </a></td><td>Emergency</td></tr><tr><td style=\"white-space:nowrap\">R<a name=\"claim-visit-type-R\"> </a></td><td>Referrals</td></tr><tr><td style=\"white-space:nowrap\">O<a name=\"claim-visit-type-O\"> </a></td><td>Other</td></tr></table></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-visit-type",
+  "version" : "0.1.0",
+  "name" : "ClaimVisitTypeCS",
+  "title" : "Visit Type (Claim)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the visit type of the Claim. \nValues limited by openIMIS.",
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "E",
+    "display" : "Emergency"
+  },
+  {
+    "code" : "R",
+    "display" : "Referrals"
+  },
+  {
+    "code" : "O",
+    "display" : "Other"
+  }]
+}

@@ -1,0 +1,100 @@
+{
+  "resourceType" : "Patient",
+  "id" : "jane-doe",
+  "meta" : {
+    "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient jane-doe</b></p><a name=\"jane-doe\"> </a><a name=\"hcjane-doe\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-patient.html\">openIMIS Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}\">Married</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">5 Tsoka Jamula Ultha (home)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Specifies the Patient/Insuree's education level\"><a href=\"StructureDefinition-patient-education-level.html\">Education Level (Patient)</a></td><td colspan=\"3\"><span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level 4}\">University</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Whether a card was issued to the Patient/Insuree during enrolment.\"><a href=\"StructureDefinition-patient-card-issued.html\">Card Issued (Patient)</a></td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Specifies the Patient/Insuree official identification and the type of identification document.\">Identification (Patient):</td><td colspan=\"3\"><ul><li>number: NationaID2</li><li>type: <span title=\"Codes:{https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types N}\">National ID</span></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Specifies the Patient/Insuree's profession\"><a href=\"StructureDefinition-patient-profession.html\">Profession (Patient)</a></td><td colspan=\"3\"><span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession 3}\">Self Employee</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Whether the Patient/Insuree is the Head of the Family.\"><a href=\"StructureDefinition-patient-is-head.html\">IsHead (Patient)</a></td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The reference to the Group/Family the Patient/Insuree is part of.\"><a href=\"StructureDefinition-patient-group-reference.html\">Group Reference (Patient)</a></td><td colspan=\"3\"><a href=\"Group-doe-family.html\">Group Doe Jane</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-is-head",
+    "valueBoolean" : true
+  },
+  {
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-education-level",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-education-level",
+        "code" : "4",
+        "display" : "University"
+      }]
+    }
+  },
+  {
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-profession",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/patient-profession",
+        "code" : "3",
+        "display" : "Self Employee"
+      }]
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "number",
+      "valueString" : "NationaID2"
+    },
+    {
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types",
+          "code" : "N",
+          "display" : "National ID"
+        }]
+      }
+    }],
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-identification"
+  },
+  {
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-card-issued",
+    "valueBoolean" : true
+  },
+  {
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/patient-group-reference",
+    "valueReference" : {
+      "reference" : "Group/doe-family"
+    }
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers",
+        "code" : "Code"
+      }]
+    },
+    "value" : "123456788"
+  }],
+  "name" : [{
+    "family" : "Doe",
+    "given" : ["Jane"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1964-05-15",
+  "address" : [{
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-municipality",
+      "valueString" : "Jamu"
+    },
+    {
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference",
+      "valueReference" : {
+        "reference" : "Location/Jamula-village"
+      }
+    }],
+    "use" : "home",
+    "line" : ["5 Tsoka"],
+    "city" : "Jamula",
+    "district" : "Rapta",
+    "state" : "Ultha"
+  }],
+  "maritalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code" : "M"
+    }]
+  }
+}

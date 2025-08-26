@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="contract-resource-party-role"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet contract-resource-party-role</b></p><a name="contract-resource-party-role"> </a><a name="hccontract-resource-party-role"> </a><ul><li>Include all codes defined in <a href="CodeSystem-contract-resource-party-role.html"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role</code></a></li></ul></div>
+  </text>
+  <url value="https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/contract-resource-party-role"/>
+  <version value="0.1.0"/>
+  <name value="ContractResourcePartyRoleVS"/>
+  <title value="Resource Party Role (Contract)"/>
+  <status value="draft"/>
+  <date value="2025-08-26T15:39:34+00:00"/>
+  <publisher value="openIMIS Initiative"/>
+  <contact>
+    <name value="openIMIS Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.openimis.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Dragos Dobre"/>
+    <telecom>
+      <system value="email"/>
+      <value value="dragos.dobre@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Hiren Soni"/>
+    <telecom>
+      <system value="email"/>
+      <value value="hiren.soni@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Indicates the participant engagement type for the Contract term."/>
+  <compose>
+    <include>
+      <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/contract-resource-party-role"/>
+    </include>
+  </compose>
+</ValueSet>

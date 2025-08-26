@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Subscription/ContributionInvoiceSubscription> a fhir:Subscription ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ContributionInvoiceSubscription"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Subscription ContributionInvoiceSubscription</b></p><a name=\"ContributionInvoiceSubscription\"> </a><a name=\"hcContributionInvoiceSubscription\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-subscription.html\">openIMIS Subscription</a></p></div><p><b>status</b>: Requested</p><p><b>topic</b>: <code>http://example.org/fhir/SubscriptionTopic/invoice-contributions</code></p><p><b>reason</b>: Accounting system integration</p><p><b>channelType</b>: <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-subscription-channel-type.html#subscription-channel-type-rest-hook\">SubscriptionChannel Type Codes rest-hook</a>: REST Hook</p><p><b>endpoint</b>: <a href=\"http://example.org/webhook/openimis-contributions\">http://example.org/webhook/openimis-contributions</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "requested"] ; # 
+  fhir:topic [
+     fhir:v "http://example.org/fhir/SubscriptionTopic/invoice-contributions"^^xsd:anyURI ;
+     fhir:link <http://example.org/fhir/SubscriptionTopic/invoice-contributions>
+  ] ; # 
+  fhir:reason [ fhir:v "Accounting system integration"] ; # 
+  fhir:channelType [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/subscription-channel-type"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "rest-hook" ] ;
+     fhir:display [ fhir:v "REST Hook" ]
+  ] ; # 
+  fhir:endpoint [ fhir:v "http://example.org/webhook/openimis-contributions"^^xsd:anyURI] . # 
+
+# -------------------------------------------------------------------------------------
+

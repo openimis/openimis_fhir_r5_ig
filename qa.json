@@ -1,0 +1,19 @@
+{
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ImplementationGuide/openimis.fhir.r5",
+  "name" : "openIMISFHIRR5",
+  "title" : "openIMIS FHIR R5 Implementation Guide",
+  "description" : "This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems.",
+  "status" : "draft",
+  "package-id" : "openimis.fhir.r5",
+  "ig-ver" : "0.1.0",
+  "date" : "Tue, 26 Aug, 2025 15:40:19 +0000",
+  "dateISO8601" : "2025-08-26T15:40:19+00:00",
+  "errs" : 29,
+  "warnings" : 241,
+  "hints" : 219,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2099983032
+}

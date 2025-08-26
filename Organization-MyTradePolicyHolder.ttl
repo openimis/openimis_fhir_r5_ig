@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Organization/MyTradePolicyHolder> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MyTradePolicyHolder"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-policy-holder-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization MyTradePolicyHolder</b></p><a name=\"MyTradePolicyHolder\"> </a><a name=\"hcMyTradePolicyHolder\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-policy-holder-organization.html\">openIMIS Policy Holder Organization</a></p></div><p><b>Legal Forms (Organization)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form 1}\">Personal Company</span></p><p><b>Activity (Organization)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity 2}\">Industry</span></p><p><b>identifier</b>: Unique code/1234, UUID unique identifier/4c87928a-cf9c-4f4b-aeeb-61041c84547f</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type bus}\">Non-Healthcare Business or Corporation</span></p><p><b>name</b>: My Trade</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td style=\"display: none\">*</td><td>John Doe</td><td><a href=\"mailto:contact@mytrade.org\">contact@mytrade.org</a>, ph: 0102030405, fax: 0102030450</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-legal-form"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-legal-form"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "Personal Company" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-ph-activity"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-ph-activity"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "2" ] ;
+         fhir:display [ fhir:v "Industry" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "1234" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "4c87928a-cf9c-4f4b-aeeb-61041c84547f" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "bus" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "My Trade"] ; # 
+  fhir:contact ( [
+     fhir:name ( [
+       fhir:text [ fhir:v "John Doe" ]
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "contact@mytrade.org" ]
+     ] [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "0102030405" ]
+     ] [
+       fhir:system [ fhir:v "fax" ] ;
+       fhir:value [ fhir:v "0102030450" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

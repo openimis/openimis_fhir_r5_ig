@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "medication-level",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medication-level</b></p><a name=\"medication-level\"> </a><a name=\"hcmedication-level\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-medication-level.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-level</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/medication-level",
+  "version" : "0.1.0",
+  "name" : "MedicationLevelVS",
+  "title" : "Level (Medication)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the Level for a Medication. Values defined by openIMIS. Can not be extended.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-level"
+    }]
+  }
+}

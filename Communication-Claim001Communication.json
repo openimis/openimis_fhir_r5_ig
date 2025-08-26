@@ -1,0 +1,103 @@
+{
+  "resourceType" : "Communication",
+  "id" : "Claim001Communication",
+  "meta" : {
+    "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication Claim001Communication</b></p><a name=\"Claim001Communication\"> </a><a name=\"hcClaim001Communication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-communication.html\">openIMIS Communication</a></p></div><p><b>status</b>: Completed</p><p><b>subject</b>: <a href=\"Patient-john-doe.html\">John Doe  Male, DoB: 1962-02-05 ( Unique code)</a></p><p><b>about</b>: <a href=\"Claim-Claim001.html\">Claim: identifier = Unique code; status = active; type = Other; use = claim; billablePeriod = 2021-09-15 --&gt; 2021-09-15; created = 2021-09-16; priority = Normal</a></p><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload CareRendered}\">Care Rendered? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload CareRendered}\">Care Rendered? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload PaymentAsked}\">Payment Asked? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload PaymentAsked}\">Payment Asked? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugPrescribed}\">Drug Prescribed? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugPrescribed}\">Drug Prescribed? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugReceived}\">Drug Received? (yes|no)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload DrugReceived}\">Drug Received? (yes|no)</span></p></blockquote><blockquote><p><b>payload</b></p><p><b>Payload Type (CommunicationRequest | Communication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload Asessment}\">Asessment? (0|1|2|3|4|5)</span></p><p><b>content</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload Asessment}\">Asessment? (0|1|2|3|4|5)</span></p></blockquote></div>"
+  },
+  "status" : "completed",
+  "subject" : {
+    "reference" : "Patient/john-doe"
+  },
+  "about" : [{
+    "reference" : "Claim/Claim001"
+  }],
+  "payload" : [{
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "CareRendered"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+        "code" : "CareRendered"
+      }]
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "PaymentAsked"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+        "code" : "PaymentAsked"
+      }]
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "DrugPrescribed"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+        "code" : "DrugPrescribed"
+      }]
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "DrugReceived"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+        "code" : "DrugReceived"
+      }]
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+          "code" : "Asessment"
+        }]
+      }
+    }],
+    "contentCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
+        "code" : "Asessment"
+      }]
+    }
+  }]
+}

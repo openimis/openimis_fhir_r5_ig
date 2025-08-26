@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="RaptaDistrictHospital"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization RaptaDistrictHospital</b></p><a name="RaptaDistrictHospital"> </a><a name="hcRaptaDistrictHospital"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-health-facility-organization.html">openIMIS Health Facility Organization</a></p></div><p><b>Health Facility Care Type (Organization)</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type B}">Both</span></p><p><b>Legal Forms (Organization)</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form D}">District organization</span></p><p><b>identifier</b>: Unique code/RAHOS001, UUID unique identifier/D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span></p><p><b>name</b>: Rapta District Hospital</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Purpose</b></td><td><b>Name</b></td><td><b>Address</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type PAYOR}">Payor</span></td><td>Rapta District Hospital Contact</td><td>Ultha </td></tr></table></div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type"/>
+        <code value="B"/>
+        <display value="Both"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-legal-form">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form"/>
+        <code value="D"/>
+        <display value="District organization"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="Code"/>
+      </coding>
+    </type>
+    <value value="RAHOS001"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="UUID"/>
+      </coding>
+    </type>
+    <value value="D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+    </coding>
+  </type>
+  <name value="Rapta District Hospital"/>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+        <code value="PAYOR"/>
+      </coding>
+    </purpose>
+    <name>
+      <text value="Rapta District Hospital Contact"/>
+    </name>
+    <address>
+      <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference">
+        <valueReference>
+          <reference value="Location/Jimara-district"/>
+        </valueReference>
+      </extension>
+      <type value="physical"/>
+      <district value="Rapta"/>
+      <state value="Ultha"/>
+    </address>
+  </contact>
+</Organization>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="bill-charge-item"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem bill-charge-item</b></p><a name="bill-charge-item"> </a><a name="hcbill-charge-item"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-charge-item</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">claim<a name="bill-charge-item-claim"> </a></td><td>Claim</td><td>Fee-for-service or Capitation amount</td></tr><tr><td style="white-space:nowrap">commission<a name="bill-charge-item-commission"> </a></td><td>Commission</td><td>Commission amount</td></tr><tr><td style="white-space:nowrap">fees<a name="bill-charge-item-fees"> </a></td><td>Fees</td><td>Fees amount</td></tr></table></div>
+  </text>
+  <url value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/bill-charge-item"/>
+  <version value="0.1.0"/>
+  <name value="BillChargeItemCS"/>
+  <title value="ChargeItem (Bill Invoice)"/>
+  <status value="draft"/>
+  <date value="2025-08-26T15:39:34+00:00"/>
+  <publisher value="openIMIS Initiative"/>
+  <contact>
+    <name value="openIMIS Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.openimis.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Dragos Dobre"/>
+    <telecom>
+      <system value="email"/>
+      <value value="dragos.dobre@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Hiren Soni"/>
+    <telecom>
+      <system value="email"/>
+      <value value="hiren.soni@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Indicates the ChargeItem for a lineItem from a Bill. Values defined by openIMIS. Can not be extended."/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="claim"/>
+    <display value="Claim"/>
+    <definition value="Fee-for-service or Capitation amount"/>
+  </concept>
+  <concept>
+    <code value="commission"/>
+    <display value="Commission"/>
+    <definition value="Commission amount"/>
+  </concept>
+  <concept>
+    <code value="fees"/>
+    <display value="Fees"/>
+    <definition value="Fees amount"/>
+  </concept>
+</CodeSystem>

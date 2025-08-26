@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="patient-identification-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem patient-identification-type</b></p><a name="patient-identification-type"> </a><a name="hcpatient-identification-type"> </a><p>This  code system <code>https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">D<a name="patient-identification-type-D"> </a></td><td>Driver's License</td></tr><tr><td style="white-space:nowrap">N<a name="patient-identification-type-N"> </a></td><td>National ID</td></tr><tr><td style="white-space:nowrap">P<a name="patient-identification-type-P"> </a></td><td>Passport</td></tr><tr><td style="white-space:nowrap">V<a name="patient-identification-type-V"> </a></td><td>Voter Card</td></tr></table></div>
+  </text>
+  <url value="https://https://github.com/openimis/openimis_fhir_r5_ig.io/openimis_fhir_r5_ig/CodeSystem-patient-identification-types"/>
+  <version value="0.1.0"/>
+  <name value="PatientIdentificationTypeCS"/>
+  <title value="Identification Type (Patient)"/>
+  <status value="draft"/>
+  <date value="2025-08-26T15:39:34+00:00"/>
+  <publisher value="openIMIS Initiative"/>
+  <contact>
+    <name value="openIMIS Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.openimis.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Dragos Dobre"/>
+    <telecom>
+      <system value="email"/>
+      <value value="dragos.dobre@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Hiren Soni"/>
+    <telecom>
+      <system value="email"/>
+      <value value="hiren.soni@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Indicates the type of document the Patient used to identify himself. Values defined by openIMIS. Can be extended."/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="D"/>
+    <display value="Driver's License"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="National ID"/>
+  </concept>
+  <concept>
+    <code value="P"/>
+    <display value="Passport"/>
+  </concept>
+  <concept>
+    <code value="V"/>
+    <display value="Voter Card"/>
+  </concept>
+</CodeSystem>

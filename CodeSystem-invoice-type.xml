@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="invoice-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem invoice-type</b></p><a name="invoice-type"> </a><a name="hcinvoice-type"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">contribution<a name="invoice-type-contribution"> </a></td><td>Contribution</td><td>To pay the contribution for a Policy under the Informal Sector coverage.</td></tr><tr><td style="white-space:nowrap">contract<a name="invoice-type-contract"> </a></td><td>Contract</td><td>To pay the contributions under the Formal Sector coverage.</td></tr><tr><td style="white-space:nowrap">funding<a name="invoice-type-funding"> </a></td><td>Funding</td><td>To create a request for external funds.</td></tr></table></div>
+  </text>
+  <url value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/invoice-type"/>
+  <version value="0.1.0"/>
+  <name value="InvoiceTypeCS"/>
+  <title value="Type (Invoice)"/>
+  <status value="draft"/>
+  <date value="2025-08-26T15:39:34+00:00"/>
+  <publisher value="openIMIS Initiative"/>
+  <contact>
+    <name value="openIMIS Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.openimis.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Dragos Dobre"/>
+    <telecom>
+      <system value="email"/>
+      <value value="dragos.dobre@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Hiren Soni"/>
+    <telecom>
+      <system value="email"/>
+      <value value="hiren.soni@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Indicates the Type for an Invoice. Values defined by openIMIS. Can not be extended."/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="contribution"/>
+    <display value="Contribution"/>
+    <definition value="To pay the contribution for a Policy under the Informal Sector coverage."/>
+  </concept>
+  <concept>
+    <code value="contract"/>
+    <display value="Contract"/>
+    <definition value="To pay the contributions under the Formal Sector coverage."/>
+  </concept>
+  <concept>
+    <code value="funding"/>
+    <display value="Funding"/>
+    <definition value="To create a request for external funds."/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Medication/AspirinMedication> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "AspirinMedication"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-medication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication AspirinMedication</b></p><a name=\"AspirinMedication\"> </a><a name=\"hcAspirinMedication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-medication.html\">openIMIS Medication</a></p></div><p><b>Unit Price (Medication|ActivityDefinition)</b>: <span title=\"Euro\">€10.00</span> (EUR)</p><p><b>Medication Type (Medication)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type D}\">Drug</span></p><p><b>Frequency (Medication)</b>: Once per 0 days</p><blockquote><p><b>UsageContext (Medication)</b></p><ul><li>CareType: <span title=\"{http://terminology.hl7.org/CodeSystem/usage-context-type venue}\">Clinical Venue</span> = <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span></li><li>Gender: <span title=\"{http://terminology.hl7.org/CodeSystem/usage-context-type gender}\">Gender</span> = <span title=\"Codes:{http://hl7.org/fhir/administrative-gender male}, {http://hl7.org/fhir/administrative-gender female}\">Male</span></li><li>Age: <span title=\"{http://terminology.hl7.org/CodeSystem/usage-context-type age}\">Age Range</span> = <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type adult}, {https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type child}\">Adult</span></li></ul></blockquote><p><b>identifier</b>: Unique code/0001, UUID unique identifier/71EFB78B-64EE-4A68-BE29-87DAF566EB20</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 7947003}\">ACETYLSALICYLIC ACID (ASPIRIN) TABS 300MG</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Money ;
+       fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+       fhir:currency [ fhir:v "EUR" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-type"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/medication-item-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "D" ] ;
+         fhir:display [ fhir:v "Drug" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-frequency"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Timing ;
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "0"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "CareType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:UsageContext ;
+         fhir:code [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "venue" ] ;
+           fhir:display [ fhir:v "Clinical Venue" ]
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "AMB" ] ;
+             fhir:display [ fhir:v "ambulatory" ]
+           ] )
+         ]
+       ]
+     ] [
+       fhir:url [ fhir:v "Gender"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:UsageContext ;
+         fhir:code [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "gender" ] ;
+           fhir:display [ fhir:v "Gender" ]
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "male" ] ;
+             fhir:display [ fhir:v "Male" ]
+           ] [
+             fhir:system [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "female" ] ;
+             fhir:display [ fhir:v "Female" ]
+           ] )
+         ]
+       ]
+     ] [
+       fhir:url [ fhir:v "Age"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:UsageContext ;
+         fhir:code [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "age" ] ;
+           fhir:display [ fhir:v "Age Range" ]
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "adult" ] ;
+             fhir:display [ fhir:v "Adult" ]
+           ] [
+             fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "child" ] ;
+             fhir:display [ fhir:v "Child" ]
+           ] )
+         ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/medication-usage-context"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "0001" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "71EFB78B-64EE-4A68-BE29-87DAF566EB20" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:7947003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "7947003" ]
+     ] ) ;
+     fhir:text [ fhir:v "ACETYLSALICYLIC ACID (ASPIRIN) TABS 300MG" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<InsurancePlan xmlns="http://hl7.org/fhir">
+  <id value="RX02"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-plan"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: InsurancePlan RX02</b></p><a name="RX02"> </a><a name="hcRX02"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-openimis-insurance-plan.html">openIMIS Insurance Plan</a></p></div><p><b>Max Installments (InsurancePlan)</b>: 3</p><p><b>Cycle Start (InsurancePlan)</b>: 01-03</p><p><b>Cycle Start (InsurancePlan)</b>: 01-07</p><p><b>Cycle Start (InsurancePlan)</b>: 01-10</p><blockquote><p><b>Period (InsurancePlan)</b></p><ul><li>kind: administration</li><li>months: 1 months<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemo = 'mo')</span></li></ul></blockquote><blockquote><p><b>Period (InsurancePlan)</b></p><ul><li>kind: grace-payment</li><li>months: 1 months<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemo = 'mo')</span></li></ul></blockquote><blockquote><p><b>Period (InsurancePlan)</b></p><ul><li>kind: grace-renewal</li><li>months: 1 months<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemo = 'mo')</span></li></ul></blockquote><blockquote><p><b>Period (InsurancePlan)</b></p><ul><li>kind: grace-enrolment</li><li>months: 1 months<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemo = 'mo')</span></li></ul></blockquote><blockquote><p><b>Discount (InsurancePlan)</b></p><ul><li>kind: renewal</li><li>Percentage: 50</li><li>Period: 2 months<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemo = 'mo')</span></li></ul></blockquote><blockquote><p><b>Discount (InsurancePlan)</b></p><ul><li>kind: enrolment</li><li>Percentage: 80</li><li>Period: 2 months<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemo = 'mo')</span></li></ul></blockquote><p><b>identifier</b>: Unique code/RX02</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/insurance-plan-type medical}">Medical</span></p><p><b>name</b>: Regional fixed enrolment</p><p><b>period</b>: 2023-10-01 --&gt; 2030-12-31</p><p><b>coverageArea</b>: <a href="Location-Upper-River-Region.html">Location Upper River Region</a></p><blockquote><p><b>coverage</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/insurance-plan-type medical}">Medical</span></p><blockquote><p><b>benefit</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/insurance-plan-type medical}">Medical</span></p><blockquote><p><b>limit</b></p><p><b>value</b>: 12 months<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemo = 'mo')</span></p><p><b>code</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit period}">Period</span></p></blockquote><blockquote><p><b>limit</b></p><p><b>value</b>: 10 member<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>code</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit memberCount}">Member Count</span></p></blockquote></blockquote></blockquote><blockquote><p><b>plan</b></p><blockquote><p><b>generalCost</b></p><p><b>type</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type lumpsum}">Lumpsum</span></p><p><b>groupSize</b>: 3</p><h3>Costs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>1500</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>generalCost</b></p><p><b>type</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type premiumAdult}">Premium Adult</span></p><h3>Costs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>150</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>generalCost</b></p><p><b>type</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type premiumChild}">Premium Child</span></p><h3>Costs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>70</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>generalCost</b></p><p><b>type</b>: <span title="Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type registrationFee}">Registration Fee</span></p><h3>Costs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>200</td><td>Euro</td></tr></table></blockquote></blockquote></div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-max-installments">
+    <valueUnsignedInt value="3"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-start-cycle">
+    <valueString value="01-03"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-start-cycle">
+    <valueString value="01-07"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-start-cycle">
+    <valueString value="01-10"/>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-period">
+    <extension url="kind">
+      <valueCode value="administration"/>
+    </extension>
+    <extension url="months">
+      <valueQuantity>
+        <value value="1"/>
+        <unit value="months"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mo"/>
+      </valueQuantity>
+    </extension>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-period">
+    <extension url="kind">
+      <valueCode value="grace-payment"/>
+    </extension>
+    <extension url="months">
+      <valueQuantity>
+        <value value="1"/>
+        <unit value="months"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mo"/>
+      </valueQuantity>
+    </extension>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-period">
+    <extension url="kind">
+      <valueCode value="grace-renewal"/>
+    </extension>
+    <extension url="months">
+      <valueQuantity>
+        <value value="1"/>
+        <unit value="months"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mo"/>
+      </valueQuantity>
+    </extension>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-period">
+    <extension url="kind">
+      <valueCode value="grace-enrolment"/>
+    </extension>
+    <extension url="months">
+      <valueQuantity>
+        <value value="1"/>
+        <unit value="months"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mo"/>
+      </valueQuantity>
+    </extension>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-discount">
+    <extension url="kind">
+      <valueCode value="renewal"/>
+    </extension>
+    <extension url="Percentage">
+      <valueDecimal value="50"/>
+    </extension>
+    <extension url="Period">
+      <valueQuantity>
+        <value value="2"/>
+        <unit value="months"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mo"/>
+      </valueQuantity>
+    </extension>
+  </extension>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/insurance-plan-discount">
+    <extension url="kind">
+      <valueCode value="enrolment"/>
+    </extension>
+    <extension url="Percentage">
+      <valueDecimal value="80"/>
+    </extension>
+    <extension url="Period">
+      <valueQuantity>
+        <value value="2"/>
+        <unit value="months"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mo"/>
+      </valueQuantity>
+    </extension>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="Code"/>
+      </coding>
+    </type>
+    <value value="RX02"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/insurance-plan-type"/>
+      <code value="medical"/>
+      <display value="Medical"/>
+    </coding>
+  </type>
+  <name value="Regional fixed enrolment"/>
+  <period>
+    <start value="2023-10-01"/>
+    <end value="2030-12-31"/>
+  </period>
+  <coverageArea>
+    <reference value="Location/Upper-River-Region"/>
+  </coverageArea>
+  <coverage>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/insurance-plan-type"/>
+        <code value="medical"/>
+        <display value="Medical"/>
+      </coding>
+    </type>
+    <benefit>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/insurance-plan-type"/>
+          <code value="medical"/>
+          <display value="Medical"/>
+        </coding>
+      </type>
+      <limit>
+        <value>
+          <value value="12"/>
+          <unit value="months"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mo"/>
+        </value>
+        <code>
+          <coding>
+            <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit"/>
+            <code value="period"/>
+            <display value="Period"/>
+          </coding>
+        </code>
+      </limit>
+      <limit>
+        <value>
+          <value value="10"/>
+          <unit value="member"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="1"/>
+        </value>
+        <code>
+          <coding>
+            <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit"/>
+            <code value="memberCount"/>
+            <display value="Member Count"/>
+          </coding>
+        </code>
+      </limit>
+    </benefit>
+  </coverage>
+  <plan>
+    <generalCost>
+      <type>
+        <coding>
+          <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type"/>
+          <code value="lumpsum"/>
+          <display value="Lumpsum"/>
+        </coding>
+      </type>
+      <groupSize value="3"/>
+      <cost>
+        <value value="1500"/>
+        <currency value="EUR"/>
+      </cost>
+    </generalCost>
+    <generalCost>
+      <type>
+        <coding>
+          <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type"/>
+          <code value="premiumAdult"/>
+          <display value="Premium Adult"/>
+        </coding>
+      </type>
+      <cost>
+        <value value="150"/>
+        <currency value="EUR"/>
+      </cost>
+    </generalCost>
+    <generalCost>
+      <type>
+        <coding>
+          <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type"/>
+          <code value="premiumChild"/>
+          <display value="Premium Child"/>
+        </coding>
+      </type>
+      <cost>
+        <value value="70"/>
+        <currency value="EUR"/>
+      </cost>
+    </generalCost>
+    <generalCost>
+      <type>
+        <coding>
+          <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-general-cost-type"/>
+          <code value="registrationFee"/>
+          <display value="Registration Fee"/>
+        </coding>
+      </type>
+      <cost>
+        <value value="200"/>
+        <currency value="EUR"/>
+      </cost>
+    </generalCost>
+  </plan>
+</InsurancePlan>

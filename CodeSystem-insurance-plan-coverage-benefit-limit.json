@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "insurance-plan-coverage-benefit-limit",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem insurance-plan-coverage-benefit-limit</b></p><a name=\"insurance-plan-coverage-benefit-limit\"> </a><a name=\"hcinsurance-plan-coverage-benefit-limit\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">period<a name=\"insurance-plan-coverage-benefit-limit-period\"> </a></td><td>Period</td><td>Duration of the period in months, in which a policy with the product will be valid.</td></tr><tr><td style=\"white-space:nowrap\">memberCount<a name=\"insurance-plan-coverage-benefit-limit-memberCount\"> </a></td><td>Member Count</td><td>Maximal number of members of a household/group for the product.</td></tr></table></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/insurance-plan-coverage-benefit-limit",
+  "version" : "0.1.0",
+  "name" : "InsurancePlanCoverageBenefitLimitCS",
+  "title" : "Coverage Benefit Limit Types (InsurancePlan)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the Coverage Benefit Limit Types for an InsurancePlan. Values defined by openIMIS. Can not be extended.",
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "period",
+    "display" : "Period",
+    "definition" : "Duration of the period in months, in which a policy with the product will be valid."
+  },
+  {
+    "code" : "memberCount",
+    "display" : "Member Count",
+    "definition" : "Maximal number of members of a household/group for the product."
+  }]
+}

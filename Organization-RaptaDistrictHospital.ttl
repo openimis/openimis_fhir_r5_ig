@@ -1,0 +1,93 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/Organization/RaptaDistrictHospital> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "RaptaDistrictHospital"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization RaptaDistrictHospital</b></p><a name=\"RaptaDistrictHospital\"> </a><a name=\"hcRaptaDistrictHospital\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-health-facility-organization.html\">openIMIS Health Facility Organization</a></p></div><p><b>Health Facility Care Type (Organization)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type B}\">Both</span></p><p><b>Legal Forms (Organization)</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form D}\">District organization</span></p><p><b>identifier</b>: Unique code/RAHOS001, UUID unique identifier/D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Rapta District Hospital</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Name</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type PAYOR}\">Payor</span></td><td>Rapta District Hospital Contact</td><td>Ultha </td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-care-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "B" ] ;
+         fhir:display [ fhir:v "Both" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-legal-form"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/organization-hf-legal-form"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "D" ] ;
+         fhir:display [ fhir:v "District organization" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "RAHOS001" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "D8A25F21-F36A-4D4D-9E58-1DB8FFBE7036" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "prov" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Rapta District Hospital"] ; # 
+  fhir:contact ( [
+     fhir:purpose [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contactentity-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PAYOR" ]
+       ] )
+     ] ;
+     fhir:name ( [
+       fhir:text [ fhir:v "Rapta District Hospital Contact" ]
+     ] ) ;
+     fhir:address [
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/address-location-reference"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Reference ;
+           fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Location/Jimara-district> ;
+           fhir:reference [ fhir:v "Location/Jimara-district" ]
+         ]
+       ] ) ;
+       fhir:type [ fhir:v "physical" ] ;
+       fhir:district [ fhir:v "Rapta" ] ;
+       fhir:state [ fhir:v "Ultha" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

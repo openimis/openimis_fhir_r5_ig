@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "claim-supporting-info-category",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet claim-supporting-info-category</b></p><a name=\"claim-supporting-info-category\"> </a><a name=\"hcclaim-supporting-info-category\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-claim-supporting-info-category.html\"><code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category</code></a></li></ul></div>"
+  },
+  "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category",
+  "version" : "0.1.0",
+  "name" : "ClaimSupportingInfoCategoryVS",
+  "title" : "Category of the supporting info (Claim)",
+  "status" : "draft",
+  "date" : "2025-08-26T15:39:34+00:00",
+  "publisher" : "openIMIS Initiative",
+  "contact" : [{
+    "name" : "openIMIS Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.openimis.org"
+    }]
+  },
+  {
+    "name" : "Dragos Dobre",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "dragos.dobre@swisstph.ch",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Hiren Soni",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "hiren.soni@swisstph.ch",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Indicates the category for the supportiong info under a Claim. Values defined by openIMIS. Can not be extended.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-supporting-info-category"
+    }]
+  }
+}

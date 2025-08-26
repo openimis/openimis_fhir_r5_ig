@@ -1,0 +1,53 @@
+{
+  "resourceType" : "Coverage",
+  "id" : "JoeDoeCoverage",
+  "meta" : {
+    "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage JoeDoeCoverage</b></p><a name=\"JoeDoeCoverage\"> </a><a name=\"hcJoeDoeCoverage\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-coverage.html\">openIMIS Coverage</a></p></div><p><b>Enrollment Date (Coverage)</b>: 2021-01-28</p><p><b>Effective Date (Coverage)</b>: 2021-01-28</p><p><b>identifier</b>: UUID unique identifier/D30F70DF-D10B-43D4-BF31-5137C118AD84</p><p><b>status</b>: Active</p><p><b>kind</b>: Insurance</p><p><b>policyHolder</b>: <a href=\"Patient-jane-doe.html\">Jane Doe  Female, DoB: 1964-05-15 ( Unique code)</a></p><p><b>beneficiary</b>: <code>joe-doe</code></p><p><b>period</b>: 2021-07-01 --&gt; 2022-06-30</p><h3>Classes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/coverage-class plan}\">Plan</span></td><td>RX01</td><td>Regional fixed enrolment</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date",
+    "valueDate" : "2021-01-28"
+  },
+  {
+    "url" : "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date",
+    "valueDate" : "2021-01-28"
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers",
+        "code" : "UUID"
+      }]
+    },
+    "value" : "D30F70DF-D10B-43D4-BF31-5137C118AD84"
+  }],
+  "status" : "active",
+  "kind" : "insurance",
+  "policyHolder" : {
+    "reference" : "Patient/jane-doe"
+  },
+  "beneficiary" : {
+    "reference" : "joe-doe"
+  },
+  "period" : {
+    "start" : "2021-07-01",
+    "end" : "2022-06-30"
+  },
+  "class" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/coverage-class",
+        "code" : "plan",
+        "display" : "Plan"
+      }]
+    },
+    "value" : {
+      "value" : "RX01"
+    },
+    "name" : "Regional fixed enrolment"
+  }]
+}

@@ -1,0 +1,139 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/openimis/openimis_fhir_r5_ig/ClaimResponse/Claim001> a fhir:ClaimResponse ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Claim001"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response"^^xsd:anyURI ;
+       fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-response>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ClaimResponse Claim001</b></p><a name=\"Claim001\"> </a><a name=\"hcClaim001\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-claim-response.html\">openIMIS Claim Response</a></p></div><p><b>identifier</b>: UUID unique identifier/D30F70DF-D10B-43D4-BF31-5137C118AD83, Unique code/Code001</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-visit-type O}\">Other</span></p><p><b>use</b>: Claim</p><p><b>patient</b>: <a href=\"Patient-john-doe.html\">John Doe  Male, DoB: 1962-02-05 ( Unique code)</a></p><p><b>created</b>: 2021-09-17</p><p><b>insurer</b>: <a href=\"Organization-openIMIS-Implementation.html\">Organization openIMIS Implementation</a></p><p><b>requestor</b>: <a href=\"Practitioner-Rushila-Dani-CA.html\">Practitioner Dani Rushila </a></p><p><b>request</b>: <a href=\"Claim-Claim001.html\">Claim: identifier = Unique code; status = active; type = Other; use = claim; billablePeriod = 2021-09-15 --&gt; 2021-09-15; created = 2021-09-16; priority = Normal</a></p><p><b>outcome</b>: Partial Processing</p><blockquote><p><b>item</b></p><p><b>Item Reference (Claim)</b>: <a href=\"ActivityDefinition-GeneralConsultationService.html\">General Consultation</a></p><p><b>itemSequence</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status 4}\">Checked</span></p><p><b>reason</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons 0}\">ACCEPTED</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>40</td></tr></table></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Item Reference (Claim)</b>: <a href=\"Medication-AspirinMedication.html\">Medication Product containing aspirin (medicinal product)</a></p><p><b>itemSequence</b>: 2</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status 4}\">Checked</span></p><p><b>reason</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons 0}\">ACCEPTED</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>10</td></tr></table></blockquote></blockquote><blockquote><p><b>total</b></p><p><b>category</b>: <span title=\"Codes:{https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status 4}\">Checked</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>60</td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UUID" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "D30F70DF-D10B-43D4-BF31-5137C118AD83" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Code" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "Code001" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-visit-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "O" ] ;
+       fhir:display [ fhir:v "Other" ]
+     ] )
+  ] ; # 
+  fhir:use [ fhir:v "claim"] ; # 
+  fhir:patient [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Patient/john-doe> ;
+     fhir:reference [ fhir:v "Patient/john-doe" ]
+  ] ; # 
+  fhir:created [ fhir:v "2021-09-17"^^xsd:date] ; # 
+  fhir:insurer [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Organization/openIMIS-Implementation> ;
+     fhir:reference [ fhir:v "Organization/openIMIS-Implementation" ]
+  ] ; # 
+  fhir:requestor [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Practitioner/Rushila-Dani-CA> ;
+     fhir:reference [ fhir:v "Practitioner/Rushila-Dani-CA" ]
+  ] ; # 
+  fhir:request [
+     fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Claim/Claim001> ;
+     fhir:reference [ fhir:v "Claim/Claim001" ]
+  ] ; # 
+  fhir:outcome [ fhir:v "partial"] ; # 
+  fhir:item ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/ActivityDefinition/GeneralConsultationService> ;
+         fhir:reference [ fhir:v "ActivityDefinition/GeneralConsultationService" ]
+       ]
+     ] ) ;
+     fhir:itemSequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:adjudication ( [
+       fhir:category [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "4" ] ;
+           fhir:display [ fhir:v "Checked" ]
+         ] )
+       ] ;
+       fhir:reason [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "0" ] ;
+           fhir:display [ fhir:v "ACCEPTED" ]
+         ] )
+       ] ;
+       fhir:amount [
+         fhir:value [ fhir:v "40"^^xsd:decimal ]
+       ]
+     ] )
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://github.com/openimis/openimis_fhir_r5_ig/Medication/AspirinMedication> ;
+         fhir:reference [ fhir:v "Medication/AspirinMedication" ]
+       ]
+     ] ) ;
+     fhir:itemSequence [ fhir:v "2"^^xsd:positiveInteger ] ;
+     fhir:adjudication ( [
+       fhir:category [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "4" ] ;
+           fhir:display [ fhir:v "Checked" ]
+         ] )
+       ] ;
+       fhir:reason [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-rejection-reasons"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "0" ] ;
+           fhir:display [ fhir:v "ACCEPTED" ]
+         ] )
+       ] ;
+       fhir:amount [
+         fhir:value [ fhir:v "10"^^xsd:decimal ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:total ( [
+     fhir:category [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/claim-status"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "4" ] ;
+         fhir:display [ fhir:v "Checked" ]
+       ] )
+     ] ;
+     fhir:amount [
+       fhir:value [ fhir:v "60"^^xsd:decimal ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

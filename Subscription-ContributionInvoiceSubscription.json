@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Subscription",
+  "id" : "ContributionInvoiceSubscription",
+  "meta" : {
+    "profile" : ["https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-subscription"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Subscription ContributionInvoiceSubscription</b></p><a name=\"ContributionInvoiceSubscription\"> </a><a name=\"hcContributionInvoiceSubscription\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-openimis-subscription.html\">openIMIS Subscription</a></p></div><p><b>status</b>: Requested</p><p><b>topic</b>: <code>http://example.org/fhir/SubscriptionTopic/invoice-contributions</code></p><p><b>reason</b>: Accounting system integration</p><p><b>channelType</b>: <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-subscription-channel-type.html#subscription-channel-type-rest-hook\">SubscriptionChannel Type Codes rest-hook</a>: REST Hook</p><p><b>endpoint</b>: <a href=\"http://example.org/webhook/openimis-contributions\">http://example.org/webhook/openimis-contributions</a></p></div>"
+  },
+  "status" : "requested",
+  "topic" : "http://example.org/fhir/SubscriptionTopic/invoice-contributions",
+  "reason" : "Accounting system integration",
+  "channelType" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/subscription-channel-type",
+    "code" : "rest-hook",
+    "display" : "REST Hook"
+  },
+  "endpoint" : "http://example.org/webhook/openimis-contributions"
+}

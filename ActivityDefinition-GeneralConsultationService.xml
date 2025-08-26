@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActivityDefinition xmlns="http://hl7.org/fhir">
+  <id value="GeneralConsultationService"/>
+  <meta>
+    <profile value="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-activity-definition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+<div>
+    <table class="grid dict">
+
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">General Consultation</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">GeneralConsultationService</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">0.1.0</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row">
+                <b>
+                    
+                        
+                            Code identifier:
+                        
+                    
+                </b>
+            </th>
+            <td style="padding-left: 4px;">
+                
+                <p style="margin-bottom: 5px;">
+                    <span>A1</span>
+                </p>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <th scope="row">
+                <b>
+                    
+                        
+                            UUID identifier:
+                        
+                    
+                </b>
+            </th>
+            <td style="padding-left: 4px;">
+                
+                <p style="margin-bottom: 5px;">
+                    <span>db2c3a6c-af07-49bd-8f6a-96aa1fc2bcf9</span>
+                </p>
+                
+            </td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Date (date last changed): </b></th>
+            <td style="padding-left: 4px;">2020-01-01</td>
+        </tr>
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Publisher (steward): </b></th>
+            <td style="padding-left: 4px;">openIMIS Initiative</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Use Context: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    <tr>
+                        <th><b>code</b></th>
+                        <th><b>value</b></th>
+                    </tr>
+                    
+                        <tr>
+                            <td>venue</td>
+                            <td/>
+                        </tr>
+                    
+                        <tr>
+                            <td>gender</td>
+                            <td/>
+                        </tr>
+                    
+                        <tr>
+                            <td>age</td>
+                            <td/>
+                        </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Topic: </b></th>
+            <td style="padding-left: 4px;">P</td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+    </table>
+</div>
+</div>
+  </text>
+  <extension url="https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price">
+    <valueMoney>
+      <value value="40"/>
+      <currency value="EUR"/>
+    </valueMoney>
+  </extension>
+  <url value="https://github.com/openimis/openimis_fhir_r5_ig/ActivityDefinition/GeneralConsultationService"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="Code"/>
+      </coding>
+    </type>
+    <value value="A1"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/openimis-identifiers"/>
+        <code value="UUID"/>
+      </coding>
+    </type>
+    <value value="db2c3a6c-af07-49bd-8f6a-96aa1fc2bcf9"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="A1"/>
+  <title value="General Consultation"/>
+  <status value="active"/>
+  <date value="2020-01-01"/>
+  <publisher value="openIMIS Initiative"/>
+  <contact>
+    <name value="openIMIS Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.openimis.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Dragos Dobre"/>
+    <telecom>
+      <system value="email"/>
+      <value value="dragos.dobre@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Hiren Soni"/>
+    <telecom>
+      <system value="email"/>
+      <value value="hiren.soni@swisstph.ch"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="venue"/>
+      <display value="Clinical Venue"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="AMB"/>
+        <display value="ambulatory"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="gender"/>
+      <display value="Gender"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/administrative-gender"/>
+        <code value="male"/>
+        <display value="Male"/>
+      </coding>
+      <coding>
+        <system value="http://hl7.org/fhir/administrative-gender"/>
+        <code value="female"/>
+        <display value="Female"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="age"/>
+      <display value="Age Range"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"/>
+        <code value="adult"/>
+        <display value="Adult"/>
+      </coding>
+      <coding>
+        <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/usage-context-age-type"/>
+        <code value="child"/>
+        <display value="Child"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <topic>
+    <coding>
+      <system value="https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/activity-definition-service-type"/>
+      <code value="P"/>
+      <display value="Preventive"/>
+    </coding>
+  </topic>
+  <timingTiming>
+    <repeat>
+      <frequency value="1"/>
+      <period value="0"/>
+      <periodUnit value="d"/>
+    </repeat>
+  </timingTiming>
+</ActivityDefinition>
