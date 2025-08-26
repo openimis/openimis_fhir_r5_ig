@@ -10,10 +10,10 @@ RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A170311380
     curl -sSL https://get.rvm.io | bash -s stable && \
     /bin/bash -lc "rvm install 3.1.0 && rvm use 3.1.0 --default && gem install jekyll jekyll-asciidoc"
 
-RUN  cd /tmp && \
-     wget --quiet https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.xz && \
-     cd /usr/local && \
-     tar --strip-components 1 -xf /tmp/node-v12.16.1-linux-x64.tar.xz
+RUN cd /tmp \
+ && wget -q https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-x64.tar.xz \
+ && cd /usr/local \
+ && tar --strip-components 1 -xf /tmp/node-v20.17.0-linux-x64.tar.xz
 
 RUN useradd -d /home/publisher -m publisher
 
