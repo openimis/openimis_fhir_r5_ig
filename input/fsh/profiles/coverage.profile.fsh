@@ -70,12 +70,12 @@ Description: "Defines a Coverage for openIMIS which maps to a Policy."
 * subrogation 0..0
 * contract 0..0
 
-* extension contains CoverageDateExtension named enrollDate 1..1 
+* extension contains CoverageEnrollDateExtension named enrollDate 1..1 
 * extension[enrollDate]
   * ^short = "Enrollment Date"
   * ^definition = "Specifies the date of the enrollment."
 
-* extension contains CoverageDateExtension named effectiveDate 1..1 
+* extension contains CoverageEffectiveDateExtension named effectiveDate 1..1 
 * extension[effectiveDate]
   * ^short = "Effective Date"
   * ^definition = "Specifies the effective date from which the policy is valid."

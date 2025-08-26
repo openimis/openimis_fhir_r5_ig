@@ -2,7 +2,7 @@
 // Mapping is done throught Medical Service openIMIS entity
 Profile: OpenIMISActivityDefinition
 Parent: ActivityDefinition
-Id: openimis-activitiy-definition
+Id: openimis-activity-definition
 Title: "openIMIS ActivityDefinition"
 Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical Service."
 
@@ -65,7 +65,7 @@ Description: "Defines a ActivityDefinition for openIMIS which maps to a Medical 
   * ^short = "Usage Context per Gender"
   * ^definition = "Usage Context per Gender male and female."
 * useContext[Age]
-  * code = UsageContextTypeCS#age "Age"
+  * code = UsageContextTypeCS#age "Age Range"
   * value[x] only CodeableConcept
   * valueCodeableConcept
     * coding 1..2 

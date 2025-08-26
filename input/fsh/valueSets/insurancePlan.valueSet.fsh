@@ -23,3 +23,11 @@ Id: insurance-plan-general-cost-type
 Title: "General Cost Type (InsurancePlan)"
 Description: "Indicates the General Cost Type for an InsurancePlan. Values defined by openIMIS. Can not be extended."
 * codes from system InsurancePlanGeneralCostTypeCS
+
+ValueSet: InsurancePlanPeriodKindVS
+Id: insurance-plan-period-kind
+* include codes from system InsurancePlanPeriodKindCS
+
+ValueSet: InsurancePlanDiscountKindVS
+Id: insurance-plan-discount-kind
+* include codes from system InsurancePlanDiscountKindCS

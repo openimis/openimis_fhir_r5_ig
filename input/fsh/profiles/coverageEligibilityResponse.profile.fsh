@@ -1,5 +1,5 @@
 // This is the profile for openIMIS Claim Response
-// Mapping is done throught Claim openIMIS entity
+// Mapping is done through Claim openIMIS entity
 Profile: OpenIMISCoverageEligibilityResponse
 Parent: CoverageEligibilityResponse
 Id: openimis-coverage-eligibility-response
@@ -43,51 +43,48 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
   * inforce 0..0
   * benefitPeriod 1..1
     * start 1..1
-      * ^short = "Benefit stat day"
+      * ^short = "Benefit start day"
       * ^definition = "First day the benefit is valid (effective date)."
     * end 1..1
       * ^short = "Benefit end day"
       * ^definition = "Last day the benefit is valid (expiry date)."
-  * item 1..3
-    * category from CoverageItemCategoryVS (required)
-      * ^short = "Category"
-      * ^definition = "Items category as medical item or service."
+  * item 1..*    // allow multiple items
     * modifier 0..0
     * provider 0..0
-    
     * network 0..0
     * unit 0..0
     * term 0..0
     * authorizationRequired 0..0
     * authorizationSupporting 0..0
     * authorizationUrl 0..0
-    
-  * item ^slicing.discriminator.type = #value
-  * item ^slicing.discriminator.path = "category.coding.code"
+
+  // --- Item slicing ---
   * item ^slicing.rules = #closed
+  * item ^slicing.discriminator[0].type = #value
+  * item ^slicing.discriminator[0].path = "category.coding.code"
+  * item ^slicing.discriminator[1].type = #exists
+  * item ^slicing.discriminator[1].path = "productOrService"
   * item contains
       benefit 1..1 and
-      item 0..1 and
-      service 0..1
+      billcode 0..*
 
+  // --- Benefit slice ---
   * item[benefit]
     * ^short = "Coverage eligibility for policy"
     * ^definition = "Coverage eligibility for policy."
-    * category = CoverageItemCategoryCS#benefit "Benefit Package"
+    * category.coding.code = CoverageItemCategoryCS#benefit
     * productOrService 0..0
     * excluded 0..0
     * name 1..1 
       * ^short = "Product/Item/Service code"
       * ^definition = "Product/Item/Service code."
-    
     * description 1..1 
       * ^short = "Product/Item/Service name"
       * ^definition = "Product/Item/Service name."
-
     * benefit 0..11
       * used[x] 0..0
     * benefit ^slicing.discriminator.type = #type
-    * benefit ^slicing.discriminator.path = "allowed[x]"
+    * benefit ^slicing.discriminator.path = "allowed"
     * benefit ^slicing.rules = #closed
     * benefit contains
         total 0..6 and
@@ -103,22 +100,20 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
       * allowedMoney 
         * value 1..1
         * currency 0..1
-          
 
-  * item[item]
-    * ^short = "Coverage eligibility for item"
-    * ^definition = "Coverage eligibility for item."
-    * category = CoverageItemCategoryCS#item "Item"
+  // --- Billcode slice (covers item/service codes) ---
+  * item[billcode]
+    * ^short = "Coverage eligibility for item or service"
+    * ^definition = "Coverage eligibility for item or service with a billable code."
+    * category 0..0
     * productOrService 1..1
       * coding 0..0
       * text 1..1
-        * ^short = "Item Code"
-        * ^definition = "Item Code."
-      * ^short = "Item Code"
-      * ^definition = "Item Code."
+        * ^short = "Item/Service Code"
+        * ^definition = "Item or Service Code."
     * excluded 1..1 
-      * ^short = "Item excluded"
-      * ^definition = "Item excluded from package."
+      * ^short = "Excluded from package"
+      * ^definition = "Item or service excluded from package."
     * benefit 0..2
       * used[x] 0..0
     * benefit ^slicing.discriminator.type = #value
@@ -128,42 +123,11 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
         minDate 0..1 and
         itemLeft 0..1 
     * benefit[minDate]
-      * type = CoverageItemBenefitTypeCS#min_date_item "Mininum date"
+      * type = CoverageItemBenefitTypeCS#min_date_item "Minimum date"
       * allowed[x] only string 
     * benefit[itemLeft]
       * type = CoverageItemBenefitTypeCS#item_left "Items left"
       * allowed[x] only unsignedInt 
-
-  * item[service]
-    * ^short = "Coverage eligibility for service"
-    * ^definition = "Coverage eligibility for service."
-    * category = CoverageItemCategoryCS#service "Service"
-    * productOrService 1..1
-      * coding 0..0
-      * text 1..1
-        * ^short = "Service Code"
-        * ^definition = "Service Code."
-      * ^short = "Service Code"
-      * ^definition = "Service Code."
-    * excluded 1..1 
-      * ^short = "Service excluded"
-      * ^definition = "Service excluded from package."
-    * benefit 0..2
-    * benefit ^slicing.discriminator.type = #value
-    * benefit ^slicing.discriminator.path = "type.coding.code"
-    * benefit ^slicing.rules = #closed
-    * benefit contains
-        minDate 0..1 and
-        itemLeft 0..1 
-    * benefit[minDate]
-      * type = CoverageItemBenefitTypeCS#min_date_item "Mininum date"
-      * allowed[x] only string 
-      * used[x] 0..0
-    * benefit[itemLeft]
-      * type = CoverageItemBenefitTypeCS#item_left "Items left"
-      * allowed[x] only unsignedInt 
-      * used[x] 0..0
-
 
 * preAuthRef 0..0
 * form 0..0

@@ -82,8 +82,8 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * value[x] 1..1
   * reason 0..0
 * supportingInfo.category from ClaimSupportingInfoCategoryVS (required)
-* supportingInfo ^slicing.discriminator.type = #value
-* supportingInfo ^slicing.discriminator.path = "category.coding.code"
+* supportingInfo ^slicing.discriminator.type = #pattern
+* supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #closed
 * supportingInfo contains
     explanation 0..1 and

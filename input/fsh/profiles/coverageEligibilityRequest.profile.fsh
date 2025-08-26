@@ -66,10 +66,12 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
 * item contains
     item 0..1 and
     service 0..1
-* item[item].category = CoverageItemCategoryCS#item "Item"
+* item[item].category.coding.code = CoverageItemCategoryCS#item
+* item[item]
   * ^short = "Coverage eligibility for item"
   * ^definition = "Coverage eligibility for item."
-* item[service].category = CoverageItemCategoryCS#service "Service"
+* item[service].category.coding.code = CoverageItemCategoryCS#service
+* item[service]
   * ^short = "Coverage eligibility for service"
   * ^definition = "Coverage eligibility for service."
 

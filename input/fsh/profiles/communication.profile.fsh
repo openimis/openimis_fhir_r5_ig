@@ -42,7 +42,7 @@ Description: "Defines a Communication for openIMIS which maps to the Feedback in
   * extension contains CommunicationPayloadTypeExtension named type 1..1
 
 * payload ^slicing.discriminator.type = #value
-* payload ^slicing.discriminator.path = "extension[type].valueCodeableConcept.coding.code"
+* payload ^slicing.discriminator.path = "content.coding.code"
 * payload ^slicing.rules = #closed
 
 * payload contains
@@ -53,18 +53,28 @@ Description: "Defines a Communication for openIMIS which maps to the Feedback in
     Asessment 1..1
 
 * payload[CareRendered]
+  * content[x] only CodeableConcept  
+  * contentCodeableConcept.coding.code = #CareRendered
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#CareRendered 
 
 * payload[PaymentAsked]
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.coding.code = #PaymentAsked
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#PaymentAsked 
 
 * payload[DrugPrescribed]
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.coding.code = #DrugPrescribed
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugPrescribed 
 
 * payload[DrugReceived]
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.coding.code = #DrugReceived
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugReceived 
 
 * payload[Asessment]
+  * content[x] only CodeableConcept
+  * contentCodeableConcept.coding.code = #Asessment
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#Asessment 
 
 

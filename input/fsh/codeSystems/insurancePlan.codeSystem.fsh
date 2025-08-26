@@ -16,3 +16,18 @@ Description: "Indicates the General Cost Type for an InsurancePlan. Values defin
 * #registrationFee "Registration Fee"
 * #generalAssemblyLumpSum "General Assembly Lump Sum"
 * #generalAssemblyFee "General Assembly Fee"
+
+// Codes for the kind of period
+CodeSystem: InsurancePlanPeriodKindCS
+Id: insurance-plan-period-kind
+Title: "InsurancePlan Period Kind"
+* #administration "Administration"
+* #grace-payment "Grace (Payment)"
+* #grace-renewal "Grace (Renewal)"
+* #grace-enrolment "Grace (Enrolment)"
+
+// Codes to label the discount
+CodeSystem: InsurancePlanDiscountKindCS
+Id: insurance-plan-discount-kind
+* #renewal "Renewal discount"
+* #enrolment "Enrolment discount"

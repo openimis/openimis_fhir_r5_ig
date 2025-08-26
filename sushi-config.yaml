@@ -1,5 +1,5 @@
 id: openimis.fhir.r5
-canonical: https://openimis.github.io/openimis_fhir_r5_ig
+canonical: https://github.com/openimis/openimis_fhir_r5_ig
 name: openIMISFHIRR5
 title: "openIMIS FHIR R5 Implementation Guide"
 description: This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems.

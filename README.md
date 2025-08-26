@@ -188,7 +188,7 @@ Issues and change requests are managed on GitHub:
 
 ### Getting Help
 
-- Check the [Implementation Guide documentation](https://openimis.github.io/openimis_fhir_r5_ig)
+- Check the [Implementation Guide documentation](https://github.com/openimis/openimis_fhir_r5_ig)
 - Review [FHIR R5 specifications](http://hl7.org/fhir/R5/)
 - Contact the development team (see below)
 

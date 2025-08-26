@@ -16,16 +16,16 @@ Description: "Allows to subscribe to notification of new or updates entitities."
   * ^short = "When to automatically disable the subscription"
 
 * reason 1..1
-* criteria 1..1
-* error 0..1
-* channel 1..1
-  * type = FHIRSubscriptionChannelType#rest-hook "Rest Hook"
-    * ^short = "Only Rest Hook is supported"
-    * ^definition = "Currently, only Rest Hook is supported."
-  * endpoint 1..1
-    * ^short = "Where to send notifications"
-    * ^definition = "Full URL to send notification about new resources."
-  * payload 0..0
-  * header 0..*
-    * ^short = "Headers to send"
-    * ^definition = "Headers to add with the notification that are sent to endpoint."
+
+* topic 1..1
+  * ^short = "The topic this subscription is related to"
+  * ^definition = "A reference to the SubscriptionTopic that defines the events to trigger notifications."
+
+* filterBy 0..*
+  * ^short = "Client-defined filters to apply to the topic triggers"
+  * ^definition = "Used to narrow down the set of events that should trigger notifications."
+
+* endpoint 1..1
+* channelType 1..1
+  * ^short = "Channel type for notifications"
+  * ^definition = "The type of channel to send notifications on."

@@ -26,7 +26,7 @@ Description: "Example of openIMIS Medication"
       * coding[0] = FHIRAdministrativeGenderCS#male "Male"
       * coding[1] = FHIRAdministrativeGenderCS#female "Female"
   * extension[Age].valueUsageContext
-    * code = UsageContextTypeCS#age "Age"
+    * code = UsageContextTypeCS#age "Age Range"
     * valueCodeableConcept
       * coding[0] = UsageContextAgeTypeCS#adult "Adult"
       * coding[1] = UsageContextAgeTypeCS#child "Child"

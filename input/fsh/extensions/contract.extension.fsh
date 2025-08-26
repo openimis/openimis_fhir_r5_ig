@@ -3,7 +3,8 @@ Extension: ContractPremiumExtension
 Id:        contract-premium
 Title:    "Premium (Contract)"
 Description: "Indicates a premium for a Contract. This is a complex extension. "
-* insert ExtensionContext(OpenIMISContract)
+* ^context[+].type = #element
+* ^context[=].expression = "Contract.term.asset"
 * extension contains
     payer 0..1 MS and
     category 1..1 MS and

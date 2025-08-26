@@ -20,7 +20,6 @@ Description: "Submit payment notice."
 * response 0..0
 
 * created 1..1
-* provider 0..0
 * payment 1..1
   * ^short = "Payment Reconciliation"
   * ^definition = "External URL to Payment Reconciliation."

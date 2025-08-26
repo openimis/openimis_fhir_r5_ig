@@ -6,7 +6,7 @@ Description: "Indicates the Marital status of a Patient"
 * FHIRMaritalStatusCS#S "Single"
 * FHIRMaritalStatusCS#D "Divorced"
 * FHIRMaritalStatusCS#W "Widowed"
-* FHIRMaritalStatusCS#UNK "unknown"
+* NullFlavorCS#UNK "unknown"
 
 ValueSet: PatientContactRelationshipVS
 Id: patient-contact-relationship

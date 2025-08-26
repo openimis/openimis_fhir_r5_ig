@@ -5,7 +5,7 @@ Description: "Example of a Village"
 * identifier[Code].value = "R1D1M2V1"
 * identifier[Code].type = OpenIMISIdentifierCS#Code
 * name = "Jamula"
-* form = LocationTypeCS#V "Village"
+* form = LocationTypeCS#V "City/Village"
 * partOf = Reference(Jamu-municipality)
 
 Instance: Jamu-municipality
