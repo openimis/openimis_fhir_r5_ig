@@ -58,7 +58,6 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 
 * gender 1..1 MS 
 * birthDate 1..1 MS // The date on which the person was born
-* deceased[x] 0..0 // Is not available in openIMIS
 
 * address 1..1 MS // Family address or Current address of the Insuree => state->district->extension[municipality]->city
   * type = FHIRAddressType#physical
