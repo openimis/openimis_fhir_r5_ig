@@ -24,6 +24,10 @@
       <system value="email"/>
       <value value="dragos.dobre@swisstph.ch"/>
     </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="hiren.soni@swisstph.ch"/>
+    </telecom>
   </contact>
   <description value="This IG is about the mapping and usage of FHIR R5 to integrate openIMIS with other external systems."/>
   <jurisdiction>

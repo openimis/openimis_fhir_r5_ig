@@ -33,20 +33,15 @@ Description: "Defines a Group for openIMIS which maps to an Family"
 
 * type = FHIRGroupTypeCS#person // always person
 * membership = #definitional // always true // RENAMED: actual is renamed to membership
-* code 0..0 // not used
 
 * name 0..1 // The name by which the Group/Family is known. Only for GET Group
   * ^short = "Group/Family official name"
   * ^definition = "Group/Family name based on Patient/Insuree official family and given names."
 
 * quantity 1..1
-* managingEntity 0..0
-* characteristic 0..0
 
 * member 1..*
   * entity only Reference(OpenIMISPatient)
-  * period 0..0
-  * inactive 0..0
 
 * extension contains GroupAddressExtension named address 1..1 MS // Family address => state->district->extension[municipality]->city
 * extension[address]

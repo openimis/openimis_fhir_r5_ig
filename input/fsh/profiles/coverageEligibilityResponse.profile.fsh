@@ -25,14 +25,10 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
 * purpose = FHIREligibilityRequestPurpose#benefits "Coverage benefits"
 * patient only Reference(OpenIMISPatient)
 
-* serviced[x] 0..0
 * created 1..1
-* requestor 0..0
 
 * request only Reference(OpenIMISCoverageEligibilityRequest)
 * outcome = FHIRClaimProcessingCodes#complete "Processing Complete"
-
-* disposition 0..0
 
 * insurer 1..1
 * insurer only Reference(OpenIMISInsuranceOrganization)
@@ -40,7 +36,6 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
 
 * insurance 0..* 
   * coverage only Reference(OpenIMISCoverage)
-  * inforce 0..0
   * benefitPeriod 1..1
     * start 1..1
       * ^short = "Benefit start day"
@@ -49,14 +44,6 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
       * ^short = "Benefit end day"
       * ^definition = "Last day the benefit is valid (expiry date)."
   * item 1..*    // allow multiple items
-    * modifier 0..0
-    * provider 0..0
-    * network 0..0
-    * unit 0..0
-    * term 0..0
-    * authorizationRequired 0..0
-    * authorizationSupporting 0..0
-    * authorizationUrl 0..0
 
   // --- Item slicing ---
   * item ^slicing.rules = #closed
@@ -73,8 +60,6 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
     * ^short = "Coverage eligibility for policy"
     * ^definition = "Coverage eligibility for policy."
     * category.coding.code = CoverageItemCategoryCS#benefit
-    * productOrService 0..0
-    * excluded 0..0
     * name 1..1 
       * ^short = "Product/Item/Service code"
       * ^definition = "Product/Item/Service code."
@@ -82,7 +67,6 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
       * ^short = "Product/Item/Service name"
       * ^definition = "Product/Item/Service name."
     * benefit 0..11
-      * used[x] 0..0
     * benefit ^slicing.discriminator.type = #type
     * benefit ^slicing.discriminator.path = "allowed"
     * benefit ^slicing.rules = #closed
@@ -105,9 +89,7 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
   * item[billcode]
     * ^short = "Coverage eligibility for item or service"
     * ^definition = "Coverage eligibility for item or service with a billable code."
-    * category 0..0
     * productOrService 1..1
-      * coding 0..0
       * text 1..1
         * ^short = "Item/Service Code"
         * ^definition = "Item or Service Code."
@@ -115,7 +97,6 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
       * ^short = "Excluded from package"
       * ^definition = "Item or service excluded from package."
     * benefit 0..2
-      * used[x] 0..0
     * benefit ^slicing.discriminator.type = #value
     * benefit ^slicing.discriminator.path = "type.coding.code"
     * benefit ^slicing.rules = #closed
@@ -128,7 +109,3 @@ Description: "Defines a CoverageEligibilityResponse for openIMIS to get the enqu
     * benefit[itemLeft]
       * type = CoverageItemBenefitTypeCS#item_left "Items left"
       * allowed[x] only unsignedInt 
-
-* preAuthRef 0..0
-* form 0..0
-* error 0..0

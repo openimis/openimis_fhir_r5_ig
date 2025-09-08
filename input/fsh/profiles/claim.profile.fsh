@@ -35,7 +35,6 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * ^short = "Visit type"
   * ^definition = "Mention the visit type."
 
-* subType 0..0
 * use = FHIRClaimUseCodes#claim "Claim"
   * ^short = "Claim Type"
   * ^definition = "openIMIS only manages Claims."
@@ -57,30 +56,17 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
 * enterer 1..1 
 * enterer only Reference(OpenIMISClaimAdministratorPractitioner)
 
-* insurer 0..0
-
 * provider only Reference(OpenIMISHealthFacilityOrganization)
   * ^short = "Health Facility"
   * ^definition = "Health Facility wher the services where provided."
 
 * priority = FHIRClaimProcessPriorityCodes#normal "Normal"
 
-* fundsReserve 0..0
-* related 0..0 // could be used later for resubmission if this will be managed by openIMIS
-* prescription 0..0
-* originalPrescription 0..0
-* payee 0..0
-* referral 0..0
-* facility 0..0
-* careTeam 0..0
-
 * supportingInfo 0..* 
   * sequence 1..1  
   * category 1..1
-  * code 0..0
-  * timing[x] 0..0
   * value[x] 1..1
-  * reason 0..0
+  
 * supportingInfo.category from ClaimSupportingInfoCategoryVS (required)
 * supportingInfo ^slicing.discriminator.type = #pattern
 * supportingInfo ^slicing.discriminator.path = "category"
@@ -109,72 +95,38 @@ Description: "Defines a Claim for openIMIS which maps to a Claim."
   * sequence 1..1
   * diagnosis[x] only CodeableConcept
   * diagnosisCodeableConcept from DiagnosisICD10Level1VS (example)
-  * type 0..0
-  * onAdmission 0..0
-  //* packageCode 0..0 // REMOVED: PackageCode is removed in R5
   * ^short = "Diagnosis"
   * ^definition = """One main diagnosis is mandatory. Up to four sub-diagnosis can be added if necessary. 
   The values are dependent on the actual implementation."""
-
-* procedure 0..0
 
 * insurance 1..1
   * sequence 1..1
   * focal 1..1
   * focal = true
-  * identifier 0..0
   * coverage only Reference(OpenIMISCoverage)
     * ^short = "Coverage"
     * ^definition = "Insuree Coverage to use. Can be obtained with CoverageEligibilityRequest."
-  * businessArrangement 0..0
-  * preAuthRef 0..0
-  * claimResponse 0..0
-
-* accident 0..0 // could be used later when accident insurance will be implemented in openIMIS
 
 * item 1..*
   * sequence 1..1
-  * careTeamSequence 0..0
-  * diagnosisSequence 0..0
-  * procedureSequence 0..0
-  * informationSequence 0..0
-  * revenue 0..0
 
   * category from ClaimItemCategoryVS (required)
     * ^short = "Category"
     * ^definition = "Items category as medical item or service."
 
   * productOrService 1..1
-    * coding 0..0
     * text 1..1
       * ^short = "Item/Service Code"
       * ^definition = "Service or Item Code."
     * ^short = "Item Code"
     * ^definition = "Service or Item Code."
 
-  * modifier 0..0
-  * programCode 0..0
-  * serviced[x] 0..0
-  * location[x] 0..0
-  
   * quantity 1..1
     * value 1..1
-    * comparator 0..0
-    * unit 0..0
-    * system 0..0
-    * code 0..0
   * unitPrice 1..1
     * value 1..1
     * currency 0..1
   
-  * factor 0..0
-  * net 0..0
-  * udi 0..0
-  * bodySite 0..0
-  // * subSite 0..0 // REMOVED: SusSite is removed in R5
-  * encounter 0..0
-  * detail 0..0
-
   * extension contains ClaimItemReferenceExtension named itemReference 1..1 
   * extension[itemReference]
     * ^short = "Item Reference"

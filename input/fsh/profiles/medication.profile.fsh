@@ -37,21 +37,6 @@ Description: "Defines a Medication for openIMIS which maps to a Medical Item."
   * ^definition = "The Medication is always active."
 * status = MedicationStatusCS#active "Active"
 
-// * manufacturer 0..0 // REMOVED: Deleted in R5
-
-// REMOVED: form is removed in R5
-// * form 0..1 //from SNOMEDCTFormCodes (example) 
-//  * ^short = "Medication Form"
-//  * ^definition = "The Medication form configured in openIMIS."
-
-// REMOVED: amount is removed in R5
-// * amount 0..1
-//   * numerator 1..1 
-//     * value 1..1 
-//   * denominator 0..0
-
-* ingredient 0..0
-* batch 0..0
 
 * extension contains MedicationUsageContextExtension named useContext 0..4
 * extension[useContext]
