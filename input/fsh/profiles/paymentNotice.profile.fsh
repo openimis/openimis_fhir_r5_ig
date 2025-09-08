@@ -17,15 +17,12 @@ Description: "Submit payment notice."
 * request 0..1 
 * request only Reference(OpenIMISInvoice or OpenIMISBill)
 
-* response 0..0
-
 * created 1..1
 * payment 1..1
   * ^short = "Payment Reconciliation"
   * ^definition = "External URL to Payment Reconciliation."
 
 * paymentDate 1..1
-* payee 0..0
 * recipient 1..1
 * recipient only Reference(OpenIMISInsuranceOrganization)
 * amount 1..1

@@ -31,13 +31,11 @@ Description: "Defines an Invoice for openIMIS."
   * ^short = "FHIR Invoice Status"
   * ^definition = "Invoice status reported to FHIR Invoice required statuses."
 
-* cancelledReason 0..0
 * type 1..1
   * coding from InvoiceTypeVS (required)
   * ^short = "contribution | contract | funding"
   * ^definition = "Invoice type as defined by openIMIS."
   
-* subject 0..0
 * recipient 1..1
 * recipient only Reference(Organization or Patient)
   * ^short = "Third party"
@@ -45,12 +43,9 @@ Description: "Defines an Invoice for openIMIS."
 
 * date 1..1
 
-* participant 0..0
 * issuer 0..1 // openIMIS is issuing this invoice
-* account 0..0 // reference to an Account
 
 * lineItem 1..*
-  * sequence 0..0
   * chargeItem[x] only CodeableConcept
   * chargeItemCodeableConcept from InvoiceChargeItemVS (required)
   * priceComponent 1..*
@@ -80,10 +75,6 @@ Description: "Defines an Invoice for openIMIS."
       * ^short = "Unit Price"
       * ^definition = "Specifies the lineItem unit price."
 
-
-
-* totalPriceComponent 0..0
-
 * totalNet 1..1
   * value 1..1
   * currency 0..1
@@ -94,4 +85,3 @@ Description: "Defines an Invoice for openIMIS."
 
 * paymentTerms 0..1
 * note 0..1
-

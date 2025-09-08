@@ -17,27 +17,18 @@ This is required in different resources.
   * ^short = "Insurance Code"
   * ^definition = "Insurance Code set through FHIR R5 module configuration. Default: openIMIS"
 
-* active 0..0 // not used
 * type 1..1
   * coding.code = OrganizationTypeCS#ins "Insurance Company"
 
 * name 1..1 
-* alias 0..0 // not used
-
-// REMOVED: telecom is moved under contact
 * contact 0..1
   * purpose 1..1
   * purpose = ContactEntityTypeCS#ADMIN "Administrative"
   * ^short = "Insurance contact"
   * ^definition = "Insurance contact details. "
   * name 1..1
-    * use 0..0
     * text 1..1
-    * family 0..0
-    * given 0..0
-    * prefix 0..0
-    * suffix 0..0
-    * period 0..0
+
   * telecom 0..3
     * value 1..1 
   * telecom ^slicing.discriminator.type = #value
@@ -59,7 +50,7 @@ This is required in different resources.
 
   * address 0..1 MS // HF address => state->district
     * type = FHIRAddressType#physical
-    * country 0..0 // Not used 
+
     // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
     * state 0..1 MS // mapped to Region 
       * ^short = "State/Region"
@@ -74,7 +65,4 @@ This is required in different resources.
     * city 0..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
       * ^short = "City/Village"
       * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
-    * postalCode 0..0 // not used
     * line 0..1 // HFAddress
-  
-* partOf 0..0 // not used

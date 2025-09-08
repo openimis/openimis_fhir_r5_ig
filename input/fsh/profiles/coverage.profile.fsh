@@ -33,16 +33,10 @@ Description: "Defines a Coverage for openIMIS which maps to a Policy."
 // NEW: kind is a new mandatory field in R5
 * kind = #insurance
 
-* type 0..0 // could be used later if different kinds of benefit packages are covered by openIMIS
-
 * policyHolder only Reference(OpenIMISPatient)
-* subscriber 0..0 
-* subscriberId 0..0
 
 // there is an 
 * beneficiary only Reference(OpenIMISPatient)
-* dependent 0..0
-* relationship 0..0
 * period 1..1 
   * start 1..1
     * ^short = "Start date"
@@ -50,10 +44,6 @@ Description: "Defines a Coverage for openIMIS which maps to a Policy."
   * end 1..1
     * ^short = "Expiry date"
     * ^definition = """Date when the enrolment/renewal will actual end. Mapped to `Policy.ExpiryDate`."""
-
-// REMOVED: payor is removed in R5
-// * payor 1..1
-// * payor only Reference(OpenIMISPatient or OpenIMISPolicyHolderOrganization)
 
 * class 1..1
   * type = FHIRCoverageClassCodes#plan "Plan"
@@ -64,12 +54,6 @@ Description: "Defines a Coverage for openIMIS which maps to a Policy."
     * ^short = "Product Name"
     * ^definition = """Name of the Product/InsurancePlan."""
     
-* order 0..0
-* network 0..0
-* costToBeneficiary 0..0
-* subrogation 0..0
-* contract 0..0
-
 * extension contains CoverageEnrollDateExtension named enrollDate 1..1 
 * extension[enrollDate]
   * ^short = "Enrollment Date"

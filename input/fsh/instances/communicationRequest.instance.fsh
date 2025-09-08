@@ -26,8 +26,8 @@ Description: """
 * payload[DrugReceived]
   * contentCodeableConcept.text = "Drug Received? (yes|no)"
   * extension[type].valueCodeableConcept = FeedbackPayloadCS#DrugReceived 
-* payload[Asessment]
-  * contentCodeableConcept.text = "Asessment? (0|1|2|3|4|5)"
-  * extension[type].valueCodeableConcept = FeedbackPayloadCS#Asessment 
+* payload[assessment]
+  * contentCodeableConcept.text = "assessment? (0|1|2|3|4|5)"
+  * extension[type].valueCodeableConcept = FeedbackPayloadCS#assessment 
 
 * recipient = Reference(Roberts-Jeb-EO)

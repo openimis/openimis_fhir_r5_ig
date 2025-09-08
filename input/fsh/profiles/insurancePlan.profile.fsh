@@ -47,7 +47,6 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
   Currently only medical is managed. Can have other values in the future."""
 
 * name 1..1
-* alias 0..0
 
 * period 1..1
   * start 1..1
@@ -57,25 +56,17 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
     * ^short = "Insurance Plan end date"
     * ^definition = "Date to which the Product is valid."
 
-* ownedBy 0..0
-* administeredBy 0..0
-
 * coverageArea 1..1
 * coverageArea only Reference(OpenIMISLocation)
-
-* contact 0..0
-* endpoint 0..0
-* network 0..0
 
 // -------------------------------------------------------------------------------------
 // Coverage + Benefits + Limits
 // -------------------------------------------------------------------------------------
 * coverage 1..1
   * type from InsurancePlanCoverageTypeVS (required)
-  * network 0..0
+
   * benefit 1..1
     * type from InsurancePlanCoverageTypeVS (required)
-    * requirement 0..0
 
     * limit 1..2
       * code 1..1
@@ -123,16 +114,10 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
 // Plan costs
 // -------------------------------------------------------------------------------------
 * plan 1..1
-  * identifier 0..0
-  * type 0..0
-  * coverageArea 0..0
-  * network 0..0
-
   * generalCost 1..*
     * type 1..1
     * type from InsurancePlanGeneralCostTypeVS (required)
     * cost 1..1
-    * comment 0..0
 
   * generalCost
     * ^slicing.discriminator.type = #value
@@ -160,34 +145,24 @@ Description: "Defines an Insurance Plan for openIMIS which maps to a Product."
   * generalCost[premiumAdult]
     * type.coding.code = #premiumAdult (exactly)
     * type = InsurancePlanGeneralCostTypeCS#premiumAdult "Premium Adult"
-    * groupSize 0..0
 
   * generalCost[premiumChild]
     * type.coding.code = #premiumChild (exactly)
     * type = InsurancePlanGeneralCostTypeCS#premiumChild "Premium Child"
-    * groupSize 0..0
 
   * generalCost[registrationLumpsum]
     * type.coding.code = #registrationLumpsum (exactly)
     * type = InsurancePlanGeneralCostTypeCS#registrationLumpsum "Registration Lumpsum"
-    * groupSize 0..0
 
   * generalCost[registrationFee]
     * type.coding.code = #registrationFee (exactly)
     * type = InsurancePlanGeneralCostTypeCS#registrationFee "Registration Fee"
-    * groupSize 0..0
-
   * generalCost[generalAssemblyLumpSum]
     * type.coding.code = #generalAssemblyLumpSum (exactly)
     * type = InsurancePlanGeneralCostTypeCS#generalAssemblyLumpSum "General Assembly Lump Sum"
-    * groupSize 0..0
-
   * generalCost[generalAssemblyFee]
     * type.coding.code = #generalAssemblyFee (exactly)
     * type = InsurancePlanGeneralCostTypeCS#generalAssemblyFee "General Assembly Fee"
-    * groupSize 0..0
-
-  * specificCost 0..0
 
 // -------------------------------------------------------------------------------------
 // Extensions (top-level): slice by URL
