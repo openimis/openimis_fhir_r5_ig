@@ -53,27 +53,7 @@ Description: "Defines an Organization for openIMIS which maps to a Policy Holder
   * telecom[fax].system = #fax
     * ^short = "PolicyHolder fax"
     * ^definition = "PolicyHolder fax contact."
-
-    * type = FHIRAddressType#physical
-
-    // Location.LocationName from HF's Region (HF.LocationId.ParentLocationId)
-    * state 1..1 MS // mapped to Region 
-      * ^short = "State/Region"
-      * ^definition = "PolicyHolder's State/Region name as it is configured in openIMIS."
-    // Location.LocationName from HF's District (HF.LocationId)
-    * district 1..1 MS // mapped to District 
-      * ^short = "District"
-      * ^definition = "PolicyHolder's District name as it is configured in openIMIS."
-    * extension contains AddressMunicipalityExtension named municipality 1..1 MS // mapped to Ward (see previous two comments) !!!
-      * ^short = "Municipality/Ward"
-      * ^definition = "Insuree's Municipality/Ward name as it is configured in openIMIS."
-    * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
-      * ^short = "City/Village"
-      * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
-
-    * line 0..1 // HFAddress
-    * extension contains AddressLocationReferenceExtension named location 1..1 MS 
-
+    
 * extension contains OrganizationPHLegalFormExtension named legalForm 0..1 
 * extension[legalForm]
   * ^short = "Legal Form"
