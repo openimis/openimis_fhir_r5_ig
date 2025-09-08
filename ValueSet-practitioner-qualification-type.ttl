@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PractitionerQualificationTypeVS"] ; # 
   fhir:title [ fhir:v "Practitioner Qualification Type"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-09-08T11:14:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-09-08T11:37:47+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "openIMIS Initiative" ] ;
