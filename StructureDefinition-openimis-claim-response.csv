@@ -264,7 +264,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.type.text","ClaimResponse.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"ClaimResponse.subType","ClaimResponse.subType","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"ClaimResponse.subType","ClaimResponse.subType","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","More granular claim type","A finer grained suite of claim type codes which may convey additional information such as Inpatient vs Outpatient and/or a specialty service.","This may contain the local bill type codes, for example the US UB-04 bill type code or the CMS bill type.","Some jurisdictions need a finer grained claim type for routing and adjudication.","","","","","","","",,"example","A more granular claim typecode.","http://hl7.org/fhir/ValueSet/claim-subtype","",,,,"ClaimResponse.subType",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
 "ClaimResponse.use","ClaimResponse.use","","","",1,1,"","","Y","code {[]} {[]}
@@ -294,13 +294,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.decision","ClaimResponse.decision","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","Result of the adjudication","The result of the claim, predetermination, or preauthorization adjudication.","The element is used to indicate the current state of the adjudication overall for the claim resource, for example: the request has been held (pended) for adjudication processing, for manual review or other reasons; that it has been processed and will be paid, or the outstanding paid, as submitted (approved); that no amount will be paid (denied); or that some amount between zero and the submitted amount will be paid (partial).","To advise the requestor of the result of the adjudication process.","","","","","","","",,"example","The overall result of the claim adjudication.","http://hl7.org/fhir/ValueSet/claim-decision","",,,,"ClaimResponse.decision",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.disposition","ClaimResponse.disposition","","","",0,0,"","","","string {[]} {[]}
+"ClaimResponse.disposition","ClaimResponse.disposition","","","",0,1,"","","","string {[]} {[]}
 ","Disposition Message","A human readable description of the status of the adjudication.","","Provided for user display.","","","","","","","",,,,,"",,,,"ClaimResponse.disposition",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.note"
-"ClaimResponse.preAuthRef","ClaimResponse.preAuthRef","","","",0,0,"","","","string {[]} {[]}
+"ClaimResponse.preAuthRef","ClaimResponse.preAuthRef","","","",0,1,"","","","string {[]} {[]}
 ","Preauthorization reference","Reference from the Insurer which is used in later communications which refers to this adjudication.","This value is only present on preauthorization adjudications.","On subsequent claims, the insurer may require the provider to quote this value.","","","","","","","",,,,,"",,,,"ClaimResponse.preAuthRef",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.preAuthPeriod","ClaimResponse.preAuthPeriod","","","",0,0,"","","","Period {[]} {[]}
+"ClaimResponse.preAuthPeriod","ClaimResponse.preAuthPeriod","","","",0,1,"","","","Period {[]} {[]}
 ","Preauthorization reference effective period","The time frame during which this authorization is effective.","","To convey to the provider when the authorized products and services must be supplied for the authorized adjudication to apply.","","","","","","","",,,,,"",,,,"ClaimResponse.preAuthPeriod",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.event","ClaimResponse.event","","","",0,*,"","","","BackboneElement {[]} {[]}
@@ -325,7 +325,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.event.when[x]","ClaimResponse.event.when[x]","","","",1,1,"","","","dateTime {[]} {[]}
 Period {[]} {[]}","Occurance date or period","A date or period in the past or future indicating when the event occurred or is expectd to occur.","","","","","","","","","",,,,,"",,,,"ClaimResponse.event.when[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.payeeType","ClaimResponse.payeeType","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"ClaimResponse.payeeType","ClaimResponse.payeeType","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Party to be paid any benefits payable","Type of Party to be reimbursed: subscriber, provider, other.","","Need to know who should receive payment with the most common situations being the Provider (assignment of benefits) or the Subscriber.","","","","","","","",,"example","A code for the party to be reimbursed.","http://hl7.org/fhir/ValueSet/payeetype","",,,,"ClaimResponse.payeeType",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.encounter","ClaimResponse.encounter","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
@@ -359,7 +359,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.item.traceNumber","ClaimResponse.item.traceNumber","","","",0,*,"","","","Identifier {[]} {[]}
 ","Number for tracking","Trace number for tracking purposes. May be defined at the jurisdiction level or between trading partners.","","Allows partners to uniquely identify components for tracking.","","","","","","","",,,,,"",,,,"ClaimResponse.item.traceNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.item.noteNumber","ClaimResponse.item.noteNumber","","","",0,0,"","","","positiveInt {[]} {[]}
+"ClaimResponse.item.noteNumber","ClaimResponse.item.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable note numbers","The numbers associated with notes below which apply to the adjudication of this item.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.item.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.item.reviewOutcome","ClaimResponse.item.reviewOutcome","","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -446,7 +446,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.item.adjudication.quantity","ClaimResponse.item.adjudication.quantity","","","",0,1,"","","","Quantity {[]} {[]}
 ","Non-monetary value","A non-monetary value associated with the category. Mutually exclusive to the amount element above.","For example: eligible percentage or co-payment percentage.","Some adjudication categories convey a percentage or a fixed value.","","","","","","","",,,,,"",,,,"ClaimResponse.item.adjudication.quantity",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.item.detail","ClaimResponse.item.detail","","","",0,0,"","","","BackboneElement {[]} {[]}
+"ClaimResponse.item.detail","ClaimResponse.item.detail","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Adjudication for claim details","A claim detail. Either a simple (a product or service) or a 'group' of sub-details which are simple items.","","The adjudication for details provided on the claim.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.item.detail.id","ClaimResponse.item.detail.id","","","",0,1,"","","","string {[]} {[]}
@@ -471,9 +471,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.item.detail.noteNumber","ClaimResponse.item.detail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable note numbers","The numbers associated with notes below which apply to the adjudication of this item.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.item.detail.reviewOutcome","ClaimResponse.item.detail.reviewOutcome","","","",0,1,"","","","","Detail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.item.detail.reviewOutcome","ClaimResponse.item.detail.reviewOutcome","","","",0,1,"","","","null {[]} {[]}
+","Detail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.item.detail.adjudication","ClaimResponse.item.detail.adjudication","","","",0,*,"","","","","Detail level adjudication details","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.item.detail.adjudication","ClaimResponse.item.detail.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Detail level adjudication details","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.item.detail.subDetail","ClaimResponse.item.detail.subDetail","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Adjudication for claim sub-details","A sub-detail adjudication of a simple product or service.","","The adjudication for sub-details provided on the claim.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -500,11 +502,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.item.detail.subDetail.noteNumber","ClaimResponse.item.detail.subDetail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable note numbers","The numbers associated with notes below which apply to the adjudication of this item.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.item.detail.subDetail.reviewOutcome","ClaimResponse.item.detail.subDetail.reviewOutcome","","","",0,1,"","","","","Subdetail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.item.detail.subDetail.reviewOutcome","ClaimResponse.item.detail.subDetail.reviewOutcome","","","",0,1,"","","","null {[]} {[]}
+","Subdetail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.item.detail.subDetail.adjudication","ClaimResponse.item.detail.subDetail.adjudication","","","",0,*,"","","","","Subdetail level adjudication details","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.item.detail.subDetail.adjudication","ClaimResponse.item.detail.subDetail.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Subdetail level adjudication details","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.item.detail.subDetail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.addItem","ClaimResponse.addItem","","","",0,0,"","","","BackboneElement {[]} {[]}
+"ClaimResponse.addItem","ClaimResponse.addItem","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Insurer added line items","The first-tier service adjudications for payor added product or service lines.","","Insurers may redefine the provided product or service or may package and/or decompose groups of products and services. The addItems allows the insurer to provide their line item list with linkage to the submitted items/details/sub-details. In a preauthorization the insurer may use the addItem structure to provide additional information on authorized products and services.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.addItem.id","ClaimResponse.addItem.id","","","",0,1,"","","","string {[]} {[]}
@@ -600,9 +604,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.addItem.noteNumber","ClaimResponse.addItem.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable note numbers","The numbers associated with notes below which apply to the adjudication of this item.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.addItem.reviewOutcome","ClaimResponse.addItem.reviewOutcome","","","",0,1,"","","","","Added items adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.addItem.reviewOutcome","ClaimResponse.addItem.reviewOutcome","","","",0,1,"","","","null {[]} {[]}
+","Added items adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.addItem.adjudication","ClaimResponse.addItem.adjudication","","","",0,*,"","","","","Added items adjudication","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.addItem.adjudication","ClaimResponse.addItem.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Added items adjudication","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.addItem.detail","ClaimResponse.addItem.detail","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Insurer added line details","The second-tier service adjudications for payor added services.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -654,9 +660,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.addItem.detail.noteNumber","ClaimResponse.addItem.detail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable note numbers","The numbers associated with notes below which apply to the adjudication of this item.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.addItem.detail.reviewOutcome","ClaimResponse.addItem.detail.reviewOutcome","","","",0,1,"","","","","Added items detail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.addItem.detail.reviewOutcome","ClaimResponse.addItem.detail.reviewOutcome","","","",0,1,"","","","null {[]} {[]}
+","Added items detail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.addItem.detail.adjudication","ClaimResponse.addItem.detail.adjudication","","","",0,*,"","","","","Added items detail adjudication","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.addItem.detail.adjudication","ClaimResponse.addItem.detail.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Added items detail adjudication","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.addItem.detail.subDetail","ClaimResponse.addItem.detail.subDetail","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Insurer added line items","The third-tier service adjudications for payor added services.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -708,11 +716,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.addItem.detail.subDetail.noteNumber","ClaimResponse.addItem.detail.subDetail.noteNumber","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable note numbers","The numbers associated with notes below which apply to the adjudication of this item.","","Provides a condensed manner for associating human readable descriptive explanations for adjudications on the line item.","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.noteNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.addItem.detail.subDetail.reviewOutcome","ClaimResponse.addItem.detail.subDetail.reviewOutcome","","","",0,1,"","","","","Added items subdetail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.addItem.detail.subDetail.reviewOutcome","ClaimResponse.addItem.detail.subDetail.reviewOutcome","","","",0,1,"","","","null {[]} {[]}
+","Added items subdetail level adjudication results","The high-level results of the adjudication if adjudication has been performed.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.reviewOutcome",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.addItem.detail.subDetail.adjudication","ClaimResponse.addItem.detail.subDetail.adjudication","","","",0,*,"","","","","Added items subdetail adjudication","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.addItem.detail.subDetail.adjudication","ClaimResponse.addItem.detail.subDetail.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Added items subdetail adjudication","The adjudication results.","","","","","","","","","",,,,,"",,,,"ClaimResponse.addItem.detail.subDetail.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.adjudication","ClaimResponse.adjudication","","","",0,0,"","","","","Header-level adjudication","The adjudication results which are presented at the header level rather than at the line-item or add-item levels.","","Some insurers will receive line-items but provide the adjudication only at a summary or header-level.","","","","","","","",,,,,"",,,,"ClaimResponse.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"ClaimResponse.adjudication","ClaimResponse.adjudication","","","",0,*,"","","","null {[]} {[]}
+","Header-level adjudication","The adjudication results which are presented at the header level rather than at the line-item or add-item levels.","","Some insurers will receive line-items but provide the adjudication only at a summary or header-level.","","","","","","","",,,,,"",,,,"ClaimResponse.adjudication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.total","ClaimResponse.total","","","",1,4,"","","Y","BackboneElement {[]} {[]}
 ","Adjudication totals","Categorized monetary totals for the adjudication.","Totals for amounts submitted, co-pays, benefits payable etc.","To provide the requestor with financial totals by category for the adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.total",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -750,7 +761,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.total.amount.currency","ClaimResponse.total.amount.currency","","","",0,1,"","","Y","code {[]} {[]}
 ","ISO 4217 Currency Code","ISO 4217 Currency Code.","","A code indicating the currency, taken from ISO 4217.","","","","","","","",,"required","A code indicating the currency, taken from ISO 4217.","http://hl7.org/fhir/ValueSet/currencies|5.0.0","",,,,"Money.currency",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.payment","ClaimResponse.payment","","","",0,0,"","","","BackboneElement {[]} {[]}
+"ClaimResponse.payment","ClaimResponse.payment","","","",0,1,"","","","BackboneElement {[]} {[]}
 ","Payment Details","Payment details for the adjudication of the claim.","","Needed to convey references to the financial instrument that has been used if payment has been made.","","","","","","","",,,,,"",,,,"ClaimResponse.payment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.payment.id","ClaimResponse.payment.id","","","",0,1,"","","","string {[]} {[]}
@@ -784,13 +795,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.payment.identifier","ClaimResponse.payment.identifier","","","",0,1,"","","","Identifier {[]} {[]}
 ","Business identifier for the payment","Issuer's unique identifier for the payment instrument.","For example: EFT number or check number.","Enable the receiver to reconcile when payment received.","","","","","","","",,,,,"",,,,"ClaimResponse.payment.identifier",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.fundsReserve","ClaimResponse.fundsReserve","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"ClaimResponse.fundsReserve","ClaimResponse.fundsReserve","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Funds reserved status","A code, used only on a response to a preauthorization, to indicate whether the benefits payable have been reserved and for whom.","Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.","Needed to advise the submitting provider on whether the rquest for reservation of funds has been honored.","","","","","","","",,"example","For whom funds are to be reserved: (Patient, Provider, None).","http://hl7.org/fhir/ValueSet/fundsreserve","",,,,"ClaimResponse.fundsReserve",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.formCode","ClaimResponse.formCode","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"ClaimResponse.formCode","ClaimResponse.formCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Printed form identifier","A code for the form to be used for printing the content.","May be needed to identify specific jurisdictional forms.","Needed to specify the specific form used for producing output for this response.","","","","","","","",,"example","The forms codes.","http://hl7.org/fhir/ValueSet/forms","",,,,"ClaimResponse.formCode",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.form","ClaimResponse.form","","","",0,0,"","","","Attachment {[]} {[]}
+"ClaimResponse.form","ClaimResponse.form","","","",0,1,"","","","Attachment {[]} {[]}
 ","Printed reference or actual form","The actual form, by reference or inclusion, for printing the content or an EOB.","Needed to permit insurers to include the actual form.","Needed to include the specific form used for producing output for this response.","","","","","","","",,,,,"",,,,"ClaimResponse.form",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.processNote","ClaimResponse.processNote","","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -809,22 +820,22 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R5/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"ClaimResponse.processNote.number","ClaimResponse.processNote.number","","","",0,0,"","","","positiveInt {[]} {[]}
+"ClaimResponse.processNote.number","ClaimResponse.processNote.number","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Note instance identifier","A number to uniquely identify a note entry.","","Necessary to provide a mechanism to link from adjudications.","","","","","","","",,,,,"",,,,"ClaimResponse.processNote.number",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.processNote.type","ClaimResponse.processNote.type","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"ClaimResponse.processNote.type","ClaimResponse.processNote.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Note purpose","The business purpose of the note text.","","To convey the expectation for when the text is used.","","","","","","","",,"extensible","The presentation types of notes.","http://hl7.org/fhir/ValueSet/note-type","",,,,"ClaimResponse.processNote.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.processNote.text","ClaimResponse.processNote.text","","","",1,1,"","","","string {[]} {[]}
 ","Note explanatory text","Claim adjustment reason.","","Required to provide human readable explanation.","","","","","","","",,,,,"",,,,"ClaimResponse.processNote.text",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.processNote.language","ClaimResponse.processNote.language","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"ClaimResponse.processNote.language","ClaimResponse.processNote.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Language of the text","A code to define the language used in the text of the note.","Only required if the language is different from the resource language.","Note text may vary from the resource defined language.","","","","","","","",,"required","IETF language tag for a human language","http://hl7.org/fhir/ValueSet/all-languages|5.0.0","",,,,"ClaimResponse.processNote.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.communicationRequest","ClaimResponse.communicationRequest","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-communication-request]]}
 ","Request for additional information","Provided only if the User has Claims.Feedback authority (111009).","For example: professional reports, documents, images, clinical resources, or accident reports.","Need to communicate insurer request for additional information required to support the adjudication.","","","","","","","",,,,,"",,,,"ClaimResponse.communicationRequest",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.insurance","ClaimResponse.insurance","","","",0,0,"","","","BackboneElement {[]} {[]}
+"ClaimResponse.insurance","ClaimResponse.insurance","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Patient insurance information","Financial instruments for reimbursement for the health care products and services specified on the claim.","All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.","At least one insurer is required for a claim to be a claim.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Coverage"
 "ClaimResponse.insurance.id","ClaimResponse.insurance.id","","","",0,1,"","","","string {[]} {[]}
@@ -855,7 +866,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ClaimResponse.insurance.claimResponse","ClaimResponse.insurance.claimResponse","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ClaimResponse]]}
 ","Adjudication results","The result of the adjudication of the line items for the Coverage specified in this insurance.","Must not be specified when 'focal=true' for this insurance.","An insurer need the adjudication results from prior insurers to determine the outstanding balance remaining by item for the items in the curent claim.","","","","","","","",,,,,"",,,,"ClaimResponse.insurance.claimResponse",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ClaimResponse.error","ClaimResponse.error","","","",0,0,"","","","BackboneElement {[]} {[]}
+"ClaimResponse.error","ClaimResponse.error","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Processing errors","Errors encountered during the processing of the adjudication.","If the request contains errors then an error element should be provided and no adjudication related sections (item, addItem, or payment) should be present.","Need to communicate processing issues to the requestor.","","","","","","","",,,,,"",,,,"ClaimResponse.error",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ClaimResponse.error.id","ClaimResponse.error.id","","","",0,1,"","","","string {[]} {[]}

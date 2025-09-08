@@ -12,14 +12,7 @@
   <sch:pattern>
     <sch:title>f:CoverageEligibilityRequest</sch:title>
     <sch:rule context="f:CoverageEligibilityRequest">
-      <sch:assert test="count(f:priority) &lt;= 0">priority: maximum cardinality of 'priority' is 0</sch:assert>
       <sch:assert test="count(f:purpose) &lt;= 1">purpose: maximum cardinality of 'purpose' is 1</sch:assert>
-      <sch:assert test="count(f:serviced[x]) &lt;= 0">serviced[x]: maximum cardinality of 'serviced[x]' is 0</sch:assert>
-      <sch:assert test="count(f:enterer) &lt;= 0">enterer: maximum cardinality of 'enterer' is 0</sch:assert>
-      <sch:assert test="count(f:provider) &lt;= 0">provider: maximum cardinality of 'provider' is 0</sch:assert>
-      <sch:assert test="count(f:facility) &lt;= 0">facility: maximum cardinality of 'facility' is 0</sch:assert>
-      <sch:assert test="count(f:supportingInfo) &lt;= 0">supportingInfo: maximum cardinality of 'supportingInfo' is 0</sch:assert>
-      <sch:assert test="count(f:insurance) &lt;= 0">insurance: maximum cardinality of 'insurance' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -75,48 +68,21 @@
   <sch:pattern>
     <sch:title>f:CoverageEligibilityRequest/f:item</sch:title>
     <sch:rule context="f:CoverageEligibilityRequest/f:item">
-      <sch:assert test="count(f:supportingInfoSequence) &lt;= 0">supportingInfoSequence: maximum cardinality of 'supportingInfoSequence' is 0</sch:assert>
       <sch:assert test="count(f:productOrService) &gt;= 1">productOrService: minimum cardinality of 'productOrService' is 1</sch:assert>
-      <sch:assert test="count(f:modifier) &lt;= 0">modifier: maximum cardinality of 'modifier' is 0</sch:assert>
-      <sch:assert test="count(f:provider) &lt;= 0">provider: maximum cardinality of 'provider' is 0</sch:assert>
-      <sch:assert test="count(f:quantity) &lt;= 0">quantity: maximum cardinality of 'quantity' is 0</sch:assert>
-      <sch:assert test="count(f:unitPrice) &lt;= 0">unitPrice: maximum cardinality of 'unitPrice' is 0</sch:assert>
-      <sch:assert test="count(f:facility) &lt;= 0">facility: maximum cardinality of 'facility' is 0</sch:assert>
-      <sch:assert test="count(f:diagnosis) &lt;= 0">diagnosis: maximum cardinality of 'diagnosis' is 0</sch:assert>
-      <sch:assert test="count(f:detail) &lt;= 0">detail: maximum cardinality of 'detail' is 0</sch:assert>
-      <sch:assert test="count(f:supportingInfoSequence) &lt;= 0">supportingInfoSequence: maximum cardinality of 'supportingInfoSequence' is 0</sch:assert>
       <sch:assert test="count(f:productOrService) &gt;= 1">productOrService: minimum cardinality of 'productOrService' is 1</sch:assert>
-      <sch:assert test="count(f:modifier) &lt;= 0">modifier: maximum cardinality of 'modifier' is 0</sch:assert>
-      <sch:assert test="count(f:provider) &lt;= 0">provider: maximum cardinality of 'provider' is 0</sch:assert>
-      <sch:assert test="count(f:quantity) &lt;= 0">quantity: maximum cardinality of 'quantity' is 0</sch:assert>
-      <sch:assert test="count(f:unitPrice) &lt;= 0">unitPrice: maximum cardinality of 'unitPrice' is 0</sch:assert>
-      <sch:assert test="count(f:facility) &lt;= 0">facility: maximum cardinality of 'facility' is 0</sch:assert>
-      <sch:assert test="count(f:diagnosis) &lt;= 0">diagnosis: maximum cardinality of 'diagnosis' is 0</sch:assert>
-      <sch:assert test="count(f:detail) &lt;= 0">detail: maximum cardinality of 'detail' is 0</sch:assert>
-      <sch:assert test="count(f:supportingInfoSequence) &lt;= 0">supportingInfoSequence: maximum cardinality of 'supportingInfoSequence' is 0</sch:assert>
       <sch:assert test="count(f:productOrService) &gt;= 1">productOrService: minimum cardinality of 'productOrService' is 1</sch:assert>
-      <sch:assert test="count(f:modifier) &lt;= 0">modifier: maximum cardinality of 'modifier' is 0</sch:assert>
-      <sch:assert test="count(f:provider) &lt;= 0">provider: maximum cardinality of 'provider' is 0</sch:assert>
-      <sch:assert test="count(f:quantity) &lt;= 0">quantity: maximum cardinality of 'quantity' is 0</sch:assert>
-      <sch:assert test="count(f:unitPrice) &lt;= 0">unitPrice: maximum cardinality of 'unitPrice' is 0</sch:assert>
-      <sch:assert test="count(f:facility) &lt;= 0">facility: maximum cardinality of 'facility' is 0</sch:assert>
-      <sch:assert test="count(f:diagnosis) &lt;= 0">diagnosis: maximum cardinality of 'diagnosis' is 0</sch:assert>
-      <sch:assert test="count(f:detail) &lt;= 0">detail: maximum cardinality of 'detail' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:title>f:CoverageEligibilityRequest/f:item/f:productOrService</sch:title>
     <sch:rule context="f:CoverageEligibilityRequest/f:item/f:productOrService">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &lt;= 0">coding: maximum cardinality of 'coding' is 0</sch:assert>
       <sch:assert test="count(f:text) &gt;= 1">text: minimum cardinality of 'text' is 1</sch:assert>
       <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &lt;= 0">coding: maximum cardinality of 'coding' is 0</sch:assert>
       <sch:assert test="count(f:text) &gt;= 1">text: minimum cardinality of 'text' is 1</sch:assert>
       <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &lt;= 0">coding: maximum cardinality of 'coding' is 0</sch:assert>
       <sch:assert test="count(f:text) &gt;= 1">text: minimum cardinality of 'text' is 1</sch:assert>
       <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
     </sch:rule>

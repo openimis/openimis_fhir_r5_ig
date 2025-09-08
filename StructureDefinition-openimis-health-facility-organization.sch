@@ -16,12 +16,9 @@
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-level']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-level': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type']) &gt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/organization-hf-care-type': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:active) &lt;= 0">active: maximum cardinality of 'active' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:type) &lt;= 1">type: maximum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:name) &gt;= 1">name: minimum cardinality of 'name' is 1</sch:assert>
-      <sch:assert test="count(f:alias) &lt;= 0">alias: maximum cardinality of 'alias' is 0</sch:assert>
-      <sch:assert test="count(f:partOf) &lt;= 0">partOf: maximum cardinality of 'partOf' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -170,13 +167,13 @@
       <sch:assert test="count(f:type) &lt;= 1">type: maximum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
       <sch:assert test="count(f:line) &lt;= 1">line: maximum cardinality of 'line' is 1</sch:assert>
-      <sch:assert test="count(f:city) &lt;= 0">city: maximum cardinality of 'city' is 0</sch:assert>
+      <sch:assert test="count(f:city) &lt;= 1">city: maximum cardinality of 'city' is 1</sch:assert>
       <sch:assert test="count(f:district) &gt;= 1">district: minimum cardinality of 'district' is 1</sch:assert>
       <sch:assert test="count(f:district) &lt;= 1">district: maximum cardinality of 'district' is 1</sch:assert>
       <sch:assert test="count(f:state) &gt;= 1">state: minimum cardinality of 'state' is 1</sch:assert>
       <sch:assert test="count(f:state) &lt;= 1">state: maximum cardinality of 'state' is 1</sch:assert>
-      <sch:assert test="count(f:postalCode) &lt;= 0">postalCode: maximum cardinality of 'postalCode' is 0</sch:assert>
-      <sch:assert test="count(f:country) &lt;= 0">country: maximum cardinality of 'country' is 0</sch:assert>
+      <sch:assert test="count(f:postalCode) &lt;= 1">postalCode: maximum cardinality of 'postalCode' is 1</sch:assert>
+      <sch:assert test="count(f:country) &lt;= 1">country: maximum cardinality of 'country' is 1</sch:assert>
       <sch:assert test="count(f:period) &lt;= 1">period: maximum cardinality of 'period' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

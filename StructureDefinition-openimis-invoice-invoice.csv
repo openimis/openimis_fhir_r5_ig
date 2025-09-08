@@ -243,7 +243,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Invoice.status","Invoice.status","","","",1,1,"","Y","Y","code {[]} {[]}
 ","FHIR Invoice Status","Invoice status reported to FHIR Invoice required statuses.","","","","","","","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/invoice-status","",,,,"Invoice.status",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.status","Varies by domain",".status"
-"Invoice.cancelledReason","Invoice.cancelledReason","","","",0,0,"","","","string {[]} {[]}
+"Invoice.cancelledReason","Invoice.cancelledReason","","","",0,1,"","","","string {[]} {[]}
 ","Reason for cancellation of this Invoice","In case of Invoice cancellation a reason must be given (entered in error, superseded by corrected invoice etc.).","Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.","","","","","","","","",,,,,"",,,,"Invoice.cancelledReason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Invoice.type","Invoice.type","","type
@@ -265,7 +265,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","C*E.9. But note many systems use C*E.2 for this","./originalText[mediaType/code=""text/plain""]/data"
 "Invoice.subject","Invoice.subject","","patient
-","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group]]}
+","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group]]}
 ","Recipient(s) of goods and services","The individual or set of individuals receiving the goods and services billed in this invoice.","","Links the event to the Patient context.","","","","","","","",,,,,"",,,,"Invoice.subject",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.subject","FiveWs.subject[x]","PAT in proximity to FT1 segment",".participation[typeCode=SBJ].role"
 "Invoice.recipient","Invoice.recipient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
@@ -280,7 +280,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Invoice.period[x]","Invoice.period[x]","","","",0,1,"","","Y","date {[]} {[]}
 Period {[]} {[]}","Billing date or period","Date/time(s) range of services included in this invoice.","","","","","","","","","",,,,,"",,,,"Invoice.period[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Invoice.participant","Invoice.participant","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Invoice.participant","Invoice.participant","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Participant in creation of this Invoice","Indicates who or what performed or participated in the charged service.","","","","","","","","","",,,,,"",,,,"Invoice.participant",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","EVN.5 or by domain",".participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]"
 "Invoice.participant.id","Invoice.participant.id","","","",0,1,"","","","string {[]} {[]}
@@ -305,7 +305,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Invoice.issuer","Invoice.issuer","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Issuing Organization of Invoice","The organizationissuing the Invoice.","Practitioners and Devices can be associated with multiple organizations. It has to be made clear, on behalf of which Organization the services have been rendered.","","","","","","","","",,,,,"",,,,"Invoice.issuer",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A",".scoper"
-"Invoice.account","Invoice.account","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Account]]}
+"Invoice.account","Invoice.account","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Account]]}
 ","Account that is being balanced","Account which is supposed to be balanced with this Invoice.","Systems posting the ChargeItems might not always be able to determine, which accounts the Items need to be places into. It is up to the potprocessing Financial System to apply internal rules to decide based on the Encounter/EpisodeOfCare/Patient/Coverage context and the type of ChargeItem, which Account is appropriate.","","","","","","","","",,,,,"",,,,"Invoice.account",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Invoice.lineItem","Invoice.lineItem","","","",1,*,"","","","BackboneElement {[]} {[]}
@@ -324,7 +324,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R5/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"Invoice.lineItem.sequence","Invoice.lineItem.sequence","","","",0,0,"","","","positiveInt {[]} {[]}
+"Invoice.lineItem.sequence","Invoice.lineItem.sequence","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Sequence number of line item","Sequence in which the items appear on the invoice.","","","","","","","","","",,,,,"",,,,"Invoice.lineItem.sequence",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Invoice.lineItem.serviced[x]","Invoice.lineItem.serviced[x]","","","",0,1,"","","","date {[]} {[]}
@@ -417,7 +417,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Invoice.lineItem.priceComponent.amount.currency","Invoice.lineItem.priceComponent.amount.currency","","","",0,1,"","","Y","code {[]} {[]}
 ","ISO 4217 Currency Code","ISO 4217 Currency Code.","","A code indicating the currency, taken from ISO 4217.","","","","","","","",,"required","A code indicating the currency, taken from ISO 4217.","http://hl7.org/fhir/ValueSet/currencies|5.0.0","",,,,"Money.currency",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","MO.Currency"
-"Invoice.totalPriceComponent","Invoice.totalPriceComponent","","","",0,0,"","","","MonetaryComponent {[]} {[]}
+"Invoice.totalPriceComponent","Invoice.totalPriceComponent","","","",0,*,"","","","MonetaryComponent {[]} {[]}
 ","Components of Invoice total","The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.","","","","","","","","","",,,,,"",,,,"Invoice.totalPriceComponent",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","EVN.5 or by domain",".participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]"
 "Invoice.totalNet","Invoice.totalNet","","","",1,1,"","","Y","Money {[]} {[]}

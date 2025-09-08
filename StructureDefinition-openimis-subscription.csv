@@ -47,7 +47,7 @@ This element is labeled as a modifier because the status contains codes that mar
 "Subscription.topic","Subscription.topic","","","",1,1,"","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SubscriptionTopic]]}
 ","The topic this subscription is related to","A reference to the SubscriptionTopic that defines the events to trigger notifications.","","","","","","","","","",,,,,"",,,,"Subscription.topic",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.what[x]"
-"Subscription.contact","Subscription.contact","","","",0,0,"","","Y","ContactPoint {[]} {[]}
+"Subscription.contact","Subscription.contact","","","",0,*,"","","Y","ContactPoint {[]} {[]}
 ","Contact details for source (e.g. troubleshooting)","Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.","","","","","","","","","",,,,,"",,,,"Subscription.contact",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.subject[x]"
 "Subscription.end","Subscription.end","","","",0,1,"","","Y","instant {[]} {[]}

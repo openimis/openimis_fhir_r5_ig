@@ -264,7 +264,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 * 'definitional': The Group.characteristics specified are both necessary and sufficient to determine membership. All entities that meet the criteria are considered to be members of the group, whether referenced by the group or not. If members are present, they are individuals that happen to be known as meeting the Group.characteristics. The list cannot be presumed to be complete.
 * 'enumerated': The Group.characteristics are necessary but not sufficient to determine membership. Membership is determined by being listed as one of the Group.member.","","There are use-cases for groups that define specific collections of individuals, and other groups that define ""types"" of intended individuals.  The requirements for both kinds of groups are similar, so we use a single resource, distinguished by this element.","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""definitional""/>","","","",,"required","The basis for membership in a group","http://hl7.org/fhir/ValueSet/group-membership-basis|5.0.0","",,,,"Group.membership",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Group.code","Group.code","","","",0,0,"","","Y","CodeableConcept {[]} {[]}
+"Group.code","Group.code","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","Kind of Group members","Provides a specific type of resource the group includes; e.g. ""cow"", ""syringe"", etc.","This would generally be omitted for Person resources.","","","","","","","","",,"example","Kind of particular resource; e.g. cow, syringe, lake, etc.","","",,,,"Group.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.what[x]","./code"
 "Group.name","Group.name","","","",0,1,"","","Y","string {[]} {[]}
@@ -276,10 +276,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Group.quantity","Group.quantity","","","",1,1,"","","Y","unsignedInt {[]} {[]}
 ","Number of members","A count of the number of resource instances that are part of the group.","Note that the quantity may be less than the number of members if some of the members are not active.","Group size is a common defining characteristic.","","","","","","","",,,,,"",,,,"Group.quantity",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./quantity"
-"Group.managingEntity","Group.managingEntity","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole]]}
+"Group.managingEntity","Group.managingEntity","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole]]}
 ","Entity that is the custodian of the Group's definition","Entity responsible for defining and maintaining Group characteristics and/or registered members.","This does not strictly align with ownership of a herd or flock, but may suffice to represent that relationship in simple cases. More complex cases will require an extension.","","","","","","","","",,,,,"",,,,"Group.managingEntity",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.witness"
-"Group.characteristic","Group.characteristic","","","",0,0,"","","Y","BackboneElement {[]} {[]}
+"Group.characteristic","Group.characteristic","","","",0,*,"","","Y","BackboneElement {[]} {[]}
 ","Include / Exclude group members by Trait","Identifies traits whose presence r absence is shared by members of the group.","All the identified characteristics must be true for an entity to a member of the group.","Needs to be a generic mechanism for identifying what individuals can be part of a group.","","","","","","","",,,,,"",,,,"Group.characteristic",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./playedRole[isNormalRole()]/participation[isNormalParticipation() and typeCode=""SBJ""]/act[isNormalAct and classCode=""OBS"" and moodCode=""EVN""]"
 "Group.characteristic.id","Group.characteristic.id","","","",0,1,"","","","string {[]} {[]}
@@ -326,9 +326,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Group.member.entity","Group.member.entity","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-patient]]}
 ","Reference to the group member","A reference to the entity that is a member of the group. Must be consistent with Group.type. If the entity is another group, then the type must be the same.","","","","","","","","","",,,,,"",,,,"Group.member.entity",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Group.member.period","Group.member.period","","","",0,0,"","","","Period {[]} {[]}
+"Group.member.period","Group.member.period","","","",0,1,"","","","Period {[]} {[]}
 ","Period member belonged to the group","The period that the member was in the group, if known.","","Need to track who was in a group at a  particular time.","","The member is in the group at this time","","","","","",,,,,"",,,,"Group.member.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Group.member.inactive","Group.member.inactive","","","",0,0,"","","","boolean {[]} {[]}
+"Group.member.inactive","Group.member.inactive","","","",0,1,"","","","boolean {[]} {[]}
 ","If member is no longer in group","A flag to indicate that the member is no longer in the group, but previously may have been a member.","","Sometimes you don't know when someone stopped being in a group, but not when.","","Members are considered active unless explicitly specified otherwise","","","","","",,,,,"",,,,"Group.member.inactive",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "

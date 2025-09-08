@@ -13,12 +13,7 @@
     <sch:title>f:PractitionerRole</sch:title>
     <sch:rule context="f:PractitionerRole">
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/practitioner-role-substitution-reference']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/practitioner-role-substitution-reference': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:active) &lt;= 0">active: maximum cardinality of 'active' is 0</sch:assert>
       <sch:assert test="count(f:practitioner) &gt;= 1">practitioner: minimum cardinality of 'practitioner' is 1</sch:assert>
-      <sch:assert test="count(f:organization) &lt;= 0">organization: maximum cardinality of 'organization' is 0</sch:assert>
-      <sch:assert test="count(f:specialty) &lt;= 0">specialty: maximum cardinality of 'specialty' is 0</sch:assert>
-      <sch:assert test="count(f:healthcareService) &lt;= 0">healthcareService: maximum cardinality of 'healthcareService' is 0</sch:assert>
-      <sch:assert test="count(f:endpoint) &lt;= 0">endpoint: maximum cardinality of 'endpoint' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -93,7 +88,7 @@
     <sch:title>f:PractitionerRole/f:period</sch:title>
     <sch:rule context="f:PractitionerRole/f:period">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:start) &lt;= 0">start: maximum cardinality of 'start' is 0</sch:assert>
+      <sch:assert test="count(f:start) &lt;= 1">start: maximum cardinality of 'start' is 1</sch:assert>
       <sch:assert test="count(f:end) &gt;= 1">end: minimum cardinality of 'end' is 1</sch:assert>
       <sch:assert test="count(f:end) &lt;= 1">end: maximum cardinality of 'end' is 1</sch:assert>
     </sch:rule>

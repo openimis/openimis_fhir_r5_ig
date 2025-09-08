@@ -3,14 +3,14 @@
   "id" : "feedback-payload",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem feedback-payload</b></p><a name=\"feedback-payload\"> </a><a name=\"hcfeedback-payload\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CareRendered<a name=\"feedback-payload-CareRendered\"> </a></td><td>Care Rendered? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">PaymentAsked<a name=\"feedback-payload-PaymentAsked\"> </a></td><td>Payment Asked? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">DrugPrescribed<a name=\"feedback-payload-DrugPrescribed\"> </a></td><td>Drug Prescribed? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">DrugReceived<a name=\"feedback-payload-DrugReceived\"> </a></td><td>Drug Received? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">Asessment<a name=\"feedback-payload-Asessment\"> </a></td><td>Asessment? (0|1|2|3|4|5)</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem feedback-payload</b></p><a name=\"feedback-payload\"> </a><a name=\"hcfeedback-payload\"> </a><p>This  code system <code>https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CareRendered<a name=\"feedback-payload-CareRendered\"> </a></td><td>Care Rendered? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">PaymentAsked<a name=\"feedback-payload-PaymentAsked\"> </a></td><td>Payment Asked? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">DrugPrescribed<a name=\"feedback-payload-DrugPrescribed\"> </a></td><td>Drug Prescribed? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">DrugReceived<a name=\"feedback-payload-DrugReceived\"> </a></td><td>Drug Received? (yes|no)</td></tr><tr><td style=\"white-space:nowrap\">assessment<a name=\"feedback-payload-assessment\"> </a></td><td>assessment? (0|1|2|3|4|5)</td></tr></table></div>"
   },
   "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload",
   "version" : "0.1.0",
   "name" : "FeedbackPayloadCS",
   "title" : "Feedback Payload (CommunicationRequest | Communication)",
   "status" : "draft",
-  "date" : "2025-08-26T15:39:34+00:00",
+  "date" : "2025-09-08T11:14:40+00:00",
   "publisher" : "openIMIS Initiative",
   "contact" : [{
     "name" : "openIMIS Initiative",
@@ -55,7 +55,7 @@
     "display" : "Drug Received? (yes|no)"
   },
   {
-    "code" : "Asessment",
-    "display" : "Asessment? (0|1|2|3|4|5)"
+    "code" : "assessment",
+    "display" : "assessment? (0|1|2|3|4|5)"
   }]
 }

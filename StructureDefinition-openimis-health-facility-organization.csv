@@ -252,7 +252,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Organization.identifier:UUID.assigner","Organization.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.4 / (CX.4,CX.9,CX.10)","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","./IdentifierIssuingAuthority"
-"Organization.active","Organization.active","","","",0,0,"","Y","Y","boolean {[]} {[]}
+"Organization.active","Organization.active","","","",0,1,"","Y","Y","boolean {[]} {[]}
 ","Whether the organization's record is still in active use","Whether the organization's record is still in active use.","This active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.
 
 This element is labeled as a modifier because it may be used to mark that the resource was created in error.","Need a flag to indicate a record is no longer to be used and should generally be hidden for the user in the UI.","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"Organization.active",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -307,7 +307,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Name used for the organization","A name associated with the organization.","If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.","Need to use the name as the label of the organization.","","","","","","","",,,,,"",,,,"Organization.name",0,1,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.1",".name","Participant.name",".PreferredName/Name"
-"Organization.alias","Organization.alias","","","",0,0,"","","","string {[]} {[]}
+"Organization.alias","Organization.alias","","","",0,*,"","","","string {[]} {[]}
 ","A list of alternate names that the organization is known as, or was known as in the past","A list of alternate names that the organization is known as, or was known as in the past.","There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.","Over time locations and organizations go through many changes and can be known by different names.
 
 For searching knowing previous names that the organization was known by can be very useful.","","","","","","","",,,,,"",,,,"Organization.alias",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -492,7 +492,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Street name, number, direction & P.O. Box etc.","This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""137 Nowhere Street""/>","","",,,,,"",,,,"Address.line",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)","AD.part[parttype = AL]","./StreetAddress (newline delimitted)"
 "Organization.contact.address.city","Organization.contact.address.city","","Municpality
-","",0,0,"","","Y","string {[]} {[]}
+","",0,1,"","","Y","string {[]} {[]}
 ","Name of city, town etc.","The name of the city, town, suburb, village or other community or delivery center.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Erewhon""/>","","",,,,,"",,,,"Address.city",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.3","AD.part[parttype = CTY]","./Jurisdiction"
 "Organization.contact.address.district","Organization.contact.address.district","","County
@@ -504,10 +504,10 @@ Territory","",1,1,"Y","","Y","string {[]} {[]}
 ","State/Region","Health Facility's State/Region name as it is configured in openIMIS.","","","","","","","","","",,,,,"",,,,"Address.state",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.4","AD.part[parttype = STA]","./Region"
 "Organization.contact.address.postalCode","Organization.contact.address.postalCode","","Zip
-","",0,0,"","","Y","string {[]} {[]}
+","",0,1,"","","Y","string {[]} {[]}
 ","Postal code for area","A postal code designating a region defined by the postal service.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""9132""/>","","",,,,,"",,,,"Address.postalCode",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.5","AD.part[parttype = ZIP]","./PostalIdentificationCode"
-"Organization.contact.address.country","Organization.contact.address.country","","","",0,0,"","","Y","string {[]} {[]}
+"Organization.contact.address.country","Organization.contact.address.country","","","",0,1,"","","Y","string {[]} {[]}
 ","Country (e.g. may be ISO 3166 2 or 3 letter code)","Country - a nation as commonly understood or generally accepted.","ISO 3166 2- or 3- letter codes MAY be used in place of a human readable country name.","","","","","","","","",,,,,"",,,,"Address.country",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.6","AD.part[parttype = CNT]","./Country"
 "Organization.contact.address.period","Organization.contact.address.period","","","",0,1,"","","Y","Period {[]} {[]}
@@ -522,7 +522,7 @@ Territory","",1,1,"Y","","Y","string {[]} {[]}
 "Organization.contact.period","Organization.contact.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","Period that this contact was valid for usage","Period that this contact was valid for usage.","If the details have multiple periods, then enter in a new ExtendedContact with the new period.","","","","","","","","",,,,,"",,,,"ExtendedContactDetail.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Organization.partOf","Organization.partOf","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"Organization.partOf","Organization.partOf","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","The organization of which this organization forms a part","The organization of which this organization forms a part.","","Need to be able to track the hierarchy of organizations within an organization.","","","","","","","",,,,,"",,,,"Organization.partOf",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","No equivalent in HL7 V2",".playedBy[classCode=Part].scoper","n/a"
 "Organization.endpoint","Organization.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}

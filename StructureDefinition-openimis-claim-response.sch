@@ -12,27 +12,14 @@
   <sch:pattern>
     <sch:title>f:ClaimResponse</sch:title>
     <sch:rule context="f:ClaimResponse">
-      <sch:assert test="count(f:subType) &lt;= 0">subType: maximum cardinality of 'subType' is 0</sch:assert>
       <sch:assert test="count(f:insurer) &gt;= 1">insurer: minimum cardinality of 'insurer' is 1</sch:assert>
       <sch:assert test="count(f:requestor) &gt;= 1">requestor: minimum cardinality of 'requestor' is 1</sch:assert>
       <sch:assert test="count(f:request) &gt;= 1">request: minimum cardinality of 'request' is 1</sch:assert>
-      <sch:assert test="count(f:disposition) &lt;= 0">disposition: maximum cardinality of 'disposition' is 0</sch:assert>
-      <sch:assert test="count(f:preAuthRef) &lt;= 0">preAuthRef: maximum cardinality of 'preAuthRef' is 0</sch:assert>
-      <sch:assert test="count(f:preAuthPeriod) &lt;= 0">preAuthPeriod: maximum cardinality of 'preAuthPeriod' is 0</sch:assert>
-      <sch:assert test="count(f:payeeType) &lt;= 0">payeeType: maximum cardinality of 'payeeType' is 0</sch:assert>
       <sch:assert test="count(f:item) &gt;= 1">item: minimum cardinality of 'item' is 1</sch:assert>
-      <sch:assert test="count(f:addItem) &lt;= 0">addItem: maximum cardinality of 'addItem' is 0</sch:assert>
-      <sch:assert test="count(f:adjudication) &lt;= 0">adjudication: maximum cardinality of 'adjudication' is 0</sch:assert>
       <sch:assert test="count(f:total) &gt;= 1">total: minimum cardinality of 'total' is 1</sch:assert>
       <sch:assert test="count(f:total) &lt;= 4">total: maximum cardinality of 'total' is 4</sch:assert>
-      <sch:assert test="count(f:payment) &lt;= 0">payment: maximum cardinality of 'payment' is 0</sch:assert>
-      <sch:assert test="count(f:fundsReserve) &lt;= 0">fundsReserve: maximum cardinality of 'fundsReserve' is 0</sch:assert>
-      <sch:assert test="count(f:formCode) &lt;= 0">formCode: maximum cardinality of 'formCode' is 0</sch:assert>
-      <sch:assert test="count(f:form) &lt;= 0">form: maximum cardinality of 'form' is 0</sch:assert>
       <sch:assert test="count(f:processNote) &lt;= 1">processNote: maximum cardinality of 'processNote' is 1</sch:assert>
       <sch:assert test="count(f:communicationRequest) &lt;= 1">communicationRequest: maximum cardinality of 'communicationRequest' is 1</sch:assert>
-      <sch:assert test="count(f:insurance) &lt;= 0">insurance: maximum cardinality of 'insurance' is 0</sch:assert>
-      <sch:assert test="count(f:error) &lt;= 0">error: maximum cardinality of 'error' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -115,9 +102,7 @@
     <sch:rule context="f:ClaimResponse/f:item">
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference']) &gt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/claim-item-reference': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:noteNumber) &lt;= 0">noteNumber: maximum cardinality of 'noteNumber' is 0</sch:assert>
       <sch:assert test="count(f:adjudication) &lt;= 4">adjudication: maximum cardinality of 'adjudication' is 4</sch:assert>
-      <sch:assert test="count(f:detail) &lt;= 0">detail: maximum cardinality of 'detail' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -152,14 +137,6 @@
       <sch:assert test="count(f:value) &gt;= 1">value: minimum cardinality of 'value' is 1</sch:assert>
       <sch:assert test="count(f:value) &lt;= 1">value: maximum cardinality of 'value' is 1</sch:assert>
       <sch:assert test="count(f:currency) &lt;= 1">currency: maximum cardinality of 'currency' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:ClaimResponse/f:processNote</sch:title>
-    <sch:rule context="f:ClaimResponse/f:processNote">
-      <sch:assert test="count(f:number) &lt;= 0">number: maximum cardinality of 'number' is 0</sch:assert>
-      <sch:assert test="count(f:type) &lt;= 0">type: maximum cardinality of 'type' is 0</sch:assert>
-      <sch:assert test="count(f:language) &lt;= 0">language: maximum cardinality of 'language' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

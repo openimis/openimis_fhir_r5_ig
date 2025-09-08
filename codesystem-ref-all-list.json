@@ -478,10 +478,10 @@
       "oids" : ["2.16.840.1.113883.4.642.4.1802"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R5/valueset-request-resource-types.html" : "Request Resource Types",
       "http://hl7.org/fhir/R5/valueset-subscription-types.html" : "Types used with Subscriptions",
       "http://hl7.org/fhir/R5/valueset-all-resource-types.html" : "All Resource Types",
-      "http://hl7.org/fhir/R5/valueset-participant-resource-types.html" : "Participant Resource Types"
+      "http://hl7.org/fhir/R5/valueset-participant-resource-types.html" : "Participant Resource Types",
+      "http://hl7.org/fhir/R5/valueset-request-resource-types.html" : "Request Resource Types"
     },
     {
       "url" : "http://hl7.org/fhir/fm-status",
@@ -1567,8 +1567,8 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-activity-definition-usage-context-venue-type.html" : "Usage Context for Venue Type (ActivityDefinition)",
       "http://terminology.hl7.org/6.5.0/ValueSet-v3-ActConsentDirective.html" : "ActConsentDirective",
+      "ValueSet-activity-definition-usage-context-venue-type.html" : "Usage Context for Venue Type (ActivityDefinition)",
       "http://terminology.hl7.org/6.5.0/ValueSet-v3-ActIncidentCode.html" : "ActIncidentCode"
     },
     {
@@ -1842,8 +1842,8 @@
       "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
       "uses" : {
       },
-      "ValueSet-coverage-item-benefit-type.html" : "Type of benefit (Coverage)",
       "ValueSet-coverage-item-benefit-type-total-left.html" : "Type of benefit as total left (Coverage)",
+      "ValueSet-coverage-item-benefit-type.html" : "Type of benefit (Coverage)",
       "ValueSet-coverage-item-benefit-type-amount-left.html" : "Type of benefit as amount left (Coverage)"
     },
     {

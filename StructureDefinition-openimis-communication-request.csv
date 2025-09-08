@@ -32,19 +32,19 @@ user content","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R5/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"CommunicationRequest.identifier","CommunicationRequest.identifier","","","",0,0,"","","Y","Identifier {[]} {[]}
+"CommunicationRequest.identifier","CommunicationRequest.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
 ","Unique identifier","Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server.","This is a business identifier, not a resource identifier (see [discussion](http://hl7.org/fhir/R5/resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.","Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers.","","","","","","","",,,,,"",,,,"CommunicationRequest.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.identifier","FiveWs.identifier"
 "CommunicationRequest.basedOn","CommunicationRequest.basedOn","","fulfills
-","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","Fulfills plan or proposal","A plan or proposal that is fulfilled in whole or in part by this request.","","Allows tracing of authorization for the request and tracking whether proposals/recommendations were acted upon.","","","","","","","",,,,,"",,,,"CommunicationRequest.basedOn",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.basedOn",".outboundRelationship[typeCode=FLFS].target"
 "CommunicationRequest.replaces","CommunicationRequest.replaces","","supersedes
-prior","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/CommunicationRequest]]}
+prior","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/CommunicationRequest]]}
 ","Request(s) replaced by this request","Completed or terminated request(s) whose function is taken by this new request.","The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing.","Allows tracing the continuation of a therapy or administrative process instantiated through multiple requests.","","","","","","","",,,,,"",,,,"CommunicationRequest.replaces",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.replaces",".outboundRelationship[typeCode=RPLC].target"
 "CommunicationRequest.groupIdentifier","CommunicationRequest.groupIdentifier","","grouperId
-","",0,0,"","","Y","Identifier {[]} {[]}
+","",0,1,"","","Y","Identifier {[]} {[]}
 ","Composite request this is part of","A shared identifier common to multiple independent Request instances that were activated/authorized more or less simultaneously by a single author.  The presence of the same identifier on each request ties those requests together and may have business ramifications in terms of reporting of results, billing, etc.  E.g. a requisition number shared by a set of lab tests ordered together, or a prescription number shared by all meds ordered at one time.","Requests are linked either by a ""basedOn"" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation.","","","","","","","","",,,,,"",,,,"CommunicationRequest.groupIdentifier",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.groupIdentifier",".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier"
 "CommunicationRequest.status","CommunicationRequest.status","","","",1,1,"","Y","Y","code {[]} {[]}
@@ -62,17 +62,17 @@ Cancelled Reason","",1,1,"","","","CodeableConcept {[]} {[]}
 
 One exception to this is that the granularity of CommunicationRequest.intent is allowed to change.  For example, a Request identified as an ""order"" might later be clarified to be a ""filler-order"".  Or, in rarer cases (to meet recipient constraints), the reverse might also occur.","Proposals/recommendations, plans and orders all use the same structure and can exist in the same fulfillment chain.","","","","","","","",,"required","Codes indicating the degree of authority/intentionality associated with a request.","http://hl7.org/fhir/ValueSet/request-intent|5.0.0","",,,,"CommunicationRequest.intent",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.intent","FiveWs.class"
-"CommunicationRequest.category","CommunicationRequest.category","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"CommunicationRequest.category","CommunicationRequest.category","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Message category","The type of message to be sent such as alert, notification, reminder, instruction, etc.","There may be multiple axes of categorization and one communication request may serve multiple purposes.","","","","","","","","",,"example","Codes for general categories of communications such as alerts, instruction, etc.","http://hl7.org/fhir/ValueSet/communication-category","",,,,"CommunicationRequest.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
-"CommunicationRequest.priority","CommunicationRequest.priority","","","",0,0,"","","Y","code {[]} {[]}
+"CommunicationRequest.priority","CommunicationRequest.priority","","","",0,1,"","","Y","code {[]} {[]}
 ","routine | urgent | asap | stat","Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine.","","","","If missing, this task should be performed with normal priority","","","","","",,"required","Codes indicating the relative importance of a communication request.","http://hl7.org/fhir/ValueSet/request-priority|5.0.0","",,,,"CommunicationRequest.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.priority","FiveWs.grade"
 "CommunicationRequest.doNotPerform","CommunicationRequest.doNotPerform","","prohibited
-","",0,0,"","Y","Y","boolean {[]} {[]}
+","",0,1,"","Y","Y","boolean {[]} {[]}
 ","True if request is prohibiting action","If true indicates that the CommunicationRequest is asking for the specified action to *not* occur.","The attributes provided with the request qualify what is not to be done.","","","If do not perform is not specified, the request is a positive request e.g. ""do perform""","","","","","",,,,,"",,,,"CommunicationRequest.doNotPerform",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.doNotPerform"
-"CommunicationRequest.medium","CommunicationRequest.medium","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"CommunicationRequest.medium","CommunicationRequest.medium","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","A channel of communication","A channel that was used for this communication (e.g. email, fax).","","","","","","","","","",,"example","Codes for communication mediums such as phone, fax, email, in person, etc.","http://terminology.hl7.org/ValueSet/v3-ParticipationMode","",,,,"CommunicationRequest.medium",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "CommunicationRequest.subject","CommunicationRequest.subject","","patient
@@ -82,7 +82,7 @@ One exception to this is that the granularity of CommunicationRequest.intent is 
 "CommunicationRequest.about","CommunicationRequest.about","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim]]}
 ","Resources that pertain to this communication request","Other resources that pertain to this communication request and to which this communication request should be associated.","Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces.","","","","","","","","",,,,,"",,,,"CommunicationRequest.about",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.supportingInfo","FiveWs.context"
-"CommunicationRequest.encounter","CommunicationRequest.encounter","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+"CommunicationRequest.encounter","CommunicationRequest.encounter","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
 ","The Encounter during which this CommunicationRequest was created","The Encounter during which this CommunicationRequest was created or to which the creation of this record is tightly associated.","This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.","","","","","","","","",,,,,"",,,,"CommunicationRequest.encounter",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.encounter","FiveWs.context"
 "CommunicationRequest.payload","CommunicationRequest.payload","","","",5,5,"","","","BackboneElement {[]} {[]}
@@ -344,85 +344,85 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "CommunicationRequest.payload:DrugReceived.content[x].text","CommunicationRequest.payload.content[x].text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Drug Received? (yes|no)""/>","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"CommunicationRequest.payload:Asessment","CommunicationRequest.payload","Asessment","","",1,1,"","","","BackboneElement {[]} {[]}
+"CommunicationRequest.payload:assessment","CommunicationRequest.payload","assessment","","",1,1,"","","","BackboneElement {[]} {[]}
 ","Message payload","Text, attachment(s), or resource(s) to be communicated to the recipient.","","","","","","","","","",,,,,"",,,,"CommunicationRequest.payload",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"CommunicationRequest.payload:Asessment.id","CommunicationRequest.payload.id","","","",0,1,"","","","string {[]} {[]}
+"CommunicationRequest.payload:assessment.id","CommunicationRequest.payload.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
 ","","n/a"
-"CommunicationRequest.payload:Asessment.extension","CommunicationRequest.payload.extension","","","",1,*,"","","","Extension {[]} {[]}
+"CommunicationRequest.payload:assessment.extension","CommunicationRequest.payload.extension","","","",1,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"CommunicationRequest.payload:Asessment.extension:type","CommunicationRequest.payload.extension","type","","",1,1,"","","","Extension {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type]]} {[]}
+"CommunicationRequest.payload:assessment.extension:type","CommunicationRequest.payload.extension","type","","",1,1,"","","","Extension {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type]]} {[]}
 ","Payload Type (CommunicationRequest | Communication)","Indicates the payload type for a Communication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"CommunicationRequest.payload:Asessment.extension:type.id","CommunicationRequest.payload.extension.id","","","",0,1,"","","","id {[]} {[]}
+"CommunicationRequest.payload:assessment.extension:type.id","CommunicationRequest.payload.extension.id","","","",0,1,"","","","id {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
 ","","n/a"
-"CommunicationRequest.payload:Asessment.extension:type.extension","CommunicationRequest.payload.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+"CommunicationRequest.payload:assessment.extension:type.extension","CommunicationRequest.payload.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"CommunicationRequest.payload:Asessment.extension:type.url","CommunicationRequest.payload.extension.url","","","",1,1,"","","","uri {[]} {[]}
+"CommunicationRequest.payload:assessment.extension:type.url","CommunicationRequest.payload.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"CommunicationRequest.payload:Asessment.extension:type.value[x]","CommunicationRequest.payload.extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"CommunicationRequest.payload:assessment.extension:type.value[x]","CommunicationRequest.payload.extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R5/extensibility.html) for a list).","","","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
     <system value=""https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/feedback-payload""/>
-    <code value=""Asessment""/>
+    <code value=""assessment""/>
   </coding>
 </valueCodeableConcept>","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-payload","",,,,"Extension.value[x]",0,1,"ext-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"CommunicationRequest.payload:Asessment.modifierExtension","CommunicationRequest.payload.modifierExtension","","extensions
+"CommunicationRequest.payload:assessment.modifierExtension","CommunicationRequest.payload.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R5/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"CommunicationRequest.payload:Asessment.content[x]","CommunicationRequest.payload.content[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+"CommunicationRequest.payload:assessment.content[x]","CommunicationRequest.payload.content[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Message part content","The communicated content (or for multi-part communications, one portion of the communication).","The content can be codified or textual.  As an example of codified content, when working with machine generated communications, the payload may be drawn from a finite, terminology defined set of communications, especially for short, status update kinds of communications where more of a natural language approach isn't appropriate.
 
 If the content isn't codified, contentCodeableConcept.text can be used.  
 
 When using contentCodeableConcept, the CodeableConcept is what is being communicated and is not a categorization of the content.","","","","","","","","",,,,,"",,,,"CommunicationRequest.payload.content[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.note"
-"CommunicationRequest.payload:Asessment.content[x].id","CommunicationRequest.payload.content[x].id","","","",0,1,"","","","id {[]} {[]}
+"CommunicationRequest.payload:assessment.content[x].id","CommunicationRequest.payload.content[x].id","","","",0,1,"","","","id {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
 ","","n/a"
-"CommunicationRequest.payload:Asessment.content[x].extension","CommunicationRequest.payload.content[x].extension","","extensions
+"CommunicationRequest.payload:assessment.content[x].extension","CommunicationRequest.payload.content[x].extension","","extensions
 user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
-"CommunicationRequest.payload:Asessment.content[x].coding","CommunicationRequest.payload.content[x].coding","","","",0,*,"","","Y","Coding {[]} {[]}
+"CommunicationRequest.payload:assessment.content[x].coding","CommunicationRequest.payload.content[x].coding","","","",0,*,"","","Y","Coding {[]} {[]}
 ","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","union(., ./translation)"
-"CommunicationRequest.payload:Asessment.content[x].text","CommunicationRequest.payload.content[x].text","","","",0,1,"","","Y","string {[]} {[]}
-","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Asessment? (0|1|2|3|4|5)""/>","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"CommunicationRequest.payload:assessment.content[x].text","CommunicationRequest.payload.content[x].text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""assessment? (0|1|2|3|4|5)""/>","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
 "CommunicationRequest.occurrence[x]","CommunicationRequest.occurrence[x]","","timing
-","",0,0,"","","Y","dateTime {[]} {[]}
+","",0,1,"","","Y","dateTime {[]} {[]}
 Period {[]} {[]}","When scheduled","The time when this communication is to occur.","","","","","","","","","",,,,,"",,,,"CommunicationRequest.occurrence[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.occurrence[x]","FiveWs.planned"
 "CommunicationRequest.authoredOn","CommunicationRequest.authoredOn","","createdOn
-","",0,0,"","","Y","dateTime {[]} {[]}
+","",0,1,"","","Y","dateTime {[]} {[]}
 ","When request transitioned to being actionable","For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation.","","","","","","","","","",,,,,"",,,,"CommunicationRequest.authoredOn",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.authoredOn","FiveWs.recorded"
 "CommunicationRequest.requester","CommunicationRequest.requester","","author
-","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}
+","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}
 ","Who asks for the information to be shared","The device, individual, or organization who asks for the information to be shared.","","","","","","","","","",,,,,"",,,,"CommunicationRequest.requester",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.requester","FiveWs.author",".participation[typeCode=AUT].role"
 "CommunicationRequest.recipient","CommunicationRequest.recipient","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-enrolment-officer-practitioner]]}
 ","Enrolment Officer","Enrolment Officer having enroled the insuree.","","","","","","","","","",,,,,"",,,,"CommunicationRequest.recipient",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.performer","FiveWs.actor"
-"CommunicationRequest.informationProvider","CommunicationRequest.informationProvider","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService], CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}
+"CommunicationRequest.informationProvider","CommunicationRequest.informationProvider","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService], CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}
 ","Who should share the information","The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.","","","","","","","","","",,,,,"",,,,"CommunicationRequest.informationProvider",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.performer","FiveWs.actor"
-"CommunicationRequest.reason","CommunicationRequest.reason","","","",0,0,"","","Y","CodeableReference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+"CommunicationRequest.reason","CommunicationRequest.reason","","","",0,*,"","","Y","CodeableReference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","Why is communication needed?","Describes why the request is being made in coded or textual form.","Textual reasons can be captured using reasonCode.text.","","","","","","","","",,"example","Codes for describing reasons for the occurrence of a communication.","http://terminology.hl7.org/ValueSet/v3-ActReason","",,,,"CommunicationRequest.reason",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.reason","FiveWs.why[x]",".reasonCode"
-"CommunicationRequest.note","CommunicationRequest.note","","","",0,0,"","","","Annotation {[]} {[]}
+"CommunicationRequest.note","CommunicationRequest.note","","","",0,*,"","","","Annotation {[]} {[]}
 ","Comments made about communication request","Comments made about the request by the requester, sender, recipient, subject or other participants.","","","","","","","","","",,,,,"",,,,"CommunicationRequest.note",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.note",".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]"

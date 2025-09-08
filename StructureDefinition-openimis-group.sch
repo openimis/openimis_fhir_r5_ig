@@ -17,10 +17,7 @@
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-poverty-status']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-poverty-status': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-type']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-type': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-confirmation']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/group-confirmation': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:code) &lt;= 0">code: maximum cardinality of 'code' is 0</sch:assert>
       <sch:assert test="count(f:quantity) &gt;= 1">quantity: minimum cardinality of 'quantity' is 1</sch:assert>
-      <sch:assert test="count(f:managingEntity) &lt;= 0">managingEntity: maximum cardinality of 'managingEntity' is 0</sch:assert>
-      <sch:assert test="count(f:characteristic) &lt;= 0">characteristic: maximum cardinality of 'characteristic' is 0</sch:assert>
       <sch:assert test="count(f:member) &gt;= 1">member: minimum cardinality of 'member' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -90,13 +87,6 @@
       <sch:assert test="count(f:code) &lt;= 1">code: maximum cardinality of 'code' is 1</sch:assert>
       <sch:assert test="count(f:display) &lt;= 1">display: maximum cardinality of 'display' is 1</sch:assert>
       <sch:assert test="count(f:userSelected) &lt;= 1">userSelected: maximum cardinality of 'userSelected' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:Group/f:member</sch:title>
-    <sch:rule context="f:Group/f:member">
-      <sch:assert test="count(f:period) &lt;= 0">period: maximum cardinality of 'period' is 0</sch:assert>
-      <sch:assert test="count(f:inactive) &lt;= 0">inactive: maximum cardinality of 'inactive' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

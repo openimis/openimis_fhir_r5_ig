@@ -12,17 +12,8 @@
   <sch:pattern>
     <sch:title>f:Location</sch:title>
     <sch:rule context="f:Location">
-      <sch:assert test="count(f:operationalStatus) &lt;= 0">operationalStatus: maximum cardinality of 'operationalStatus' is 0</sch:assert>
       <sch:assert test="count(f:name) &gt;= 1">name: minimum cardinality of 'name' is 1</sch:assert>
-      <sch:assert test="count(f:alias) &lt;= 0">alias: maximum cardinality of 'alias' is 0</sch:assert>
-      <sch:assert test="count(f:description) &lt;= 0">description: maximum cardinality of 'description' is 0</sch:assert>
-      <sch:assert test="count(f:type) &lt;= 0">type: maximum cardinality of 'type' is 0</sch:assert>
-      <sch:assert test="count(f:address) &lt;= 0">address: maximum cardinality of 'address' is 0</sch:assert>
       <sch:assert test="count(f:form) &gt;= 1">form: minimum cardinality of 'form' is 1</sch:assert>
-      <sch:assert test="count(f:position) &lt;= 0">position: maximum cardinality of 'position' is 0</sch:assert>
-      <sch:assert test="count(f:managingOrganization) &lt;= 0">managingOrganization: maximum cardinality of 'managingOrganization' is 0</sch:assert>
-      <sch:assert test="count(f:hoursOfOperation) &lt;= 0">hoursOfOperation: maximum cardinality of 'hoursOfOperation' is 0</sch:assert>
-      <sch:assert test="count(f:endpoint) &lt;= 0">endpoint: maximum cardinality of 'endpoint' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

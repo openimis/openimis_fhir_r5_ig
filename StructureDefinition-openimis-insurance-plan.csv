@@ -269,7 +269,7 @@ Currently only medical is managed. Can have other values in the future.","","","
 ","Official name","Official name of the health insurance product as designated by the owner.","If the name of the product/plan changes, consider putting the old name in the alias column so that it can still be located through searches.","","","","","","","","",,,,,"",,,,"InsurancePlan.name",0,1,"ipn-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".name"
-"InsurancePlan.alias","InsurancePlan.alias","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.alias","InsurancePlan.alias","","","",0,*,"","","","string {[]} {[]}
 ","Alternate names","A list of alternate names that the product is known as, or was known as in the past.","There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the product/plan.","Over time products/plans go through many changes and can be known by different names.
 
 For searching knowing previous names that the product/plan was known by can be very useful.","","","","","","","",,,,,"",,,,"InsurancePlan.alias",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -294,22 +294,22 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./high"
 "InsurancePlan.ownedBy","InsurancePlan.ownedBy","","Payer
-","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Product issuer","The entity that is providing  the health insurance product and underwriting the risk.  This is typically an insurance carriers, other third-party payers, or health plan sponsors comonly referred to as 'payers'.","","","","","","","","","",,,,,"",,,,"InsurancePlan.ownedBy",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.administeredBy","InsurancePlan.administeredBy","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"InsurancePlan.administeredBy","InsurancePlan.administeredBy","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Product administrator","An organization which administer other services such as underwriting, customer service and/or claims processing on behalf of the health insurance product owner.","","","","","","","","","",,,,,"",,,,"InsurancePlan.administeredBy",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.coverageArea","InsurancePlan.coverageArea","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-location]]}
 ","Where product applies","The geographic region in which a health insurance product's benefits apply.","","","","","","","","","",,,,,"",,,,"InsurancePlan.coverageArea",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.contact","InsurancePlan.contact","","","",0,0,"","","","ExtendedContactDetail {[]} {[]}
+"InsurancePlan.contact","InsurancePlan.contact","","","",0,*,"","","","ExtendedContactDetail {[]} {[]}
 ","Official contact details relevant to the health insurance plan/product","The contact details of communication devices available relevant to the specific Insurance Plan/Product. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.","The address/telecom use code 'home' are not to be used.","Need to keep track of both simple contact details and also assigned contacts within larger organizations.","","","","","","","",,,,,"",,,,"InsurancePlan.contact",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".contactParty"
-"InsurancePlan.endpoint","InsurancePlan.endpoint","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}
+"InsurancePlan.endpoint","InsurancePlan.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}
 ","Technical endpoint","The technical endpoints providing access to services operated for the health insurance product.","","Organizations have multiple systems that provide various services and need to be able to define the technical connection details for how to connect to them, and for what purpose.","","","","","","","",,,,,"",,,,"InsurancePlan.endpoint",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
-"InsurancePlan.network","InsurancePlan.network","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"InsurancePlan.network","InsurancePlan.network","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","What networks are Included","Reference to the network included in the health insurance product.","Networks are represented as a hierarchy of organization resources.","","","","","","","","",,,,,"",,,,"InsurancePlan.network",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.coverage","InsurancePlan.coverage","","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -331,7 +331,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.coverage.type","InsurancePlan.coverage.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Type of coverage","Type of coverage  (Medical; Dental; Mental Health; Substance Abuse; Vision; Drug; Short Term; Long Term Care; Hospice; Home Health).","","","","","","","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-type","",,,,"InsurancePlan.coverage.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.coverage.network","InsurancePlan.coverage.network","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"InsurancePlan.coverage.network","InsurancePlan.coverage.network","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","What networks provide coverage","Reference to the network that providing the type of coverage.","Networks are represented as a hierarchy of organization resources.","","","","","","","","",,,,,"",,,,"InsurancePlan.coverage.network",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.coverage.benefit","InsurancePlan.coverage.benefit","","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -353,7 +353,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.coverage.benefit.type","InsurancePlan.coverage.benefit.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Type of benefit","Type of benefit (primary care; speciality care; inpatient; outpatient).","","","","","","","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/insurance-plan-coverage-type","",,,,"InsurancePlan.coverage.benefit.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.coverage.benefit.requirement","InsurancePlan.coverage.benefit.requirement","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.coverage.benefit.requirement","InsurancePlan.coverage.benefit.requirement","","","",0,1,"","","","string {[]} {[]}
 ","Referral requirements","The referral requirements to have access/coverage for this benefit.","","","","","","","","","",,,,,"",,,,"InsurancePlan.coverage.benefit.requirement",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.coverage.benefit.limit","InsurancePlan.coverage.benefit.limit","","","",1,2,"","","","BackboneElement {[]} {[]}
@@ -579,16 +579,16 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R5/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"InsurancePlan.plan.identifier","InsurancePlan.plan.identifier","","","",0,0,"","","Y","Identifier {[]} {[]}
+"InsurancePlan.plan.identifier","InsurancePlan.plan.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
 ","Business Identifier for Product","Business identifiers assigned to this health insurance plan which remain constant as the resource is updated and propagates from server to server.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.identifier",".scopes[Role](classCode=IDENT)"
-"InsurancePlan.plan.type","InsurancePlan.plan.type","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"InsurancePlan.plan.type","InsurancePlan.plan.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Type of plan","Type of plan. For example, ""Platinum"" or ""High Deductable"".","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.coverageArea","InsurancePlan.plan.coverageArea","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}
+"InsurancePlan.plan.coverageArea","InsurancePlan.plan.coverageArea","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}
 ","Where product applies","The geographic region in which a health insurance plan's benefits apply.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.coverageArea",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.network","InsurancePlan.plan.network","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"InsurancePlan.plan.network","InsurancePlan.plan.network","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","What networks provide coverage","Reference to the network that providing the type of coverage.","Networks are represented as a hierarchy of organization resources.","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.network",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost","InsurancePlan.plan.generalCost","","","",1,*,"","","","BackboneElement {[]} {[]}
@@ -617,7 +617,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:lumpsum","InsurancePlan.plan.generalCost","lumpsum","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -690,7 +690,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost:lumpsum.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost:lumpsum.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost:lumpsum.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:premiumAdult","InsurancePlan.plan.generalCost","premiumAdult","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -757,13 +757,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost:premiumAdult.type.text","InsurancePlan.plan.generalCost.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"InsurancePlan.plan.generalCost:premiumAdult.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,0,"","","","positiveInt {[]} {[]}
+"InsurancePlan.plan.generalCost:premiumAdult.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Number of enrollees","Number of participants enrolled in the plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.groupSize",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:premiumAdult.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost:premiumAdult.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost:premiumAdult.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:premiumChild","InsurancePlan.plan.generalCost","premiumChild","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -830,13 +830,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost:premiumChild.type.text","InsurancePlan.plan.generalCost.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"InsurancePlan.plan.generalCost:premiumChild.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,0,"","","","positiveInt {[]} {[]}
+"InsurancePlan.plan.generalCost:premiumChild.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Number of enrollees","Number of participants enrolled in the plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.groupSize",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:premiumChild.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost:premiumChild.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost:premiumChild.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:registrationLumpsum","InsurancePlan.plan.generalCost","registrationLumpsum","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -903,13 +903,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost:registrationLumpsum.type.text","InsurancePlan.plan.generalCost.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"InsurancePlan.plan.generalCost:registrationLumpsum.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,0,"","","","positiveInt {[]} {[]}
+"InsurancePlan.plan.generalCost:registrationLumpsum.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Number of enrollees","Number of participants enrolled in the plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.groupSize",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:registrationLumpsum.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost:registrationLumpsum.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost:registrationLumpsum.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:registrationFee","InsurancePlan.plan.generalCost","registrationFee","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -976,13 +976,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost:registrationFee.type.text","InsurancePlan.plan.generalCost.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"InsurancePlan.plan.generalCost:registrationFee.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,0,"","","","positiveInt {[]} {[]}
+"InsurancePlan.plan.generalCost:registrationFee.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Number of enrollees","Number of participants enrolled in the plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.groupSize",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:registrationFee.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost:registrationFee.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost:registrationFee.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:generalAssemblyLumpSum","InsurancePlan.plan.generalCost","generalAssemblyLumpSum","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -1049,13 +1049,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost:generalAssemblyLumpSum.type.text","InsurancePlan.plan.generalCost.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"InsurancePlan.plan.generalCost:generalAssemblyLumpSum.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,0,"","","","positiveInt {[]} {[]}
+"InsurancePlan.plan.generalCost:generalAssemblyLumpSum.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Number of enrollees","Number of participants enrolled in the plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.groupSize",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:generalAssemblyLumpSum.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost:generalAssemblyLumpSum.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost:generalAssemblyLumpSum.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:generalAssemblyFee","InsurancePlan.plan.generalCost","generalAssemblyFee","","",0,1,"","","","BackboneElement {[]} {[]}
@@ -1122,16 +1122,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "InsurancePlan.plan.generalCost:generalAssemblyFee.type.text","InsurancePlan.plan.generalCost.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"InsurancePlan.plan.generalCost:generalAssemblyFee.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,0,"","","","positiveInt {[]} {[]}
+"InsurancePlan.plan.generalCost:generalAssemblyFee.groupSize","InsurancePlan.plan.generalCost.groupSize","","","",0,1,"","","","positiveInt {[]} {[]}
 ","Number of enrollees","Number of participants enrolled in the plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.groupSize",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.generalCost:generalAssemblyFee.cost","InsurancePlan.plan.generalCost.cost","","","",1,1,"","","","Money {[]} {[]}
 ","Cost value","Value of the cost.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.cost",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.generalCost:generalAssemblyFee.comment","InsurancePlan.plan.generalCost.comment","","","",0,0,"","","","string {[]} {[]}
+"InsurancePlan.plan.generalCost:generalAssemblyFee.comment","InsurancePlan.plan.generalCost.comment","","","",0,1,"","","","string {[]} {[]}
 ","Additional cost information","Additional information about the general costs associated with this plan.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.generalCost.comment",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"InsurancePlan.plan.specificCost","InsurancePlan.plan.specificCost","","","",0,0,"","","","BackboneElement {[]} {[]}
+"InsurancePlan.plan.specificCost","InsurancePlan.plan.specificCost","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Specific costs","Costs associated with the coverage provided by the product.","","","","","","","","","",,,,,"",,,,"InsurancePlan.plan.specificCost",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "InsurancePlan.plan.specificCost.id","InsurancePlan.plan.specificCost.id","","","",0,1,"","","","string {[]} {[]}

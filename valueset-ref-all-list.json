@@ -46,12 +46,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.69"],
       "uses" : {
       },
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-group-address.html" : "Poverty Status (Group)",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-group-address.html" : "Poverty Status (Group)"
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/address-use",
@@ -65,12 +64,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.67"],
       "uses" : {
       },
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-group-address.html" : "Poverty Status (Group)",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-group-address.html" : "Poverty Status (Group)"
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/adjudication-error",
@@ -84,8 +82,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.39"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/adjudication-reason",
@@ -119,8 +117,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1"],
       "uses" : {
       },
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
       "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
       "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
     },
     {
@@ -135,31 +133,31 @@
       "sources" : ["2.16.840.1.113883.4.642.3.21"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
-      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
-      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription",
-      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-group.html" : "openIMIS Group",
-      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
-      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
-      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
-      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
-      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
-      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
-      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
       "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
       "StructureDefinition-openimis-location.html" : "openIMIS Location",
-      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/all-resource-types",
@@ -312,8 +310,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/claim-careteamrole",
@@ -403,10 +401,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/claim-outcome",
@@ -440,8 +438,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/claim-type",
@@ -461,8 +459,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/claim-use",
@@ -482,8 +480,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -527,8 +525,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
-      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest",
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/communication-not-done-reason",
@@ -598,14 +596,14 @@
       "sources" : ["2.16.840.1.113883.4.642.3.71"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
       "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
       "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
@@ -619,14 +617,14 @@
       "sources" : ["2.16.840.1.113883.4.642.3.73"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
       "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
       "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/contract-action",
@@ -1129,15 +1127,15 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1025"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-contract-premium.html" : "Premium (Contract)",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
       "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
       "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
       "StructureDefinition-unit-price.html" : "Unit Price (Medication|ActivityDefinition)",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
       "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-contract-premium.html" : "Premium (Contract)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/datestype",
@@ -1149,10 +1147,10 @@
       "systems" : ["http://hl7.org/fhir/datestype"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -1263,9 +1261,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1174"],
       "uses" : {
       },
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission",
@@ -1303,8 +1301,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/ex-diagnosistype",
@@ -1378,8 +1376,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/ex-revenue-center",
@@ -1399,8 +1397,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/fm-status",
@@ -1420,11 +1418,11 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
       "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/forms",
@@ -1438,8 +1436,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.37"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse"
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/fundsreserve",
@@ -1453,8 +1451,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.33"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/group-membership-basis",
@@ -1546,28 +1544,28 @@
       "sources" : ["2.16.840.1.113883.4.642.3.45"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
-      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
-      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
-      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
-      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
       "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
       "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
-      "StructureDefinition-openimis-group.html" : "openIMIS Group",
       "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
-      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -1581,28 +1579,28 @@
       "sources" : ["2.16.840.1.113883.4.642.3.57"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
-      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
-      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
-      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
-      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
       "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
       "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
-      "StructureDefinition-openimis-group.html" : "openIMIS Group",
       "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
-      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/insuranceplan-applicability",
@@ -1654,31 +1652,31 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
-      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
-      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription",
-      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-group.html" : "openIMIS Group",
-      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
-      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
-      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
-      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
-      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
-      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
-      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
       "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-subscription.html" : "openIMIS Subscription",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
       "StructureDefinition-openimis-location.html" : "openIMIS Location",
-      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
+      "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
+      "StructureDefinition-openimis-payment-notice.html" : "openIMIS Payment Notice",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -1904,11 +1902,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.65"],
       "uses" : {
       },
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
       "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization"
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/note-type",
@@ -1944,9 +1942,9 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization"
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/participant-resource-types",
@@ -1992,8 +1990,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.31"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/payment-adjustment-reason",
@@ -2062,8 +2060,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
@@ -2107,8 +2105,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/provider-qualification",
@@ -2158,10 +2156,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.59"],
       "uses" : {
       },
-      "StructureDefinition-insurance-plan-period.html" : "Period (InsurancePlan)",
-      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-insurance-plan-discount.html" : "Discount (InsurancePlan)",
       "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
-      "StructureDefinition-insurance-plan-discount.html" : "Discount (InsurancePlan)"
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-insurance-plan-period.html" : "Period (InsurancePlan)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/related-claim-relationship",
@@ -2197,8 +2195,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.113"],
       "uses" : {
       },
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/request-priority",
@@ -2212,9 +2210,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.115"],
       "uses" : {
       },
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest",
       "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/request-resource-types",
@@ -2298,8 +2296,8 @@
       "sources" : ["2.16.840.1.113883.4.642.4.3322"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/service-place",
@@ -2319,8 +2317,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/service-uscls",
@@ -2342,10 +2340,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",
@@ -2460,8 +2458,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/timing-abbreviation",
@@ -2501,8 +2499,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/units-of-time",
@@ -2540,8 +2538,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.28"],
       "uses" : {
       },
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/version-algorithm",
@@ -2588,11 +2586,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.416"],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
       "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role"
+      "StructureDefinition-openimis-insurance-organization.html" : "openIMIS Insurance Organization",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/usage-context-type",
@@ -2689,8 +2687,8 @@
       "sources" : ["2.16.840.1.113883.1.11.16543"],
       "uses" : {
       },
-      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
-      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest",
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
@@ -2770,8 +2768,8 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-workflow-type",
@@ -2883,8 +2881,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim"
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/communication-request-status",
@@ -3079,9 +3077,9 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-communication.html" : "openIMIS Communication",
       "StructureDefinition-communication-payload-type.html" : "Payload Type (CommunicationRequest | Communication)",
-      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest"
+      "StructureDefinition-openimis-communication-request.html" : "openIMIS CommunicationRequest",
+      "StructureDefinition-openimis-communication.html" : "openIMIS Communication"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/feedback-status",
@@ -3314,26 +3312,26 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
-      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
-      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
-      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
-      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
       "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
       "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
-      "StructureDefinition-openimis-group.html" : "openIMIS Group",
       "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-location.html" : "openIMIS Location",
+      "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
       "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
-      "StructureDefinition-openimis-location.html" : "openIMIS Location"
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-care-type",
@@ -3499,8 +3497,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-gender-type",
@@ -3512,8 +3510,8 @@
       "systems" : ["http://hl7.org/fhir/administrative-gender"],
       "uses" : {
       },
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
-      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
     }
   ]
 }

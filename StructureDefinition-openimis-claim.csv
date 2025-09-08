@@ -267,7 +267,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.type.text","Claim.type.text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data"
-"Claim.subType","Claim.subType","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.subType","Claim.subType","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","More granular claim type","A finer grained suite of claim type codes which may convey additional information such as Inpatient vs Outpatient and/or a specialty service.","This may contain the local bill type codes, for example the US UB-04 bill type code or the CMS bill type.","Some jurisdictions need a finer grained claim type for routing and adjudication.","","","","","","","",,"example","A more granular claim typecode.","http://hl7.org/fhir/ValueSet/claim-subtype","",,,,"Claim.subType",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
 "Claim.use","Claim.use","","","",1,1,"","","Y","code {[]} {[]}
@@ -301,7 +301,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.enterer","Claim.enterer","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-claim-administrator-practitioner]]}
 ","Author of the claim","Individual who created the claim, predetermination or preauthorization.","","Some jurisdictions require the contact information for personnel completing claims.","","","","","","","",,,,,"",,,,"Claim.enterer",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.author"
-"Claim.insurer","Claim.insurer","","","",0,0,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"Claim.insurer","Claim.insurer","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Target","The Insurer who is target of the request.","","","","","","","","","",,,,,"",,,,"Claim.insurer",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.performer"
 "Claim.provider","Claim.provider","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-health-facility-organization]]}
@@ -317,10 +317,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 </valueCodeableConcept>","","","",,"example","The timeliness with which processing is required: stat, normal, deferred.","http://hl7.org/fhir/ValueSet/process-priority","",,,,"Claim.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.priority"
 "Claim.fundsReserve","Claim.fundsReserve","","Fund pre-allocation
-","",0,0,"","","","CodeableConcept {[]} {[]}
+","",0,1,"","","","CodeableConcept {[]} {[]}
 ","For whom to reserve funds","A code to indicate whether and for whom funds are to be reserved for future claims.","This field is only used for preauthorizations.","In the case of a Pre-Determination/Pre-Authorization the provider may request that funds in the amount of the expected Benefit be reserved ('Patient' or 'Provider') to pay for the Benefits determined on the subsequent claim(s). 'None' explicitly indicates no funds reserving is requested.","","","","","","","",,"example","For whom funds are to be reserved: (Patient, Provider, None).","http://hl7.org/fhir/ValueSet/fundsreserve","",,,,"Claim.fundsReserve",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.related","Claim.related","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Claim.related","Claim.related","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Prior or corollary claims","Other claims which are related to this claim such as prior submissions or claims for related services or for the same event.","For example,  for the original treatment and follow-up exams.","For workplace or other accidents it is common to relate separate claims arising from the same event.","","","","","","","",,,,,"",,,,"Claim.related",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.related.id","Claim.related.id","","","",0,1,"","","","string {[]} {[]}
@@ -345,13 +345,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.related.reference","Claim.related.reference","","","",0,1,"","","","Identifier {[]} {[]}
 ","File or case reference","An alternate organizational reference to the case or file to which this particular claim pertains.","For example, Property/Casualty insurer claim # or Workers Compensation case # .","In cases where an event-triggered claim is being submitted to an insurer which requires a reference number to be specified on all exchanges.","","","","","","","",,,,,"",,,,"Claim.related.reference",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.prescription","Claim.prescription","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/DeviceRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/VisionPrescription]]}
+"Claim.prescription","Claim.prescription","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/DeviceRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/VisionPrescription]]}
 ","Prescription authorizing services and products","Prescription is the document/authorization given to the claim author for them to provide products and services for which consideration (reimbursement) is sought. Could be a RX for medications, an 'order' for oxygen or wheelchair or physiotherapy treatments.","","Required to authorize the dispensing of controlled substances and devices.","","","","","","","",,,,,"",,,,"Claim.prescription",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.originalPrescription","Claim.originalPrescription","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/DeviceRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/VisionPrescription]]}
+"Claim.originalPrescription","Claim.originalPrescription","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/DeviceRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/VisionPrescription]]}
 ","Original prescription if superseded by fulfiller","Original prescription which has been superseded by this prescription to support the dispensing of pharmacy services, medications or products.","For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefore issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.","Often required when a fulfiller varies what is fulfilled from that authorized on the original prescription.","","","","","","","",,,,,"",,,,"Claim.originalPrescription",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.payee","Claim.payee","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Claim.payee","Claim.payee","","","",0,1,"","","","BackboneElement {[]} {[]}
 ","Recipient of benefits payable","The party to be reimbursed for cost of the products and services according to the terms of the policy.","Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and choose to pay the subscriber instead.","The provider needs to specify who they wish to be reimbursed and the claims processor needs express who they will reimburse.","","","","","","","",,,,,"",,,,"Claim.payee",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.payee.id","Claim.payee.id","","","",0,1,"","","","string {[]} {[]}
@@ -373,13 +373,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.payee.party","Claim.payee.party","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
 ","Recipient reference","Reference to the individual or organization to whom any payment will be made.","Not required if the payee is 'subscriber' or 'provider'.","Need to provide demographics if the payee is not 'subscriber' nor 'provider'.","","","","","","","",,,,,"",,,,"Claim.payee.party",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.referral","Claim.referral","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]}
+"Claim.referral","Claim.referral","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]}
 ","Treatment referral","The referral information received by the claim author, it is not to be used when the author generates a referral for a patient. A copy of that referral may be provided as supporting information. Some insurers require proof of referral to pay for services or to pay specialist rates for services.","The referral resource which lists the date, practitioner, reason and other supporting information.","Some insurers require proof of referral to pay for services or to pay specialist rates for services.","","","","","","","",,,,,"",,,,"Claim.referral",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.cause"
 "Claim.encounter","Claim.encounter","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
 ","Encounters associated with the listed treatments","Healthcare encounters related to this claim.","This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.","Used in some jurisdictions to link clinical events to claim items.","","","","","","","",,,,,"",,,,"Claim.encounter",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.facility","Claim.facility","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"Claim.facility","Claim.facility","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Servicing facility","Facility where the services were provided.","","Insurance adjudication can be dependant on where services were delivered.","","","","","","","",,,,,"",,,,"Claim.facility",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.where[x]"
 "Claim.diagnosisRelatedGroup","Claim.diagnosisRelatedGroup","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -407,7 +407,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.event.when[x]","Claim.event.when[x]","","","",1,1,"","","","dateTime {[]} {[]}
 Period {[]} {[]}","Occurance date or period","A date or period in the past or future indicating when the event occurred or is expectd to occur.","","","","","","","","","",,,,,"",,,,"Claim.event.when[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.careTeam","Claim.careTeam","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Claim.careTeam","Claim.careTeam","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Members of the care team","The members of the team who provided the products and services.","","Common to identify the responsible and supporting practitioners.","","","","","","","",,,,,"",,,,"Claim.careTeam",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.careTeam.id","Claim.careTeam.id","","","",0,1,"","","","string {[]} {[]}
@@ -465,16 +465,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.supportingInfo.category","Claim.supportingInfo.category","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Classification of the supplied information","The general class of the information supplied: information; exception; accident, employment; onset, etc.","This may contain a category for the local bill type codes.","Required to group or associate information items with common characteristics. For example: admission information or prior treatments.","","","","","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category","",,,,"Claim.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo.code","Claim.supportingInfo.code","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo.code","Claim.supportingInfo.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","","Required to identify the kind of additional information.","","","","","","","",,"example","The valuset used for additional information codes.","http://hl7.org/fhir/ValueSet/claim-exception","",,,,"Claim.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo.timing[x]","Claim.supportingInfo.timing[x]","","","",0,0,"","","","date {[]} {[]}
+"Claim.supportingInfo.timing[x]","Claim.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"Claim.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.supportingInfo.value[x]","Claim.supportingInfo.value[x]","","","",1,1,"","","","boolean {[]} {[]}
 string {[]} {[]}Quantity {[]} {[]}Attachment {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}Identifier {[]} {[]}","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"Claim.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo.reason","Claim.supportingInfo.reason","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo.reason","Claim.supportingInfo.reason","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"Claim.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.supportingInfo:explanation","Claim.supportingInfo","explanation","Attachments
@@ -508,16 +508,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
   </coding>
 </valueCodeableConcept>","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category","",,,,"Claim.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:explanation.code","Claim.supportingInfo.code","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo:explanation.code","Claim.supportingInfo.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","","Required to identify the kind of additional information.","","","","","","","",,"example","The valuset used for additional information codes.","http://hl7.org/fhir/ValueSet/claim-exception","",,,,"Claim.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:explanation.timing[x]","Claim.supportingInfo.timing[x]","","","",0,0,"","","","date {[]} {[]}
+"Claim.supportingInfo:explanation.timing[x]","Claim.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"Claim.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.supportingInfo:explanation.value[x]","Claim.supportingInfo.value[x]","","","",1,1,"","","","string {[]} {[]}
 ","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"Claim.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:explanation.reason","Claim.supportingInfo.reason","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo:explanation.reason","Claim.supportingInfo.reason","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"Claim.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.supportingInfo:guarantee","Claim.supportingInfo","guarantee","Attachments
@@ -551,16 +551,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
   </coding>
 </valueCodeableConcept>","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category","",,,,"Claim.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:guarantee.code","Claim.supportingInfo.code","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo:guarantee.code","Claim.supportingInfo.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","","Required to identify the kind of additional information.","","","","","","","",,"example","The valuset used for additional information codes.","http://hl7.org/fhir/ValueSet/claim-exception","",,,,"Claim.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:guarantee.timing[x]","Claim.supportingInfo.timing[x]","","","",0,0,"","","","date {[]} {[]}
+"Claim.supportingInfo:guarantee.timing[x]","Claim.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"Claim.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.supportingInfo:guarantee.value[x]","Claim.supportingInfo.value[x]","","","",1,1,"","","","string {[]} {[]}
 ","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"Claim.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:guarantee.reason","Claim.supportingInfo.reason","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo:guarantee.reason","Claim.supportingInfo.reason","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"Claim.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.supportingInfo:attachment","Claim.supportingInfo","attachment","Attachments
@@ -594,16 +594,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
   </coding>
 </valueCodeableConcept>","","","",,"required","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/claim-supporting-info-category","",,,,"Claim.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:attachment.code","Claim.supportingInfo.code","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo:attachment.code","Claim.supportingInfo.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","","Required to identify the kind of additional information.","","","","","","","",,"example","The valuset used for additional information codes.","http://hl7.org/fhir/ValueSet/claim-exception","",,,,"Claim.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:attachment.timing[x]","Claim.supportingInfo.timing[x]","","","",0,0,"","","","date {[]} {[]}
+"Claim.supportingInfo:attachment.timing[x]","Claim.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"Claim.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.supportingInfo:attachment.value[x]","Claim.supportingInfo.value[x]","","","",1,1,"","","","Attachment {[]} {[]}
 ","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"Claim.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.supportingInfo:attachment.reason","Claim.supportingInfo.reason","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.supportingInfo:attachment.reason","Claim.supportingInfo.reason","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"Claim.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.diagnosis","Claim.diagnosis","","","",1,5,"","","","BackboneElement {[]} {[]}
@@ -629,13 +629,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.diagnosis.diagnosis[x]","Claim.diagnosis.diagnosis[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Nature of illness or problem","The nature of illness or problem in a coded form or as a reference to an external defined Condition.","","Provides health context for the evaluation of the products and/or services.","","","","","","","",,"example","","https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/diagnosis-ICD10-level1","",,,,"Claim.diagnosis.diagnosis[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.diagnosis.type","Claim.diagnosis.type","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.diagnosis.type","Claim.diagnosis.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Timing or nature of the diagnosis","When the condition was observed or the relative ranking.","For example: admitting, primary, secondary, discharge.","Often required to capture a particular diagnosis, for example: primary or discharge.","","","","","","","",,"example","The type of the diagnosis: admitting, principal, discharge.","http://hl7.org/fhir/ValueSet/ex-diagnosistype","",,,,"Claim.diagnosis.type",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.diagnosis.onAdmission","Claim.diagnosis.onAdmission","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.diagnosis.onAdmission","Claim.diagnosis.onAdmission","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Present on admission","Indication of whether the diagnosis was present on admission to a facility.","","Many systems need to understand for adjudication if the diagnosis was present a time of admission.","","","","","","","",,"example","Present on admission.","http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission","",,,,"Claim.diagnosis.onAdmission",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.procedure","Claim.procedure","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Claim.procedure","Claim.procedure","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Clinical procedures performed","Procedures performed on the patient relevant to the billing items with the claim.","","The specific clinical invention are sometimes required to be provided to justify billing a greater than customary amount for a service.","","","","","","","",,,,,"",,,,"Claim.procedure",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.procedure.id","Claim.procedure.id","","","",0,1,"","","","string {[]} {[]}
@@ -688,22 +688,22 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.insurance.focal","Claim.insurance.focal","","","",1,1,"","","Y","boolean {[]} {[]}
 ","Coverage to be used for adjudication","A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.","A patient may (will) have multiple insurance policies which provide reimbursement for healthcare services and products. For example a person may also be covered by their spouse's policy and both appear in the list (and may be from the same insurer). This flag will be set to true for only one of the listed policies and that policy will be used for adjudicating this claim. Other claims would be created to request adjudication against the other listed policies.","To identify which coverage in the list is being used to adjudicate this claim.","","","","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""true""/>","","","",,,,,"",,,,"Claim.insurance.focal",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.insurance.identifier","Claim.insurance.identifier","","","",0,0,"","","","Identifier {[]} {[]}
+"Claim.insurance.identifier","Claim.insurance.identifier","","","",0,1,"","","","Identifier {[]} {[]}
 ","Pre-assigned Claim number","The business identifier to be used when the claim is sent for adjudication against this insurance policy.","Only required in jurisdictions where insurers, rather than the provider, are required to send claims to  insurers that appear after them in the list. This element is not required when 'subrogation=true'.","This will be the claim number should it be necessary to create this claim in the future. This is provided so that payors may forward claims to other payors in the Coordination of Benefit for adjudication rather than the provider being required to initiate each adjudication.","","","","","","","",,,,,"",,,,"Claim.insurance.identifier",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.identifier","FiveWs.identifier"
 "Claim.insurance.coverage","Claim.insurance.coverage","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-coverage]]}
 ","Coverage","Insuree Coverage to use. Can be obtained with CoverageEligibilityRequest.","","Required to allow the adjudicator to locate the correct policy and history within their information system.","","","","","","","",,,,,"",,,,"Claim.insurance.coverage",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.insurance.businessArrangement","Claim.insurance.businessArrangement","","","",0,0,"","","","string {[]} {[]}
+"Claim.insurance.businessArrangement","Claim.insurance.businessArrangement","","","",0,1,"","","","string {[]} {[]}
 ","Additional provider contract number","A business agreement number established between the provider and the insurer for special business processing purposes.","","Providers may have multiple business arrangements with a given insurer and must supply the specific contract number for adjudication.","","","","","","","",,,,,"",,,,"Claim.insurance.businessArrangement",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.insurance.preAuthRef","Claim.insurance.preAuthRef","","","",0,0,"","","","string {[]} {[]}
+"Claim.insurance.preAuthRef","Claim.insurance.preAuthRef","","","",0,*,"","","","string {[]} {[]}
 ","Prior authorization reference number","Reference numbers previously provided by the insurer to the provider to be quoted on subsequent claims containing services or products related to the prior authorization.","This value is an alphanumeric string that may be provided over the phone, via text, via paper, or within a ClaimResponse resource and is not a FHIR Identifier.","Providers must quote previously issued authorization reference numbers in order to obtain adjudication as previously advised on the Preauthorization.","","","","","","","",,,,,"",,,,"Claim.insurance.preAuthRef",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.insurance.claimResponse","Claim.insurance.claimResponse","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ClaimResponse]]}
+"Claim.insurance.claimResponse","Claim.insurance.claimResponse","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ClaimResponse]]}
 ","Adjudication results","The result of the adjudication of the line items for the Coverage specified in this insurance.","Must not be specified when 'focal=true' for this insurance.","An insurer need the adjudication results from prior insurers to determine the outstanding balance remaining by item for the items in the curent claim.","","","","","","","",,,,,"",,,,"Claim.insurance.claimResponse",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.accident","Claim.accident","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Claim.accident","Claim.accident","","","",0,1,"","","","BackboneElement {[]} {[]}
 ","Details of the event","Details of an accident which resulted in injuries which required the products and services listed in the claim.","","When healthcare products and services are accident related, benefits may be payable under accident provisions of policies, such as automotive, etc before they are payable under normal health insurance.","","","","","","","",,,,,"",,,,"Claim.accident",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.accident.id","Claim.accident.id","","","",0,1,"","","","string {[]} {[]}
@@ -756,19 +756,19 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.item.traceNumber","Claim.item.traceNumber","","","",0,*,"","","","Identifier {[]} {[]}
 ","Number for tracking","Trace number for tracking purposes. May be defined at the jurisdiction level or between trading partners.","","Allows partners to uniquely identify components for tracking.","","","","","","","",,,,,"",,,,"Claim.item.traceNumber",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.careTeamSequence","Claim.item.careTeamSequence","","","",0,0,"","","","positiveInt {[]} {[]}
+"Claim.item.careTeamSequence","Claim.item.careTeamSequence","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable careTeam members","CareTeam members related to this service or product.","","Need to identify the individuals and their roles in the provision of the product or service.","","","","","","","",,,,,"",,,,"Claim.item.careTeamSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.diagnosisSequence","Claim.item.diagnosisSequence","","","",0,0,"","","","positiveInt {[]} {[]}
+"Claim.item.diagnosisSequence","Claim.item.diagnosisSequence","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable diagnoses","Diagnosis applicable for this service or product.","","Need to related the product or service to the associated diagnoses.","","","","","","","",,,,,"",,,,"Claim.item.diagnosisSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.procedureSequence","Claim.item.procedureSequence","","","",0,0,"","","","positiveInt {[]} {[]}
+"Claim.item.procedureSequence","Claim.item.procedureSequence","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable procedures","Procedures applicable for this service or product.","","Need to provide any listed specific procedures to support the product or service being claimed.","","","","","","","",,,,,"",,,,"Claim.item.procedureSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.informationSequence","Claim.item.informationSequence","","","",0,0,"","","","positiveInt {[]} {[]}
+"Claim.item.informationSequence","Claim.item.informationSequence","","","",0,*,"","","","positiveInt {[]} {[]}
 ","Applicable exception and supporting information","Exceptions, special conditions and supporting information applicable for this service or product.","","Need to reference the supporting information items that relate directly to this product or service.","","","","","","","",,,,,"",,,,"Claim.item.informationSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.revenue","Claim.item.revenue","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.item.revenue","Claim.item.revenue","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Revenue or cost center code","The type of revenue or cost center providing the product and/or service.","","Needed in the processing of institutional claims.","","","","","","","",,"example","Codes for the revenue or cost centers supplying the service and/or products.","http://hl7.org/fhir/ValueSet/ex-revenue-center","",,,,"Claim.item.revenue",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.item.category","Claim.item.category","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -786,7 +786,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
-"Claim.item.productOrService.coding","Claim.item.productOrService.coding","","","",0,0,"","","Y","Coding {[]} {[]}
+"Claim.item.productOrService.coding","Claim.item.productOrService.coding","","","",0,*,"","","Y","Coding {[]} {[]}
 ","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","union(., ./translation)"
 "Claim.item.productOrService.text","Claim.item.productOrService.text","","","",1,1,"","","Y","string {[]} {[]}
@@ -799,16 +799,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.item.request","Claim.item.request","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/DeviceRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/NutritionOrder], CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/SupplyRequest], CanonicalType[http://hl7.org/fhir/StructureDefinition/VisionPrescription]]}
 ","Request or Referral for Service","Request or Referral for Goods or Service to be rendered.","","May identify the service to be provided or provider authorization for the service.","","","","","","","",,,,,"",,,,"Claim.item.request",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.modifier","Claim.item.modifier","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.item.modifier","Claim.item.modifier","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Product or service billing modifiers","Item typification or modifiers codes to convey additional context for the product or service.","For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.","To support inclusion of the item for adjudication or to charge an elevated fee.","","","","","","","",,"example","Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen.","http://hl7.org/fhir/ValueSet/claim-modifiers","",,,,"Claim.item.modifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.programCode","Claim.item.programCode","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.item.programCode","Claim.item.programCode","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Program the product or service is provided under","Identifies the program under which this may be recovered.","For example: Neonatal program, child dental program or drug users recovery program.","Commonly used in in the identification of publicly provided program focused on population segments or disease classifications.","","","","","","","",,"example","Program specific reason codes.","http://hl7.org/fhir/ValueSet/ex-program-code","",,,,"Claim.item.programCode",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.serviced[x]","Claim.item.serviced[x]","","","",0,0,"","","","date {[]} {[]}
+"Claim.item.serviced[x]","Claim.item.serviced[x]","","","",0,1,"","","","date {[]} {[]}
 Period {[]} {[]}","Date or dates of service or product delivery","The date or dates when the service or product was supplied, performed or completed.","","Needed to determine whether the  service or product was provided during the term of the insurance coverage.","","","","","","","",,,,,"",,,,"Claim.item.serviced[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.done[x]"
-"Claim.item.location[x]","Claim.item.location[x]","","","",0,0,"","","","CodeableConcept {[]} {[]}
+"Claim.item.location[x]","Claim.item.location[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
 Address {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}","Place of service or where product was supplied","Where the product or service was provided.","","The location can alter whether the item was acceptable for insurance purposes or impact the determination of the benefit amount.","","","","","","","",,"example","Place of service: pharmacy, school, prison, etc.","http://hl7.org/fhir/ValueSet/service-place","",,,,"Claim.item.location[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.where[x]"
 "Claim.item.patientPaid","Claim.item.patientPaid","","","",0,1,"","","","Money {[]} {[]}
@@ -831,14 +831,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.item.quantity.comparator","Claim.item.quantity.comparator","","","",0,0,"","Y","Y","code {[]} {[]}
 ","< | <= | >= | > | ad - how to understand the value","Not allowed to be used in this context","","Need a framework for handling measures where the value is <5ug/L or >400mg/L due to the limitations of measuring methodology.","","If there is no comparator, then there is no modification of the value","","","","","",,"required","How the Quantity should be understood and represented.","http://hl7.org/fhir/ValueSet/quantity-comparator|5.0.0","",,,,"Quantity.comparator",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","IVL properties"
-"Claim.item.quantity.unit","Claim.item.quantity.unit","","","",0,0,"","","Y","string {[]} {[]}
+"Claim.item.quantity.unit","Claim.item.quantity.unit","","","",0,1,"","","Y","string {[]} {[]}
 ","Unit representation","A human-readable form of the unit.","","There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms.","","","","","","","",,,,,"",,,,"Quantity.unit",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PQ.unit"
-"Claim.item.quantity.system","Claim.item.quantity.system","","","",0,0,"","","Y","uri {[]} {[]}
+"Claim.item.quantity.system","Claim.item.quantity.system","","","",0,1,"","","Y","uri {[]} {[]}
 ","System that defines coded unit form","The identification of the system that provides the coded form of the unit.","","Need to know the system that defines the coded form of the unit.","","","","","","","",,,,,"",,,,"Quantity.system",0,1,"qty-3
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CO.codeSystem, PQ.translation.codeSystem"
-"Claim.item.quantity.code","Claim.item.quantity.code","","","",0,0,"","","Y","code {[]} {[]}
+"Claim.item.quantity.code","Claim.item.quantity.code","","","",0,1,"","","Y","code {[]} {[]}
 ","Coded form of the unit","A computer processable form of the unit in some unit representation system.","The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.","Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.","","","","","","","",,,,,"",,,,"Quantity.code",0,1,"qty-3
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PQ.code, MO.currency, PQ.translation.code"
@@ -859,19 +859,19 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.item.unitPrice.currency","Claim.item.unitPrice.currency","","","",0,1,"","","Y","code {[]} {[]}
 ","ISO 4217 Currency Code","ISO 4217 Currency Code.","","A code indicating the currency, taken from ISO 4217.","","","","","","","",,"required","A code indicating the currency, taken from ISO 4217.","http://hl7.org/fhir/ValueSet/currencies|5.0.0","",,,,"Money.currency",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.factor","Claim.item.factor","","","",0,0,"","","","decimal {[]} {[]}
+"Claim.item.factor","Claim.item.factor","","","",0,1,"","","","decimal {[]} {[]}
 ","Price scaling factor","A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.","To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).","When discounts are provided to a patient (example: Senior's discount) then this must be documented for adjudication.","","","","","","","",,,,,"",,,,"Claim.item.factor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.item.tax","Claim.item.tax","","","",0,1,"","","","Money {[]} {[]}
 ","Total tax","The total of taxes applicable for this product or service.","","Required when taxes are not embedded in the unit price or provided as a separate service.","","","","","","","",,,,,"",,,,"Claim.item.tax",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.net","Claim.item.net","","","",0,0,"","","","Money {[]} {[]}
+"Claim.item.net","Claim.item.net","","","",0,1,"","","","Money {[]} {[]}
 ","Total item cost","The total amount claimed for the group (if a grouper) or the line item. Net = unit price * quantity * factor.","For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.","Provides the total amount claimed  for the group (if a grouper) or the line item.","","","","","","","",,,,,"",,,,"Claim.item.net",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.udi","Claim.item.udi","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}
+"Claim.item.udi","Claim.item.udi","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}
 ","Unique device identifier","Unique Device Identifiers associated with this line item.","","The UDI code allows the insurer to obtain device level information on the product supplied.","","","","","","","",,,,,"",,,,"Claim.item.udi",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.bodySite","Claim.item.bodySite","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Claim.item.bodySite","Claim.item.bodySite","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Anatomical location","Physical location where the service is performed or applies.","","","","","","","","","",,,,,"",,,,"Claim.item.bodySite",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.item.bodySite.id","Claim.item.bodySite.id","","","",0,1,"","","","string {[]} {[]}
@@ -893,10 +893,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.item.bodySite.subSite","Claim.item.bodySite.subSite","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Sub-location","A region or surface of the bodySite, e.g. limb region or tooth surface(s).","","Allows insurer to validate specific procedures.","","","","","","","",,"example","","http://hl7.org/fhir/ValueSet/surface","",,,,"Claim.item.bodySite.subSite",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.encounter","Claim.item.encounter","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+"Claim.item.encounter","Claim.item.encounter","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
 ","Encounters associated with the listed treatments","Healthcare encounters related to this claim.","This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.","Used in some jurisdictions to link clinical events to claim items.","","","","","","","",,,,,"",,,,"Claim.item.encounter",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.context"
-"Claim.item.detail","Claim.item.detail","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Claim.item.detail","Claim.item.detail","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Product or service provided","A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.","","The items to be processed for adjudication.","","","","","","","",,,,,"",,,,"Claim.item.detail",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.item.detail.id","Claim.item.detail.id","","","",0,1,"","","","string {[]} {[]}

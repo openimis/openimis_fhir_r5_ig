@@ -15,45 +15,9 @@
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price']) &gt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/unit-price': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/activity-definition-level']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/activity-definition-level': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:version) &lt;= 0">version: maximum cardinality of 'version' is 0</sch:assert>
       <sch:assert test="count(f:name) &gt;= 1">name: minimum cardinality of 'name' is 1</sch:assert>
       <sch:assert test="count(f:title) &gt;= 1">title: minimum cardinality of 'title' is 1</sch:assert>
-      <sch:assert test="count(f:subtitle) &lt;= 0">subtitle: maximum cardinality of 'subtitle' is 0</sch:assert>
-      <sch:assert test="count(f:experimental) &lt;= 0">experimental: maximum cardinality of 'experimental' is 0</sch:assert>
-      <sch:assert test="count(f:subject[x]) &lt;= 0">subject[x]: maximum cardinality of 'subject[x]' is 0</sch:assert>
       <sch:assert test="count(f:date) &gt;= 1">date: minimum cardinality of 'date' is 1</sch:assert>
-      <sch:assert test="count(f:publisher) &lt;= 0">publisher: maximum cardinality of 'publisher' is 0</sch:assert>
-      <sch:assert test="count(f:contact) &lt;= 0">contact: maximum cardinality of 'contact' is 0</sch:assert>
-      <sch:assert test="count(f:description) &lt;= 0">description: maximum cardinality of 'description' is 0</sch:assert>
-      <sch:assert test="count(f:jurisdiction) &lt;= 0">jurisdiction: maximum cardinality of 'jurisdiction' is 0</sch:assert>
-      <sch:assert test="count(f:purpose) &lt;= 0">purpose: maximum cardinality of 'purpose' is 0</sch:assert>
-      <sch:assert test="count(f:usage) &lt;= 0">usage: maximum cardinality of 'usage' is 0</sch:assert>
-      <sch:assert test="count(f:copyright) &lt;= 0">copyright: maximum cardinality of 'copyright' is 0</sch:assert>
-      <sch:assert test="count(f:approvalDate) &lt;= 0">approvalDate: maximum cardinality of 'approvalDate' is 0</sch:assert>
-      <sch:assert test="count(f:lastReviewDate) &lt;= 0">lastReviewDate: maximum cardinality of 'lastReviewDate' is 0</sch:assert>
-      <sch:assert test="count(f:effectivePeriod) &lt;= 0">effectivePeriod: maximum cardinality of 'effectivePeriod' is 0</sch:assert>
-      <sch:assert test="count(f:author) &lt;= 0">author: maximum cardinality of 'author' is 0</sch:assert>
-      <sch:assert test="count(f:editor) &lt;= 0">editor: maximum cardinality of 'editor' is 0</sch:assert>
-      <sch:assert test="count(f:reviewer) &lt;= 0">reviewer: maximum cardinality of 'reviewer' is 0</sch:assert>
-      <sch:assert test="count(f:endorser) &lt;= 0">endorser: maximum cardinality of 'endorser' is 0</sch:assert>
-      <sch:assert test="count(f:relatedArtifact) &lt;= 0">relatedArtifact: maximum cardinality of 'relatedArtifact' is 0</sch:assert>
-      <sch:assert test="count(f:library) &lt;= 0">library: maximum cardinality of 'library' is 0</sch:assert>
-      <sch:assert test="count(f:profile) &lt;= 0">profile: maximum cardinality of 'profile' is 0</sch:assert>
-      <sch:assert test="count(f:code) &lt;= 0">code: maximum cardinality of 'code' is 0</sch:assert>
-      <sch:assert test="count(f:intent) &lt;= 0">intent: maximum cardinality of 'intent' is 0</sch:assert>
-      <sch:assert test="count(f:priority) &lt;= 0">priority: maximum cardinality of 'priority' is 0</sch:assert>
-      <sch:assert test="count(f:doNotPerform) &lt;= 0">doNotPerform: maximum cardinality of 'doNotPerform' is 0</sch:assert>
-      <sch:assert test="count(f:location) &lt;= 0">location: maximum cardinality of 'location' is 0</sch:assert>
-      <sch:assert test="count(f:participant) &lt;= 0">participant: maximum cardinality of 'participant' is 0</sch:assert>
-      <sch:assert test="count(f:product[x]) &lt;= 0">product[x]: maximum cardinality of 'product[x]' is 0</sch:assert>
-      <sch:assert test="count(f:quantity) &lt;= 0">quantity: maximum cardinality of 'quantity' is 0</sch:assert>
-      <sch:assert test="count(f:dosage) &lt;= 0">dosage: maximum cardinality of 'dosage' is 0</sch:assert>
-      <sch:assert test="count(f:bodySite) &lt;= 0">bodySite: maximum cardinality of 'bodySite' is 0</sch:assert>
-      <sch:assert test="count(f:specimenRequirement) &lt;= 0">specimenRequirement: maximum cardinality of 'specimenRequirement' is 0</sch:assert>
-      <sch:assert test="count(f:observationRequirement) &lt;= 0">observationRequirement: maximum cardinality of 'observationRequirement' is 0</sch:assert>
-      <sch:assert test="count(f:observationResultRequirement) &lt;= 0">observationResultRequirement: maximum cardinality of 'observationResultRequirement' is 0</sch:assert>
-      <sch:assert test="count(f:transform) &lt;= 0">transform: maximum cardinality of 'transform' is 0</sch:assert>
-      <sch:assert test="count(f:dynamicValue) &lt;= 0">dynamicValue: maximum cardinality of 'dynamicValue' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

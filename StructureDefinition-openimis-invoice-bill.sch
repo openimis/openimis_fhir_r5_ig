@@ -12,15 +12,10 @@
   <sch:pattern>
     <sch:title>f:Invoice</sch:title>
     <sch:rule context="f:Invoice">
-      <sch:assert test="count(f:cancelledReason) &lt;= 0">cancelledReason: maximum cardinality of 'cancelledReason' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:subject) &lt;= 0">subject: maximum cardinality of 'subject' is 0</sch:assert>
       <sch:assert test="count(f:recipient) &gt;= 1">recipient: minimum cardinality of 'recipient' is 1</sch:assert>
       <sch:assert test="count(f:date) &gt;= 1">date: minimum cardinality of 'date' is 1</sch:assert>
-      <sch:assert test="count(f:participant) &lt;= 0">participant: maximum cardinality of 'participant' is 0</sch:assert>
-      <sch:assert test="count(f:account) &lt;= 0">account: maximum cardinality of 'account' is 0</sch:assert>
       <sch:assert test="count(f:lineItem) &gt;= 1">lineItem: minimum cardinality of 'lineItem' is 1</sch:assert>
-      <sch:assert test="count(f:totalPriceComponent) &lt;= 0">totalPriceComponent: maximum cardinality of 'totalPriceComponent' is 0</sch:assert>
       <sch:assert test="count(f:totalNet) &gt;= 1">totalNet: minimum cardinality of 'totalNet' is 1</sch:assert>
       <sch:assert test="count(f:totalGross) &gt;= 1">totalGross: minimum cardinality of 'totalGross' is 1</sch:assert>
       <sch:assert test="count(f:note) &lt;= 1">note: maximum cardinality of 'note' is 1</sch:assert>
@@ -104,7 +99,6 @@
   <sch:pattern>
     <sch:title>f:Invoice/f:lineItem</sch:title>
     <sch:rule context="f:Invoice/f:lineItem">
-      <sch:assert test="count(f:sequence) &lt;= 0">sequence: maximum cardinality of 'sequence' is 0</sch:assert>
       <sch:assert test="count(f:priceComponent) &gt;= 1">priceComponent: minimum cardinality of 'priceComponent' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

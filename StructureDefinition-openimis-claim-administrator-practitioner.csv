@@ -240,7 +240,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.identifier:UUID.assigner","Practitioner.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.4 / (CX.4,CX.9,CX.10)","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","./IdentifierIssuingAuthority"
-"Practitioner.active","Practitioner.active","","","",0,0,"","Y","Y","boolean {[]} {[]}
+"Practitioner.active","Practitioner.active","","","",0,1,"","Y","Y","boolean {[]} {[]}
 ","Whether this practitioner's record is in active use","Whether this practitioner's record is in active use.","If the practitioner is not in use by one organization, then it should mark the period on the PractitonerRole with an end date (even if they are active) as they may be active in another role.","Need to be able to mark a practitioner record as not to be used because it was created in error.","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"Practitioner.active",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.status","./statusCode","Participant.active"
 "Practitioner.name","Practitioner.name","","","",1,1,"","","Y","HumanName {[]} {[]}
@@ -374,7 +374,7 @@ Ranks need not be sequential and not all repetitions must have a rank.  For exam
 "Practitioner.telecom:phone.period","Practitioner.telecom.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","Time period when the contact point was/is in use","Time period when the contact point was/is in use.","","","","","","","","","",,,,,"",,,,"ContactPoint.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
-"Practitioner.gender","Practitioner.gender","","","",0,0,"","","Y","code {[]} {[]}
+"Practitioner.gender","Practitioner.gender","","","",0,1,"","","Y","code {[]} {[]}
 ","male | female | other | unknown","Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.","","Needed to address the person correctly.","","","","","","","",,"required","The gender of a person used for administrative purposes.","http://hl7.org/fhir/ValueSet/administrative-gender|5.0.0","",,,,"Practitioner.gender",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","STF-5","./administrativeGender","ParticipantLiving.gender","./GenderCode"
 "Practitioner.birthDate","Practitioner.birthDate","","","",1,1,"Y","","Y","date {[]} {[]}
@@ -383,10 +383,10 @@ Ranks need not be sequential and not all repetitions must have a rank.  For exam
 "Practitioner.deceased[x]","Practitioner.deceased[x]","","","",0,1,"","","Y","boolean {[]} {[]}
 dateTime {[]} {[]}","Indicates if the practitioner is deceased or not","Indicates if the practitioner is deceased or not.","If there's no value in the instance, it means there is no statement on whether or not the practitioner is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.","","","","","","","","",,,,,"",,,,"Practitioner.deceased[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime"
-"Practitioner.address","Practitioner.address","","","",0,0,"","","Y","Address {[]} {[]}
+"Practitioner.address","Practitioner.address","","","",0,*,"","","Y","Address {[]} {[]}
 ","Address(es) of the practitioner that are not role specific (typically home address)","Address(es) of the practitioner that are not role specific (typically home address). Work addresses are not typically entered in this property as they are usually role dependent.","The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).","The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations.","","","","","","","",,,,,"",,,,"Practitioner.address",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","ORC-24, STF-11, ROL-11, PRT-14","./addr","ParticipantContactable.address","./Addresses"
-"Practitioner.photo","Practitioner.photo","","","",0,0,"","","","Attachment {[]} {[]}
+"Practitioner.photo","Practitioner.photo","","","",0,*,"","","","Attachment {[]} {[]}
 ","Image of the person","Image of the person.","","Many EHR systems have the capability to capture an image of patients and personnel. Fits with newer social media usage too.","","","","","","","",,,,,"",,,,"Practitioner.photo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./subjectOf/ObservationEvent[code=""photo""]/value","ParticipantLiving.photo","./ImageURI (only supports the URI reference)"
 "Practitioner.qualification","Practitioner.qualification","","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -423,7 +423,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.qualification.issuer","Practitioner.qualification.issuer","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that regulates and issues the qualification","Organization that regulates and issues the qualification.","","","","","","","","","",,,,,"",,,,"Practitioner.qualification.issuer",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playingEntity.playingRole[classCode=QUAL].scoper"
-"Practitioner.communication","Practitioner.communication","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Practitioner.communication","Practitioner.communication","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","A language which may be used to communicate with the practitioner","A language which may be used to communicate with the practitioner, often for correspondence/administrative purposes.The `PractitionerRole.communication` property should be used for publishing the languages that a practitioner is able to communicate with patients (on a per Organization/Role basis).","If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Practitioner.Communication associations.For animals, language is not a relevant field, and should be absent from the instance.","","","","","","","","",,,,,"",,,,"Practitioner.communication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","LanguageCommunication"
 "Practitioner.communication.id","Practitioner.communication.id","","","",0,1,"","","","string {[]} {[]}

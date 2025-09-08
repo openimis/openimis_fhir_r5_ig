@@ -240,7 +240,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.identifier:UUID.assigner","Practitioner.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.4 / (CX.4,CX.9,CX.10)","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","./IdentifierIssuingAuthority"
-"Practitioner.active","Practitioner.active","","","",0,0,"","Y","Y","boolean {[]} {[]}
+"Practitioner.active","Practitioner.active","","","",0,1,"","Y","Y","boolean {[]} {[]}
 ","Whether this practitioner's record is in active use","Whether this practitioner's record is in active use.","If the practitioner is not in use by one organization, then it should mark the period on the PractitonerRole with an end date (even if they are active) as they may be active in another role.","Need to be able to mark a practitioner record as not to be used because it was created in error.","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"Practitioner.active",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.status","./statusCode","Participant.active"
 "Practitioner.name","Practitioner.name","","","",1,1,"","","Y","HumanName {[]} {[]}
@@ -374,7 +374,7 @@ Ranks need not be sequential and not all repetitions must have a rank.  For exam
 "Practitioner.telecom:phone.period","Practitioner.telecom.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","Time period when the contact point was/is in use","Time period when the contact point was/is in use.","","","","","","","","","",,,,,"",,,,"ContactPoint.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
-"Practitioner.gender","Practitioner.gender","","","",0,0,"","","Y","code {[]} {[]}
+"Practitioner.gender","Practitioner.gender","","","",0,1,"","","Y","code {[]} {[]}
 ","male | female | other | unknown","Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.","","Needed to address the person correctly.","","","","","","","",,"required","The gender of a person used for administrative purposes.","http://hl7.org/fhir/ValueSet/administrative-gender|5.0.0","",,,,"Practitioner.gender",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","STF-5","./administrativeGender","ParticipantLiving.gender","./GenderCode"
 "Practitioner.birthDate","Practitioner.birthDate","","","",1,1,"Y","","Y","date {[]} {[]}
@@ -409,7 +409,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Permanent Address","Permanent Address Details.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""137 Nowhere Street""/>","","",,,,,"",,,,"Address.line",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)","AD.part[parttype = AL]","./StreetAddress (newline delimitted)"
 "Practitioner.address.city","Practitioner.address.city","","Municpality
-","",0,0,"","","Y","string {[]} {[]}
+","",0,1,"","","Y","string {[]} {[]}
 ","Name of city, town etc.","The name of the city, town, suburb, village or other community or delivery center.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Erewhon""/>","","",,,,,"",,,,"Address.city",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.3","AD.part[parttype = CTY]","./Jurisdiction"
 "Practitioner.address.district","Practitioner.address.district","","County
@@ -421,10 +421,10 @@ Territory","",1,1,"Y","","Y","string {[]} {[]}
 ","State/Region","Enrolment Officer's State/Region name as it is configured in openIMIS.","","","","","","","","","",,,,,"",,,,"Address.state",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.4","AD.part[parttype = STA]","./Region"
 "Practitioner.address.postalCode","Practitioner.address.postalCode","","Zip
-","",0,0,"","","Y","string {[]} {[]}
+","",0,1,"","","Y","string {[]} {[]}
 ","Postal code for area","A postal code designating a region defined by the postal service.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""9132""/>","","",,,,,"",,,,"Address.postalCode",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.5","AD.part[parttype = ZIP]","./PostalIdentificationCode"
-"Practitioner.address.country","Practitioner.address.country","","","",0,0,"","","Y","string {[]} {[]}
+"Practitioner.address.country","Practitioner.address.country","","","",0,1,"","","Y","string {[]} {[]}
 ","Country (e.g. may be ISO 3166 2 or 3 letter code)","Country - a nation as commonly understood or generally accepted.","ISO 3166 2- or 3- letter codes MAY be used in place of a human readable country name.","","","","","","","","",,,,,"",,,,"Address.country",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.6","AD.part[parttype = CNT]","./Country"
 "Practitioner.address.period","Practitioner.address.period","","","",0,1,"","","Y","Period {[]} {[]}
@@ -433,7 +433,7 @@ Territory","",1,1,"Y","","Y","string {[]} {[]}
   <end value=""2010-07-01""/>
 </valuePeriod>","","",,,,,"",,,,"Address.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XAD.12 / XAD.13 + XAD.14","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
-"Practitioner.photo","Practitioner.photo","","","",0,0,"","","","Attachment {[]} {[]}
+"Practitioner.photo","Practitioner.photo","","","",0,*,"","","","Attachment {[]} {[]}
 ","Image of the person","Image of the person.","","Many EHR systems have the capability to capture an image of patients and personnel. Fits with newer social media usage too.","","","","","","","",,,,,"",,,,"Practitioner.photo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./subjectOf/ObservationEvent[code=""photo""]/value","ParticipantLiving.photo","./ImageURI (only supports the URI reference)"
 "Practitioner.qualification","Practitioner.qualification","","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -470,7 +470,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.qualification.issuer","Practitioner.qualification.issuer","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that regulates and issues the qualification","Organization that regulates and issues the qualification.","","","","","","","","","",,,,,"",,,,"Practitioner.qualification.issuer",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playingEntity.playingRole[classCode=QUAL].scoper"
-"Practitioner.communication","Practitioner.communication","","","",0,0,"","","","BackboneElement {[]} {[]}
+"Practitioner.communication","Practitioner.communication","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","A language which may be used to communicate with the practitioner","A language which may be used to communicate with the practitioner, often for correspondence/administrative purposes.The `PractitionerRole.communication` property should be used for publishing the languages that a practitioner is able to communicate with patients (on a per Organization/Role basis).","If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Practitioner.Communication associations.For animals, language is not a relevant field, and should be absent from the instance.","","","","","","","","",,,,,"",,,,"Practitioner.communication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","LanguageCommunication"
 "Practitioner.communication.id","Practitioner.communication.id","","","",0,1,"","","","string {[]} {[]}

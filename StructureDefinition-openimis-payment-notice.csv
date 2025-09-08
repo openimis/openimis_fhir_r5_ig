@@ -107,7 +107,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PaymentNotice.request","PaymentNotice.request","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-invoice], CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-invoice-bill]]}
 ","Request reference","Reference of resource for which payment is being made.","","","","","","","","","",,,,,"",,,,"PaymentNotice.request",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.basedOn","FiveWs.subject[x]"
-"PaymentNotice.response","PaymentNotice.response","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+"PaymentNotice.response","PaymentNotice.response","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","Response reference","Reference of response to resource for which payment is being made.","","","","","","","","","",,,,,"",,,,"PaymentNotice.response",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.subject[x]","n/a"
 "PaymentNotice.created","PaymentNotice.created","","","",1,1,"","","Y","dateTime {[]} {[]}
@@ -122,7 +122,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PaymentNotice.paymentDate","PaymentNotice.paymentDate","","","",1,1,"","","","date {[]} {[]}
 ","Payment or clearing date","The date when the above payment action occurred.","","Need to convey the date when the action being notified occurred.","","","","","","","",,,,,"",,,,"PaymentNotice.paymentDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"PaymentNotice.payee","PaymentNotice.payee","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentNotice.payee","PaymentNotice.payee","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Party being paid","The party who will receive or has received payment that is the subject of this notification.","","","","","","","","","",,,,,"",,,,"PaymentNotice.payee",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "PaymentNotice.recipient","PaymentNotice.recipient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/openimis-insurance-organization]]}

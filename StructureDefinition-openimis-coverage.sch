@@ -16,19 +16,9 @@
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-enroll-date': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date']) &gt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date']) &lt;= 1">extension with URL = 'https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/coverage-effective-date': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:type) &lt;= 0">type: maximum cardinality of 'type' is 0</sch:assert>
-      <sch:assert test="count(f:subscriber) &lt;= 0">subscriber: maximum cardinality of 'subscriber' is 0</sch:assert>
-      <sch:assert test="count(f:subscriberId) &lt;= 0">subscriberId: maximum cardinality of 'subscriberId' is 0</sch:assert>
-      <sch:assert test="count(f:dependent) &lt;= 0">dependent: maximum cardinality of 'dependent' is 0</sch:assert>
-      <sch:assert test="count(f:relationship) &lt;= 0">relationship: maximum cardinality of 'relationship' is 0</sch:assert>
       <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
       <sch:assert test="count(f:class) &gt;= 1">class: minimum cardinality of 'class' is 1</sch:assert>
       <sch:assert test="count(f:class) &lt;= 1">class: maximum cardinality of 'class' is 1</sch:assert>
-      <sch:assert test="count(f:order) &lt;= 0">order: maximum cardinality of 'order' is 0</sch:assert>
-      <sch:assert test="count(f:network) &lt;= 0">network: maximum cardinality of 'network' is 0</sch:assert>
-      <sch:assert test="count(f:costToBeneficiary) &lt;= 0">costToBeneficiary: maximum cardinality of 'costToBeneficiary' is 0</sch:assert>
-      <sch:assert test="count(f:subrogation) &lt;= 0">subrogation: maximum cardinality of 'subrogation' is 0</sch:assert>
-      <sch:assert test="count(f:contract) &lt;= 0">contract: maximum cardinality of 'contract' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

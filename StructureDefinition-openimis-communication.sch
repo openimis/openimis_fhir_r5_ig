@@ -12,27 +12,9 @@
   <sch:pattern>
     <sch:title>f:Communication</sch:title>
     <sch:rule context="f:Communication">
-      <sch:assert test="count(f:identifier) &lt;= 0">identifier: maximum cardinality of 'identifier' is 0</sch:assert>
-      <sch:assert test="count(f:instantiatesCanonical) &lt;= 0">instantiatesCanonical: maximum cardinality of 'instantiatesCanonical' is 0</sch:assert>
-      <sch:assert test="count(f:instantiatesUri) &lt;= 0">instantiatesUri: maximum cardinality of 'instantiatesUri' is 0</sch:assert>
-      <sch:assert test="count(f:basedOn) &lt;= 0">basedOn: maximum cardinality of 'basedOn' is 0</sch:assert>
-      <sch:assert test="count(f:partOf) &lt;= 0">partOf: maximum cardinality of 'partOf' is 0</sch:assert>
-      <sch:assert test="count(f:inResponseTo) &lt;= 0">inResponseTo: maximum cardinality of 'inResponseTo' is 0</sch:assert>
-      <sch:assert test="count(f:statusReason) &lt;= 0">statusReason: maximum cardinality of 'statusReason' is 0</sch:assert>
-      <sch:assert test="count(f:category) &lt;= 0">category: maximum cardinality of 'category' is 0</sch:assert>
-      <sch:assert test="count(f:priority) &lt;= 0">priority: maximum cardinality of 'priority' is 0</sch:assert>
-      <sch:assert test="count(f:medium) &lt;= 0">medium: maximum cardinality of 'medium' is 0</sch:assert>
       <sch:assert test="count(f:subject) &gt;= 1">subject: minimum cardinality of 'subject' is 1</sch:assert>
-      <sch:assert test="count(f:topic) &lt;= 0">topic: maximum cardinality of 'topic' is 0</sch:assert>
       <sch:assert test="count(f:about) &gt;= 1">about: minimum cardinality of 'about' is 1</sch:assert>
       <sch:assert test="count(f:about) &lt;= 1">about: maximum cardinality of 'about' is 1</sch:assert>
-      <sch:assert test="count(f:encounter) &lt;= 0">encounter: maximum cardinality of 'encounter' is 0</sch:assert>
-      <sch:assert test="count(f:sent) &lt;= 0">sent: maximum cardinality of 'sent' is 0</sch:assert>
-      <sch:assert test="count(f:received) &lt;= 0">received: maximum cardinality of 'received' is 0</sch:assert>
-      <sch:assert test="count(f:recipient) &lt;= 0">recipient: maximum cardinality of 'recipient' is 0</sch:assert>
-      <sch:assert test="count(f:sender) &lt;= 0">sender: maximum cardinality of 'sender' is 0</sch:assert>
-      <sch:assert test="count(f:reason) &lt;= 0">reason: maximum cardinality of 'reason' is 0</sch:assert>
-      <sch:assert test="count(f:note) &lt;= 0">note: maximum cardinality of 'note' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

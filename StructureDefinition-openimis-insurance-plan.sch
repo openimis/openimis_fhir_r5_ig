@@ -20,15 +20,9 @@
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:type) &lt;= 1">type: maximum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:name) &gt;= 1">name: minimum cardinality of 'name' is 1</sch:assert>
-      <sch:assert test="count(f:alias) &lt;= 0">alias: maximum cardinality of 'alias' is 0</sch:assert>
       <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
-      <sch:assert test="count(f:ownedBy) &lt;= 0">ownedBy: maximum cardinality of 'ownedBy' is 0</sch:assert>
-      <sch:assert test="count(f:administeredBy) &lt;= 0">administeredBy: maximum cardinality of 'administeredBy' is 0</sch:assert>
       <sch:assert test="count(f:coverageArea) &gt;= 1">coverageArea: minimum cardinality of 'coverageArea' is 1</sch:assert>
       <sch:assert test="count(f:coverageArea) &lt;= 1">coverageArea: maximum cardinality of 'coverageArea' is 1</sch:assert>
-      <sch:assert test="count(f:contact) &lt;= 0">contact: maximum cardinality of 'contact' is 0</sch:assert>
-      <sch:assert test="count(f:endpoint) &lt;= 0">endpoint: maximum cardinality of 'endpoint' is 0</sch:assert>
-      <sch:assert test="count(f:network) &lt;= 0">network: maximum cardinality of 'network' is 0</sch:assert>
       <sch:assert test="count(f:coverage) &gt;= 1">coverage: minimum cardinality of 'coverage' is 1</sch:assert>
       <sch:assert test="count(f:coverage) &lt;= 1">coverage: maximum cardinality of 'coverage' is 1</sch:assert>
       <sch:assert test="count(f:plan) &gt;= 1">plan: minimum cardinality of 'plan' is 1</sch:assert>
@@ -116,14 +110,7 @@
   <sch:pattern>
     <sch:title>f:InsurancePlan/f:coverage</sch:title>
     <sch:rule context="f:InsurancePlan/f:coverage">
-      <sch:assert test="count(f:network) &lt;= 0">network: maximum cardinality of 'network' is 0</sch:assert>
       <sch:assert test="count(f:benefit) &lt;= 1">benefit: maximum cardinality of 'benefit' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:InsurancePlan/f:coverage/f:benefit</sch:title>
-    <sch:rule context="f:InsurancePlan/f:coverage/f:benefit">
-      <sch:assert test="count(f:requirement) &lt;= 0">requirement: maximum cardinality of 'requirement' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -184,49 +171,25 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:title>f:InsurancePlan/f:plan</sch:title>
-    <sch:rule context="f:InsurancePlan/f:plan">
-      <sch:assert test="count(f:identifier) &lt;= 0">identifier: maximum cardinality of 'identifier' is 0</sch:assert>
-      <sch:assert test="count(f:type) &lt;= 0">type: maximum cardinality of 'type' is 0</sch:assert>
-      <sch:assert test="count(f:coverageArea) &lt;= 0">coverageArea: maximum cardinality of 'coverageArea' is 0</sch:assert>
-      <sch:assert test="count(f:network) &lt;= 0">network: maximum cardinality of 'network' is 0</sch:assert>
-      <sch:assert test="count(f:specificCost) &lt;= 0">specificCost: maximum cardinality of 'specificCost' is 0</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:title>f:InsurancePlan/f:plan/f:generalCost</sch:title>
     <sch:rule context="f:InsurancePlan/f:plan/f:generalCost">
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:groupSize) &gt;= 1">groupSize: minimum cardinality of 'groupSize' is 1</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:groupSize) &lt;= 0">groupSize: maximum cardinality of 'groupSize' is 0</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:groupSize) &lt;= 0">groupSize: maximum cardinality of 'groupSize' is 0</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:groupSize) &lt;= 0">groupSize: maximum cardinality of 'groupSize' is 0</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:groupSize) &lt;= 0">groupSize: maximum cardinality of 'groupSize' is 0</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:groupSize) &lt;= 0">groupSize: maximum cardinality of 'groupSize' is 0</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:groupSize) &lt;= 0">groupSize: maximum cardinality of 'groupSize' is 0</sch:assert>
       <sch:assert test="count(f:cost) &gt;= 1">cost: minimum cardinality of 'cost' is 1</sch:assert>
-      <sch:assert test="count(f:comment) &lt;= 0">comment: maximum cardinality of 'comment' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

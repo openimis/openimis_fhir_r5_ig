@@ -13,10 +13,8 @@
     <sch:title>f:PaymentNotice</sch:title>
     <sch:rule context="f:PaymentNotice">
       <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
-      <sch:assert test="count(f:response) &lt;= 0">response: maximum cardinality of 'response' is 0</sch:assert>
       <sch:assert test="count(f:payment) &gt;= 1">payment: minimum cardinality of 'payment' is 1</sch:assert>
       <sch:assert test="count(f:paymentDate) &gt;= 1">paymentDate: minimum cardinality of 'paymentDate' is 1</sch:assert>
-      <sch:assert test="count(f:payee) &lt;= 0">payee: maximum cardinality of 'payee' is 0</sch:assert>
       <sch:assert test="count(f:paymentStatus) &gt;= 1">paymentStatus: minimum cardinality of 'paymentStatus' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

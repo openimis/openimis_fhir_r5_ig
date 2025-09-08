@@ -12,7 +12,6 @@
   <sch:pattern>
     <sch:title>f:Subscription</sch:title>
     <sch:rule context="f:Subscription">
-      <sch:assert test="count(f:contact) &lt;= 0">contact: maximum cardinality of 'contact' is 0</sch:assert>
       <sch:assert test="count(f:reason) &gt;= 1">reason: minimum cardinality of 'reason' is 1</sch:assert>
       <sch:assert test="count(f:endpoint) &gt;= 1">endpoint: minimum cardinality of 'endpoint' is 1</sch:assert>
     </sch:rule>
