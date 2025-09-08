@@ -50,8 +50,8 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
-      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/activity-definition-usage-context-workflow-type",
@@ -591,26 +591,26 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
-      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
-      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
-      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response",
-      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
-      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
-      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
-      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
-      "StructureDefinition-openimis-group.html" : "openIMIS Group",
-      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
       "StructureDefinition-openimis-location.html" : "openIMIS Location",
+      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
+      "StructureDefinition-openimis-patient.html" : "openIMIS Patient",
+      "StructureDefinition-openimis-claim-administrator-practitioner-role.html" : "openIMIS Claim Administrator Practitioner Role",
+      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
+      "StructureDefinition-openimis-insurance-plan.html" : "openIMIS Insurance Plan",
+      "StructureDefinition-openimis-claim.html" : "openIMIS Claim",
       "StructureDefinition-openimis-enrolment-officer-practitioner.html" : "openIMIS Enrolment Officer Practitioner",
+      "StructureDefinition-openimis-invoice-bill.html" : "openIMIS Bill",
+      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-openimis-group.html" : "openIMIS Group",
+      "StructureDefinition-openimis-enrolment-officer-practitioner-role.html" : "openIMIS Enrolment Officer Practitioner Role",
+      "StructureDefinition-openimis-invoice-invoice.html" : "openIMIS Invoice",
+      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
+      "StructureDefinition-openimis-policy-holder-organization.html" : "openIMIS Policy Holder Organization",
       "StructureDefinition-openimis-claim-administrator-practitioner.html" : "openIMIS Claim Administrator Practitioner",
       "StructureDefinition-openimis-coverage-eligibility-response.html" : "openIMIS CoverageEligibilityResponse",
-      "StructureDefinition-openimis-health-facility-organization.html" : "openIMIS Health Facility Organization",
-      "StructureDefinition-openimis-contract.html" : "openIMIS Contract",
-      "StructureDefinition-openimis-coverage.html" : "openIMIS Coverage",
-      "StructureDefinition-openimis-coverage-eligibility-request.html" : "openIMIS CoverageEligibilityRequest",
-      "StructureDefinition-openimis-medication.html" : "openIMIS Medication",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+      "StructureDefinition-openimis-claim-response.html" : "openIMIS Claim Response"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/organization-hf-care-type",
@@ -776,8 +776,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/ValueSet/usage-context-gender-type",
@@ -789,8 +789,8 @@
       "systems" : ["http://hl7.org/fhir/administrative-gender"],
       "uses" : {
       },
-      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)",
-      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition"
+      "StructureDefinition-openimis-activity-definition.html" : "openIMIS ActivityDefinition",
+      "StructureDefinition-medication-usage-context.html" : "UsageContext (Medication)"
     }
   ]
 }

@@ -3,7 +3,7 @@ openIMISFHIRR5 : Validation Results
 
 err = 28, warn = 241, info = 220
 IG Publisher Version: 2.0.16
-Generated Mon Sep 08 11:40:48 UTC 2025. FHIR version 5.0.0 for openimis.fhir.r5#0.1.0 (canonical = https://github.com/openimis/openimis_fhir_r5_ig)
+Generated Mon Sep 08 11:52:49 UTC 2025. FHIR version 5.0.0 for openimis.fhir.r5#0.1.0 (canonical = https://github.com/openimis/openimis_fhir_r5_ig)
  Build Errors : 5 / 7 / 0
  /github/workspace/fsh-generated/resources/ActivityDefinition-GeneralConsultationService : 0 / 0 / 5
  /github/workspace/fsh-generated/resources/CapabilityStatement-openIMISCapabilityStatement : 4 / 2 / 1

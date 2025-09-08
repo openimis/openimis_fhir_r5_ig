@@ -25,7 +25,7 @@
   fhir:name [ fhir:v "GroupPovertyStatusExtension"] ; # 
   fhir:title [ fhir:v "Poverty Status (Group)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-09-08T11:37:47+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-09-08T11:49:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "openIMIS Initiative"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "openIMIS Initiative" ] ;

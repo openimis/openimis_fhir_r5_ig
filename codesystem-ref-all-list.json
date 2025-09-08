@@ -85,8 +85,8 @@
       "oids" : ["2.16.840.1.113883.4.642.4.2"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R5/valueset-administrative-gender.html" : "AdministrativeGender",
-      "ValueSet-usage-context-gender-type.html" : "Usage Context for Gender Type (ActivityDefinition|Medication)"
+      "ValueSet-usage-context-gender-type.html" : "Usage Context for Gender Type (ActivityDefinition|Medication)",
+      "http://hl7.org/fhir/R5/valueset-administrative-gender.html" : "AdministrativeGender"
     },
     {
       "url" : "http://hl7.org/fhir/asset-availability",
@@ -478,9 +478,9 @@
       "oids" : ["2.16.840.1.113883.4.642.4.1802"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R5/valueset-subscription-types.html" : "Types used with Subscriptions",
       "http://hl7.org/fhir/R5/valueset-all-resource-types.html" : "All Resource Types",
       "http://hl7.org/fhir/R5/valueset-participant-resource-types.html" : "Participant Resource Types",
+      "http://hl7.org/fhir/R5/valueset-subscription-types.html" : "Types used with Subscriptions",
       "http://hl7.org/fhir/R5/valueset-request-resource-types.html" : "Request Resource Types"
     },
     {
@@ -496,8 +496,8 @@
       ],
       "uses" : {
       },
-      "ValueSet-coverage-status.html" : "Coverage Status (Coverage)",
-      "http://hl7.org/fhir/R5/valueset-fm-status.html" : "Financial Resource Status Codes"
+      "http://hl7.org/fhir/R5/valueset-fm-status.html" : "Financial Resource Status Codes",
+      "ValueSet-coverage-status.html" : "Coverage Status (Coverage)"
     },
     {
       "url" : "http://hl7.org/fhir/group-membership-basis",
@@ -657,8 +657,8 @@
       "oids" : ["2.16.840.1.113883.4.642.4.4"],
       "uses" : {
       },
-      "ValueSet-insurance-plan-publication-status.html" : "Publication Status (InsurancePlan)",
-      "http://hl7.org/fhir/R5/valueset-publication-status.html" : "PublicationStatus"
+      "http://hl7.org/fhir/R5/valueset-publication-status.html" : "PublicationStatus",
+      "ValueSet-insurance-plan-publication-status.html" : "Publication Status (InsurancePlan)"
     },
     {
       "url" : "http://hl7.org/fhir/quantity-comparator",
@@ -1567,9 +1567,9 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
+      "http://terminology.hl7.org/6.5.0/ValueSet-v3-ActIncidentCode.html" : "ActIncidentCode",
       "http://terminology.hl7.org/6.5.0/ValueSet-v3-ActConsentDirective.html" : "ActConsentDirective",
-      "ValueSet-activity-definition-usage-context-venue-type.html" : "Usage Context for Venue Type (ActivityDefinition)",
-      "http://terminology.hl7.org/6.5.0/ValueSet-v3-ActIncidentCode.html" : "ActIncidentCode"
+      "ValueSet-activity-definition-usage-context-venue-type.html" : "Usage Context for Venue Type (ActivityDefinition)"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
@@ -1581,8 +1581,8 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "http://terminology.hl7.org/6.5.0/ValueSet-v3-ActReason.html" : "v3 Code System ActReason",
-      "http://terminology.hl7.org/6.5.0/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse"
+      "http://terminology.hl7.org/6.5.0/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse",
+      "http://terminology.hl7.org/6.5.0/ValueSet-v3-ActReason.html" : "v3 Code System ActReason"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation",
@@ -1842,9 +1842,9 @@
       "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
       "uses" : {
       },
+      "ValueSet-coverage-item-benefit-type-amount-left.html" : "Type of benefit as amount left (Coverage)",
       "ValueSet-coverage-item-benefit-type-total-left.html" : "Type of benefit as total left (Coverage)",
-      "ValueSet-coverage-item-benefit-type.html" : "Type of benefit (Coverage)",
-      "ValueSet-coverage-item-benefit-type-amount-left.html" : "Type of benefit as amount left (Coverage)"
+      "ValueSet-coverage-item-benefit-type.html" : "Type of benefit (Coverage)"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category",
@@ -2154,8 +2154,8 @@
       "oids" : ["2.16.840.1.113883.6.121"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R5/valueset-languages.html" : "Common Languages",
-      "http://hl7.org/fhir/R5/valueset-all-languages.html" : "All Languages"
+      "http://hl7.org/fhir/R5/valueset-all-languages.html" : "All Languages",
+      "http://hl7.org/fhir/R5/valueset-languages.html" : "Common Languages"
     },
     {
       "url" : "urn:iso:std:iso:3166",
@@ -2167,8 +2167,8 @@
       "oids" : ["1.0.3166.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R5/valueset-use-context.html" : "Context of Use ValueSet",
-      "http://hl7.org/fhir/R5/valueset-jurisdiction.html" : "Jurisdiction ValueSet"
+      "http://hl7.org/fhir/R5/valueset-jurisdiction.html" : "Jurisdiction ValueSet",
+      "http://hl7.org/fhir/R5/valueset-use-context.html" : "Context of Use ValueSet"
     },
     {
       "url" : "urn:iso:std:iso:3166:-2",

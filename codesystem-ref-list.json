@@ -324,9 +324,9 @@
       "description" : "Indicates the type of benefit under a Coverage. Values defined by openIMIS. Can not be extended.",
       "uses" : {
       },
+      "ValueSet-coverage-item-benefit-type-amount-left.html" : "Type of benefit as amount left (Coverage)",
       "ValueSet-coverage-item-benefit-type-total-left.html" : "Type of benefit as total left (Coverage)",
-      "ValueSet-coverage-item-benefit-type.html" : "Type of benefit (Coverage)",
-      "ValueSet-coverage-item-benefit-type-amount-left.html" : "Type of benefit as amount left (Coverage)"
+      "ValueSet-coverage-item-benefit-type.html" : "Type of benefit (Coverage)"
     },
     {
       "url" : "https://github.com/openimis/openimis_fhir_r5_ig/CodeSystem/coverage-item-category",
