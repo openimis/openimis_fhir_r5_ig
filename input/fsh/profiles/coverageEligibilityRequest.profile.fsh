@@ -21,44 +21,27 @@ Description: "Defines a CoverageEligibilityRequest for openIMIS to enquire an In
 
 * status = FHIRFinancialResourceStatusCodes#active "Active"
 
-* priority 0..0
 
 * purpose 1..1
 * purpose = FHIREligibilityRequestPurpose#benefits "Coverage benefits"
 * patient only Reference(OpenIMISPatient)
 
-* serviced[x] 0..0
 * created 1..1
-* enterer 0..0 // might be used to identify the EO or CA if generic JWT is used for integration
-* provider 0..0
 
 * insurer 1..1
 * insurer only Reference(OpenIMISInsuranceOrganization)
   * ^definition = "Hardcodded as openIMIS doesn't support multiple insurance organizations."
 
-* facility 0..0
-* supportingInfo 0..0
-* insurance 0..0
-
 * item 0..2
-  * supportingInfoSequence 0..0
   * category from CoverageItemCategoryVS (required)
     * ^short = "Category"
     * ^definition = "Items category as medical item or service."
   * productOrService 1..1
-    * coding 0..0
     * text 1..1
       * ^short = "Item/Service Code"
       * ^definition = "Service or Item Code."
     * ^short = "Item Code"
     * ^definition = "Service or Item Code."
-  * modifier 0..0
-  * provider 0..0
-  * quantity 0..0
-  * unitPrice 0..0
-  * facility 0..0
-  * diagnosis 0..0
-  * detail 0..0
 
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "category.coding.code"

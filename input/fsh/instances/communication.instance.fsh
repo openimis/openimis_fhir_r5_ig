@@ -34,8 +34,8 @@ Example of a Communication (Feedback)
     * url = "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type"
     * valueCodeableConcept = FeedbackPayloadCS#DrugReceived
 
-* payload[Asessment]
-  * contentCodeableConcept = FeedbackPayloadCS#Asessment
+* payload[assessment]
+  * contentCodeableConcept = FeedbackPayloadCS#assessment
   * extension[+]
     * url = "https://github.com/openimis/openimis_fhir_r5_ig/StructureDefinition/communication-payload-type"
-    * valueCodeableConcept = FeedbackPayloadCS#Asessment
+    * valueCodeableConcept = FeedbackPayloadCS#assessment

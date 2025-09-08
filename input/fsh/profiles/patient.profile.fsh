@@ -58,11 +58,10 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 
 * gender 1..1 MS 
 * birthDate 1..1 MS // The date on which the person was born
-* deceased[x] 0..0 // Is not available in openIMIS
 
 * address 1..1 MS // Family address or Current address of the Insuree => state->district->extension[municipality]->city
   * type = FHIRAddressType#physical
-  * country 0..0 // Not used 
+
   // Location.LocationName from Family's Region (Family.LocationId.ParentLocationId.ParentLocationId.ParentLocationId)
   // Location.LocationName from Insuree's Region (Insuree.CurrentVillage.ParentLocationId.ParentLocationId.ParentLocationId)
   * state 1..1 MS // mapped to Region (see previous two comments) !!!
@@ -81,7 +80,7 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * city 1..1 MS // Location.LocationName from Family's City (Family.LocationId) or Insuree's City (Insuree.CurrentVillage)
     * ^short = "City/Village"
     * ^definition = "Insuree's City/Village name as it is configured in openIMIS."
-  * postalCode 0..0 // not used
+
   * line 0..1 // Family.FamilyAddress or Insuree.CurrentAddress
   * extension contains AddressLocationReferenceExtension named location 1..1 MS 
 * address ^slicing.discriminator.type = #value
@@ -94,7 +93,6 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
 * address[InsureeAddress].use = FHIRAddressUse#temp // mapped to Insuree current address
 
 * maritalStatus from PatientMaritalStatusVS (required)
-* multipleBirth[x] 0..0
 
 * photo 0..1 MS 
   * contentType 1..1 MS // Mime type of the Insuree image
@@ -110,11 +108,9 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
     Data 0..1 
 * photo[URL] // used in GET Insuree
   * url 1..1
-  * data 0..0
   * size 1..1
   * ^short = "used in GET Patient"
 * photo[Data] // used in POST && PUT Insuree
-  * url 0..0
   * data 1..1
   * size 0..1
   * ^short = "used in POST & PUT Patient"
@@ -123,26 +119,17 @@ Description: "Defines a Patient for openIMIS which maps to an Insuree"
   * relationship 0..1
   * relationship from PatientContactRelationshipVS (extensible)
   * name 1..1
-    * use 0..0
-    * text 0..0
     * family 1..1
     * given 1..1
-    * prefix 0..0
-    * suffix 0..0
-    * period 0..0
+
   * telecom 0..*
   * address 0..1
   * ^short = "Head of Family contact"
   * ^definition = "Head of Family contact details. If missing, this Person is the Head of Family. Only available in GET Patient."
 
-* communication 0..0 // Not used but can be mapped to tblFamilySMS.LanguageOfSMS
-
 * generalPractitioner only Reference(OpenIMISHealthFacilityOrganization) // ToDo: see https://openimis.atlassian.net/browse/OE0-25 
   * ^short = "First Service Point"
   * ^definition = "Hospital being set as the Insuree`s First Service Point."
-
-* managingOrganization 0..0
-* link 0..0 // ToDo: see https://openimis.atlassian.net/browse/OE0-26
 
 * extension contains PatientIsHeadExtension named isHead 0..1 MS 
 * extension[isHead]

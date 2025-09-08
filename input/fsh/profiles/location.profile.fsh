@@ -32,18 +32,11 @@ Description: "Defines a Location for openIMIS which maps to a Location"
   * ^definition = "The location is always active."
 * status = LocationStatusCS#active "Active"
 
-* operationalStatus 0..0
-
 * name 1..1 MS // The name by which the Location is known
   * ^short = "Location official name"
   * ^definition = "Location official family and given names."
 
-* alias 0..0
-* description 0..0
 * mode = LocationModeCS#instance "Instance"
-* type 0..0
-// * telecom 0..0 // REMOVED: telecom is moved under Location.contact.telecom in R5 
-* address 0..0 
 
 // PhysicalType is removed in R5 and renamed to form
 // * physicalType 1..1 MS 
@@ -56,12 +49,6 @@ Description: "Defines a Location for openIMIS which maps to a Location"
   * ^definition = "Location type specifying the level of location."
 * form from LocationTypeVS (required)
 
-* position 0..0
-* managingOrganization 0..0
 
 * partOf 0..1 MS
 * partOf only Reference(OpenIMISLocation)
-
-* hoursOfOperation 0..0
-// * availabilityExceptions 0..0 // REMOVED: Removed and moved to Location.hoursOfOperation.notAvailable.description
-* endpoint 0..0

@@ -14,4 +14,4 @@ Description: "Indicates the Feedback Payload code for a CommunicationRequest and
 * #PaymentAsked "Payment Asked? (yes|no)"
 * #DrugPrescribed "Drug Prescribed? (yes|no)"
 * #DrugReceived "Drug Received? (yes|no)"
-* #Asessment "Asessment? (0|1|2|3|4|5)"
+* #assessment "assessment? (0|1|2|3|4|5)"

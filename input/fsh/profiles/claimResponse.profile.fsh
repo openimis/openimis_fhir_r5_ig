@@ -35,7 +35,6 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
   * ^short = "Visit type"
   * ^definition = "Mapped to Emergency, Referrals or Other visit type."
 
-* subType 0..0
 * use = FHIRClaimUseCodes#claim "Claim"
   * ^short = "Claim Type"
   * ^definition = "openIMIS only manages Claims."
@@ -60,14 +59,8 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
   * complete: valuated or rejected state
   * partial: checked or processed state 
   """
-* disposition 0..0
-* preAuthRef 0..0
-* preAuthPeriod 0..0
-* payeeType 0..0
-
 * item 1..*
   * itemSequence 1..1
-  * noteNumber 0..0
   * adjudication 0..4 // UPDATED: Min Cardinality changed from 1 to 0
     * category from ClaimStatusVS (required)
     * reason 1..1
@@ -85,15 +78,10 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
     // * value 1..1 REMOVED: value is removed in R5
     //   * ^definition = "Quantity provided."
   
-  * detail 0..0
-
   * extension contains ClaimItemReferenceExtension named itemReference 1..1 
   * extension[itemReference]
     * ^short = "Item Reference"
     * ^definition = "Specifies the reference to the Medication or ActivityDefinition."
-
-* addItem 0..0
-* adjudication 0..0
 
 * total 1..4
   * category from ClaimStatusVS (required)
@@ -101,22 +89,10 @@ Description: "Defines a ClaimResponse for openIMIS which maps to a Claim. The Cl
     * value 1..1
     * currency 0..1
 
-* payment 0..0
-* fundsReserve 0..0
-* formCode 0..0
-* form 0..0
-
 * processNote 0..1
-  * number 0..0
-  * type 0..0
   * text 1..1
     * ^definition = "Claim adjustment reason."
-  * language 0..0
 
 * communicationRequest 0..1
 * communicationRequest only Reference(OpenIMISCommunicationRequest)
   * ^definition = "Provided only if the User has Claims.Feedback authority (111009)."
-
-* insurance 0..0
-* error 0..0
-
